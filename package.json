@@ -9,6 +9,7 @@
     "build": "npm run validate && tsc --noEmit && vite build",
     "preview": "vite preview",
     "validate": "tsx scripts/validate.ts",
+    "qa:book": "node --import tsx --test qa/book.test.tsx",
     "checkin:brief": "tsx scripts/checkin-brief.ts",
     "checkin:log": "tsx scripts/checkin-log.ts"
   },
