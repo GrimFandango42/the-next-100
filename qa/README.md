@@ -8,7 +8,7 @@ Before merging, check:
 
 - Opening → workbench → fork → prediction index anchors land directly, without scroll interception or blank transition states.
 - Both scenario cards update the evidence controls and odds; `?b=concentration` restores the scenario on reload.
-- The index initially contains 33 predictions; Space filters to 6; All restores 33.
+- The index count matches `data/events.json`; Space shows only space events; All restores the full count.
 - Every prediction opens its reasoning. Tab/Shift+Tab stay inside the dialog, Escape closes it, and focus returns to the opener.
 - Event links retain the selected scenario and open the correct dialog on reload; old `#m-` links still work.
 - At phone widths, scene copy stacks above artwork, both scenario cards remain readable, and the index has no horizontal overflow. Check Safari on a real phone before broad rollout.

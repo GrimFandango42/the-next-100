@@ -12,6 +12,7 @@ The forecast is a set of data files. A check-in is a disciplined edit of those f
 6. **Dates don't drift without a reason.** Changing `year` or `yearEnd` is a revision like any other, logged in `history`. The original window is recoverable from history, which is how the forecast gets graded later.
 7. **Scenarios sum to 100.** Both branches and the unconditional column.
 8. **The forecast's voice stays the forecast's.** Edits are written in the same register as the original lines: plain, specific, no hedging filler.
+9. **Sources are judged, not just collected.** `SOURCES.md` is the registry (what to open per domain and metric, tiers, what to avoid) and its last section is the rules: one primary or it did not happen; a vendor claim moves a line by at most two points and says so; resolving a line needs two independent primaries; cite datasets by edition; for bot-blocked hosts use the registry's alternate route or leave it for the desktop run. Every check-in evaluates the sources it used, and the changelog body says when a source was weak.
 
 ## Steps
 
@@ -19,7 +20,7 @@ The forecast is a set of data files. A check-in is a disciplined edit of those f
 git pull
 npm ci
 npm run checkin:brief          # what is due, what to search, where the needles sit
-# research: open the standing queries + each live line's signals; read, don't skim
+# research: open the registry sources (SOURCES.md) first, then the standing queries + each live line's signals; read, don't skim
 # edit data/*.json accordingly (see "What can change" below)
 npm run checkin:log -- --headline "…" --body "…" --touched id,id --sources url,url
 npm run validate               # must pass
@@ -41,6 +42,7 @@ The VPS pulls `main` every 10 minutes and rebuilds, so a push is a deploy.
 | `data/meta.json` | `lastCheckin` (the log script does this), `hinge.pluralismProbability` when indicators move in aggregate | forces, caveat |
 | `data/changelog.json` | one entry per check-in (the log script does this) | — |
 | `data/eras.json` | — | names and theses only if an era's character has clearly changed |
+| `data/sources.json` + `SOURCES.md` | — | quarterly: replace moved or dead sources, demote ones that failed twice, add a source a line needed and lacked |
 
 ## Grading rules
 

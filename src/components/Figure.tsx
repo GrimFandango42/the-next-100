@@ -63,7 +63,8 @@ function Stripes({ m, branch, year, ev }: { m: Metric; branch: Branch; year: num
   const kf = metricKF(m, branch);
   const years = Array.from({ length: 2200 - 2026 + 1 }, (_, i) => 2026 + i);
   const bw = W / years.length;
-  const col = (v: number) => interpolateRdYlBu(1 - Math.max(0, Math.min(1, (v - 0.9) / 2.2)));
+  const vs = kf.map((k) => k[1]), lo = Math.min(...vs) - 0.15, hi = Math.max(...vs) + 0.1;
+  const col = (v: number) => interpolateRdYlBu(1 - Math.max(0, Math.min(1, (v - lo) / (hi - lo))));
   const yr = Math.round(year), v = lerp(kf, year);
   const x = (y: number) => (y - 2026) * bw;
   const peak = kf.reduce((a, b) => (b[1] > a[1] ? b : a), kf[0]);

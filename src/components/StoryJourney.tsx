@@ -76,9 +76,9 @@ export default function StoryJourney() {
       <div className="scene-bottom"><a href="#first-work">↑ The way we work</a><a href="#forecast-index">Explore the rest of the forecast ↓</a></div>
     </section>
     <section id="forecast-index" className="forecast-index" data-story-stop aria-labelledby="index-title">
-      <div className="index-heading"><div><div className="guide-kicker">THE FULL FIELD GUIDE</div><h2 id="index-title">Thirty-three bets<br/>on <em>what comes next.</em></h2></div><p>A date is a forecast, not an appointment.<br/>Open any prediction for its reasoning,<br/>signals, and revision history.</p></div>
+      <div className="index-heading"><div><div className="guide-kicker">THE FULL FIELD GUIDE</div><h2 id="index-title">{data.events.length} bets<br/>on <em>what comes next.</em></h2></div><p>A date is a forecast, not an appointment.<br/>Open any prediction for its reasoning,<br/>signals, and revision history.</p></div>
       <div className="index-filters" role="group" aria-label="Filter predictions by topic"><button aria-pressed={filter==="all"} onClick={()=>setFilter("all")}>All predictions</button>{domains.map(([id,d])=><button key={id} aria-pressed={filter===id} onClick={()=>setFilter(id)}>{d.name}</button>)}</div>
-      <div className="index-results" aria-live="polite">{events.length} predictions{filter!=="all"?` · ${DOMAIN_META[filter].name}`:" · 2027–2180"}</div>
+      <div className="index-results" aria-live="polite">{events.length} predictions{filter!=="all"?` · ${DOMAIN_META[filter].name}`:` · ${Math.min(...data.events.map(e=>e.year))}–${Math.max(...data.events.map(e=>e.yearEnd??e.year))}`}</div>
       <ol className="prediction-list">{events.map(e=><li key={e.id}><button onClick={()=>{setYear(e.year);select(e.id);}}><span className="prediction-year">{e.year}{e.yearEnd&&<small>–{e.yearEnd}</small>}</span><span className="prediction-name">{e.title}<small>{DOMAIN_META[e.domain].name}</small></span><span className="prediction-odds">{e.probability!=null?`${Math.round(e.probability*100)}%`:"—"}<small>{e.confidence}</small></span><span className="prediction-arrow">↗</span></button></li>)}</ol>
       <a className="guide-cta" href="#explore">Go behind the forecast <span>↓</span></a>
     </section>

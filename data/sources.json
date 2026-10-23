@@ -1,0 +1,1372 @@
+{
+ "generated": "2026-10-23",
+ "note": "Every URL was opened on 2026-10-23 from the check-in sandbox (curl via proxy or WebFetch) and resolved. IEA, OECD indicator pages, NCSL, congress.gov UI, FRED were not openable and are excluded.",
+ "domains": {
+  "ai": [
+   {
+    "name": "Epoch AI data hub",
+    "url": "https://epoch.ai/data",
+    "pulls": "Model database (compute, release date, open/closed), data centers, chip owners/users, frontier-lab hiring, ECI",
+    "cadence": "continuous; CSVs re-cut weekly",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch AI models dataset",
+    "url": "https://epoch.ai/data/ai-models",
+    "pulls": "Per-model training compute, accessibility, publication date",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch open vs closed ECI gap",
+    "url": "https://epoch.ai/data-insights/open-closed-eci-gap",
+    "pulls": "Open-weight lag in months on ECI (~4 months, May 2026)",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch US vs China ECI gap",
+    "url": "https://epoch.ai/data-insights/us-vs-china-eci",
+    "pulls": "China-US frontier lag in months (~7, Jan 2026)",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "METR time horizons",
+    "url": "https://metr.org/time-horizons/",
+    "pulls": "50%-success task horizon per frontier model; doubling time",
+    "cadence": "per model release",
+    "tier": "institutional"
+   },
+   {
+    "name": "Stanford AI Index",
+    "url": "https://aiindex.stanford.edu/report/",
+    "pulls": "Annual chapters: open/closed gap, compute, labor, policy",
+    "cadence": "annual (April)",
+    "tier": "institutional"
+   },
+   {
+    "name": "UK AI Security Institute research",
+    "url": "https://www.aisi.gov.uk/research",
+    "pulls": "Frontier AI Trends Report, pre-deployment evals (cyber, bio, autonomy)",
+    "cadence": "irregular, several per quarter",
+    "tier": "primary"
+   },
+   {
+    "name": "US CAISI (NIST)",
+    "url": "https://www.nist.gov/caisi",
+    "pulls": "US government model evaluations and standards",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "International AI Safety Report",
+    "url": "https://internationalaisafetyreport.org/",
+    "pulls": "Consensus scientific statement on capabilities and risks",
+    "cadence": "annual + interim",
+    "tier": "institutional"
+   },
+   {
+    "name": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/",
+    "pulls": "Independent intelligence index; open vs proprietary filter",
+    "cadence": "continuous",
+    "tier": "trade"
+   },
+   {
+    "name": "SWE-bench leaderboards",
+    "url": "https://www.swebench.com/",
+    "pulls": "Verified agentic coding scores",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Anthropic Transparency Hub",
+    "url": "https://www.anthropic.com/transparency",
+    "pulls": "System/model reports for capability and autonomy claims (vendor)",
+    "cadence": "per release",
+    "tier": "vendor"
+   },
+   {
+    "name": "BIS (export controls)",
+    "url": "https://www.bis.gov/",
+    "pulls": "Export-control rules and entity-list actions",
+    "cadence": "continuous",
+    "tier": "primary"
+   }
+  ],
+  "bio": [
+   {
+    "name": "FDA novel drug approvals 2026",
+    "url": "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026",
+    "pulls": "Count and names of CDER novel approvals (no origin field; attribute per molecule and record method)",
+    "cadence": "rolling; annual summary January",
+    "tier": "primary"
+   },
+   {
+    "name": "FDA novel approvals index",
+    "url": "https://www.fda.gov/drugs/development-approval-process-drugs/novel-drug-approvals-fda",
+    "pulls": "Year pages and annual reports",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "FDA AI and medical products",
+    "url": "https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-medical-products",
+    "pulls": "Guidance and policy on AI in drug development and review",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "FDA guidance search",
+    "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+    "pulls": "Final/draft guidance on AI-assisted trial design",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "FDA Biomarker Qualification Program",
+    "url": "https://www.fda.gov/drugs/drug-development-tool-ddt-qualification-programs/biomarker-qualification-program",
+    "pulls": "Qualified biomarkers; where an aging surrogate endpoint would appear",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "EMA CHMP highlights",
+    "url": "https://www.ema.europa.eu/en/committees/chmp/chmp-agendas-minutes-highlights",
+    "pulls": "Monthly positive opinions",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "EMA qualification of novel methodologies",
+    "url": "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development",
+    "pulls": "EU biomarker/endpoint qualification opinions",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/",
+    "pulls": "Phase III status of AI-originated molecules and geroprotector trials",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "NIA Interventions Testing Program",
+    "url": "https://www.nia.nih.gov/research/dab/interventions-testing-program-itp",
+    "pulls": "Reference mouse-lifespan screen results",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "Nature Reviews Drug Discovery",
+    "url": "https://www.nature.com/nrd/",
+    "pulls": "Annual approval reviews; AI-drug pipeline analyses",
+    "cadence": "monthly",
+    "tier": "peer-reviewed"
+   },
+   {
+    "name": "STAT News",
+    "url": "https://www.statnews.com/",
+    "pulls": "Leads on approvals, trials, FDA policy",
+    "cadence": "daily",
+    "tier": "quality-press"
+   },
+   {
+    "name": "Endpoints News",
+    "url": "https://endpts.com/",
+    "pulls": "Leads on biotech pipeline and FDA actions",
+    "cadence": "daily",
+    "tier": "trade"
+   },
+   {
+    "name": "WHO Disease Outbreak News",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news",
+    "pulls": "Official outbreak notifications",
+    "cadence": "weekly",
+    "tier": "primary"
+   },
+   {
+    "name": "IBBIS",
+    "url": "https://ibbis.bio/",
+    "pulls": "DNA synthesis screening standards and biosecurity policy",
+    "cadence": "irregular",
+    "tier": "institutional"
+   }
+  ],
+  "energy": [
+   {
+    "name": "EIA Short-Term Energy Outlook",
+    "url": "https://www.eia.gov/outlooks/steo/",
+    "pulls": "US generation, prices, demand outlook",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "EIA Electric Power Monthly",
+    "url": "https://www.eia.gov/electricity/monthly/",
+    "pulls": "Generation mix and wholesale prices",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "EIA Today in Energy",
+    "url": "https://www.eia.gov/todayinenergy/",
+    "pulls": "Notes on negative prices, data-center load, siting",
+    "cadence": "daily",
+    "tier": "primary"
+   },
+   {
+    "name": "Ember data",
+    "url": "https://ember-energy.org/data/",
+    "pulls": "Global electricity generation, solar share, monthly updates; Global Electricity Review (April)",
+    "cadence": "monthly / annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "CAISO Today's Outlook",
+    "url": "https://www.caiso.com/todays-outlook",
+    "pulls": "Daylight price and curtailment signal",
+    "cadence": "daily",
+    "tier": "primary"
+   },
+   {
+    "name": "Lazard LCOE+",
+    "url": "https://www.lazard.com/research-insights/levelized-cost-of-energyplus/",
+    "pulls": "Annual levelized cost curves",
+    "cadence": "annual (June)",
+    "tier": "trade"
+   },
+   {
+    "name": "DOE Fusion Energy Sciences",
+    "url": "https://www.energy.gov/science/fes/fusion-energy-sciences",
+    "pulls": "US fusion programme milestones",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "ITER Newsline",
+    "url": "https://www.iter.org/newsline",
+    "pulls": "ITER schedule and milestones",
+    "cadence": "weekly",
+    "tier": "primary"
+   },
+   {
+    "name": "NIF (LLNL)",
+    "url": "https://lasers.llnl.gov/",
+    "pulls": "Ignition/gain records",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "UKAEA",
+    "url": "https://ccfe.ukaea.uk/",
+    "pulls": "STEP and UK fusion programme",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "Fusion Industry Association reports",
+    "url": "https://www.fusionindustryassociation.org/fusion-industry-reports/",
+    "pulls": "Annual industry survey: funding, self-reported grid timelines",
+    "cadence": "annual (July)",
+    "tier": "trade"
+   },
+   {
+    "name": "International Federation of Robotics",
+    "url": "https://ifr.org/",
+    "pulls": "World Robotics: industrial and service robot volumes",
+    "cadence": "annual (Sept/Oct)",
+    "tier": "trade"
+   },
+   {
+    "name": "World Bank manufacturing value added",
+    "url": "https://data.worldbank.org/indicator/NV.IND.MANF.ZS",
+    "pulls": "Manufacturing share by country for labor-cost-irrelevant",
+    "cadence": "annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "Semiconductor Industry Association",
+    "url": "https://www.semiconductors.org/",
+    "pulls": "Fab announcements and siting",
+    "cadence": "irregular",
+    "tier": "trade"
+   }
+  ],
+  "climate": [
+   {
+    "name": "Copernicus C3S Climate Bulletins",
+    "url": "https://climate.copernicus.eu/climate-bulletins",
+    "pulls": "Monthly ERA5 anomaly vs 1850-1900; 12-month running mean",
+    "cadence": "monthly (early month)",
+    "tier": "primary"
+   },
+   {
+    "name": "Copernicus Global Climate Highlights",
+    "url": "https://climate.copernicus.eu/global-climate-highlights-2025",
+    "pulls": "Annual global temperature summary",
+    "cadence": "annual (January)",
+    "tier": "primary"
+   },
+   {
+    "name": "NOAA NCEI global monthly report",
+    "url": "https://www.ncei.noaa.gov/access/monitoring/monthly-report/global/",
+    "pulls": "Monthly global anomaly, NOAAGlobalTemp",
+    "cadence": "monthly (mid-month)",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA GISTEMP",
+    "url": "https://data.giss.nasa.gov/gistemp/",
+    "pulls": "Monthly global anomaly",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "HadCRUT5",
+    "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+    "pulls": "Monthly global anomaly",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "Berkeley Earth",
+    "url": "https://berkeleyearth.org/data/",
+    "pulls": "Monthly data and annual probability statements",
+    "cadence": "monthly / annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "WMO annual-to-decadal update",
+    "url": "https://wmo.int/publication-series/wmo-global-annual-decadal-climate-update-2025-2029",
+    "pulls": "Probability of 5-year mean above 1.5C",
+    "cadence": "annual (May)",
+    "tier": "institutional"
+   },
+   {
+    "name": "WMO State of the Global Climate",
+    "url": "https://wmo.int/publication-series/state-of-global-climate-2024",
+    "pulls": "Multi-dataset annual mean for observed anchors",
+    "cadence": "annual (March)",
+    "tier": "institutional"
+   },
+   {
+    "name": "Global Carbon Budget",
+    "url": "https://globalcarbonbudget.org/",
+    "pulls": "Fossil CO2 emissions; peak confirmation",
+    "cadence": "annual (Nov/Dec)",
+    "tier": "institutional"
+   },
+   {
+    "name": "NOAA global CO2 trend",
+    "url": "https://gml.noaa.gov/ccgg/trends/global.html",
+    "pulls": "Monthly global mean CO2",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "UNEP Emissions Gap Report 2025 (UNEP-CCC mirror)",
+    "url": "https://unepccc.org/publications/emissions-gap-report-2025/",
+    "pulls": "Warming projections under pledges",
+    "cadence": "annual (Nov)",
+    "tier": "institutional"
+   },
+   {
+    "name": "Climate Action Tracker",
+    "url": "https://climateactiontracker.org/",
+    "pulls": "Policy-based warming projections",
+    "cadence": "2-3 per year",
+    "tier": "institutional"
+   },
+   {
+    "name": "IPCC AR7",
+    "url": "https://www.ipcc.ch/ar7/",
+    "pulls": "Assessment cycle timeline",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "CDR.fyi",
+    "url": "https://www.cdr.fyi/",
+    "pulls": "Carbon removal purchases and deliveries (tonnes)",
+    "cadence": "continuous",
+    "tier": "trade"
+   },
+   {
+    "name": "SRM360",
+    "url": "https://www.srm360.org/",
+    "pulls": "SRM funding tracker, outdoor experiments, bans",
+    "cadence": "irregular; monthly newsletter",
+    "tier": "institutional"
+   },
+   {
+    "name": "Degrees Initiative",
+    "url": "https://www.degrees.ngo/",
+    "pulls": "Global South SRM research programmes",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "ARIA Exploring Climate Cooling",
+    "url": "https://www.aria.org.uk/opportunity-spaces/future-proofing-our-climate-and-weather/exploring-climate-cooling",
+    "pulls": "UK-funded SRM research programme status",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "Carbon Brief",
+    "url": "https://www.carbonbrief.org/",
+    "pulls": "Quarterly state-of-the-climate analyses citing primaries",
+    "cadence": "daily",
+    "tier": "quality-press"
+   }
+  ],
+  "space": [
+   {
+    "name": "NASA Artemis",
+    "url": "https://www.nasa.gov/humans-in-space/artemis/",
+    "pulls": "Programme status, mission dates, Moon Base plans",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA Artemis III",
+    "url": "https://www.nasa.gov/mission/artemis-iii/",
+    "pulls": "Mission scope (2027 LEO docking demo) and date",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA Artemis IV",
+    "url": "https://www.nasa.gov/mission/artemis-iv/",
+    "pulls": "First crewed landing plan (2028)",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "GAO NASA Assessments of Major Projects 2026",
+    "url": "https://www.gao.gov/products/gao-26-108556",
+    "pulls": "Independent schedule and cost status; Artemis refocus, Gateway pause",
+    "cadence": "annual (June/July)",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA OIG audits",
+    "url": "https://oig.nasa.gov/audits/",
+    "pulls": "Independent audits of Artemis elements",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA CLPS",
+    "url": "https://www.nasa.gov/commercial-lunar-payload-services/",
+    "pulls": "Lunar surface delivery contracts and landings",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "Who Is In Space",
+    "url": "https://www.whoisinspace.com/",
+    "pulls": "Live headcount of humans in space",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Jonathan's Space Report: human spaceflight",
+    "url": "https://planet4589.org/space/astro/web/pop.html",
+    "pulls": "Authoritative census, person-days in space",
+    "cadence": "rolling",
+    "tier": "institutional"
+   },
+   {
+    "name": "Jonathan's Space Report: statistics",
+    "url": "https://planet4589.org/space/stats/",
+    "pulls": "Launch and population statistics",
+    "cadence": "rolling",
+    "tier": "institutional"
+   },
+   {
+    "name": "NASA ISS",
+    "url": "https://www.nasa.gov/missions/station/",
+    "pulls": "Crew rotations, station end-of-life",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA commercial LEO destinations",
+    "url": "https://www.nasa.gov/humans-in-space/commercial-space/low-earth-orbit-economy/commercial-destinations-in-low-earth-orbit/",
+    "pulls": "Post-ISS station awards and milestones",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "CNSA (English)",
+    "url": "https://www.cnsa.gov.cn/english/",
+    "pulls": "Tiangong crews, ILRS, crewed lunar programme",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "ESA Human and Robotic Exploration",
+    "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration",
+    "pulls": "European lunar programme status",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "FAA commercial space data",
+    "url": "https://www.faa.gov/data_research/commercial_space_data",
+    "pulls": "Licensed launches and reentries",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "Spaceflight Now",
+    "url": "https://www.spaceflightnow.com/",
+    "pulls": "Launch reporting",
+    "cadence": "daily",
+    "tier": "trade"
+   },
+   {
+    "name": "Ars Technica Space",
+    "url": "https://arstechnica.com/space/",
+    "pulls": "Quality reporting on Artemis and Starship",
+    "cadence": "daily",
+    "tier": "quality-press"
+   },
+   {
+    "name": "SETI Institute",
+    "url": "https://www.seti.org/",
+    "pulls": "Technosignature search status",
+    "cadence": "quarterly glance",
+    "tier": "institutional"
+   },
+   {
+    "name": "Breakthrough Listen",
+    "url": "https://breakthroughinitiatives.org/initiative/1",
+    "pulls": "Technosignature survey results",
+    "cadence": "quarterly glance",
+    "tier": "institutional"
+   }
+  ],
+  "society": [
+   {
+    "name": "UN World Population Prospects",
+    "url": "https://population.un.org/wpp/",
+    "pulls": "Population, fertility, peak year; revision year",
+    "cadence": "biennial",
+    "tier": "primary"
+   },
+   {
+    "name": "UN Population Division data portal",
+    "url": "https://population.un.org/dataportal/home",
+    "pulls": "Annual estimate series for observed anchors",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "World Bank total fertility rate",
+    "url": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN",
+    "pulls": "TFR by country",
+    "cadence": "annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "Eurostat",
+    "url": "https://ec.europa.eu/eurostat",
+    "pulls": "EU fertility and hours worked",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "Japan Statistics Bureau",
+    "url": "https://www.stat.go.jp/english/",
+    "pulls": "Population and vital statistics",
+    "cadence": "monthly / annual",
+    "tier": "primary"
+   },
+   {
+    "name": "Korea Ministry of Data and Statistics",
+    "url": "https://kostat.go.kr/anse/",
+    "pulls": "Birth statistics, TFR",
+    "cadence": "monthly / annual",
+    "tier": "primary"
+   },
+   {
+    "name": "NY Fed labor market for recent college graduates",
+    "url": "https://www.newyorkfed.org/research/college-labor-market",
+    "pulls": "Recent-grad unemployment and underemployment vs all workers",
+    "cadence": "quarterly (Feb/May/Aug/Nov)",
+    "tier": "primary"
+   },
+   {
+    "name": "BLS Employment Situation archive",
+    "url": "https://www.bls.gov/bls/news-release/empsit.htm",
+    "pulls": "Unemployment by education; average weekly hours",
+    "cadence": "monthly (first Friday)",
+    "tier": "primary"
+   },
+   {
+    "name": "Indeed Hiring Lab",
+    "url": "https://www.hiringlab.org/",
+    "pulls": "Job postings by occupation and seniority",
+    "cadence": "weekly",
+    "tier": "trade"
+   },
+   {
+    "name": "Burning Glass Institute",
+    "url": "https://www.burningglassinstitute.org/",
+    "pulls": "Entry-level hiring and AI exposure research",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "Stanford Digital Economy Lab",
+    "url": "https://digitaleconomy.stanford.edu/",
+    "pulls": "AI Economic Indicators; entry-level employment research",
+    "cadence": "rolling",
+    "tier": "peer-reviewed"
+   },
+   {
+    "name": "NBER working papers",
+    "url": "https://www.nber.org/papers",
+    "pulls": "Labor-market and AI adoption research",
+    "cadence": "weekly",
+    "tier": "peer-reviewed"
+   },
+   {
+    "name": "OECD Employment Outlook 2026",
+    "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en/full-report.html",
+    "pulls": "Hours, AI and labor-market analysis",
+    "cadence": "annual (July)",
+    "tier": "institutional"
+   },
+   {
+    "name": "OECD Data Explorer",
+    "url": "https://data-explorer.oecd.org/",
+    "pulls": "Hours worked, fertility series (JS app)",
+    "cadence": "annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "ILO data and statistics",
+    "url": "https://www.ilo.org/data-and-statistics",
+    "pulls": "Weekly hours, employment by sector",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "Stanford Basic Income Lab",
+    "url": "https://basicincome.stanford.edu/",
+    "pulls": "Map of pilots and national policies",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "BIEN news",
+    "url": "https://basicincome.org/news/",
+    "pulls": "Advocacy news on income-floor laws (leads)",
+    "cadence": "weekly",
+    "tier": "trade"
+   },
+   {
+    "name": "American Presidency Project party platforms",
+    "url": "https://www.presidency.ucsb.edu/documents/app-categories/elections-and-transitions/party-platforms",
+    "pulls": "Platform text for AI planks",
+    "cadence": "per cycle",
+    "tier": "primary"
+   },
+   {
+    "name": "Pew Research on AI",
+    "url": "https://www.pewresearch.org/topic/science/science-issues/artificial-intelligence/",
+    "pulls": "Public opinion on AI and jobs",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "Gallup News",
+    "url": "https://news.gallup.com/",
+    "pulls": "Public opinion and workplace AI use",
+    "cadence": "weekly",
+    "tier": "institutional"
+   },
+   {
+    "name": "Congress.gov API",
+    "url": "https://api.congress.gov/",
+    "pulls": "Bill status and roll calls (congress.gov UI is bot-gated)",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "GovInfo",
+    "url": "https://www.govinfo.gov/",
+    "pulls": "Enrolled bills, public laws, Federal Register",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "Regulations.gov",
+    "url": "https://www.regulations.gov/",
+    "pulls": "Agency AI rulemakings",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "White House presidential actions",
+    "url": "https://www.whitehouse.gov/presidential-actions/",
+    "pulls": "AI executive orders",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "US State Department",
+    "url": "https://www.state.gov/",
+    "pulls": "US-China readouts and joint statements",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "PRC Ministry of Foreign Affairs",
+    "url": "https://www.fmprc.gov.cn/eng/",
+    "pulls": "Chinese readouts on AI dialogue",
+    "cadence": "continuous",
+    "tier": "primary"
+   },
+   {
+    "name": "UN Global Digital Compact",
+    "url": "https://www.un.org/global-digital-compact/en",
+    "pulls": "UN scientific panel and global dialogue on AI governance",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "GovAI research",
+    "url": "https://www.governance.ai/research",
+    "pulls": "Compute governance and verification research",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "CSET",
+    "url": "https://cset.georgetown.edu/",
+    "pulls": "Export-control and compute analysis",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "V-Dem",
+    "url": "https://www.v-dem.net/",
+    "pulls": "Democracy indices for the hinge",
+    "cadence": "annual (March)",
+    "tier": "institutional"
+   },
+   {
+    "name": "Freedom in the World",
+    "url": "https://freedomhouse.org/report/freedom-world",
+    "pulls": "Political rights and civil liberties",
+    "cadence": "annual (Feb)",
+    "tier": "institutional"
+   },
+   {
+    "name": "Metaculus",
+    "url": "https://www.metaculus.com/questions/",
+    "pulls": "Community forecasts (calibration check only)",
+    "cadence": "continuous",
+    "tier": "weak"
+   },
+   {
+    "name": "Forecasting Research Institute",
+    "url": "https://forecastingresearch.org/",
+    "pulls": "Forecast accuracy research on AI progress",
+    "cadence": "irregular",
+    "tier": "institutional"
+   }
+  ],
+  "risk": [
+   {
+    "name": "Bulletin Doomsday Clock",
+    "url": "https://thebulletin.org/doomsday-clock/",
+    "pulls": "Current setting and statement (85 s, 27 Jan 2026)",
+    "cadence": "annual (late January)",
+    "tier": "institutional"
+   },
+   {
+    "name": "SIPRI",
+    "url": "https://www.sipri.org/",
+    "pulls": "Yearbook: nuclear forces",
+    "cadence": "annual (June)",
+    "tier": "institutional"
+   },
+   {
+    "name": "CISA cybersecurity advisories",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+    "pulls": "Joint advisories, alerts, emergency directives",
+    "cadence": "several per week",
+    "tier": "primary"
+   },
+   {
+    "name": "NCSC threat reports",
+    "url": "https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports",
+    "pulls": "UK threat reporting incl. AI-enabled tradecraft",
+    "cadence": "weekly",
+    "tier": "primary"
+   },
+   {
+    "name": "ENISA",
+    "url": "https://www.enisa.europa.eu/",
+    "pulls": "EU Threat Landscape (Oct) and incident reporting",
+    "cadence": "annual / rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "Canadian Centre for Cyber Security",
+    "url": "https://www.cyber.gc.ca/en/guidance",
+    "pulls": "Advisories and threat assessments",
+    "cadence": "weekly",
+    "tier": "primary"
+   },
+   {
+    "name": "Verizon DBIR",
+    "url": "https://www.verizon.com/business/resources/reports/dbir/",
+    "pulls": "Breach statistics (vendor, methods public)",
+    "cadence": "annual (May)",
+    "tier": "vendor"
+   },
+   {
+    "name": "Microsoft Security Insider",
+    "url": "https://www.microsoft.com/en-us/security/security-insider/",
+    "pulls": "Digital Defense Report and threat intelligence (vendor)",
+    "cadence": "annual (Oct) / rolling",
+    "tier": "vendor"
+   },
+   {
+    "name": "Lloyd's",
+    "url": "https://www.lloyds.com/",
+    "pulls": "Systemic cyber scenarios and market reports",
+    "cadence": "irregular",
+    "tier": "trade"
+   },
+   {
+    "name": "Munich Re",
+    "url": "https://www.munichre.com/en.html",
+    "pulls": "Cyber insurance market outlook",
+    "cadence": "annual",
+    "tier": "trade"
+   },
+   {
+    "name": "Marsh",
+    "url": "https://www.marsh.com/",
+    "pulls": "Global Insurance Market Index (cyber pricing)",
+    "cadence": "quarterly",
+    "tier": "trade"
+   },
+   {
+    "name": "WHO Disease Outbreak News",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news",
+    "pulls": "Outbreak notifications",
+    "cadence": "weekly",
+    "tier": "primary"
+   },
+   {
+    "name": "ECDC",
+    "url": "https://www.ecdc.europa.eu/en",
+    "pulls": "EU threat reports",
+    "cadence": "weekly",
+    "tier": "primary"
+   },
+   {
+    "name": "ProMED",
+    "url": "https://promedmail.org/",
+    "pulls": "Early outbreak alerts (leads)",
+    "cadence": "daily",
+    "tier": "institutional"
+   },
+   {
+    "name": "SecureBio",
+    "url": "https://www.securebio.org/",
+    "pulls": "Biosecurity evaluation and biosurveillance research",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "UK AISI research",
+    "url": "https://www.aisi.gov.uk/research",
+    "pulls": "Bio and cyber capability evaluations of frontier models",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "AI Incident Database",
+    "url": "https://incidentdatabase.ai/",
+    "pulls": "Curated AI incidents",
+    "cadence": "weekly",
+    "tier": "institutional"
+   },
+   {
+    "name": "OECD AI Incidents Monitor",
+    "url": "https://oecd.ai/en/incidents",
+    "pulls": "Automated incident feed (leads only)",
+    "cadence": "continuous",
+    "tier": "weak"
+   },
+   {
+    "name": "RAND AI",
+    "url": "https://www.rand.org/topics/artificial-intelligence.html",
+    "pulls": "Risk and policy research",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "Frontier Model Forum",
+    "url": "https://www.frontiermodelforum.org/",
+    "pulls": "Industry safety commitments (vendor consortium)",
+    "cadence": "irregular",
+    "tier": "vendor"
+   }
+  ]
+ },
+ "metrics": {
+  "population": [
+   {
+    "name": "UN World Population Prospects",
+    "url": "https://population.un.org/wpp/",
+    "pulls": "Population, fertility, peak year; revision year",
+    "cadence": "biennial",
+    "tier": "primary"
+   },
+   {
+    "name": "UN Population Division data portal",
+    "url": "https://population.un.org/dataportal/home",
+    "pulls": "Annual estimate series for observed anchors",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "World Bank total fertility rate",
+    "url": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN",
+    "pulls": "TFR by country",
+    "cadence": "annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "Census International Database",
+    "url": "https://www.census.gov/data-tools/demo/idb/",
+    "pulls": "Independent projections for cross-check",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "Our World in Data population",
+    "url": "https://ourworldindata.org/population-growth",
+    "pulls": "Charting and long series",
+    "cadence": "rolling",
+    "tier": "institutional"
+   }
+  ],
+  "lifespan": [
+   {
+    "name": "WHO Global Health Estimates",
+    "url": "https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates",
+    "pulls": "Life expectancy at birth by country",
+    "cadence": "biennial",
+    "tier": "primary"
+   },
+   {
+    "name": "Human Mortality Database",
+    "url": "https://www.mortality.org/",
+    "pulls": "Reference LE series for high-income countries",
+    "cadence": "rolling",
+    "tier": "institutional"
+   },
+   {
+    "name": "ONS life expectancies",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/lifeexpectancies",
+    "pulls": "UK national LE",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "World Bank life expectancy",
+    "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN",
+    "pulls": "LE by country",
+    "cadence": "annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "IHME",
+    "url": "https://www.healthdata.org/",
+    "pulls": "GBD modelled LE (cite edition)",
+    "cadence": "periodic",
+    "tier": "institutional"
+   },
+   {
+    "name": "Our World in Data life expectancy",
+    "url": "https://ourworldindata.org/life-expectancy",
+    "pulls": "Charting",
+    "cadence": "rolling",
+    "tier": "institutional"
+   }
+  ],
+  "ai-share": [
+   {
+    "name": "Census BTOS",
+    "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+    "pulls": "Firm AI-use rate (19.8% at 3 May 2026)",
+    "cadence": "biweekly",
+    "tier": "primary"
+   },
+   {
+    "name": "Census story on AI use",
+    "url": "https://census.gov/library/stories/2026/05/ai-use-businesses.html",
+    "pulls": "BTOS AI-use summary by firm size",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "Fed FEDS Note: monitoring AI adoption",
+    "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+    "pulls": "Worker-level and employment-weighted adoption from BTOS, RPS, SBU",
+    "cadence": "irregular",
+    "tier": "primary"
+   },
+   {
+    "name": "Atlanta Fed Survey of Business Uncertainty",
+    "url": "https://www.atlantafed.org/research/surveys/business-uncertainty",
+    "pulls": "Executive survey incl. AI adoption",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "Anthropic Economic Index",
+    "url": "https://www.anthropic.com/economic-index",
+    "pulls": "Task-level augmentation vs automation (one platform)",
+    "cadence": "periodic",
+    "tier": "vendor"
+   },
+   {
+    "name": "Ramp AI Index",
+    "url": "https://www.ramp.com/data/ai-index",
+    "pulls": "Paid business AI adoption from card data",
+    "cadence": "monthly",
+    "tier": "vendor"
+   },
+   {
+    "name": "Stanford AI Index",
+    "url": "https://aiindex.stanford.edu/report/",
+    "pulls": "Annual adoption and economy chapter",
+    "cadence": "annual (April)",
+    "tier": "institutional"
+   }
+  ],
+  "work-hours": [
+   {
+    "name": "BLS Employment Situation archive",
+    "url": "https://www.bls.gov/bls/news-release/empsit.htm",
+    "pulls": "Average weekly hours, all private employees",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "OECD Data Explorer",
+    "url": "https://data-explorer.oecd.org/",
+    "pulls": "Average annual hours per worker",
+    "cadence": "annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "ILO data and statistics",
+    "url": "https://www.ilo.org/data-and-statistics",
+    "pulls": "Mean weekly hours by country",
+    "cadence": "annual",
+    "tier": "primary"
+   },
+   {
+    "name": "Our World in Data working hours",
+    "url": "https://ourworldindata.org/working-hours",
+    "pulls": "Long-run series",
+    "cadence": "rolling",
+    "tier": "institutional"
+   },
+   {
+    "name": "OECD Employment Outlook 2026",
+    "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en/full-report.html",
+    "pulls": "Hours and labour-market context",
+    "cadence": "annual (July)",
+    "tier": "institutional"
+   }
+  ],
+  "warming": [
+   {
+    "name": "Copernicus C3S Climate Bulletins",
+    "url": "https://climate.copernicus.eu/climate-bulletins",
+    "pulls": "Monthly ERA5 anomaly vs 1850-1900; 12-month running mean",
+    "cadence": "monthly (early month)",
+    "tier": "primary"
+   },
+   {
+    "name": "NOAA NCEI global monthly report",
+    "url": "https://www.ncei.noaa.gov/access/monitoring/monthly-report/global/",
+    "pulls": "Monthly global anomaly, NOAAGlobalTemp",
+    "cadence": "monthly (mid-month)",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA GISTEMP",
+    "url": "https://data.giss.nasa.gov/gistemp/",
+    "pulls": "Monthly global anomaly",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "HadCRUT5",
+    "url": "https://www.metoffice.gov.uk/hadobs/hadcrut5/",
+    "pulls": "Monthly global anomaly",
+    "cadence": "monthly",
+    "tier": "primary"
+   },
+   {
+    "name": "Berkeley Earth",
+    "url": "https://berkeleyearth.org/data/",
+    "pulls": "Monthly data and annual probability statements",
+    "cadence": "monthly / annual",
+    "tier": "institutional"
+   },
+   {
+    "name": "WMO annual-to-decadal update",
+    "url": "https://wmo.int/publication-series/wmo-global-annual-decadal-climate-update-2025-2029",
+    "pulls": "Probability of 5-year mean above 1.5C",
+    "cadence": "annual (May)",
+    "tier": "institutional"
+   },
+   {
+    "name": "WMO State of the Global Climate",
+    "url": "https://wmo.int/publication-series/state-of-global-climate-2024",
+    "pulls": "Multi-dataset annual mean for observed anchors",
+    "cadence": "annual (March)",
+    "tier": "institutional"
+   }
+  ],
+  "off-earth": [
+   {
+    "name": "Who Is In Space",
+    "url": "https://www.whoisinspace.com/",
+    "pulls": "Live headcount of humans in space",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Jonathan's Space Report: human spaceflight",
+    "url": "https://planet4589.org/space/astro/web/pop.html",
+    "pulls": "Authoritative census, person-days in space",
+    "cadence": "rolling",
+    "tier": "institutional"
+   },
+   {
+    "name": "NASA ISS",
+    "url": "https://www.nasa.gov/missions/station/",
+    "pulls": "Crew rotations, station end-of-life",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "CNSA (English)",
+    "url": "https://www.cnsa.gov.cn/english/",
+    "pulls": "Tiangong crews, ILRS, crewed lunar programme",
+    "cadence": "rolling",
+    "tier": "primary"
+   },
+   {
+    "name": "NASA commercial LEO destinations",
+    "url": "https://www.nasa.gov/humans-in-space/commercial-space/low-earth-orbit-economy/commercial-destinations-in-low-earth-orbit/",
+    "pulls": "Post-ISS station awards and milestones",
+    "cadence": "rolling",
+    "tier": "primary"
+   }
+  ],
+  "frontier-actors": [
+   {
+    "name": "Epoch AI models dataset",
+    "url": "https://epoch.ai/data/ai-models",
+    "pulls": "Per-model training compute, accessibility, publication date",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch open vs closed ECI gap",
+    "url": "https://epoch.ai/data-insights/open-closed-eci-gap",
+    "pulls": "Open-weight lag in months on ECI (~4 months, May 2026)",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch US vs China ECI gap",
+    "url": "https://epoch.ai/data-insights/us-vs-china-eci",
+    "pulls": "China-US frontier lag in months (~7, Jan 2026)",
+    "cadence": "irregular",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch AI data centers",
+    "url": "https://epoch.ai/data/data-centers",
+    "pulls": "Compute concentration by owner for compute-ownership",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Epoch AI companies",
+    "url": "https://epoch.ai/data/ai-companies",
+    "pulls": "Frontier developer list and resources",
+    "cadence": "continuous",
+    "tier": "institutional"
+   },
+   {
+    "name": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/",
+    "pulls": "Independent intelligence index; open vs proprietary filter",
+    "cadence": "continuous",
+    "tier": "trade"
+   },
+   {
+    "name": "Stanford AI Index",
+    "url": "https://aiindex.stanford.edu/report/",
+    "pulls": "Annual chapters: open/closed gap, compute, labor, policy",
+    "cadence": "annual (April)",
+    "tier": "institutional"
+   }
+  ],
+  "clock": [
+   {
+    "name": "Bulletin Doomsday Clock",
+    "url": "https://thebulletin.org/doomsday-clock/",
+    "pulls": "Current setting and statement (85 s, 27 Jan 2026)",
+    "cadence": "annual (late January)",
+    "tier": "institutional"
+   },
+   {
+    "name": "SIPRI",
+    "url": "https://www.sipri.org/",
+    "pulls": "Yearbook: nuclear forces",
+    "cadence": "annual (June)",
+    "tier": "institutional"
+   },
+   {
+    "name": "CISA cybersecurity advisories",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories",
+    "pulls": "Joint advisories, alerts, emergency directives",
+    "cadence": "several per week",
+    "tier": "primary"
+   },
+   {
+    "name": "WHO Disease Outbreak News",
+    "url": "https://www.who.int/emergencies/disease-outbreak-news",
+    "pulls": "Outbreak notifications",
+    "cadence": "weekly",
+    "tier": "primary"
+   }
+  ]
+ },
+ "avoid": [
+  {
+   "pattern": "Vendor newsrooms, launch posts, CEO interviews for capability, deployment or schedule claims",
+   "why": "The claimant benefits; 'deployed', 'net energy', 'AI-designed' get redefined. Lead only; cite with an independent eval, regulator record or on-record customer."
+  },
+  {
+   "pattern": "SEO explainers and aggregator sites summarising FDA counts, state AI laws, IEA figures",
+   "why": "Second-hand, undated, frequently wrong on counts and dates. Go to the primary they summarise."
+  },
+  {
+   "pattern": "Prediction-market odds (Polymarket, Kalshi, Manifold) or Metaculus medians as sole evidence",
+   "why": "Thin liquidity, resolution mismatch, reflexive with news; they are forecasts not observations. Use as a calibration flag (>15-point divergence) and cite the underlying event."
+  },
+  {
+   "pattern": "Automated incident or news feeds (OECD AIM, news digests, Climate Reanalyzer daily values)",
+   "why": "Duplicates and misclassification; leads to the underlying advisory or dataset only."
+  },
+  {
+   "pattern": "Advocacy groups on their own cause (BIEN, 4 Day Week Global, FLI index, industry associations on timelines)",
+   "why": "Selection effects and member self-reports. Use to discover; confirm in statute, gazette or statistical office."
+  },
+  {
+   "pattern": "Consulting 'state of AI' surveys (McKinsey, Gartner, WEF) for adoption or displacement numbers",
+   "why": "Self-selected executive samples, lead-gen framing, incomparable across years. Use Census BTOS, Fed notes, BLS, NY Fed."
+  },
+  {
+   "pattern": "Scenario documents (AI 2027, lab 'pathways' posts)",
+   "why": "They are forecasts like this one; compare, never cite as evidence."
+  },
+  {
+   "pattern": "Wikipedia and tertiary reference sites",
+   "why": "Follow their citations to the primary."
+  },
+  {
+   "pattern": "Paywalled press as the only source for a fact",
+   "why": "Unverifiable to readers; find the primary document, else cite and mark 'paywalled'."
+  },
+  {
+   "pattern": "Single-month temperature records, single-day prices, single-benchmark SOTA claims",
+   "why": "Noise; use 12-month means, monthly averages, multi-benchmark indices."
+  },
+  {
+   "pattern": "Undated or unversioned dataset pulls",
+   "why": "UN WPP, BLS, Epoch all revise; cite edition and access date."
+  }
+ ],
+ "queries": {
+  "weekly": [
+   "site:epoch.ai OR site:metr.org OR site:artificialanalysis.ai new model (frontier releases, horizons)",
+   "open-weight model release capabilities \"Epoch Capabilities Index\" OR \"Artificial Analysis Intelligence Index\" (open-weights-gap)",
+   "\"automated research\" OR \"AI scientist\" lab results end-to-end training run cadence (ai-runs-rd-programs, research-loop)",
+   "frontier compute share hyperscaler GW data center Epoch \"AI data centers\" (compute-ownership)",
+   "BIS export controls AI chips rule OR entity list (compute-verification-talks)",
+   "US China AI dialogue compute verification \"joint statement\" (compute-treaty)",
+   "CISA advisory autonomous OR \"AI-enabled\" intrusion utility OR payments (ai-cyberattack-infrastructure)",
+   "cyber insurance rate index repricing AI (ai-cyberattack-infrastructure signal)",
+   "AISI OR CAISI frontier model evaluation cyber biological uplift (incidents, mass-casualty-event)",
+   "Census BTOS AI use rate; \"AI adoption\" FEDS Notes OR Atlanta Fed survey (agents-default-knowledge-work, ai-share)",
+   "agent seats enterprise contract procurement \"per agent\" pricing (agents-default-knowledge-work)",
+   "bar association OR AICPA generative AI ethics opinion supervision (agents-default-knowledge-work)",
+   "New York Fed recent college graduates unemployment; BLS employment situation unemployment bachelor's 20-24 (entry-level-hiring-contracts)",
+   "analyst class size cut OR hiring freeze junior consulting law bank AI (entry-level-hiring-contracts)",
+   "AI bill passed Senate OR House \"artificial intelligence\" congress.gov; AI executive order OR preemption state AI laws (federal-ai-statute)",
+   "2028 presidential candidate AI policy data center compute plank (first-ai-election)",
+   "FDA approves \"AI-discovered\" OR \"AI-designed\" drug Phase 3 results (ai-drugs-phase-iii, ai-chemistry-majority)",
+   "FDA guidance artificial intelligence drug development final (ai-drugs-phase-iii)",
+   "geroprotective trial all-cause mortality OR aging biomarker surrogate endpoint FDA qualification (aging-therapy-approved)",
+   "fusion \"power purchase agreement\" OR \"net electricity\" grid utility; NIF gain OR ITER schedule (fusion-net-grid)",
+   "negative wholesale electricity prices daylight solar record; data center siting power price decision (fusion-net-grid signals, labor-cost-irrelevant)",
+   "humanoid robot shipped units price hospital deployment (humanoids-in-homes)",
+   "Artemis III OR Artemis IV schedule GAO OR OIG OR NASA; HLS Starship OR Blue Moon milestone (lunar-base-occupied)",
+   "Tiangong OR ISS crew rotation; commercial space station CLD award (off-earth)",
+   "Copernicus monthly bulletin global temperature anomaly; NOAA NCEI global climate report (warming)",
+   "global CO2 emissions peak Global Carbon Budget OR IEA; direct air capture capacity delivered tonnes (two-degrees-breached)",
+   "stratospheric aerosol injection national program funded OR outdoor experiment (geoengineering-unilateral)",
+   "UN World Population Prospects revision; total fertility rate record low OECD country (population-peak)",
+   "basic income national law passed; four-day week legislation G7 (ubi-pilots-national, labor-response)",
+   "WHO disease outbreak news; DNA synthesis screening policy OR biosecurity incident (incidents)"
+  ],
+  "quarterly": [
+   "Doomsday Clock statement (January); SIPRI Yearbook nuclear forces (June) (clock)",
+   "WMO annual-to-decadal climate update probability 1.5 (May); WMO State of the Global Climate (March) (warming annual anchor)",
+   "Stanford AI Index (April); International AI Safety Report (February); State of AI Report (October) (ai lines, frontier-actors)",
+   "OECD Employment Outlook (July); IFR World Robotics (Sept/Oct); Fusion Industry Association report (July); Lazard LCOE (June); IEA World Energy Outlook (November) (work-hours, humanoids-in-homes, fusion-net-grid, labor-cost-irrelevant)",
+   "V-Dem (March); Freedom in the World (February); Global Carbon Budget (Nov/Dec); UNEP Emissions Gap (November); FDA novel approvals annual summary (January); GAO NASA major projects (June/July) (hinge, two-degrees-breached, ai-chemistry-majority, lunar-base-occupied)"
+  ]
+ },
+ "rules": [
+  "One primary or it did not happen: a probability moves only on a document from the measuring institution, regulator, legislature or an independent evaluator; press and vendor posts are leads that must resolve to such a document, else they go in the changelog body, not in sources.",
+  "A single vendor claim is a signal, never a resolution: it may move a reading by at most 0.1 or a probability by at most 2 points, only when specific (units, dates, customers), and the history entry says 'vendor claim, unverified'; two vendors saying the same thing are still one claim.",
+  "Independent evaluation beats self-report and the stricter metric beats the looser: METR/AISI/Epoch over lab benchmarks; regulator or grid-operator records over announcements; BLS/NY Fed over company statements.",
+  "Measure against the forecast's own definition: restate the line's test before citing (e.g. 'net electricity to a grid' = metered export confirmed by the ISO or utility); a source answering a different question does not count.",
+  "Paywalled primaries are citable (DOI/URL, title, date, exact sentence in history.reason); paywalled press only when no underlying document exists, marked 'paywalled' in the history entry.",
+  "Prediction-market moves count only with a named cause: flag a market diverging more than 15 points from a line, find the event behind it, and cite the event's source, never the price.",
+  "Cite datasets by edition and access date: 'Publisher, Dataset (revision), accessed YYYY-MM-DD, URL'; observed points in metrics.json carry the edition in their note.",
+  "One month is weather, twelve months is a reading: cite running annual or multi-benchmark figures for warming, prices, hiring and capability; a record month alone cannot move a probability.",
+  "Conflicting primaries: record both numbers in the history entry and lean on the slower-moving, more conservative one.",
+  "Resolving a line (happened, partial, early, late, missed) needs at least two independent primaries, or one primary plus an institutional or peer-reviewed confirmation, plus a date, all in history.sources.",
+  "Only cite pages you actually opened: for bot-blocked hosts (BLS, CISA, congress.gov, OECD, IEA, CDC, NCSL, GAO) use the registry's alternative host or search-then-fetch route; if it still fails, do not cite it and leave a note for the desktop run.",
+  "Each sourced history entry says what the source would have had to show to move the line the other way.",
+  "Refresh the registry quarterly: moved pages and dead links go in sources.json; a source failing twice in a row is demoted or replaced with a changelog note."
+ ]
+}

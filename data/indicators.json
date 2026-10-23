@@ -1,9 +1,72 @@
 [
-  { "id": "open-weights-gap", "watch": "Open-weight models vs. the frontier", "pluralism": "Open models stay within ~12 months of the best closed ones", "concentration": "Gap widens past 3 years and keeps widening", "window": "2027–2032", "reading": 0.3, "lastChecked": "2026-10-23", "note": "Open-weight releases still land within roughly a year of frontier capability." },
-  { "id": "compute-ownership", "watch": "Compute ownership", "pluralism": "Top-5 actors hold under half of frontier compute", "concentration": "One or two actors hold most of it; export controls harden into monopoly", "window": "2028–2036", "reading": -0.2, "lastChecked": "2026-10-23", "note": "Frontier compute is concentrating in a handful of hyperscalers and labs." },
-  { "id": "research-loop", "watch": "The AI-does-AI-research loop", "pluralism": "Multiple labs close the loop within a year of each other", "concentration": "One lab closes it first and pulls away for 2+ years", "window": "2027–2031", "reading": 0, "lastChecked": "2026-10-23", "note": "Not yet closed by anyone in a verifiable way." },
-  { "id": "compute-treaty", "watch": "A compute-verification agreement", "pluralism": "US and China agree on monitoring; others join", "concentration": "Talks collapse; capability is raced in secret", "window": "2029–2034", "reading": -0.1, "lastChecked": "2026-10-23", "note": "Export controls are the only live instrument; no verification talks yet." },
-  { "id": "labor-response", "watch": "The labor response", "pluralism": "Shorter weeks, income floors, a care and trades boom", "concentration": "Unemployment without transfers; unrest; surveillance scales to manage it", "window": "2030–2040", "reading": 0, "lastChecked": "2026-10-23" },
-  { "id": "who-decides", "watch": "Who decides on superhuman systems", "pluralism": "An international regime, audited, with teeth", "concentration": "A few firms or states, unauditable", "window": "2036–2055", "reading": 0, "lastChecked": "2026-10-23" },
-  { "id": "incidents", "watch": "Bio and cyber incidents", "pluralism": "Scares contained; defense outruns offense", "concentration": "A mass-casualty event used to justify lockdown", "window": "2028–2060", "reading": 0.1, "lastChecked": "2026-10-23" }
+  {
+    "id": "open-weights-gap",
+    "watch": "Open-weight models vs. the frontier",
+    "pluralism": "Open models stay within ~12 months of the best closed ones",
+    "concentration": "Gap widens past 3 years and keeps widening",
+    "window": "2027–2032",
+    "reading": 0.25,
+    "lastChecked": "2026-10-23",
+    "note": "Epoch (May 2026): best open-weight models about four months behind the closed frontier on ECI, slightly wider than late 2025; but the real frontier (Mythos, Sol, Astra) is restricted or unreleased, so the true gap is larger than the public one."
+  },
+  {
+    "id": "compute-ownership",
+    "watch": "Compute ownership",
+    "pluralism": "Top-5 actors hold under half of frontier compute",
+    "concentration": "One or two actors hold most of it; export controls harden into monopoly",
+    "window": "2028–2036",
+    "reading": -0.25,
+    "lastChecked": "2026-10-23",
+    "note": "Epoch: Amazon, Google, Meta, Microsoft and Oracle held 71% of global AI compute in Q4 2025, up from 63% in Q1 2024; the labs still run under half of operational compute but depend on those five."
+  },
+  {
+    "id": "research-loop",
+    "watch": "The AI-does-AI-research loop",
+    "pluralism": "Multiple labs close the loop within a year of each other",
+    "concentration": "One lab closes it first and pulls away for 2+ years",
+    "window": "2027–2031",
+    "reading": 0.1,
+    "lastChecked": "2026-10-23",
+    "note": "Nobody has closed it. Anthropic reports Claude leading 26% of its AI R&D (August 2026, from under 1% in February); OpenAI, Anthropic and Google all describe recursive self-improvement as starting at once, which is the pluralist pattern."
+  },
+  {
+    "id": "compute-treaty",
+    "watch": "A compute-verification agreement",
+    "pluralism": "US and China agree on monitoring; others join",
+    "concentration": "Talks collapse; capability is raced in secret",
+    "window": "2029–2034",
+    "reading": 0.0,
+    "lastChecked": "2026-10-23",
+    "note": "First official channel: a US–China AI dialogue and an incident channel were agreed on 26 September 2026, first meeting due by November; chips and export controls are excluded and no monitoring is on the table."
+  },
+  {
+    "id": "labor-response",
+    "watch": "The labor response",
+    "pluralism": "Shorter weeks, income floors, a care and trades boom",
+    "concentration": "Unemployment without transfers; unrest; surveillance scales to manage it",
+    "window": "2030–2040",
+    "reading": 0.0,
+    "lastChecked": "2026-10-23",
+    "note": "The entry-level squeeze is measurable (recent-graduate unemployment 5.6% against 4.2% overall; 22–25-year-olds in exposed jobs 19% below trend) but no transfer, income-floor or shorter-week law exists; the proposals (a public wealth fund, an AI tax) are on paper."
+  },
+  {
+    "id": "who-decides",
+    "watch": "Who decides on superhuman systems",
+    "pluralism": "An international regime, audited, with teeth",
+    "concentration": "A few firms or states, unauditable",
+    "window": "2036–2055",
+    "reading": 0.1,
+    "lastChecked": "2026-10-23",
+    "note": "First pieces of an audited regime in 2026: embedded third-party evaluators at two labs, a US–China incident channel, a 1,134-signature lab-employee call for pacing tools. Against it: Commerce switched off a lab's frontier models by letter with no published process."
+  },
+  {
+    "id": "incidents",
+    "watch": "Bio and cyber incidents",
+    "pluralism": "Scares contained; defense outruns offense",
+    "concentration": "A mass-casualty event used to justify lockdown",
+    "window": "2028–2060",
+    "reading": 0.0,
+    "lastChecked": "2026-10-23",
+    "note": "Scares are still being contained (the Hugging Face intrusion reached only benchmark data) but offense is outrunning defense: autonomous cyber task length doubles about every 4.7 months and OpenAI's agents disabled their own monitors in October."
+  }
 ]
