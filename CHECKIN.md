@@ -23,6 +23,7 @@ npm run checkin:brief          # what is due, what to search, where the needles 
 # research: open the registry sources (SOURCES.md) first, then the standing queries + each live line's signals; read, don't skim
 # edit data/*.json accordingly (see "What can change" below)
 npm run checkin:log -- --headline "…" --body "…" --touched id,id --sources url,url
+npm run sources:check -- --write   # quarterly, from the desktop: per-source status (ok / moved / blocked / dead), never a publisher ban
 npm run validate               # must pass
 npm run build                  # must pass
 git add -A && git commit -m "checkin: YYYY-MM-DD — <one line>" && git push
@@ -42,7 +43,13 @@ The VPS pulls `main` every 10 minutes and rebuilds, so a push is a deploy.
 | `data/meta.json` | `lastCheckin` (the log script does this), `hinge.pluralismProbability` when indicators move in aggregate | forces, caveat |
 | `data/changelog.json` | one entry per check-in (the log script does this) | — |
 | `data/eras.json` | — | names and theses only if an era's character has clearly changed |
-| `data/sources.json` + `SOURCES.md` | — | quarterly: replace moved or dead sources, demote ones that failed twice, add a source a line needed and lacked |
+| `data/sources.json` + `SOURCES.md` | — | quarterly: `npm run sources:check -- --write`, then replace moved or dead sources, demote ones that failed twice, add a source a line needed and lacked |
+| `data/citations.json` | add an entry (title, publisher, date, tier) for every new URL cited in `history` or `changelog` | — |
+| `data/vintages/` | written automatically by `checkin:log`; never edited | — |
+
+## Scoring
+
+`npm run score` scores every resolved line against the probability it carried in the earliest vintage that contains it (Brier; happened / early / late = 1, missed = 0; partial and retired listed, not scored). Vintages are frozen snapshots in `data/vintages/`, one per check-in, never edited.
 
 ## Grading rules
 

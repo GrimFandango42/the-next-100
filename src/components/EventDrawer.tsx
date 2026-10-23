@@ -90,7 +90,7 @@ export function Detail() {
       <div className="block">
         <div className="eyebrow">Revision history</div>
         {e.history.length === 0 ? <p className="muted small">Unchanged since written on {data.meta.written}.</p> : (
-          <ul className="hist">{e.history.map((h, i) => <li key={i}><span className="mono">{h.date}</span> <b>{h.change}</b><br /><span className="muted">{h.reason}</span>{h.sources.length > 0 && <span className="src">{h.sources.map((s, j) => <a key={j} href={s} target="_blank" rel="noreferrer">[{j + 1}]</a>)}</span>}</li>)}</ul>
+          <ul className="hist">{e.history.map((h, i) => <li key={i}><span className="mono">{h.date}</span> <b>{h.change}</b><br /><span className="muted">{h.reason}</span>{h.sources.length > 0 && <ul className="cites">{h.sources.map((s, j) => <Cite key={j} url={s} />)}</ul>}</li>)}</ul>
         )}
       </div>
     </aside>
@@ -106,4 +106,13 @@ function Upcoming() {
       {next.map((e) => <button key={e.id} className="link" onClick={() => select(e.id)}><span className="mono" style={{ color: DOMAIN_META[e.domain].color }}>{e.year}</span> {e.title}</button>)}
     </div>
   );
+}
+
+export function Cite({ url }: { url: string }) {
+  const c = data.citations[url];
+  let host = url; try { host = new URL(url).hostname.replace(/^www\./, ""); } catch { /* keep */ }
+  return <li className={"cite" + (c?.status && c.status !== "ok" ? " " + c.status : "")}>
+    <a href={url} target="_blank" rel="noreferrer">{c?.title ?? host}</a>
+    <span className="cite-m">{[c?.publisher ?? host, c?.date, c?.tier].filter(Boolean).join(" · ")}{c?.status && c.status !== "ok" ? ` · ${c.status}` : ""}</span>
+  </li>;
 }

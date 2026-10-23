@@ -84,6 +84,9 @@ export const Era = z.object({
   thesis: z.string(),
   good: z.array(z.string()),
   bad: z.array(z.string()),
+  /** What changes for an ordinary life in this era, and the one uncertainty that matters most. */
+  life: z.string().optional(),
+  uncertainty: z.string().optional(),
 });
 export type Era = z.infer<typeof Era>;
 
@@ -125,6 +128,7 @@ export const Indicator = z.object({
   reading: z.number().min(-1).max(1).default(0),
   lastChecked: z.string().optional(),
   note: z.string().optional(),
+  sources: z.array(z.string().url()).default([]),
 });
 export type Indicator = z.infer<typeof Indicator>;
 
@@ -154,6 +158,10 @@ export const Meta = z.object({
 });
 export type Meta = z.infer<typeof Meta>;
 
+/** Who published what, so a source reads as publisher · title · date instead of [1]. Keyed by URL. */
+export const Citation = z.object({ title: z.string().nullable(), publisher: z.string().nullable(), date: z.string().nullable(), tier: z.string().optional(), status: z.string().optional(), checked: z.string().optional() });
+export type Citation = z.infer<typeof Citation>;
+
 export const Dataset = z.object({
   meta: Meta,
   events: z.array(ForecastEvent),
@@ -163,6 +171,7 @@ export const Dataset = z.object({
   scenarios: z.array(Scenario),
   indicators: z.array(Indicator),
   changelog: z.array(ChangelogEntry),
+  citations: z.record(z.string(), Citation).default({}),
 });
 export type Dataset = z.infer<typeof Dataset>;
 

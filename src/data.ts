@@ -7,8 +7,9 @@ import clock from "../data/clock.json";
 import scenarios from "../data/scenarios.json";
 import indicators from "../data/indicators.json";
 import changelog from "../data/changelog.json";
+import citations from "../data/citations.json";
 
-export const data = Dataset.parse({ meta, events, eras, metrics, clock, scenarios, indicators, changelog });
+export const data = Dataset.parse({ meta, events, eras, metrics, clock, scenarios, indicators, changelog, citations });
 export const YEAR_MIN = 2026;
 export const YEAR_MAX = 2200;
 /** Most forecast lines sit before 2070; open there and keep the long tail one click away. */

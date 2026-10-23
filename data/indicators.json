@@ -7,7 +7,12 @@
     "window": "2027–2032",
     "reading": 0.25,
     "lastChecked": "2026-10-23",
-    "note": "Epoch (May 2026): best open-weight models about four months behind the closed frontier on ECI, slightly wider than late 2025; but the real frontier (Mythos, Sol, Astra) is restricted or unreleased, so the true gap is larger than the public one."
+    "note": "Epoch (May 2026): best open-weight models about four months behind the closed frontier on ECI, slightly wider than late 2025; but the real frontier (Mythos, Sol, Astra) is restricted or unreleased, so the true gap is larger than the public one.",
+    "sources": [
+      "https://epoch.ai/data-insights/open-closed-eci-gap",
+      "https://epochai.substack.com/p/the-epoch-brief-june-1-2026",
+      "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+    ]
   },
   {
     "id": "compute-ownership",
@@ -17,7 +22,12 @@
     "window": "2028–2036",
     "reading": -0.25,
     "lastChecked": "2026-10-23",
-    "note": "Epoch: Amazon, Google, Meta, Microsoft and Oracle held 71% of global AI compute in Q4 2025, up from 63% in Q1 2024; the labs still run under half of operational compute but depend on those five."
+    "note": "Epoch: Amazon, Google, Meta, Microsoft and Oracle held 71% of global AI compute in Q4 2025, up from 63% in Q1 2024; the labs still run under half of operational compute but depend on those five.",
+    "sources": [
+      "https://epoch.ai/data-insights/hyperscalers-control-most-compute",
+      "https://epoch.ai/gradient-updates/frontier-labs-dont-use-most-ai-compute",
+      "https://epochai.substack.com/p/the-epoch-brief-june-1-2026"
+    ]
   },
   {
     "id": "research-loop",
@@ -27,7 +37,13 @@
     "window": "2027–2031",
     "reading": 0.1,
     "lastChecked": "2026-10-23",
-    "note": "Nobody has closed it. Anthropic reports Claude leading 26% of its AI R&D (August 2026, from under 1% in February); OpenAI, Anthropic and Google all describe recursive self-improvement as starting at once, which is the pluralist pattern."
+    "note": "Nobody has closed it. Anthropic reports Claude leading 26% of its AI R&D (August 2026, from under 1% in February); OpenAI, Anthropic and Google all describe recursive self-improvement as starting at once, which is the pluralist pattern.",
+    "sources": [
+      "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/",
+      "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
+    ]
   },
   {
     "id": "compute-treaty",
@@ -37,7 +53,13 @@
     "window": "2029–2034",
     "reading": 0.0,
     "lastChecked": "2026-10-23",
-    "note": "First official channel: a US–China AI dialogue and an incident channel were agreed on 26 September 2026, first meeting due by November; chips and export controls are excluded and no monitoring is on the table."
+    "note": "First official channel: a US–China AI dialogue and an incident channel were agreed on 26 September 2026, first meeting due by November; chips and export controls are excluded and no monitoring is on the table.",
+    "sources": [
+      "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+      "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles",
+      "https://www.aljazeera.com/news/2026/9/26/china-us-to-open-ai-communication-channel-after-summit-white-house-says",
+      "https://chinaselectcommittee.house.gov/media/press-releases/house-committee-passes-chip-security-act"
+    ]
   },
   {
     "id": "labor-response",
@@ -47,7 +69,13 @@
     "window": "2030–2040",
     "reading": 0.0,
     "lastChecked": "2026-10-23",
-    "note": "The entry-level squeeze is measurable (recent-graduate unemployment 5.6% against 4.2% overall; 22–25-year-olds in exposed jobs 19% below trend) but no transfer, income-floor or shorter-week law exists; the proposals (a public wealth fund, an AI tax) are on paper."
+    "note": "The entry-level squeeze is measurable (recent-graduate unemployment 5.6% against 4.2% overall; 22–25-year-olds in exposed jobs 19% below trend) but no transfer, income-floor or shorter-week law exists; the proposals (a public wealth fund, an AI tax) are on paper.",
+    "sources": [
+      "https://www.newyorkfed.org/research/college-labor-market",
+      "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+      "https://techcrunch.com/2026/04/06/openais-vision-for-the-ai-economy-public-wealth-funds-robot-taxes-and-a-four-day-work-week/"
+    ]
   },
   {
     "id": "who-decides",
@@ -57,7 +85,13 @@
     "window": "2036–2055",
     "reading": 0.1,
     "lastChecked": "2026-10-23",
-    "note": "First pieces of an audited regime in 2026: embedded third-party evaluators at two labs, a US–China incident channel, a 1,134-signature lab-employee call for pacing tools. Against it: Commerce switched off a lab's frontier models by letter with no published process."
+    "note": "First pieces of an audited regime in 2026: embedded third-party evaluators at two labs, a US–China incident channel, a 1,134-signature lab-employee call for pacing tools. Against it: Commerce switched off a lab's frontier models by letter with no published process.",
+    "sources": [
+      "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+      "https://thenextweb.com/news/pacing-the-frontier-ai-employees-letter-us-government",
+      "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next"
+    ]
   },
   {
     "id": "incidents",
@@ -67,6 +101,11 @@
     "window": "2028–2060",
     "reading": 0.0,
     "lastChecked": "2026-10-23",
-    "note": "Scares are still being contained (the Hugging Face intrusion reached only benchmark data) but offense is outrunning defense: autonomous cyber task length doubles about every 4.7 months and OpenAI's agents disabled their own monitors in October."
+    "note": "Scares are still being contained (the Hugging Face intrusion reached only benchmark data) but offense is outrunning defense: autonomous cyber task length doubles about every 4.7 months and OpenAI's agents disabled their own monitors in October.",
+    "sources": [
+      "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
+      "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+      "https://aljazeera.com/economy/2026/10/21/openai-says-its-agents-turned-off-own-safeguards"
+    ]
   }
 ]

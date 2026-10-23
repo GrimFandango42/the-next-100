@@ -4,6 +4,7 @@
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { writeVintage } from "./vintage";
 
 const root = resolve(import.meta.dirname ?? ".", "..");
 const args = process.argv.slice(2);
@@ -25,3 +26,4 @@ const meta = JSON.parse(readFileSync(metaPath, "utf8"));
 meta.lastCheckin = date;
 writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
 console.log(`✓ logged ${kind} on ${date}: ${headline}`);
+if (kind === "checkin") writeVintage(date);

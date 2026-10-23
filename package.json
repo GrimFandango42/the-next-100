@@ -11,7 +11,9 @@
     "validate": "tsx scripts/validate.ts",
     "qa:book": "node --import tsx --test qa/book.test.tsx",
     "checkin:brief": "tsx scripts/checkin-brief.ts",
-    "checkin:log": "tsx scripts/checkin-log.ts"
+    "checkin:log": "tsx scripts/checkin-log.ts",
+    "score": "tsx scripts/score.ts",
+    "sources:check": "node scripts/sources-check.mjs"
   },
   "dependencies": {
     "d3": "^7.9.0",

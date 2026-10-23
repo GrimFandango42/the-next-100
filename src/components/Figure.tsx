@@ -48,7 +48,7 @@ export default function Figure({ ev, branch, year, active }: { ev: ForecastEvent
   const [img, setImg] = useState<string | null>(`/moments/${ev.id}.webp`);
   useEffect(() => setImg(`/moments/${ev.id}.webp`), [ev.id]);
   return (
-    <div className={"figure" + (active ? " live" : "")} style={{ ["--d" as any]: color }} aria-hidden="true">
+    <div className={"figure" + (active ? " live" : "")} style={{ ["--d" as any]: color }} role="img" aria-label={`${ev.hero?.label ?? ev.title}: a figure drawn from the forecast's numbers`}>
       {img && <img className="fig-art" src={img} alt="" onError={() => setImg(null)} />}
       {kind === "stripes" && metric && <Stripes m={metric} branch={branch} year={year} ev={ev} />}
       {kind === "field" && <Field ev={ev} metric={metric} branch={branch} year={year} />}
@@ -114,7 +114,7 @@ function Curve({ m, branch, year, ev }: { m: Metric; branch: Branch; year: numbe
   const log = m.scale === "log";
   const vals = [...a, ...b, ...(m.reference[0]?.points ?? [])].map((k) => k[1]);
   const lo = log ? Math.log10(Math.max(1, Math.min(...vals))) : Math.min(...vals) * 0.92, hi = log ? Math.log10(Math.max(...vals)) : Math.max(...vals) * 1.05;
-  const px = 44, py = 40, pw = W - px - 24, ph = H - py - 60;
+  const px = 64, py = 40, pw = W - px - 24, ph = H - py - 60;
   const X = (y: number) => px + ((y - 2026) / 174) * pw;
   const Y = (v: number) => py + ph - (((log ? Math.log10(Math.max(1, v)) : v) - lo) / (hi - lo || 1)) * ph;
   const path = (kf: [number, number][]) => kf.map((k, i) => `${i ? "L" : "M"}${X(k[0]).toFixed(1)},${Y(k[1]).toFixed(1)}`).join(" ");
@@ -124,18 +124,21 @@ function Curve({ m, branch, year, ev }: { m: Metric; branch: Branch; year: numbe
   const same = a === b;
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="fig">
+      <title>{m.label}: {f.value}{f.unit} in {yr} on the {branch} path{ref ? `; ${ref.label} shown dotted` : ""}{m.observed.length ? `; ${m.observed.length} observed point${m.observed.length > 1 ? "s" : ""}` : ""}.</title>
       <line x1={px} x2={px + pw} y1={py + ph} y2={py + ph} stroke="rgba(255,255,255,.18)" />
+      {[0, 0.5, 1].map((t) => { const vv = log ? Math.pow(10, lo + (hi - lo) * t) : lo + (hi - lo) * t; const yy = py + ph - t * ph; return <g key={t}><line x1={px - 6} x2={px + pw} y1={yy} y2={yy} stroke="rgba(255,255,255,.08)" /><text x={px - 10} y={yy + 4} textAnchor="end" className="fig-mono fig-dim">{fmt(m, vv).value}{fmt(m, vv).unit}</text></g>; })}
       {!same && <path d={path(b)} fill="none" stroke="rgba(255,255,255,.35)" strokeWidth={1.5} strokeDasharray="4 5" />}
       {ref && <path d={path(ref.points as [number, number][])} fill="none" stroke="#fff" strokeOpacity={0.55} strokeWidth={2} strokeDasharray="1 6" strokeLinecap="round" />}
-      {ref && <text x={X(ref.points[ref.points.length - 1][0]) - 6} y={Y(ref.points[ref.points.length - 1][1]) - 10} textAnchor="end" className="fig-mono fig-dim">{ref.label}: {fmt(m, ref.points[ref.points.length - 1][1]).value}{fmt(m, ref.points[ref.points.length - 1][1]).unit}</text>}
+      {ref && <text x={X(ref.points[ref.points.length - 1][0]) + 8} y={Y(ref.points[ref.points.length - 1][1]) + 4} textAnchor="start" className="fig-mono fig-dim">{ref.label}: {fmt(m, ref.points[ref.points.length - 1][1]).value}{fmt(m, ref.points[ref.points.length - 1][1]).unit}</text>}
       <path d={path(a) + ` L${X(2200).toFixed(1)},${(py + ph).toFixed(1)} L${X(2026).toFixed(1)},${(py + ph).toFixed(1)} Z`} fill="var(--d)" opacity={0.12} />
       <path d={path(a)} fill="none" stroke="var(--d)" strokeWidth={3} strokeLinejoin="round" />
+      {m.observed.map((o) => { const oy = Number(String(o.date).slice(0, 4)); return <circle key={o.date} cx={X(oy)} cy={Y(o.value)} r={5} fill="#fff" stroke="var(--d)" strokeWidth={2}><title>Observed {o.date}: {fmt(m, o.value).value}{fmt(m, o.value).unit}</title></circle>; })}
       <line x1={X(yr)} x2={X(yr)} y1={py} y2={py + ph} stroke="#fff" strokeOpacity={0.5} />
       <circle cx={X(yr)} cy={Y(v)} r={7} fill="#fff" stroke="var(--d)" strokeWidth={3} />
       <text x={X(yr) + (yr > 2130 ? -14 : 14)} y={Y(v) - 14} textAnchor={yr > 2130 ? "end" : "start"} className="fig-big">{f.value}<tspan className="fig-unit">{f.unit}</tspan></text>
       <text x={px} y={H - 18} className="fig-mono fig-dim">2026</text>
       <text x={px + pw} y={H - 18} textAnchor="end" className="fig-mono fig-dim">2200</text>
-      <text x={px + pw / 2} y={H - 18} textAnchor="middle" className="fig-mono fig-dim">{m.label}{same ? "" : ` · dashed: if ${other} wins`}</text>
+      <text x={px + pw / 2} y={H - 18} textAnchor="middle" className="fig-mono fig-dim">{m.label}{same ? "" : ` · dashed: if ${other} wins`}{m.observed.length ? " · ○ observed" : ""}</text>
       <line x1={X(ev.year)} x2={X(ev.year)} y1={py + ph} y2={py + ph + 10} stroke="var(--d)" strokeWidth={3} />
     </svg>
   );

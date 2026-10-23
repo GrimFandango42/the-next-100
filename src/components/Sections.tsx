@@ -2,6 +2,7 @@ import { data } from "../data";
 import { STATUS_LABEL } from "../lib";
 import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
+import { Cite } from "./EventDrawer";
 
 export function Eras() {
   const { year, setYear } = useStore();
@@ -55,6 +56,7 @@ export function Indicators() {
           </div>
           <div className="ind-readings"><span className="c">{i.concentration}</span><span className="p">{i.pluralism}</span></div>
           {i.note && <p className="small muted">{i.note}{i.lastChecked && <span className="mono"> · checked {i.lastChecked}</span>}</p>}
+          {i.sources.length > 0 && <details className="ind-src"><summary>{i.sources.length} sources</summary><ul className="cites">{i.sources.map((u) => <Cite key={u} url={u} />)}</ul></details>}
         </div>
       ))}
     </div>

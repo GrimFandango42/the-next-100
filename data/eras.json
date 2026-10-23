@@ -1,42 +1,95 @@
 [
   {
     "id": "deployment-shock",
-    "from": 2026, "to": 2030,
+    "from": 2026,
+    "to": 2030,
     "name": "The deployment shock",
     "thesis": "AI agents take over knowledge work faster than institutions can absorb it. Politics catches up through crisis rather than foresight.",
-    "good": ["Agents make expertise cheap", "Drug discovery accelerates", "First arms-control-style talks on compute"],
-    "bad": ["Entry-level jobs vanish first", "AI-driven cyberattack on infrastructure (~70%)", "A bio-adjacent scare (~40%)"]
+    "good": [
+      "Agents make expertise cheap",
+      "Drug discovery accelerates",
+      "First arms-control-style talks on compute"
+    ],
+    "bad": [
+      "Entry-level jobs vanish first",
+      "AI-driven cyberattack on infrastructure (~70%)",
+      "A bio-adjacent scare (~40%)"
+    ],
+    "life": "Your job changes before your title does: the work is set up for an agent and you check it. New graduates feel it first. Everything digital gets cheaper and more suspect at once.",
+    "uncertainty": "Whether institutions respond to the first big incident with rules or with panic."
   },
   {
     "id": "restructuring",
-    "from": 2030, "to": 2040,
+    "from": 2030,
+    "to": 2040,
     "name": "The restructuring",
     "thesis": "The singularity question gets answered in a form nobody finds satisfying, and the hinge resolves one way or the other.",
-    "good": ["AI-designed drugs at scale", "Energy becomes functionally abundant", "Lunar base; robots in homes"],
-    "bad": ["A two-tier labor market", "The clock likely passes 60 seconds", "Concentration risk peaks"]
+    "good": [
+      "AI-designed drugs at scale",
+      "Energy becomes functionally abundant",
+      "Lunar base; robots in homes"
+    ],
+    "bad": [
+      "A two-tier labor market",
+      "The clock likely passes 60 seconds",
+      "Concentration risk peaks"
+    ],
+    "life": "Fewer paid hours, more arguments about who pays. The first drugs and robots that were obviously designed by machines arrive. Someone you know works beside a system that is better than anyone at the job.",
+    "uncertainty": "The hinge: whether the most capable systems stay in many hands or a few."
   },
   {
     "id": "divergence",
-    "from": 2040, "to": 2060,
+    "from": 2040,
+    "to": 2060,
     "name": "The divergence",
     "thesis": "Population peaks, aging is slowed, 2°C is breached, and governance of superhuman systems settles into a regime, legitimate or not.",
-    "good": ["First aging therapies approved", "A Mars outpost", "Emissions falling fast"],
-    "bad": ["Geoengineering fights", "A mass-casualty event (~15%)", "The nation-state loses ground to firms and city-regions"]
+    "good": [
+      "First aging therapies approved",
+      "A Mars outpost",
+      "Emissions falling fast"
+    ],
+    "bad": [
+      "Geoengineering fights",
+      "A mass-casualty event (~15%)",
+      "The nation-state loses ground to firms and city-regions"
+    ],
+    "life": "Where you live decides more than what you earn. Aging slows for those who can get the therapy. The weather is the thing the news argues about.",
+    "uncertainty": "Whether governance of superhuman systems is legitimate, or merely effective."
   },
   {
     "id": "slow-and-fast",
-    "from": 2060, "to": 2100,
+    "from": 2060,
+    "to": 2100,
     "name": "The slow world and the fast world",
     "thesis": "Population declines. Abundance for the well-governed; surveillance or disorder for the rest.",
-    "good": ["Healthy lifespans past 110", "Orbital industry", "Climate stabilized or managed"],
-    "bad": ["Intergenerational conflict replaces class conflict", "Surveillance states where institutions lost", "Humans mostly out of the decision loop"]
+    "good": [
+      "Healthy lifespans past 110",
+      "Orbital industry",
+      "Climate stabilized or managed"
+    ],
+    "bad": [
+      "Intergenerational conflict replaces class conflict",
+      "Surveillance states where institutions lost",
+      "Humans mostly out of the decision loop"
+    ],
+    "life": "Long lives, small families, and a world that runs mostly without human labor. Whether that feels like freedom or like being managed depends on the institutions you were born under.",
+    "uncertainty": "How far population falls, and whether the well-governed places stay open to the rest."
   },
   {
     "id": "sketch",
-    "from": 2100, "to": 2200,
+    "from": 2100,
+    "to": 2200,
     "name": "The sketch",
     "thesis": "Humans and AI either merge into something continuous, or humans persist as a protected, long-lived population beside the systems that do the civilizational work.",
-    "good": ["A self-sustaining off-Earth settlement", "Risk measured, not just feared"],
-    "bad": ["Permanent loss of control remains a ~5% tail", "The silence continues"]
+    "good": [
+      "A self-sustaining off-Earth settlement",
+      "Risk measured, not just feared"
+    ],
+    "bad": [
+      "Permanent loss of control remains a ~5% tail",
+      "The silence continues"
+    ],
+    "life": "A sketch, not a forecast: humans either continuous with their systems or kept beside them. Either way, most of what matters is decided by minds that are not human.",
+    "uncertainty": "Whether 'human' still names a boundary anyone cares to defend."
   }
 ]

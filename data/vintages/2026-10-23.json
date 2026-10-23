@@ -1,0 +1,382 @@
+{
+  "date": "2026-10-23",
+  "note": "Frozen at this check-in. Never edited. Scores are computed against the earliest vintage that contains a line.",
+  "hinge": 0.57,
+  "scenarios": {
+    "flourish": {
+      "unconditional": 44,
+      "pluralism": 52,
+      "concentration": 34
+    },
+    "diminished": {
+      "unconditional": 35,
+      "pluralism": 28,
+      "concentration": 45
+    },
+    "catastrophe": {
+      "unconditional": 15,
+      "pluralism": 15,
+      "concentration": 15
+    },
+    "extinction": {
+      "unconditional": 6,
+      "pluralism": 5,
+      "concentration": 6
+    }
+  },
+  "indicators": {
+    "open-weights-gap": 0.25,
+    "compute-ownership": -0.25,
+    "research-loop": 0.1,
+    "compute-treaty": 0,
+    "labor-response": 0,
+    "who-decides": 0.1,
+    "incidents": 0
+  },
+  "events": {
+    "agents-default-knowledge-work": {
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.72,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "entry-level-hiring-contracts": {
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.85,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "ai-runs-rd-programs": {
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.68,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "first-ai-election": {
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.78,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "ai-cyberattack-infrastructure": {
+      "year": 2029,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.78,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "federal-ai-statute": {
+      "year": 2029,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "compute-verification-talks": {
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-drugs-phase-iii": {
+      "year": 2033,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.7,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "fusion-net-grid": {
+      "year": 2034,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ubi-pilots-national": {
+      "year": 2034,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-chemistry-majority": {
+      "year": 2035,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "lunar-base-occupied": {
+      "year": 2035,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "humanoids-in-homes": {
+      "year": 2036,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "superhuman-cognition": {
+      "year": 2034,
+      "yearEnd": 2040,
+      "timing": "window",
+      "probability": 0.7,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "hinge-resolves": {
+      "year": 2039,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.57,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "aging-therapy-approved": {
+      "year": 2043,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "labor-cost-irrelevant": {
+      "year": 2045,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "population-peak": {
+      "year": 2046,
+      "yearEnd": 2058,
+      "timing": "window",
+      "probability": 0.45,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "two-degrees-breached": {
+      "year": 2050,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.75,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "geoengineering-unilateral": {
+      "year": 2052,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "mars-outpost": {
+      "year": 2052,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "superintelligence-regime": {
+      "year": 2055,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.62,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "mass-casualty-event": {
+      "year": 2055,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.17,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "population-declining": {
+      "year": 2065,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "healthy-lifespan-110": {
+      "year": 2072,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "bci-mainstream": {
+      "year": 2075,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "orbital-industry": {
+      "year": 2085,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "off-earth-population": {
+      "year": 2100,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "world-2100": {
+      "year": 2100,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "human-ai-continuity": {
+      "year": 2125,
+      "yearEnd": 2175,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "self-sustaining-settlement": {
+      "year": 2150,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "clock-retired": {
+      "year": 2150,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "the-silence": {
+      "year": 2180,
+      "yearEnd": null,
+      "timing": "through",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "labs-pace-the-frontier": {
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "state-ai-laws-preempted": {
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "helion-delivers-microsoft": {
+      "year": 2028,
+      "yearEnd": 2030,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "bci-permanent-approval": {
+      "year": 2029,
+      "yearEnd": 2031,
+      "timing": "window",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "china-crewed-moon": {
+      "year": 2030,
+      "yearEnd": 2031,
+      "timing": "window",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "fossil-co2-peak": {
+      "year": 2030,
+      "yearEnd": 2033,
+      "timing": "window",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "in-vivo-editing-common-disease": {
+      "year": 2029,
+      "yearEnd": 2031,
+      "timing": "window",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "federal-pqc-deadline-met": {
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.2,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "quantum-chemistry-advantage": {
+      "year": 2030,
+      "yearEnd": 2033,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "data-centres-tenth-us-power": {
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    }
+  }
+}
