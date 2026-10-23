@@ -29,6 +29,18 @@ export const Revision = z.object({
 });
 export type Revision = z.infer<typeof Revision>;
 
+/** The one number (or phrase) a moment is about, and the one thing the planet does for it. */
+export const Hero = z.object({
+  metric: z.string().optional(),
+  num: z.number().optional(),
+  prefix: z.string().optional(),
+  unit: z.string().optional(),
+  text: z.string().optional(),
+  label: z.string(),
+  effect: z.enum(["web", "hub", "bloom", "dim", "peak", "heat", "cool", "sun", "moon", "mars", "orbit", "alarm", "clock", "merge", "silence", "ripple"]),
+});
+export type Hero = z.infer<typeof Hero>;
+
 export const ForecastEvent = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   year: z.number().int().min(2026).max(2200),
@@ -51,6 +63,7 @@ export const ForecastEvent = z.object({
   /** What depends on this. */
   leadsTo: z.array(z.string()).default([]),
   history: z.array(Revision).default([]),
+  hero: Hero.optional(),
 });
 export type ForecastEvent = z.infer<typeof ForecastEvent>;
 

@@ -16,7 +16,12 @@
     "leadsTo": [
       "entry-level-hiring-contracts",
       "ai-runs-rd-programs"
-    ]
+    ],
+    "hero": {
+      "metric": "ai-share",
+      "label": "of cognitive work now done by AI",
+      "effect": "web"
+    }
   },
   {
     "id": "entry-level-hiring-contracts",
@@ -35,7 +40,14 @@
     "leadsTo": [
       "first-ai-election",
       "ubi-pilots-national"
-    ]
+    ],
+    "hero": {
+      "prefix": "−",
+      "num": 50,
+      "unit": "%",
+      "label": "entry-level hiring at banks, law and consulting firms, roughly",
+      "effect": "ripple"
+    }
   },
   {
     "id": "ai-runs-rd-programs",
@@ -55,7 +67,12 @@
     "leadsTo": [
       "superhuman-cognition",
       "hinge-resolves"
-    ]
+    ],
+    "hero": {
+      "text": "AI → AI",
+      "label": "the research loop closes",
+      "effect": "web"
+    }
   },
   {
     "id": "first-ai-election",
@@ -73,7 +90,12 @@
     ],
     "leadsTo": [
       "federal-ai-statute"
-    ]
+    ],
+    "hero": {
+      "text": "Nov 2028",
+      "label": "the first election fought over AI",
+      "effect": "ripple"
+    }
   },
   {
     "id": "ai-cyberattack-infrastructure",
@@ -92,7 +114,12 @@
     "leadsTo": [
       "federal-ai-statute",
       "compute-verification-talks"
-    ]
+    ],
+    "hero": {
+      "metric": "clock",
+      "label": "seconds to midnight, after the first AI-driven attack on infrastructure",
+      "effect": "alarm"
+    }
   },
   {
     "id": "federal-ai-statute",
@@ -107,7 +134,12 @@
       "Bipartisan AI bill passes a chamber",
       "A federal AI office with rulemaking authority is created"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "num": 1,
+      "label": "comprehensive federal AI law, written in a hurry",
+      "effect": "ripple"
+    }
   },
   {
     "id": "compute-verification-talks",
@@ -125,7 +157,13 @@
     ],
     "leadsTo": [
       "hinge-resolves"
-    ]
+    ],
+    "hero": {
+      "num": 45,
+      "unit": "%",
+      "label": "chance the talks even begin",
+      "effect": "web"
+    }
   },
   {
     "id": "ai-drugs-phase-iii",
@@ -144,7 +182,12 @@
     "leadsTo": [
       "ai-chemistry-majority",
       "aging-therapy-approved"
-    ]
+    ],
+    "hero": {
+      "text": "½",
+      "label": "the time from first trial to approval",
+      "effect": "bloom"
+    }
   },
   {
     "id": "fusion-net-grid",
@@ -163,7 +206,12 @@
     "leadsTo": [
       "labor-cost-irrelevant",
       "geoengineering-unilateral"
-    ]
+    ],
+    "hero": {
+      "text": "Net +",
+      "label": "electricity to a grid, from fusion",
+      "effect": "sun"
+    }
   },
   {
     "id": "ubi-pilots-national",
@@ -179,7 +227,12 @@
       "Four-day-week legislation in a G7 country",
       "Trades and care wages rise faster than professional wages"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "num": 2,
+      "label": "OECD countries with a national income floor",
+      "effect": "ripple"
+    }
   },
   {
     "id": "ai-chemistry-majority",
@@ -193,7 +246,14 @@
     "signals": [
       "Annual FDA novel-approval list with origin attribution"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "prefix": ">",
+      "num": 50,
+      "unit": "%",
+      "label": "of new FDA approvals designed by AI",
+      "effect": "bloom"
+    }
   },
   {
     "id": "lunar-base-occupied",
@@ -211,7 +271,12 @@
     "leadsTo": [
       "mars-outpost",
       "orbital-industry"
-    ]
+    ],
+    "hero": {
+      "metric": "off-earth",
+      "label": "people living off-Earth, all the time",
+      "effect": "moon"
+    }
   },
   {
     "id": "humanoids-in-homes",
@@ -229,7 +294,12 @@
     ],
     "leadsTo": [
       "labor-cost-irrelevant"
-    ]
+    ],
+    "hero": {
+      "text": "Home",
+      "label": "where robots arrive third, after warehouses and hospitals",
+      "effect": "bloom"
+    }
   },
   {
     "id": "superhuman-cognition",
@@ -250,7 +320,12 @@
     "leadsTo": [
       "hinge-resolves",
       "superintelligence-regime"
-    ]
+    ],
+    "hero": {
+      "metric": "ai-share",
+      "label": "of cognitive work done by systems we cannot fully audit",
+      "effect": "web"
+    }
   },
   {
     "id": "hinge-resolves",
@@ -270,7 +345,12 @@
     "leadsTo": [
       "superintelligence-regime",
       "mass-casualty-event"
-    ]
+    ],
+    "hero": {
+      "metric": "frontier-actors",
+      "label": "actors at the AI frontier",
+      "effect": "web"
+    }
   },
   {
     "id": "aging-therapy-approved",
@@ -287,7 +367,12 @@
     ],
     "leadsTo": [
       "healthy-lifespan-110"
-    ]
+    ],
+    "hero": {
+      "metric": "lifespan",
+      "label": "years of life expectancy, and climbing again",
+      "effect": "bloom"
+    }
   },
   {
     "id": "labor-cost-irrelevant",
@@ -302,7 +387,12 @@
       "Manufacturing employment falls while output rises across the G20",
       "New plants cite power price and permitting as the top siting factors"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "num": 0,
+      "label": "role for labor cost in where things are made",
+      "effect": "sun"
+    }
   },
   {
     "id": "population-peak",
@@ -319,7 +409,12 @@
     ],
     "leadsTo": [
       "population-declining"
-    ]
+    ],
+    "hero": {
+      "metric": "population",
+      "label": "people. The most there will ever be.",
+      "effect": "peak"
+    }
   },
   {
     "id": "two-degrees-breached",
@@ -337,7 +432,12 @@
     ],
     "leadsTo": [
       "geoengineering-unilateral"
-    ]
+    ],
+    "hero": {
+      "metric": "warming",
+      "label": "above pre-industrial, with emissions already falling",
+      "effect": "heat"
+    }
   },
   {
     "id": "geoengineering-unilateral",
@@ -352,7 +452,12 @@
       "A national geoengineering program is funded openly",
       "Stratospheric aerosol flights detected and attributed"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "num": 1,
+      "label": "country acting alone on the planet's thermostat",
+      "effect": "cool"
+    }
   },
   {
     "id": "mars-outpost",
@@ -369,7 +474,12 @@
     ],
     "leadsTo": [
       "self-sustaining-settlement"
-    ]
+    ],
+    "hero": {
+      "metric": "off-earth",
+      "label": "people living off-Earth, now on two worlds",
+      "effect": "mars"
+    }
   },
   {
     "id": "superintelligence-regime",
@@ -386,7 +496,12 @@
     ],
     "leadsTo": [
       "human-ai-continuity"
-    ]
+    ],
+    "hero": {
+      "metric": "frontier-actors",
+      "label": "actors at the AI frontier, under one regime",
+      "effect": "web"
+    }
   },
   {
     "id": "mass-casualty-event",
@@ -401,7 +516,13 @@
       "AI-enabled bio capability demonstrated by a non-state actor",
       "Defensive biosurveillance lagging synthesis capability"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "num": 15,
+      "unit": "%",
+      "label": "chance of millions dead before 2060",
+      "effect": "alarm"
+    }
   },
   {
     "id": "population-declining",
@@ -415,7 +536,12 @@
     "signals": [
       "Consecutive years of global population decline"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "metric": "population",
+      "label": "people, and falling",
+      "effect": "dim"
+    }
   },
   {
     "id": "healthy-lifespan-110",
@@ -430,7 +556,13 @@
       "Centenarian share of population rises sharply",
       "Political movements organized explicitly by age cohort"
     ],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "num": 110,
+      "unit": "+",
+      "label": "healthy years, widely available",
+      "effect": "bloom"
+    }
   },
   {
     "id": "bci-mainstream",
@@ -446,7 +578,12 @@
     ],
     "leadsTo": [
       "human-ai-continuity"
-    ]
+    ],
+    "hero": {
+      "text": "Human ↔ AI",
+      "label": "the line stops being legible",
+      "effect": "merge"
+    }
   },
   {
     "id": "orbital-industry",
@@ -463,7 +600,12 @@
     ],
     "leadsTo": [
       "off-earth-population"
-    ]
+    ],
+    "hero": {
+      "metric": "off-earth",
+      "label": "people living off-Earth, working an industry",
+      "effect": "orbit"
+    }
   },
   {
     "id": "off-earth-population",
@@ -477,7 +619,12 @@
     "signals": [],
     "leadsTo": [
       "self-sustaining-settlement"
-    ]
+    ],
+    "hero": {
+      "metric": "off-earth",
+      "label": "people living off-Earth",
+      "effect": "orbit"
+    }
   },
   {
     "id": "world-2100",
@@ -500,7 +647,12 @@
         "reason": "Display fix; the claim is unchanged.",
         "sources": []
       }
-    ]
+    ],
+    "hero": {
+      "metric": "population",
+      "label": "people on a managed planet, beside minds that are not human",
+      "effect": "bloom"
+    }
   },
   {
     "id": "human-ai-continuity",
@@ -513,7 +665,12 @@
     "summary": "Augmentation, hybrid cognition, perhaps uploading. Or humans persist as a protected, long-lived population alongside the systems that do the civilizational work.",
     "detail": "Year-level resolution is not available here. The shape is one of two: a merger in which the question 'human or AI' stops parsing, or a settlement in which a small, long-lived human population is kept safe and comfortable by systems that run everything else. Both are survival. Only one is clearly evolution.",
     "signals": [],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "text": "Us + Them",
+      "label": "or just us, kept safe",
+      "effect": "merge"
+    }
   },
   {
     "id": "self-sustaining-settlement",
@@ -525,7 +682,12 @@
     "summary": "A population that would survive if Earth stopped sending anything.",
     "detail": "The threshold that matters for the species rather than for any one mission.",
     "signals": [],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "text": "Independent",
+      "label": "a settlement that survives without Earth",
+      "effect": "mars"
+    }
   },
   {
     "id": "clock-retired",
@@ -537,7 +699,12 @@
     "summary": "Replaced by something that measures risk from the systems we built, not the weapons we built.",
     "detail": "The Bulletin's clock was designed for a world where the risk was a bomb. By the mid-22nd century the risk is a system, and the institution that measures it looks different.",
     "signals": [],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "text": "—",
+      "label": "the Doomsday Clock, retired",
+      "effect": "clock"
+    }
   },
   {
     "id": "the-silence",
@@ -549,6 +716,11 @@
     "summary": "No contact with non-human intelligence, detected or otherwise.",
     "detail": "Included because it would change everything, and because the forecast is that it does not happen. The probability here is of the forecast being right that there is still nothing.",
     "signals": [],
-    "leadsTo": []
+    "leadsTo": [],
+    "hero": {
+      "text": "…",
+      "label": "still nothing out there",
+      "effect": "silence"
+    }
   }
 ]
