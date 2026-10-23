@@ -6,6 +6,7 @@ import { useStore } from "../store";
 import { useNarrow } from "../hooks";
 import World, { type Effect } from "./World";
 import { Detail } from "./EventDrawer";
+import { bed } from "../sound";
 
 /** One beat = one moment. Every beat gets the same scroll distance; the page settles on each. */
 type Era = (typeof data.eras)[number];
@@ -51,6 +52,8 @@ export default function Journey() {
   const [speed, setSpeed] = useState(1);
   const [modal, setModal] = useState(false);
   const [chosen, setChosen] = useState<Branch | null>(null); // the fork, once picked this visit
+  const [soundOn, setSoundOn] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
   const speedRef = useRef(speed); speedRef.current = speed;
 
   const vh = () => window.innerHeight / 100;
@@ -63,6 +66,15 @@ export default function Journey() {
     const on = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => setBf(Math.max(0, (window.scrollY - top()) / (BEAT_VH * vh())))); };
     on(); addEventListener("scroll", on, { passive: true }); addEventListener("resize", on);
     return () => { removeEventListener("scroll", on); removeEventListener("resize", on); cancelAnimationFrame(raf); };
+  }, []);
+
+  useEffect(() => {
+    const h = location.hash;
+    if (!h.startsWith("#m-")) return;
+    const id = h.slice(3);
+    const i = beats.findIndex((b) => (b.kind === "event" || b.kind === "hinge") && b.ev.id === id);
+    if (i > 0) requestAnimationFrame(() => window.scrollTo({ top: beatTop(i), behavior: "auto" }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const i0 = Math.min(beats.length - 1, Math.floor(bf)), i1 = Math.min(beats.length - 1, i0 + 1);
@@ -109,6 +121,22 @@ export default function Journey() {
   const stat = statValue(statId, branch, yf);
   const isHinge = beat.kind === "hinge" && near;
   const planetDim = beat.kind === "era" && near ? 1 : 0;
+  const eraIndex = data.eras.indexOf(era);
+  const corner = (beat.kind === "event" && beat.ev.cornerstone) || beat.kind === "hinge" || beat.kind === "outro";
+  useEffect(() => { bed.setEra(eraIndex); }, [eraIndex]);
+  useEffect(() => { bed.setIntensity(corner && near ? 1 : 0); }, [corner, near]);
+  useEffect(() => { bed.setDark(branch === "concentration" && yf > 2039 ? 1 : 0); }, [branch, yf > 2039]); // eslint-disable-line react-hooks/exhaustive-deps
+  const toggleSound = () => { if (bed.on) { bed.stop(); setSoundOn(false); } else { bed.start(); bed.setEra(eraIndex); setSoundOn(true); } };
+  const share = async (ev: ForecastEvent) => {
+    const url = location.origin + location.pathname + "#m-" + ev.id;
+    const text = `${ev.year}: ${ev.title} (${Math.round((ev.probability ?? 0) * 100)}% likely) · The Next 100`;
+    try {
+      if (narrow && navigator.share) { await navigator.share({ title: "The Next 100", text, url }); return; }
+      await navigator.clipboard.writeText(url); setToast("Link copied");
+    } catch { setToast(url); }
+    setTimeout(() => setToast(null), 2200);
+  };
+  const drift = (ai - bf) * (narrow ? 60 : 90); // content rises in as you arrive, drifts up as you leave
 
   return (
     <section className="journey" ref={ref} style={{ height: totalVh + "vh" }} aria-label="The Next 100, as a film you scroll through">
@@ -152,28 +180,29 @@ export default function Journey() {
 
         {/* year · chapter · the one stat */}
         <div className="stage-year" style={{ opacity: (1 - introOpacity) * (beat.kind === "era" && near ? 0 : 1) }}>
-          <div className="yr">{y}</div>
+          <div className="yr" aria-label={String(y)}>{String(y).split("").map((d, k) => <span key={k + "-" + d} className="digit">{d}</span>)}</div>
           <div className="era-name">{era.name}</div>
-          {!(hero?.metric) && beat.kind !== "outro" && <div className="one-stat" key={statId}><b className="mono">{stat.value}<small>{stat.unit}</small></b><span>{STAT_LABEL[statId] ?? statId}</span></div>}
+          {beat.kind === "intro" && <div className="one-stat" key={statId}><b className="mono">{stat.value}<small>{stat.unit}</small></b><span>{STAT_LABEL[statId] ?? statId}</span></div>}
         </div>
 
         {/* the beat */}
-        <div className={"beat" + (beat.kind === "intro" || contentOpacity < 0.5 ? " inactive" : "")} style={{ opacity: beat.kind === "intro" ? 0 : contentOpacity }} key={ai}>
+        <div className={"beat" + (beat.kind === "intro" || contentOpacity < 0.5 ? " inactive" : "")} style={{ opacity: beat.kind === "intro" ? 0 : contentOpacity, transform: `translateY(${drift}px)` }} key={ai}>
           {beat.kind === "era" && (
             <div className="chapter">
               <span className="mono">Chapter {beat.n} of {data.eras.length} · {beat.era.from}–{beat.era.to}</span>
               <h2><Words text={beat.era.name} /></h2>
+              <ChapterStats era={beat.era} branch={branch} />
               <p>{beat.era.thesis}</p>
               <div className="era-gb"><span className="g">▲ {beat.era.good[0]}</span><span className="b">▼ {beat.era.bad[0]}</span></div>
             </div>
           )}
-          {beat.kind === "event" && <EventBeat ev={beat.ev} branch={branch} year={yf} onOpen={() => open(beat.ev)} />}
+          {beat.kind === "event" && <EventBeat ev={beat.ev} branch={branch} year={yf} onOpen={() => open(beat.ev)} onShare={() => share(beat.ev)} />}
           {beat.kind === "hinge" && (
             <div className="hinge-copy">
               <div className="moment-kicker"><span className="dot" />2039 · the hinge</div>
               <h2><Words text="Here the future forks." /></h2>
               <p>{chosen ? (branch === "pluralism" ? "Many actors stay at the frontier. Chaotic, contested, broadly free." : "One actor pulls away for good. The century's best or worst outcomes.") : "Pick a planet."}</p>
-              <button className="link-btn" onClick={() => open(beat.ev)}>Read the reasoning →</button>
+              <span className="hinge-actions"><button className="link-btn" onClick={() => open(beat.ev)}>Read the reasoning →</button><button className="share-btn" aria-label="Share this moment" onClick={() => share(beat.ev)}><ShareIcon /></button></span>
             </div>
           )}
           {beat.kind === "outro" && <Outro branch={branch} onFlip={() => setBranch(branch === "pluralism" ? "concentration" : "pluralism")} />}
@@ -192,9 +221,11 @@ export default function Journey() {
         </nav>
 
         <div className="stage-ctl">
+          <button className={"sound" + (soundOn ? " on" : "")} aria-pressed={soundOn} aria-label={soundOn ? "Sound off" : "Sound on"} title={soundOn ? "Sound off" : "Sound on"} onClick={toggleSound}>{soundOn ? <SoundBars /> : "♪"}</button>
           <button className="icon primary" aria-label={playing ? "Pause" : "Auto-play"} onClick={() => setPlaying(!playing)}>{playing ? "❚❚" : "▶"}</button>
           <button className="speed" aria-label="Playback speed" onClick={() => setSpeed(speed === 1 ? 1.5 : speed === 1.5 ? 0.75 : 1)}>{speed}×</button>
         </div>
+        {toast && <div className="toast" role="status">{toast}</div>}
         <div className="scroll-tip" style={{ opacity: ai === 1 && near && !playing ? 1 : 0 }}>Scroll for the next moment ↓</div>
       </div>
 
@@ -207,7 +238,7 @@ export default function Journey() {
   );
 }
 
-function EventBeat({ ev, branch, year, onOpen }: { ev: ForecastEvent; branch: Branch; year: number; onOpen: () => void }) {
+function EventBeat({ ev, branch, year, onOpen, onShare }: { ev: ForecastEvent; branch: Branch; year: number; onOpen: () => void; onShare: () => void }) {
   const p = Math.round((ev.probability ?? 0) * 100);
   const color = DOMAIN_META[ev.domain].color;
   const h = ev.hero;
@@ -216,7 +247,7 @@ function EventBeat({ ev, branch, year, onOpen }: { ev: ForecastEvent; branch: Br
   else if (h?.num != null) big = { num: h.num, prefix: h.prefix, unit: h.unit };
   else if (h?.text) big = { text: h.text };
   return (
-    <div className={"ev-beat" + (ev.cornerstone ? " corner" : "")} style={{ ["--d" as any]: color }}>
+    <div className={"ev-beat" + (ev.cornerstone ? " is-corner" : "")} style={{ ["--d" as any]: color }}>
       <div className="ev-beat-head">
         <Glyph domain={ev.domain} />
         <div className="moment-kicker"><span>{ev.year}{ev.yearEnd ? `–${ev.yearEnd}` : ""}</span><span>·</span><span style={{ color }}>{DOMAIN_META[ev.domain].name}</span>{ev.cornerstone && <><span>·</span><span className="cs">cornerstone</span></>}</div>
@@ -229,6 +260,7 @@ function EventBeat({ ev, branch, year, onOpen }: { ev: ForecastEvent; branch: Br
       <div className="ev-beat-foot">
         <Ring p={p} /><div className="ring-l"><b>{p}% likely</b><span>{ev.confidence} confidence</span></div>
         <button className="ghost" onClick={onOpen}>Why →</button>
+        <button className="share-btn" aria-label="Share this moment" title="Share this moment" onClick={onShare}><ShareIcon /></button>
       </div>
     </div>
   );
@@ -284,4 +316,22 @@ const GLYPHS: Record<Domain, JSX.Element> = {
 };
 function Glyph({ domain }: { domain: Domain }) {
   return <span className="glyph"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{GLYPHS[domain]}</svg></span>;
+}
+
+function ChapterStats({ era, branch }: { era: Era; branch: Branch }) {
+  const evs = data.events.filter((e) => e.year >= era.from && e.year < (era.to === 2200 ? 2201 : era.to) && (!e.branch || e.branch === branch));
+  const cs = evs.filter((e) => e.cornerstone).length;
+  const span = era.to - era.from;
+  return (
+    <div className="chapter-stats mono">
+      <span><b><CountUp to={span} /></b> years</span><i>·</i>
+      <span><b><CountUp to={evs.length} /></b> predictions</span>{cs > 0 && <><i>·</i><span><b><CountUp to={cs} /></b> cornerstone{cs === 1 ? "" : "s"}</span></>}
+    </div>
+  );
+}
+function ShareIcon() {
+  return <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5" /><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" /></svg>;
+}
+function SoundBars() {
+  return <span className="bars" aria-hidden="true"><i /><i /><i /></span>;
 }

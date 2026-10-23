@@ -84,7 +84,7 @@ export default function World({ year, branch, effect = "none", dim = 0, forceBra
       const hubOn = s.conc * smooth(2034, 2044, y);
 
       const wide = W > 900, phone = W <= 760;
-      const L = t.layout ?? (wide ? { cx: 0.64, cy: 0.5, r: Math.min(0.25 * W, 0.3 * H) / Math.min(W, H) } : phone ? { cx: 0.5, cy: 0.42, r: Math.min(0.36 * W, 0.17 * H) / Math.min(W, H) } : { cx: 0.5, cy: 0.52, r: Math.min(0.3 * W, 0.26 * H) / Math.min(W, H) });
+      const L = t.layout ?? (wide ? { cx: 0.64, cy: 0.5, r: Math.min(0.25 * W, 0.3 * H) / Math.min(W, H) } : phone ? { cx: 0.5, cy: 0.37, r: Math.min(0.3 * W, 0.135 * H) / Math.min(W, H) } : { cx: 0.5, cy: 0.52, r: Math.min(0.3 * W, 0.26 * H) / Math.min(W, H) });
       let cx = L.cx * W, cy = L.cy * H, R = Math.max(4, L.r * Math.min(W, H));
       const toMoon = fx.moon, sil = fx.silence;
       R *= 1 - sil * 0.45 + toMoon * 0.1;

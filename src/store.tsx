@@ -17,7 +17,7 @@ const ALL: Domain[] = ["ai", "bio", "energy", "climate", "space", "society", "ri
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [year, setYearRaw] = useState(YEAR_MIN);
-  const initialHash = typeof location !== "undefined" ? location.hash.slice(1) : "";
+  const initialHash = typeof location !== "undefined" && !location.hash.startsWith("#m-") ? location.hash.slice(1) : "";
   const initialEvent = data.events.find((e) => e.id === initialHash);
   const [branch, setBranchRaw] = useState<Branch>(() => (initialHash === "concentration" ? "concentration" : "pluralism"));
   const [playing, setPlaying] = useState(false);
