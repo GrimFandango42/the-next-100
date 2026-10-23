@@ -600,6 +600,14 @@
         "sources": [
           "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/"
         ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "source added",
+        "reason": "The 2026-10-23 probability move rested on trade press. GAO's July 2026 assessment is the primary anchor: Artemis II flew in April 2026; NASA's February–March 2026 changes refocus Artemis III–V; Gateway and two other Artemis projects are paused; two Artemis projects already report risks likely to delay their schedules. No number changed.",
+        "sources": [
+          "https://www.gao.gov/products/gao-26-108556"
+        ]
       }
     ],
     "timing": "around",

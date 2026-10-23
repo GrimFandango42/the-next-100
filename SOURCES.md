@@ -4,6 +4,10 @@ The forecast moves only on documents. This file is the standing registry: for ev
 
 Tiers, in the order a check-in trusts them: primary data (the measuring institution, regulator, legislature, or an independent evaluator) → institutional analysis → peer-reviewed → quality press with named reporting → trade press → vendor statements → everything else. A probability moves on the first three; the rest are leads.
 
+## Where the forecast's own citations stand (audit of 2026-10-23)
+
+87 distinct URLs are cited across `history`, `changelog` and `metrics`; all opened on 2026-10-23, none blocked, moved or dead (`data/citations.json` holds title, publisher, date, tier and status for each). Tier mix: institutional 20, primary 16, vendor 15, trade 14, weak 11, quality-press 9, peer-reviewed 2. Moves that still lean on weak or vendor sources and should be re-anchored at the next check-in: `the-silence` (a repost of the Grimaldi paper; cite the journal or arXiv version), `humanoids-in-homes` (vendor transcript and trade press only), `ai-drugs-phase-iii` / `ai-chemistry-majority` (sponsor press releases), `ai-runs-rd-programs` (Anthropic's own index), `superintelligence-regime` (a CEO essay plus press). Well anchored: the hiring, population, hinge and compute-talks moves.
+
 ## Registry by domain
 
 Format: **Name** — URL — what to pull — cadence — tier.

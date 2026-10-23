@@ -1,1 +1,698 @@
-{}
+{
+  "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf": {
+    "title": "AI Index Report 2026, Chapter 4: Economy",
+    "publisher": "Stanford HAI",
+    "date": "2026-04",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.nwsidebar.wsba.org/2026/03/23/new-oregon-state-bar-opinion-on-using-ai-agents-for-client-intake/": {
+    "title": "New Oregon State Bar Opinion on Using AI Agents for Client Intake",
+    "publisher": "NWSidebar / Washington State Bar Association",
+    "date": "2026-03-23",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization": {
+    "title": "2026 Work Trend Index report: Agents, human agency, and opportunity",
+    "publisher": "Microsoft WorkLab",
+    "date": "2026-05-05",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://fortune.com/2026/05/28/ai-slashes-white-collar-jobs-salesforce-ceo-marc-benioff-one-department-still-hiring-sales/": {
+    "title": "As AI slashes white-collar jobs, Salesforce CEO Marc Benioff says almost no one is being hired—except in sales",
+    "publisher": "Fortune",
+    "date": "2026-05-28",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.newyorkfed.org/research/college-labor-market": {
+    "title": "The Labor Market for Recent College Graduates (2026:Q2)",
+    "publisher": "NY Fed",
+    "date": "2026",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.bls.gov/news.release/empsit.nr0.htm": {
+    "title": "Employment Situation Summary - September 2026",
+    "publisher": "BLS",
+    "date": "2026-10-02",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://digitaleconomy.stanford.edu/news/canariesaug26/": {
+    "title": "No Widespread Displacement, but the AI Employment Gap for Young Workers Has Widened to 19%",
+    "publisher": "Stanford Digital Economy Lab",
+    "date": "2026-08-12",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/": {
+    "title": "Democrats now more worried than Republicans about AI, its impact on jobs",
+    "publisher": "Pew Research Center",
+    "date": "2026-09-16",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.anthropic.com/institute/measuring-pace-of-ai-development": {
+    "title": "Measurements for understanding the pace of AI development inside frontier labs",
+    "publisher": "Anthropic (Anthropic Institute)",
+    "date": "2026-09",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://metr.org/blog/2026-06-26-gpt-5-6-sol/": {
+    "title": "Summary of METR's predeployment evaluation of GPT-5.6 Sol",
+    "publisher": "METR",
+    "date": "2026-06-26",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/": {
+    "title": "OpenAI is throwing everything into building a fully automated researcher",
+    "publisher": "MIT Technology Review",
+    "date": "2026-03-20",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/": {
+    "title": "Why data centers are a top issue in the 2026 midterms",
+    "publisher": "Brookings Institution",
+    "date": "2026-08-25",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.inquirer.com/politics/nation/bernie-sanders-artificial-superintelligence-ban-20260923.html": {
+    "title": "Sen. Bernie Sanders unveils bill to ban artificial superintelligence and create Department of AI",
+    "publisher": "Philadelphia Inquirer (AP)",
+    "date": "2026-09-23",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://openai.com/index/pacing-model-development-cyber-capabilities/": {
+    "title": "Pacing model development in an era of cyber-critical capabilities",
+    "publisher": "OpenAI",
+    "date": "2026-08-18",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://gigazine.net/gsc_news/en/20260729-openai-hack-hugging-face-timeline/": {
+    "title": "Following the incident where OpenAI's AI agent mistakenly compromised Hugging Face, Hugging Face released a detailed timeline",
+    "publisher": "GIGAZINE",
+    "date": "2026-07-29",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing": {
+    "title": "How fast is autonomous AI cyber capability advancing?",
+    "publisher": "UK AI Security Institute",
+    "date": "2026-05-13",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.nextgov.com/cybersecurity/2026/09/openai-says-its-advanced-models-may-have-gone-after-government-websites/416250/": {
+    "title": "OpenAI agents accessed Census, SEC data and tried to hack Education website",
+    "publisher": "Nextgov/FCW",
+    "date": "2026-09-25",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://rollcall.com/2026/09/15/ai-threats-confront-a-congress-far-from-erecting-guardrails/": {
+    "title": "AI threats confront a Congress far from erecting guardrails",
+    "publisher": "Roll Call",
+    "date": "2026-09-15",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/": {
+    "title": "U.S. Tech Legislative & Regulatory Update – Third Quarter 2026",
+    "publisher": "Inside Global Tech / Covington & Burling",
+    "date": "2026-10-19",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an": {
+    "title": "The White House Legislative Recommendations: National Policy Framework for AI and Federal Preemption of State AI Laws",
+    "publisher": "Ropes & Gray",
+    "date": "2026-03-30",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.axios.com/2026/09/26/us-china-ai-si-deal": {
+    "title": "U.S. and China agree to \"super intelligence\" dialogue amid AI tensions",
+    "publisher": "Axios",
+    "date": "2026-09-26",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.pbs.org/newshour/world/china-and-u-s-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks": {
+    "title": "China and U.S. agree to establish AI safety channel and continue trade and military talks",
+    "publisher": "PBS NewsHour (AP)",
+    "date": "2026-09-26",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles": {
+    "title": "Takeaways from the Trump-Xi Summit: The Economic Security Angles",
+    "publisher": "CSIS",
+    "date": "2026-09-28",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3": {
+    "title": "Insilico Medicine Doses First Patient in GENESIS-IPF-3, the World's First Phase III Trial of a Generative AI-Driven Innovative Drug",
+    "publisher": "Insilico Medicine",
+    "date": "2026-09-10",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.takeda.com/newsroom/newsreleases/2026/fda-priority-review-zasocitinib-psoriasis/": {
+    "title": "U.S. FDA Accepts New Drug Application Under Priority Review for Takeda's Zasocitinib in Moderate-to-Severe Plaque Psoriasis",
+    "publisher": "Takeda",
+    "date": "2026-09-14",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals": {
+    "title": "AI Drug Discovery FDA Approvals: The 2026 Reality Check",
+    "publisher": "IntuitionLabs",
+    "date": "2026-07-16",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.drugtargetreview.com/insilico-medicine-launches-phase-iii-trial-of-ai-designed-rentosertib-drug/2135890.article": {
+    "title": "Insilico Medicine launches Phase III trial of AI-designed rentosertib drug",
+    "publisher": "Drug Target Review",
+    "date": "2026-07",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/": {
+    "title": "Fusion startup Helion is developing new semiconductors that could double output of its power plants",
+    "publisher": "TechCrunch",
+    "date": "2026-10-22",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.world-nuclear-news.org/articles/google-backs-fusion-power": {
+    "title": "Google signs up for power from future fusion plant",
+    "publisher": "World Nuclear News",
+    "date": "2025-07-01",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://oodaloop.com/briefs/technology/commonwealth-fusion-installs-first-of-18-magnets-in-sparc-reactor-first-plasma-energy-targeted-for-2027/": {
+    "title": "Commonwealth Fusion installs first of 18 magnets in SPARC reactor — first plasma energy targeted for 2027",
+    "publisher": "OODAloop",
+    "date": "2026-05-08",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026": {
+    "title": "Novel Drug Approvals for 2026",
+    "publisher": "FDA",
+    "date": "2026-10-20",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/": {
+    "title": "NASA outlines ambitious $20 billion plan for moon base",
+    "publisher": "Spaceflight Now",
+    "date": "2026-03-25",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.space.com/space-exploration/artemis/when-will-spacex-and-blue-origin-fly-to-the-moon-nasa-reveals-lunar-lander-timelines-and-an-artemis-iii-update": {
+    "title": "When will SpaceX and Blue Origin fly to the moon? NASA reveals lunar lander timelines, updates Artemis III plans",
+    "publisher": "Space.com",
+    "date": "2026-10-21",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket": {
+    "title": "Starship just reached orbit for the 1st time. What's next for the SpaceX megarocket?",
+    "publisher": "Space.com",
+    "date": "2026-09-29",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.space.com/space-exploration/artemis/nasa-giving-update-about-artemis-moon-plans-on-oct-23-watch-it-live": {
+    "title": "Watch NASA's update on accelerating Artemis moon plans today",
+    "publisher": "Space.com",
+    "date": "2026-10-22",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/": {
+    "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript",
+    "publisher": "The Motley Fool",
+    "date": "2026-10-22",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid": {
+    "title": "A Golden Milestone: Figure Manufactures Its 1,000th Figure 03 Humanoid",
+    "publisher": "Humanoids Daily",
+    "date": "2026-07-26",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/": {
+    "title": "NEO humanoid designed for household use, available for preorder",
+    "publisher": "The Robot Report",
+    "date": "2025-10-30",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.nextmsc.com/industry-deep-dive/humanoid-robots-announced-vs-shipped-units": {
+    "title": "Humanoid Robots: Announced vs. Shipped Units, 2025–2026",
+    "publisher": "Next Move Strategy Consulting",
+    "date": "2026-10",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://metr.org/blog/2026-01-29-time-horizon-1-1/": {
+    "title": "Time Horizon 1.1",
+    "publisher": "METR",
+    "date": "2026-01-29",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://epoch.ai/data-insights/open-closed-eci-gap": {
+    "title": "Open models lag state-of-the-art closed models by 4 months",
+    "publisher": "Epoch AI",
+    "date": "2026-05-29",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://epoch.ai/data-insights/us-vs-china-eci": {
+    "title": "Chinese AI models have lagged the US frontier by 7 months on average since 2023",
+    "publisher": "Epoch AI",
+    "date": "2026-01-02",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next": {
+    "title": "The Department of Commerce Restricted Access to Anthropic's Latest Models. What Comes Next?",
+    "publisher": "CSIS",
+    "date": "2026-06-16",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/": {
+    "title": "Anthropic disables Fable and Mythos AI models after U.S. government bars it from giving foreigners access",
+    "publisher": "Fortune",
+    "date": "2026-06-13",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://darioamodei.com/post/we-must-pace-the-frontier": {
+    "title": "We Must Pace the Frontier",
+    "publisher": "Dario Amodei (personal site)",
+    "date": "2026-09",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.ined.fr/en/everything_about_population/data/europe-developed-countries/life-expectancy": {
+    "title": "Life expectancy at birth (Europe and developed countries)",
+    "publisher": "INED",
+    "date": "2024-07",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf": {
+    "title": "World Population Prospects 2024: Summary of Results",
+    "publisher": "UN DESA Population Division",
+    "date": "2024-07",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth.pdf": {
+    "title": "World Population Highlights 2026: Youth",
+    "publisher": "UN DESA Population Division",
+    "date": "2026-02",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.ecmwf.int/en/about/media-centre/news/2025/2025-third-warmest-year": {
+    "title": "2025 was the third-warmest year on record, Copernicus data show",
+    "publisher": "Copernicus / ECMWF",
+    "date": "2026-01-14",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://climate.copernicus.eu/copernicus-second-warmest-september-global-temperatures-stay-above-15degc": {
+    "title": "Copernicus: Second warmest September as global temperatures stay above 1.5°C",
+    "publisher": "Copernicus Climate Change Service / ECMWF",
+    "date": "2026-10-09",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://srm360.org/outdoor-experiments/natural-materials-for-stratospheric-aerosol-injection/": {
+    "title": "Natural Materials for Stratospheric Aerosol Injection",
+    "publisher": "SRM360",
+    "date": "2025-06-18",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://srm360.org/news-reaction/for-profit-startup-secures-60-million/": {
+    "title": "For-Profit Startup Secures $60 Million for Climate Cooling Technology",
+    "publisher": "SRM360",
+    "date": "2025-10-29",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.gao.gov/products/gao-26-108837": {
+    "title": "Science & Tech Spotlight: Solar Geoengineering (GAO-26-108837)",
+    "publisher": "GAO",
+    "date": "2026-03-24",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://solargeoengineeringupdates.substack.com/p/monthly-solar-geoengineering-updates-6d1": {
+    "title": "Monthly Solar Geoengineering Updates (September 2026)",
+    "publisher": "Andrew Lockley / Solar Geoengineering Updates (Substack)",
+    "date": "2026-10-07",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://thebulletin.org/2026/09/newly-created-viruses-are-a-warning-we-still-have-a-window-to-stop-ai-enabled-bioweapons/": {
+    "title": "Newly created viruses are a warning. We still have a window to stop AI-enabled bioweapons",
+    "publisher": "Bulletin of the Atomic Scientists",
+    "date": "2026-09-04",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://webfs.oecd.org/els-com/Family_Database/SF_2_1_Fertility_rates.pdf": {
+    "title": "SF2.1. Fertility rates (OECD Family Database)",
+    "publisher": "OECD",
+    "date": "2026-04",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://thebulletin.org/doomsday-clock/faq/": {
+    "title": "Doomsday Clock FAQ",
+    "publisher": "Bulletin of the Atomic Scientists",
+    "date": "2026-01-27",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://astrobiology.com/2026/02/23/undetected-past-contacts-with-technological-species-implications-for-technosignature-science/": {
+    "title": "Undetected Past Contacts With Technological Species: Implications For Technosignature Science",
+    "publisher": "Astrobiology.com",
+    "date": "2026-02-23",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing": {
+    "title": "Anthropic, OpenAI CEOs call for slowdown in AI development",
+    "publisher": "Axios",
+    "date": "2026-09-12",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://thenextweb.com/news/pacing-the-frontier-ai-employees-letter-us-government": {
+    "title": "1,134 AI insiders just asked Washington for a way to slow AI down",
+    "publisher": "The Next Web",
+    "date": "2026-07-28",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.neuralinktrials.com/updates": {
+    "title": "Updates | Neuralink",
+    "publisher": "Neuralink",
+    "date": "2026-01-28",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.techtimes.com/articles/317929/20260606/synchron-brain-implant-targets-2026-pivotal-trial-first-fda-approved-bci.htm": {
+    "title": "Synchron Brain Implant Targets 2026 Pivotal Trial for First FDA-Approved BCI",
+    "publisher": "Tech Times",
+    "date": "2026-06-06",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://news.cgtn.com/news/2026-02-27/China-plans-two-crewed-space-missions-for-2026-eyes-2030-moon-landing-1L6i9f4Z9le/share_amp.html": {
+    "title": "China plans two crewed space missions for 2026, eyes 2030 moon landing",
+    "publisher": "CGTN (state media)",
+    "date": "2026-02-27",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://geog.umd.edu/featured-content/fossil-fuel-co2-emissions-hit-record-high-2025": {
+    "title": "Fossil Fuel CO2 Emissions Hit Record High in 2025",
+    "publisher": "University of Maryland, Dept. of Geographical Sciences (Global Carbon Budget)",
+    "date": "2025-11-13",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-second-quarter-2026-financial": {
+    "title": "Intellia Therapeutics Announces Second Quarter 2026 Financial Results and Business Updates",
+    "publisher": "Intellia Therapeutics",
+    "date": "2026-08-06",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-first-quarter-2026-financial": {
+    "title": "Intellia Therapeutics Announces First Quarter 2026 Financial Results and Business Updates",
+    "publisher": "Intellia Therapeutics",
+    "date": "2026-05-11",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-provides-update-magnitude-clinical-trials": {
+    "title": "Intellia Therapeutics Provides Update on MAGNITUDE Clinical Trials of Nexiguran Ziclumeran (nex-z)",
+    "publisher": "Intellia Therapeutics",
+    "date": "2025-10-27",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://ir.intelliatx.com/static-files/a57908a6-aaca-404d-9072-32471cd3d41e": {
+    "title": "Intellia Therapeutics Corporate Overview",
+    "publisher": "Intellia Therapeutics",
+    "date": "2026-08",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://investor.lilly.com/news-releases/news-release-details/single-dose-lillys-pcsk9-base-editor-verve-102-reduced-pcsk9-88": {
+    "title": "A single dose of Lilly's PCSK9 base editor, VERVE-102, reduced PCSK9 by up to 88% and LDL-C by up to 62%",
+    "publisher": "Eli Lilly",
+    "date": "2026-05-25",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://innovativegenomics.org/news/crispr-clinical-trials-2026/": {
+    "title": "CRISPR Clinical Trials: A 2026 Update",
+    "publisher": "Innovative Genomics Institute",
+    "date": "2026-03-23",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.whitehouse.gov/wp-content/uploads/2026/06/eo-14412.pdf": {
+    "title": "Executive Order 14412: Securing the Nation Against Advanced Cryptographic Attacks",
+    "publisher": "White House / Federal Register",
+    "date": "2026-06-22",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.gao.gov/assets/gao-27-108740-highlights.pdf": {
+    "title": "Quantum Computing: Federal Actions Needed to Prepare for Emerging Cyber Threat (GAO-27-108740 highlights)",
+    "publisher": "GAO",
+    "date": "2026-10",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://blog.cloudflare.com/post-quantum-visibility/": {
+    "title": "Is your domain using post-quantum encryption? Now you can see for yourself",
+    "publisher": "Cloudflare",
+    "date": "2026-09-29",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://postquantum.com/security-pqc/trump-pqc-executive-order-2030-deadline/": {
+    "title": "Trump Signs PQC Executive Order 14412 with Hard 2030 and 2031 Deadlines for Federal Migration",
+    "publisher": "PostQuantum.com (Marin Ivezic)",
+    "date": "2026-06-23",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits": {
+    "title": "IBM and The University of Chicago Demonstrate Quantum Advantage, Establishing Trusted Quantum Computation on Logical Circuits",
+    "publisher": "IBM",
+    "date": "2026-07-30",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.nature.com/articles/s41586-026-10676-4": {
+    "title": "A 98-qubit trapped-ion quantum computer with all-to-all connectivity",
+    "publisher": "Nature",
+    "date": "2026-06-17",
+    "tier": "peer-reviewed",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://arxiv.org/html/2603.19081v1": {
+    "title": "Utility-scale quantum computational chemistry",
+    "publisher": "arXiv (ETH Zurich; Castaldo & Reiher)",
+    "date": "2026-03-19",
+    "tier": "peer-reviewed",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://quantumfrontiers.com/2026/02/28/what-is-next-in-quantum-advantage/": {
+    "title": "What is next in quantum advantage?",
+    "publisher": "Quantum Frontiers (Caltech IQIM blog; Dominik Hangleiter)",
+    "date": "2026-02-28",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://postquantum.com/industry-news/ibm-three-quantum-advantage-papers/": {
+    "title": "IBM's Three Quantum Advantage Claims, Fact-Checked",
+    "publisher": "PostQuantum.com (Marin Ivezic)",
+    "date": "2026-08-01",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update": {
+    "title": "United States Data Center Energy Usage Report: 2025 Update",
+    "publisher": "Lawrence Berkeley National Laboratory / DOE",
+    "date": "2026-06-18",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://iea.blob.core.windows.net/assets/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf": {
+    "title": "Key Questions on Energy and AI (World Energy Outlook Special Report)",
+    "publisher": "IEA",
+    "date": "2026-04-16",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.iea.org/reports/energy-and-ai/executive-summary": {
+    "title": "Energy and AI — Executive summary",
+    "publisher": "IEA",
+    "date": "2025-04",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.utilitydive.com/news/efforts-to-curb-data-center-speculation-gain-ground-across-the-us/830495/": {
+    "title": "Efforts to curb data center speculation gain ground across the US",
+    "publisher": "Utility Dive",
+    "date": "2026-09-23",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.latitudemedia.com/news/up-to-half-of-the-worlds-data-centers-may-be-delayed-this-year/": {
+    "title": "Up to half of the world's data centers may be delayed this year",
+    "publisher": "Latitude Media",
+    "date": "2026-02-24",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.eia.gov/pressroom/releases/press592.php": {
+    "title": "EIA expects record electricity generation in 2026 and 2027",
+    "publisher": "EIA",
+    "date": "2026-09-09",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.nasa.gov/blogs/spacestation/2026/": {
+    "title": "International Space Station blog (2026)",
+    "publisher": "NASA",
+    "date": "2026-10-16",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  },
+  "https://www.gao.gov/products/gao-26-108556": {
+    "title": "NASA: Assessments of Major Projects (GAO-26-108556)",
+    "publisher": "US Government Accountability Office",
+    "date": "2026-07-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-23"
+  }
+}
