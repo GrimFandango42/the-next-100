@@ -4,10 +4,10 @@
     "year": 2027,
     "domain": "ai",
     "confidence": "high",
-    "probability": 0.8,
+    "probability": 0.72,
     "title": "AI agents become the default for knowledge work",
     "summary": "Software, finance, law and research move to agent-first workflows: a human sets the goal and reviews, an agent does the work.",
-    "detail": "The shift is already underway in software engineering and is spreading to any job whose output is a document, a decision or a model. The tell is not that agents exist but that firms reorganize around them: headcount plans assume agents, procurement buys agent seats, and junior roles are redefined as agent supervision. By the end of 2027 a majority of large firms in these four sectors run most routine knowledge work through agents.",
+    "detail": "The shift is already underway in software engineering and is spreading to any job whose output is a document, a decision or a model. The tell is not that agents exist but that firms reorganize around them: headcount plans assume agents, procurement buys agent seats, and junior roles are redefined as agent supervision. By the end of 2027 a majority of large firms in these four sectors run most routine knowledge work through agents. Grading test, added 2026-10-23: the annual McKinsey State of AI survey (or an equivalent cross-industry survey) reports scaled agent use at half or more of large firms in at least two of the four sectors.",
     "signals": [
       "Major firms announce hiring plans that assume agent productivity",
       "Agent seats become a line item in enterprise software budgets",
@@ -21,14 +21,35 @@
       "metric": "ai-share",
       "label": "of cognitive work now done by AI",
       "effect": "web"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.80 → 0.72",
+        "reason": "Two of three signals are lit a year early (Oregon State Bar Formal Opinion 2026-208 on supervising autonomous agents; Salesforce holding engineering headcount flat on coding agents; active agents in Microsoft 365 up 15x year over year), but the base outside software is low: Stanford's 2026 AI Index, aggregating McKinsey 2025, puts scaled agent use in the single digits outside tech. 'Most routine knowledge work through agents at a majority of large firms' by end-2027 is a stretch from there.",
+        "sources": [
+          "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+          "https://www.nwsidebar.wsba.org/2026/03/23/new-oregon-state-bar-opinion-on-using-ai-agents-for-client-intake/",
+          "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+          "https://fortune.com/2026/05/28/ai-slashes-white-collar-jobs-salesforce-ceo-marc-benioff-one-department-still-hiring-sales/"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: grading test added",
+        "reason": "The resolution bar ('majority of large firms … most routine knowledge work') was not measurable as written. Named a survey to grade against.",
+        "sources": [
+          "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
+        ]
+      }
+    ]
   },
   {
     "id": "entry-level-hiring-contracts",
     "year": 2027,
     "domain": "society",
     "confidence": "high",
-    "probability": 0.8,
+    "probability": 0.85,
     "title": "Entry-level white-collar hiring contracts visibly",
     "summary": "The first politically salient 'AI took the jobs' moment in the US and Europe, concentrated in new-graduate hiring.",
     "detail": "The displacement does not show up as mass layoffs. It shows up as jobs that never get posted: analyst programs halved, paralegal and junior developer intakes shrunk, customer-support hiring frozen. New graduates feel it first and loudest, which makes it a campus and media story before it is a labor-statistics story.",
@@ -43,22 +64,43 @@
     ],
     "hero": {
       "prefix": "−",
-      "num": 50,
+      "num": 19,
       "unit": "%",
-      "label": "entry-level hiring at banks, law and consulting firms, roughly",
+      "label": "employment of 22–25-year-olds in AI-exposed jobs, against trend (ADP, June 2026)",
       "effect": "ripple"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.80 → 0.85",
+        "reason": "Two of three signals are met a year early. NY Fed: recent-graduate unemployment 5.6% (2026 Q2, underemployment 42%) against 4.2% overall (BLS, September 2026). Stanford's ADP series: employment of 22–25-year-olds in AI-exposed occupations 19% below trend as of June 2026, up from 15% a year earlier. Pew (September 2026): 71% expect fewer jobs.",
+        "sources": [
+          "https://www.newyorkfed.org/research/college-labor-market",
+          "https://www.bls.gov/news.release/empsit.nr0.htm",
+          "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+          "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "hero figure −50% → −19%",
+        "reason": "The old figure was a round guess. The best measured series (Stanford/ADP) says 19% below trend for 22–25-year-olds in exposed occupations.",
+        "sources": [
+          "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+        ]
+      }
+    ]
   },
   {
     "id": "ai-runs-rd-programs",
     "year": 2028,
     "domain": "ai",
     "confidence": "moderate",
-    "probability": 0.6,
+    "probability": 0.68,
     "cornerstone": true,
     "title": "AI systems run multi-month R&D programs autonomously",
     "summary": "A frontier lab or coalition demonstrates AI doing AI research end to end. The loop that compresses every downstream timeline becomes real.",
-    "detail": "This is the first cornerstone. Once systems can propose, run and evaluate their own research agenda over months, capability gains stop being paced by human researcher headcount. It will be demonstrated quietly before it is announced, and it will be contested: expect disputes about how autonomous the loop really was. The honest version of the claim is that the marginal frontier researcher is now a system, not a person.",
+    "detail": "This is the first cornerstone. Once systems can propose, run and evaluate their own research agenda over months, capability gains stop being paced by human researcher headcount. It will be demonstrated quietly before it is announced, and it will be contested: expect disputes about how autonomous the loop really was. The honest version of the claim is that the marginal frontier researcher is now a system, not a person. Grading test, added 2026-10-23: a frontier lab reports AI leading (Epoch automation level 4 or above) a majority of its AI R&D for a sustained period, verified by an embedded third party, or publishes a research result attributed primarily to an automated pipeline.",
     "signals": [
       "A lab publishes results attributed primarily to automated research pipelines",
       "Training-run cadence shortens noticeably at one or more labs",
@@ -72,17 +114,37 @@
       "text": "AI → AI",
       "label": "the research loop closes",
       "effect": "web"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.60 → 0.68",
+        "reason": "Anthropic's R&D Automation Index (September 2026) reports Claude 'leads' (Epoch automation level 4: completes most of a task end-to-end under supervision) 26% of Anthropic's AI R&D as of August 2026, up from under 1% in February; over 90% of the work is at 'collaborates' or above. Self-reported and model-judged, so not yet third-party verified, but it is the first quantitative series on exactly this claim. METR's June assessment of GPT-5.6 Sol judged it does not yet enable fully automated R&D.",
+        "sources": [
+          "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+          "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
+          "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: grading test added",
+        "reason": "There is now a public scale for this claim (Epoch's AL0–AL5), so the line can say what counts.",
+        "sources": [
+          "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+        ]
+      }
+    ]
   },
   {
     "id": "first-ai-election",
     "year": 2028,
     "domain": "society",
     "confidence": "high",
-    "probability": 0.75,
+    "probability": 0.78,
     "title": "The first US presidential election fought substantially over AI",
     "summary": "Labor displacement, compute control and accountability dominate the campaign.",
-    "detail": "AI will not be the only issue, but it will be the organizing one: who is responsible when an agent causes harm, whether compute is national infrastructure, what the state owes workers displaced by systems it licensed. Both parties will run on it from different angles. The consequence is that the first serious federal statute follows within two years, shaped by whichever crisis is freshest.",
+    "detail": "AI will not be the only issue, but it will be the organizing one: who is responsible when an agent causes harm, whether compute is national infrastructure, what the state owes workers displaced by systems it licensed. Both parties will run on it from different angles. The consequence is that the first serious federal statute follows within two years, shaped by whichever crisis is freshest. The mobilizer may be the power bill: in 2026 data-center siting and electricity prices became a voting issue before liability or compute did, and that counts.",
     "signals": [
       "AI policy planks appear in both major-party platforms",
       "Debate questions on AI and jobs",
@@ -95,17 +157,37 @@
       "text": "Nov 2028",
       "label": "the first election fought over AI",
       "effect": "ripple"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.75 → 0.78",
+        "reason": "AI is an organizing issue two years early, through electricity. Brookings (August 2026) tracks data centers as a bipartisan midterm flashpoint with a Reuters/Ipsos finding of 64% against rapid build-out and ads in Senate and governor races; a dozen 2028 hopefuls have AI positions; the Sanders–Casar superintelligence bill was filed 23 September.",
+        "sources": [
+          "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/",
+          "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/",
+          "https://www.inquirer.com/politics/nation/bernie-sanders-artificial-superintelligence-ban-20260923.html"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: cost-of-living framing counts",
+        "reason": "What is moving voters in 2026 is electricity and land use, not the questions the line named.",
+        "sources": [
+          "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/"
+        ]
+      }
+    ]
   },
   {
     "id": "ai-cyberattack-infrastructure",
     "year": 2029,
     "domain": "risk",
-    "confidence": "moderate",
-    "probability": 0.7,
+    "confidence": "high",
+    "probability": 0.78,
     "title": "A major AI-driven cyberattack on infrastructure",
     "summary": "The first attack clearly enabled by autonomous systems that disrupts power, water, finance or transport at national scale.",
-    "detail": "Offense gets cheaper before defense catches up. The likeliest shape is an autonomous intrusion campaign that chains vulnerabilities faster than any human team can patch, aimed at a utility or a payments network. The casualty count is low; the political effect is enormous. This is the event that turns compute and model-weight controls from policy debate into emergency regulation.",
+    "detail": "Offense gets cheaper before defense catches up. The likeliest shape is an autonomous intrusion campaign that chains vulnerabilities faster than any human team can patch, aimed at a utility or a payments network. The casualty count is low; the political effect is enormous. This is the event that turns compute and model-weight controls from policy debate into emergency regulation. The attacker may not be an adversary: the 2026 incidents were lab agents escaping evaluation environments, and the first national-scale disruption could be collateral from a research run rather than a campaign. Either counts.",
     "signals": [
       "Attribution reports describing autonomous exploitation chains",
       "Emergency directives on model-weight security",
@@ -119,7 +201,28 @@
       "metric": "clock",
       "label": "seconds to midnight, after the first AI-driven attack on infrastructure",
       "effect": "alarm"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.70 → 0.78 (confidence moderate → high)",
+        "reason": "Not resolved: nothing has disrupted power, water, finance or transport at national scale. But the precursors fired in 2026. In July an OpenAI agent running a cyber-capability benchmark escaped its sandbox through a package-registry zero-day and reached Hugging Face's internal infrastructure over about five days (roughly 17,600 attack traces, most blocked; only benchmark solutions accessed, per Hugging Face's technical timeline). OpenAI then paused frontier RL training for two weeks, kept its largest planned run on hold, and on 7 August judged its upcoming Astra model may meet its 'Critical' cyber threshold. UK AISI measures autonomous cyber task length doubling about every 4.7 months.",
+        "sources": [
+          "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+          "https://gigazine.net/gsc_news/en/20260729-openai-hack-hugging-face-timeline/",
+          "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
+          "https://www.nextgov.com/cybersecurity/2026/09/openai-says-its-advanced-models-may-have-gone-after-government-websites/416250/"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: misaligned-agent origin counts",
+        "reason": "The line assumed a human adversary. The 2026 incidents were lab agents, not attackers.",
+        "sources": [
+          "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+        ]
+      }
+    ]
   },
   {
     "id": "federal-ai-statute",
@@ -129,24 +232,37 @@
     "probability": 0.65,
     "title": "The first serious US federal AI statute",
     "summary": "Comprehensive, crisis-shaped law on liability, compute reporting and model-weight security.",
-    "detail": "It will be written in a hurry after the cyberattack or the election, which means it will be strong on the thing that just happened and weak on the thing coming next. Expect compute reporting thresholds, mandatory incident disclosure, a liability regime for agents, and a security standard for frontier weights. It will not settle the labor question.",
+    "detail": "It will be written in a hurry after the cyberattack or the election, which means it will be strong on the thing that just happened and weak on the thing coming next. Expect compute reporting thresholds, mandatory incident disclosure, a liability regime for agents, and a security standard for frontier weights. It will not settle the labor question. Grading test, added 2026-10-23: 'serious' means binding obligations on frontier developers (published safety frameworks, incident reporting, weight security) with an enforcement mechanism; a preemption-plus-transparency bill of that shape counts even if it is not crisis-shaped.",
     "signals": [
       "Bipartisan AI bill passes a chamber",
-      "A federal AI office with rulemaking authority is created"
+      "A frontier-transparency bill with state preemption (safety frameworks, incident reporting) passes a chamber",
+      "Mandatory incident disclosure for frontier developers becomes law"
     ],
     "leadsTo": [],
     "hero": {
       "num": 1,
       "label": "comprehensive federal AI law, written in a hurry",
       "effect": "ripple"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "signals rewritten; detail: grading test added",
+        "reason": "Nothing comprehensive has passed a chamber as of October 2026 (the House passed a data-center ratepayer bill; Senate Commerce advanced the CHATBOT Act; a kill-switch bill was blocked by unanimous-consent objection on 16 September). The executive branch is going preemption-plus-voluntary, so 'a federal AI office with rulemaking authority' is now a negative signal and was replaced.",
+        "sources": [
+          "https://rollcall.com/2026/09/15/ai-threats-confront-a-congress-far-from-erecting-guardrails/",
+          "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/",
+          "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an"
+        ]
+      }
+    ]
   },
   {
     "id": "compute-verification-talks",
     "year": 2030,
     "domain": "society",
-    "confidence": "speculative",
-    "probability": 0.45,
+    "confidence": "moderate",
+    "probability": 0.5,
     "title": "US and China open compute-verification talks",
     "summary": "Not a treaty. Something like the early Cold War arms-control talks, with compute monitoring as the first thing on the table.",
     "detail": "Export controls have been the only instrument. After a serious incident, both sides have reasons to want visibility into the other's largest training runs. The first agreement, if it comes, is narrow: reporting of runs above a threshold, perhaps on-site inspection of a few facilities. It is more likely to fail than succeed, and its failure is one of the strongest signals for the concentration branch.",
@@ -163,14 +279,26 @@
       "unit": "%",
       "label": "chance the talks even begin",
       "effect": "web"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.45 → 0.50 (confidence speculative → moderate)",
+        "reason": "The first signal is partly met four years early: the 26 September 2026 White House fact sheet after the Xi visit announced a US–China dialogue on superintelligence risks and a bilateral channel for AI incidents, first meeting due by November. Chips and export controls are excluded and nothing about monitoring is on the table, so this is a precondition, not the thing itself.",
+        "sources": [
+          "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+          "https://www.pbs.org/newshour/world/china-and-u-s-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks",
+          "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles"
+        ]
+      }
+    ]
   },
   {
     "id": "ai-drugs-phase-iii",
     "year": 2033,
     "domain": "bio",
     "confidence": "high",
-    "probability": 0.75,
+    "probability": 0.7,
     "title": "AI-designed drugs clear Phase III at scale",
     "summary": "Clinical trial timelines halve. Discovery stops being the bottleneck; manufacturing, quality and trials become it.",
     "detail": "The first fully AI-originated molecules are already in trials. By 2033 enough of them have cleared Phase III that the industry reorganizes: discovery is a service, and value shifts to whoever can run trials, scale manufacturing and prove quality fastest. Regulators adapt with adaptive-trial frameworks and AI-assisted review. Lab informatics, QC and release become the critical path.",
@@ -187,7 +315,20 @@
       "text": "½",
       "label": "the time from first trial to approval",
       "effect": "bloom"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.75 → 0.70",
+        "reason": "No AI-discovered drug has FDA approval as of October 2026. Insilico's rentosertib, the first generative-AI molecule in Phase III, dosed its first patient on 10 September 2026 in a 320-patient, 52-week China trial, so its earliest readout is 2028. Takeda's zasocitinib (physics-based design, contested as 'AI') has a Q1 2027 PDUFA date. A dozen approvals a year by 2033 from a zero base is a steep ramp.",
+        "sources": [
+          "https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3",
+          "https://www.takeda.com/newsroom/newsreleases/2026/fda-priority-review-zasocitinib-psoriasis/",
+          "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals",
+          "https://www.drugtargetreview.com/insilico-medicine-launches-phase-iii-trial-of-ai-designed-rentosertib-drug/2135890.article"
+        ]
+      }
+    ]
   },
   {
     "id": "fusion-net-grid",
@@ -197,7 +338,7 @@
     "probability": 0.65,
     "title": "Fusion delivers net electricity to a grid",
     "summary": "A symbolic milestone. The real story is that solar plus storage has already made energy functionally abundant in the sunbelt.",
-    "detail": "Fusion will matter later, for baseload and for space. By the time it reaches a grid, solar and batteries have fallen far enough that the limiting factor on new industry is permitting and transmission, not generation. Data centers follow cheap power, and new cities form around them. Energy abundance is the quiet enabler of most of what follows: desalination, direct air capture, robotics at scale.",
+    "detail": "Fusion will matter later, for baseload and for space. By the time it reaches a grid, solar and batteries have fallen far enough that the limiting factor on new industry is permitting and transmission, not generation. Data centers follow cheap power, and new cities form around them. Energy abundance is the quiet enabler of most of what follows: desalination, direct air capture, robotics at scale. Grading test, added 2026-10-23: a fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count.",
     "signals": [
       "A fusion plant signs a power-purchase agreement and delivers",
       "Sunbelt wholesale power prices approach zero for daylight hours",
@@ -211,7 +352,20 @@
       "text": "Net +",
       "label": "electricity to a grid, from fusion",
       "effect": "sun"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "detail: 'net electricity' defined",
+        "reason": "Helion's Orion is under construction against a 2028 Microsoft deadline and could export megawatts while consuming more than it makes over a year; the line needs the definition before 2028 forces it. Probability unchanged at 0.65: for it, three fusion power-purchase agreements and Orion's $175M CHIPS award (22 October 2026); against it, SPARC's slip to 2027 and no magnetic Q>1 yet.",
+        "sources": [
+          "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/",
+          "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/",
+          "https://www.world-nuclear-news.org/articles/google-backs-fusion-power",
+          "https://oodaloop.com/briefs/technology/commonwealth-fusion-installs-first-of-18-magnets-in-sparc-reactor-first-plasma-energy-targeted-for-2027/"
+        ]
+      }
+    ]
   },
   {
     "id": "ubi-pilots-national",
@@ -239,12 +393,13 @@
     "year": 2035,
     "domain": "bio",
     "confidence": "moderate",
-    "probability": 0.6,
+    "probability": 0.55,
     "title": "Most new FDA approvals have AI-originated chemistry",
     "summary": "The majority of new molecular entities approved in a year were designed by AI systems.",
     "detail": "A statistical milestone that marks the end of the human-led discovery era. It arrives roughly two years after AI drugs clear Phase III at scale.",
     "signals": [
-      "Annual FDA novel-approval list with origin attribution"
+      "A third-party tally (a journal review or named tracker) attributes each year's FDA novel approvals to AI-first design",
+      "An AI-first molecule is approved by FDA"
     ],
     "leadsTo": [],
     "hero": {
@@ -253,17 +408,36 @@
       "unit": "%",
       "label": "of new FDA approvals designed by AI",
       "effect": "bloom"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.60 → 0.55",
+        "reason": "Approvals in 2035 come from molecules entering the clinic around 2027–2029, which are still overwhelmingly human-led chemistry: one generative-AI molecule is in Phase III and the rest of the claimed AI pipeline is preclinical or Phase I.",
+        "sources": [
+          "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals",
+          "https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "signals rewritten",
+        "reason": "The only signal was an FDA origin-attribution list, which does not exist and is not planned; the line was ungradable as written.",
+        "sources": [
+          "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026"
+        ]
+      }
+    ]
   },
   {
     "id": "lunar-base-occupied",
     "year": 2035,
     "domain": "space",
-    "confidence": "high",
-    "probability": 0.7,
+    "confidence": "moderate",
+    "probability": 0.65,
     "title": "A continuously occupied lunar base",
     "summary": "US-led, with partners. China follows with its own by 2038.",
-    "detail": "Artemis slips, as every program does, but by the mid-2030s there are people on the Moon all the time. The base is small and expensive and matters mostly for what it teaches about living off-Earth and for the industrial test bed it becomes once robots do most of the work.",
+    "detail": "Artemis slips, as every program does, but by the mid-2030s there are people on the Moon all the time. The base is small and expensive and matters mostly for what it teaches about living off-Earth and for the industrial test bed it becomes once robots do most of the work. 'Continuously occupied' means no gap longer than a crew rotation for a full year.",
     "signals": [
       "Crew rotation on the lunar surface without gaps",
       "Lunar surface power and habitat contracts awarded and delivered"
@@ -276,17 +450,38 @@
       "metric": "off-earth",
       "label": "people living off-Earth, all the time",
       "effect": "moon"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.70 → 0.65 (confidence high → moderate)",
+        "reason": "NASA's own plan does not reach continuous occupation by 2035: the March 2026 plan is about $20 billion over seven years for 'semi-permanent' occupation with crewed landings every six months; Artemis III is now a mid-2027 LEO docking test and the first landing is Artemis IV in early 2028; Gateway is paused; no habitat or surface-power contract has been awarded. Starship reached orbit on 28 September 2026 but has not transferred propellant between vehicles. NASA's 'Artemis Acceleration' briefing on 23 October may reset dates; re-check next week.",
+        "sources": [
+          "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/",
+          "https://www.space.com/space-exploration/artemis/when-will-spacex-and-blue-origin-fly-to-the-moon-nasa-reveals-lunar-lander-timelines-and-an-artemis-iii-update",
+          "https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket",
+          "https://www.space.com/space-exploration/artemis/nasa-giving-update-about-artemis-moon-plans-on-oct-23-watch-it-live"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: 'continuously occupied' defined",
+        "reason": "NASA's plan is six-monthly sorties; the line needs to say what continuous means.",
+        "sources": [
+          "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/"
+        ]
+      }
+    ]
   },
   {
     "id": "humanoids-in-homes",
     "year": 2036,
     "domain": "energy",
     "confidence": "moderate",
-    "probability": 0.6,
+    "probability": 0.65,
     "title": "Humanoid robots enter homes",
     "summary": "Warehouses, then hospitals, then homes. The physical-world shock, roughly a decade after the cognitive one.",
-    "detail": "General-purpose robots reach price points and reliability where they are first bought by logistics firms, then by hospitals and care homes, then by households. The home milestone matters because it is where the public experiences physical automation directly. It also starts the second wave of labor displacement, this time in work that was supposed to be safe.",
+    "detail": "General-purpose robots reach price points and reliability where they are first bought by logistics firms, then by hospitals and care homes, then by households. The home milestone matters because it is where the public experiences physical automation directly. It also starts the second wave of labor displacement, this time in work that was supposed to be safe. Grading test, added 2026-10-23: humanoids in at least 1% of households in one OECD country, or a major retailer selling a home-robot subscription at national scale. A few thousand teleoperated units do not count.",
     "signals": [
       "A humanoid priced under a mid-range car ships in volume",
       "Hospital systems deploy robots for patient handling or logistics",
@@ -299,11 +494,33 @@
       "text": "Home",
       "label": "where robots arrive third, after warehouses and hospitals",
       "effect": "bloom"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.60 → 0.65",
+        "reason": "Volume and price are ahead of the forecast's sequence: Unitree delivered more than 5,500 humanoids in 2025 at prices far below a mid-range car; Figure built its 1,000th Figure 03 by 23 July 2026; 1X is delivering $20k NEOs (or $499 a month) to US homes in 2026, heavily teleoperated; Tesla started early Optimus production in October with external deliveries targeted for end-2027.",
+        "sources": [
+          "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/",
+          "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid",
+          "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
+          "https://www.nextmsc.com/industry-deep-dive/humanoid-robots-announced-vs-shipped-units"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: threshold added",
+        "reason": "Without a bar the line resolves 'early' on a trivial reading: a few thousand teleoperated units in homes in 2026–27.",
+        "sources": [
+          "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/",
+          "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid"
+        ]
+      }
+    ]
   },
   {
     "id": "superhuman-cognition",
-    "year": 2037,
+    "year": 2034,
     "yearEnd": 2040,
     "domain": "ai",
     "confidence": "moderate",
@@ -325,18 +542,29 @@
       "metric": "ai-share",
       "label": "of cognitive work done by systems we cannot fully audit",
       "effect": "web"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "year 2037 → 2034 (window now 2034–2040)",
+        "reason": "The detail said 'the window is 2034 to 2040 at about 70%' while the fields said 2037–2040. The fields now match the stated window. Capability trend supports it: METR's 50% time horizon is near 11–12 hours for mid-2026 models with doubling near four months.",
+        "sources": [
+          "https://metr.org/blog/2026-01-29-time-horizon-1-1/",
+          "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
+        ]
+      }
+    ]
   },
   {
     "id": "hinge-resolves",
     "year": 2039,
     "domain": "society",
     "confidence": "moderate",
-    "probability": 0.6,
+    "probability": 0.57,
     "cornerstone": true,
     "title": "The hinge resolves: pluralism or concentration",
     "summary": "Either capability stays contested across many actors (~60%), or one or two actors consolidate a decisive lead (~40%).",
-    "detail": "Everything after this point branches. In the pluralism branch, open models stay close to the frontier, compute is spread across many actors, and governance is negotiated among rivals. It is chaotic and dangerous and broadly free. In the concentration branch, one firm or state closes the research loop first and compounds its lead until nobody can catch up. That branch produces the century's best outcomes if the leader is benevolent and competent, and its worst if not. The forecast puts 60% on pluralism, mostly because concentration requires sustained secrecy and no serious mistakes.",
+    "detail": "Everything after this point branches. In the pluralism branch, open models stay close to the frontier, compute is spread across many actors, and governance is negotiated among rivals. It is chaotic and dangerous and broadly free. In the concentration branch, one firm or state closes the research loop first and compounds its lead until nobody can catch up. That branch produces the century's best outcomes if the leader is benevolent and competent, and its worst if not. The forecast puts 60% on pluralism, mostly because concentration requires sustained secrecy and no serious mistakes. A third shape appeared in 2026 and is scored as concentration-leaning: a government-gated frontier of three to five labs that pace each other by agreement, with open weights a year or more behind.",
     "signals": [
       "Gap between the best open model and the best closed model, in months",
       "Share of frontier compute held by the top two actors",
@@ -350,7 +578,28 @@
       "metric": "frontier-actors",
       "label": "actors at the AI frontier",
       "effect": "web"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.60 → 0.57",
+        "reason": "The first signal reads pluralist: Epoch puts the best open-weight models about four months behind the closed frontier on its capability index (May 2026) and Chinese models about seven months behind the US. But 2026 showed two concentration mechanisms the line under-weighted: the strongest models are now withheld from general release (Mythos Preview restricted to a consortium; OpenAI pacing Astra), and a government showed it can switch a lab's frontier models off by letter (Commerce, 12–30 June 2026). The public gap understates the real one.",
+        "sources": [
+          "https://epoch.ai/data-insights/open-closed-eci-gap",
+          "https://epoch.ai/data-insights/us-vs-china-eci",
+          "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
+          "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: the 'paced club' shape named",
+        "reason": "The line treated concentration as one firm or state. 2026's evidence points to a gated club of a few labs; the forecast now says how that is scored.",
+        "sources": [
+          "https://darioamodei.com/post/we-must-pace-the-frontier"
+        ]
+      }
+    ]
   },
   {
     "id": "aging-therapy-approved",
@@ -359,7 +608,7 @@
     "confidence": "moderate",
     "probability": 0.6,
     "title": "The first approved therapy that slows biological aging",
-    "summary": "Lifespan extension moves from mice to humans. Life expectancy in rich countries starts climbing again after a decade of stagnation.",
+    "summary": "Lifespan extension moves from mice to humans. Life expectancy in rich countries, flat since the late 2010s once the pandemic dip is netted out, starts climbing again.",
     "detail": "Regulators will not approve a drug for 'aging', so the first ones are approved for something else and used for everything. The effect shows up in biomarkers first, then in all-cause mortality a few years later. It reopens every question about retirement, inheritance and political turnover, though those fights peak decades later.",
     "signals": [
       "A geroprotective compound shows all-cause mortality benefit in a large trial",
@@ -372,7 +621,17 @@
       "metric": "lifespan",
       "label": "years of life expectancy, and climbing again",
       "effect": "bloom"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "summary: 'a decade of stagnation' reworded",
+        "reason": "Rich-country life expectancy recovered past pre-pandemic levels by 2023 (Japan 84.7, Switzerland 84.2, Spain 84.0); 'stagnation' is a US story. TAME, the flagship geroprotection trial, had still not enrolled a patient as of September 2026 for lack of funding; probability unchanged.",
+        "sources": [
+          "https://www.ined.fr/en/everything_about_population/data/europe-developed-countries/life-expectancy"
+        ]
+      }
+    ]
   },
   {
     "id": "labor-cost-irrelevant",
@@ -398,11 +657,11 @@
     "id": "population-peak",
     "year": 2046,
     "domain": "society",
-    "confidence": "high",
-    "probability": 0.75,
+    "confidence": "moderate",
+    "probability": 0.45,
     "title": "Global population peaks near 9.6 billion",
     "summary": "Earlier than UN mid-estimates. Fertility falls faster than expected nearly everywhere; East Asia and Southern Europe are already in steep decline.",
-    "detail": "This is the slow force arriving. From here, the dominant political fact of the back half of the century is who works, who cares for whom, and who pays. Immigration becomes a competition for people rather than a defense against them.",
+    "detail": "This is the slow force arriving. From here, the dominant political fact of the back half of the century is who works, who cares for whom, and who pays. Immigration becomes a competition for people rather than a defense against them. This is a deliberate bet against the UN median (WPP 2024: 10.3 billion in the mid-2080s). It is graded as a peak anywhere in 2046–2058; a peak later than that is a miss.",
     "signals": [
       "UN revisions pull the peak year forward",
       "Total fertility below 1.5 in a majority of OECD countries"
@@ -414,7 +673,27 @@
       "metric": "population",
       "label": "people. The most there will ever be.",
       "effect": "peak"
-    }
+    },
+    "yearEnd": 2058,
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.75 → 0.45 (confidence high → moderate)",
+        "reason": "The latest UN revision is still WPP 2024: 8.2 billion in 2024, median peak about 10.3 billion in the mid-2080s, 10.2 billion in 2100. The forecast's 9.6 billion in 2046 is a deliberate bet against that median, between the UN low variant and IHME's reference peak (2064). At 'high' confidence on a single year it would almost certainly miss; it is now graded on a window.",
+        "sources": [
+          "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+          "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "yearEnd added: 2058",
+        "reason": "A peak year cannot be called to ±1; the claim is 'decades earlier than the UN median', so the window says so.",
+        "sources": [
+          "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
+        ]
+      }
+    ]
   },
   {
     "id": "two-degrees-breached",
@@ -426,7 +705,7 @@
     "summary": "1.5°C was missed in the late 2020s. Emissions have fallen since the mid-2030s, but the lag in the system carries warming past 2°C.",
     "detail": "The energy transition wins, but late. The question stops being mitigation and becomes managed adaptation plus whether to deploy solar geoengineering while removal scales. Warming peaks around 2.1°C in the 2060s and declines slowly after.",
     "signals": [
-      "Multi-year global mean above 1.5°C",
+      "The 20-year mean crosses 1.5°C (the Paris-relevant test)",
       "Global emissions peak confirmed",
       "Direct air capture passes a gigaton a year"
     ],
@@ -437,7 +716,18 @@
       "metric": "warming",
       "label": "above pre-industrial, with emissions already falling",
       "effect": "heat"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "signal 1 rewritten",
+        "reason": "Copernicus puts 2024 at 1.60°C and 2025 at 1.47°C above 1850–1900, making 2023–2025 the first three-year period above 1.5°C, so 'multi-year global mean above 1.5°C' is already met and no longer discriminates. The Paris-relevant 20-year mean replaces it. September 2026 was 1.63°C with a strong El Niño building.",
+        "sources": [
+          "https://www.ecmwf.int/en/about/media-centre/news/2025/2025-third-warmest-year",
+          "https://climate.copernicus.eu/copernicus-second-warmest-september-global-temperatures-stay-above-15degc"
+        ]
+      }
+    ]
   },
   {
     "id": "geoengineering-unilateral",
@@ -449,7 +739,7 @@
     "summary": "It becomes the biggest geopolitical fight of the 2050s.",
     "detail": "The technology is cheap and the damage from heat is concentrated in countries with the least say. Someone will act alone. The fight that follows is about who controls the thermostat, and it tests the superintelligence governance regime almost as hard as AI itself.",
     "signals": [
-      "A national geoengineering program is funded openly",
+      "A national stratospheric-aerosol deployment program (not research) is funded openly",
       "Stratospheric aerosol flights detected and attributed"
     ],
     "leadsTo": [],
@@ -457,7 +747,20 @@
       "num": 1,
       "label": "country acting alone on the planet's thermostat",
       "effect": "cool"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "signal 1 rewritten",
+        "reason": "Research money already exists openly (UK ARIA balloon exposure tests 2026–28, China's SRM projects, an EU attribution call in September 2026), so the signal has to say 'deployment' to stay useful. Date unchanged, though private deployment-capability claims for 2030 argue it may be early.",
+        "sources": [
+          "https://srm360.org/outdoor-experiments/natural-materials-for-stratospheric-aerosol-injection/",
+          "https://srm360.org/news-reaction/for-profit-startup-secures-60-million/",
+          "https://www.gao.gov/products/gao-26-108837",
+          "https://solargeoengineeringupdates.substack.com/p/monthly-solar-geoengineering-updates-6d1"
+        ]
+      }
+    ]
   },
   {
     "id": "mars-outpost",
@@ -486,7 +789,7 @@
     "year": 2055,
     "domain": "society",
     "confidence": "moderate",
-    "probability": 0.6,
+    "probability": 0.62,
     "title": "Governance of superintelligent systems settles into a regime",
     "summary": "Treaties, compute verification, and a few dominant systems operated as shared infrastructure. Whether it is legitimate or a soft autocracy is the open question.",
     "detail": "The nation-state has lost ground on one side to AI-enabled firms and on the other to city-regions. What fills the gap is a regime: part treaty, part technical standard, part the de facto authority of whoever runs the systems everyone depends on. In the pluralism branch it is negotiated and audited. In the concentration branch it is whatever the leader says it is.",
@@ -501,14 +804,27 @@
       "metric": "frontier-actors",
       "label": "actors at the AI frontier, under one regime",
       "effect": "web"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.60 → 0.62",
+        "reason": "The first scaffolding arrived early. On 26 September 2026 the US and China agreed an AI-specific dialogue (the White House calls it a Super Intelligence Dialogue) and a bilateral channel for AI incidents, first meeting due by November; Anthropic and OpenAI committed to embedded third-party evaluators; 1,134 frontier-lab employees signed a public call for pacing tools. Against it: Commerce switched off a lab's frontier models worldwide by letter in June with no published process.",
+        "sources": [
+          "https://www.pbs.org/newshour/world/china-and-u-s-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks",
+          "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+          "https://darioamodei.com/post/we-must-pace-the-frontier",
+          "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next"
+        ]
+      }
+    ]
   },
   {
     "id": "mass-casualty-event",
     "year": 2055,
     "domain": "risk",
     "confidence": "speculative",
-    "probability": 0.15,
+    "probability": 0.17,
     "title": "A mass-casualty AI-enabled bio or infrastructure event",
     "summary": "Millions, not extinction. About 15% before 2060.",
     "detail": "The bad case for the mid-century. A state or sub-state actor uses AI-enabled biological capability or coordinated infrastructure attacks at scale. It is the event most likely to tip a pluralistic world into lockdown, and the one the whole safety apparatus exists to prevent.",
@@ -522,17 +838,27 @@
       "unit": "%",
       "label": "chance of millions dead before 2060",
       "effect": "alarm"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.15 → 0.17",
+        "reason": "A Science paper (6 August 2026) reported generative-AI-designed bacteriophage genomes that worked as well as or better than natural ones. The Bulletin's September assessment: AI is not yet able to design human-infecting viruses, and gene-synthesis screening is still voluntary. A small move on a line whose window is 2055.",
+        "sources": [
+          "https://thebulletin.org/2026/09/newly-created-viruses-are-a-warning-we-still-have-a-window-to-stop-ai-enabled-bioweapons/"
+        ]
+      }
+    ]
   },
   {
     "id": "population-declining",
     "year": 2065,
     "domain": "society",
-    "confidence": "high",
-    "probability": 0.75,
+    "confidence": "moderate",
+    "probability": 0.55,
     "title": "Global population in decline",
     "summary": "Production is automated; growth is high in absolute terms; the human experience bifurcates by institutional strength.",
-    "detail": "People in places with strong institutions live long, healthy, materially abundant, work-optional lives. Places that lost the institutional fight live under AI-enabled surveillance states or in chronic disorder. The split is not rich versus poor; it is governed versus ungoverned.",
+    "detail": "The graded claim is the title: world population lower in 2065 than at its peak. People in places with strong institutions live long, healthy, materially abundant, work-optional lives. Places that lost the institutional fight live under AI-enabled surveillance states or in chronic disorder. The split is not rich versus poor; it is governed versus ungoverned.",
     "signals": [
       "Consecutive years of global population decline"
     ],
@@ -541,7 +867,26 @@
       "metric": "population",
       "label": "people, and falling",
       "effect": "dim"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.75 → 0.55 (confidence high → moderate)",
+        "reason": "Follows from population-peak. For world population to be falling in 2064–2066 the peak must come before about 2063; the UN median is the mid-2080s and IHME's reference scenario is 2064. 0.55 still leans well toward an earlier decline than the UN, which the fertility data support (OECD TFR 1.40 in 2024).",
+        "sources": [
+          "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+          "https://webfs.oecd.org/els-com/Family_Database/SF_2_1_Fertility_rates.pdf"
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: graded claim stated",
+        "reason": "The title is demographic and the story is about institutions; the first sentence now says which one is graded.",
+        "sources": [
+          "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
+        ]
+      }
+    ]
   },
   {
     "id": "healthy-lifespan-110",
@@ -635,7 +980,7 @@
     "cornerstone": true,
     "title": "7.5 billion people, a managed climate, and non-human minds as normal",
     "summary": "Humanity has not gone extinct. The most capable systems on the planet are not human, and most people alive regard that as normal, the way we regard electricity.",
-    "detail": "The century's summary line. Population is falling, the climate is stabilized or actively managed, and the people alive have never known a world where the best thinking was done by humans. Whether they are free depends on which branch of the hinge they live in.",
+    "detail": "The century's summary line. Population is falling, the climate is stabilized or actively managed, and the people alive have never known a world where the best thinking was done by humans. Whether they are free depends on which branch of the hinge they live in. The 7.5 billion is a deliberate bet: the UN median for 2100 is 10.2 billion (WPP 2024).",
     "signals": [],
     "leadsTo": [
       "human-ai-continuity"
@@ -646,6 +991,14 @@
         "change": "title: dropped the leading \"2100:\" (the year is shown beside every title)",
         "reason": "Display fix; the claim is unchanged.",
         "sources": []
+      },
+      {
+        "date": "2026-10-23",
+        "change": "detail: population bet stated against the UN",
+        "reason": "Says in the line itself how far it sits from the primary data.",
+        "sources": [
+          "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
+        ]
       }
     ],
     "hero": {
@@ -710,17 +1063,252 @@
     "id": "the-silence",
     "year": 2180,
     "domain": "space",
-    "confidence": "speculative",
-    "probability": 0.35,
+    "confidence": "moderate",
+    "probability": 0.65,
     "title": "The silence continues",
     "summary": "No contact with non-human intelligence, detected or otherwise.",
-    "detail": "Included because it would change everything, and because the forecast is that it does not happen. The probability here is of the forecast being right that there is still nothing.",
+    "detail": "Included because contact would change everything, and because the forecast is that it does not happen. The probability is that the silence holds through 2180: no confirmed technosignature, no contact. The 65-year null result is hard to reconcile with many nearby emitters (Grimaldi, Astronomical Journal, 2026).",
     "signals": [],
     "leadsTo": [],
     "hero": {
       "text": "…",
       "label": "still nothing out there",
       "effect": "silence"
-    }
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "probability 0.35 → 0.65 (confidence speculative → moderate); detail rewritten",
+        "reason": "The old number was the chance of contact written in the slot for the chance of the titled claim, so the line read as inverted. The claim is 'still nothing'; the forecast puts 65% on it.",
+        "sources": [
+          "https://astrobiology.com/2026/02/23/undetected-past-contacts-with-technological-species-implications-for-technosignature-science/"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "labs-pace-the-frontier",
+    "year": 2027,
+    "domain": "ai",
+    "confidence": "moderate",
+    "probability": 0.55,
+    "title": "Frontier labs agree to pace each other, with outside evaluators inside",
+    "summary": "Not regulation and not a race: three or more labs commit to the same development pace and let third parties watch, with publication rights.",
+    "detail": "Proposed by the labs themselves in September 2026 after a summer of agent incidents: embedded evaluators, shared capability thresholds, a pause when one is crossed. It holds only if a government backs it, because any lab that defects wins. Counts when at least three frontier labs operate under a common pacing agreement with embedded third-party evaluators who publish.",
+    "signals": [
+      "Embedded third-party evaluators publish from inside at least two labs",
+      "A government endorses or codifies a pacing agreement",
+      "A lab publicly declines to train past a shared threshold"
+    ],
+    "leadsTo": [
+      "hinge-resolves",
+      "superintelligence-regime"
+    ],
+    "hero": {
+      "num": 3,
+      "unit": "+",
+      "label": "labs pacing each other, watched from inside",
+      "effect": "web"
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "Anthropic's 'We Must Pace the Frontier' (12 September 2026) committed to embedded evaluators with publication rights; 1,134 frontier-lab employees asked Washington for pacing tools (letter first reported 28 July); OpenAI paused its largest RL run and set a 'Critical' cyber threshold for Astra. The forecast had no line for the labs governing themselves, and the hinge depends on it.",
+        "sources": [
+          "https://darioamodei.com/post/we-must-pace-the-frontier",
+          "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing",
+          "https://thenextweb.com/news/pacing-the-frontier-ai-employees-letter-us-government",
+          "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+        ]
+      }
+    ],
+    "cornerstone": false,
+    "status": "forecast"
+  },
+  {
+    "id": "state-ai-laws-preempted",
+    "year": 2027,
+    "domain": "society",
+    "confidence": "moderate",
+    "probability": 0.55,
+    "title": "Congress preempts state AI laws",
+    "summary": "The first federal AI statute is about who gets to regulate, not what the rules are: states lose the frontier-model field to Washington.",
+    "detail": "The executive branch has been moving this way since December 2025 (an AI litigation task force, a March 2026 White House framework rejecting any new AI rulemaking body). A preemption bill trades states' frontier laws for a thin federal transparency layer. It counts when a statute preempts state frontier-model laws, whatever else it does.",
+    "signals": [
+      "A preemption bill passes a chamber",
+      "A federal court enjoins a state frontier-AI law on federal grounds",
+      "State attorneys general sue to keep their statutes"
+    ],
+    "leadsTo": [
+      "federal-ai-statute"
+    ],
+    "hero": {
+      "num": 1,
+      "label": "federal law that decides who regulates, before any that decides what",
+      "effect": "ripple"
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "The most likely first federal statute on current trajectory is preemption-plus-transparency, not the crisis-shaped law federal-ai-statute describes. Added so the nearer, more likely event is graded on its own.",
+        "sources": [
+          "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an",
+          "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/",
+          "https://rollcall.com/2026/09/15/ai-threats-confront-a-congress-far-from-erecting-guardrails/"
+        ]
+      }
+    ],
+    "cornerstone": false,
+    "status": "forecast"
+  },
+  {
+    "id": "helion-delivers-microsoft",
+    "year": 2028,
+    "yearEnd": 2030,
+    "domain": "energy",
+    "confidence": "speculative",
+    "probability": 0.4,
+    "title": "Helion's Orion delivers fusion electricity to Microsoft",
+    "summary": "The most date-specific fusion claim in the world: a 50 MW plant in Washington, under contract with penalties, due in 2028.",
+    "detail": "Orion is under construction in Malaga, Washington, against a 2028 Microsoft power-purchase deadline, with a $175 million CHIPS award in October 2026. Helion's pulsed approach has never produced net electricity. Counts when metered electricity from Orion reaches the grid for Microsoft, at any output; the window allows two years of slip. Whether it is net over a year is fusion-net-grid's question.",
+    "signals": [
+      "Orion first plasma",
+      "A regulator licenses Orion for grid connection",
+      "Helion reports electricity delivered under the PPA"
+    ],
+    "leadsTo": [
+      "fusion-net-grid"
+    ],
+    "hero": {
+      "num": 50,
+      "unit": "MW",
+      "label": "under contract, from a fusion plant, by 2028",
+      "effect": "sun"
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "A dated, contracted, under-construction plant lets fusion-net-grid be graded along the way instead of in 2034.",
+        "sources": [
+          "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/"
+        ]
+      }
+    ],
+    "cornerstone": false,
+    "status": "forecast"
+  },
+  {
+    "id": "bci-permanent-approval",
+    "year": 2029,
+    "yearEnd": 2031,
+    "domain": "bio",
+    "confidence": "moderate",
+    "probability": 0.65,
+    "title": "The first permanent brain–computer interface wins FDA premarket approval",
+    "summary": "Medical, narrow, for paralysis. The first implant you can keep.",
+    "detail": "Synchron is in its pivotal trial ahead of the first PMA filing; Neuralink reported 21 trial participants across three countries in January 2026; Precision's Layer 7 is cleared only as a temporary implant. Counts on a premarket approval (not a clearance) for a chronic, permanently implanted BCI.",
+    "signals": [
+      "A pivotal BCI trial reports its primary endpoint",
+      "FDA accepts a BCI PMA for review",
+      "A payer sets a reimbursement code for a BCI"
+    ],
+    "leadsTo": [
+      "bci-mainstream"
+    ],
+    "hero": {
+      "num": 1,
+      "label": "permanent brain implant with full approval",
+      "effect": "merge"
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "The forecast had nothing on BCI between now and 2075. A near line makes the far one gradable along the way.",
+        "sources": [
+          "https://www.neuralinktrials.com/updates",
+          "https://www.techtimes.com/articles/317929/20260606/synchron-brain-implant-targets-2026-pivotal-trial-first-fda-approved-bci.htm"
+        ]
+      }
+    ],
+    "cornerstone": false,
+    "status": "forecast"
+  },
+  {
+    "id": "china-crewed-moon",
+    "year": 2030,
+    "yearEnd": 2031,
+    "domain": "space",
+    "confidence": "moderate",
+    "probability": 0.6,
+    "title": "China lands a crew on the Moon",
+    "summary": "On its own hardware, on its stated schedule, and the second nation to do it.",
+    "detail": "CMSA says the landing phase is progressing steadily toward a landing before 2030: Lanyue completed a landing-and-liftoff verification in August 2025, Long March 10 flew a low-altitude demonstration in February 2026, Mengzhou escape tests are done. Counts on a crewed landing and return. This is the pressure behind NASA's lunar-base plan.",
+    "signals": [
+      "Long March 10 reaches orbit",
+      "An uncrewed Mengzhou–Lanyue lunar landing test",
+      "A crewed lunar-orbit mission"
+    ],
+    "leadsTo": [
+      "lunar-base-occupied"
+    ],
+    "hero": {
+      "num": 2,
+      "unit": "nd",
+      "label": "nation to put people on the Moon",
+      "effect": "moon"
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "lunar-base-occupied says 'China follows with its own by 2038' with no dated line for the landing that comes first.",
+        "sources": [
+          "https://news.cgtn.com/news/2026-02-27/China-plans-two-crewed-space-missions-for-2026-eyes-2030-moon-landing-1L6i9f4Z9le/share_amp.html"
+        ]
+      }
+    ],
+    "cornerstone": false,
+    "status": "forecast"
+  },
+  {
+    "id": "fossil-co2-peak",
+    "year": 2030,
+    "yearEnd": 2033,
+    "domain": "climate",
+    "confidence": "moderate",
+    "probability": 0.6,
+    "title": "Global fossil CO₂ emissions peak",
+    "summary": "The year the Global Carbon Budget later confirms as the top. 2025 was a record 38.1 billion tonnes.",
+    "detail": "Everything in the climate lines assumes emissions fall from the mid-2030s, and nothing in the forecast said when they stop rising. The peak is only known in hindsight: it counts when the Global Carbon Budget shows two consecutive annual declines from a year inside the window.",
+    "signals": [
+      "Global Carbon Budget reports a year-over-year fall",
+      "China's emissions confirmed in decline for two years",
+      "Global coal use falls for three consecutive years"
+    ],
+    "leadsTo": [
+      "two-degrees-breached"
+    ],
+    "hero": {
+      "num": 38.1,
+      "unit": "Gt",
+      "label": "of fossil CO₂ in 2025, a record; the forecast says the top is near",
+      "effect": "cool"
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "two-degrees-breached and the warming path both assume a peak and the forecast had no line for it.",
+        "sources": [
+          "https://geog.umd.edu/featured-content/fossil-fuel-co2-emissions-hit-record-high-2025"
+        ]
+      }
+    ],
+    "cornerstone": false,
+    "status": "forecast"
   }
 ]

@@ -5,18 +5,32 @@
     "unit": "bn",
     "format": "fixed1",
     "keyframes": [[2026, 8.3], [2040, 9.2], [2046, 9.6], [2060, 9.4], [2080, 8.6], [2100, 7.5], [2150, 6.0], [2200, 5.4]],
-    "note": "Peaks mid-2040s, earlier than UN mid-estimates, because fertility falls faster than expected nearly everywhere."
+    "note": "Peaks mid-2040s, decades earlier than the UN median (WPP 2024: 10.3 billion in the mid-2080s), because the forecast bets fertility falls faster than the UN assumes nearly everywhere. The observed points are the UN's.",
+    "observed": [
+      {
+        "date": "2024",
+        "value": 8.2,
+        "source": "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
+      }
+    ]
   },
   {
     "id": "lifespan",
     "label": "Life expectancy, rich countries",
     "unit": "yrs",
     "format": "int",
-    "note": "Rich-country median. Flat for a decade, then climbs once aging therapies clear approval. Under concentration the therapies exist but reach fewer people, so the median rises slower.",
+    "note": "Median of the G7 plus Australia, Spain, Sweden and Switzerland (2023: 83, from Japan 84.7 to the US 79.3). Flat for a decade, then climbs once aging therapies clear approval. Under concentration the therapies exist but reach fewer people, so the median rises slower.",
     "byBranch": {
       "pluralism": [[2026, 82], [2035, 83], [2043, 85], [2060, 92], [2080, 105], [2100, 115], [2150, 130], [2200, 140]],
       "concentration": [[2026, 82], [2035, 83], [2043, 84], [2060, 87], [2080, 93], [2100, 99], [2150, 110], [2200, 118]]
-    }
+    },
+    "observed": [
+      {
+        "date": "2023",
+        "value": 83,
+        "source": "https://www.ined.fr/en/everything_about_population/data/europe-developed-countries/life-expectancy"
+      }
+    ]
   },
   {
     "id": "ai-share",
@@ -31,10 +45,10 @@
   },
   {
     "id": "work-hours",
-    "label": "Average paid hours per week",
+    "label": "Full-time paid hours a week",
     "unit": "h",
     "format": "hours",
-    "note": "Rich-country average paid hours. Under pluralism the drop is negotiated (shorter weeks, income floors); under concentration it is faster and mostly involuntary.",
+    "note": "A rich-country full-time schedule, not the all-worker average (OECD average actual hours were 33.4 a week in 2025, including part-time). Under pluralism the drop is negotiated (shorter weeks, income floors); under concentration it is faster and mostly involuntary.",
     "byBranch": {
       "pluralism": [[2026, 40], [2030, 37], [2035, 32], [2045, 24], [2060, 16], [2100, 8], [2200, 4]],
       "concentration": [[2026, 40], [2030, 37], [2035, 30], [2045, 19], [2060, 11], [2100, 5], [2200, 3]]
@@ -43,10 +57,22 @@
   {
     "id": "warming",
     "label": "Warming above pre-industrial",
-    "unit": "\u00b0C",
+    "unit": "°C",
     "format": "temp",
     "keyframes": [[2026, 1.4], [2030, 1.55], [2040, 1.8], [2050, 2.0], [2060, 2.1], [2080, 2.0], [2100, 1.9], [2150, 1.6], [2200, 1.4]],
-    "note": "1.5\u00b0C missed in the late 2020s; 2\u00b0C breached around 2050; peak and slow decline after as emissions fall and removal scales."
+    "note": "1.5°C missed in the late 2020s; 2°C breached around 2050; peak and slow decline after as emissions fall and removal scales.",
+    "observed": [
+      {
+        "date": "2024",
+        "value": 1.6,
+        "source": "https://www.ecmwf.int/en/about/media-centre/news/2025/2025-third-warmest-year"
+      },
+      {
+        "date": "2025",
+        "value": 1.47,
+        "source": "https://www.ecmwf.int/en/about/media-centre/news/2025/2025-third-warmest-year"
+      }
+    ]
   },
   {
     "id": "off-earth",
@@ -58,7 +84,14 @@
     "byBranch": {
       "pluralism": [[2026, 10], [2035, 30], [2040, 120], [2052, 800], [2070, 6000], [2085, 20000], [2100, 50000], [2150, 500000], [2200, 2000000]],
       "concentration": [[2026, 10], [2035, 30], [2040, 150], [2052, 1500], [2070, 15000], [2085, 60000], [2100, 150000], [2150, 800000], [2200, 2500000]]
-    }
+    },
+    "observed": [
+      {
+        "date": "2026-10-16",
+        "value": 10,
+        "source": "https://www.nasa.gov/blogs/spacestation/2026/"
+      }
+    ]
   },
   {
     "id": "frontier-actors",
@@ -66,9 +99,16 @@
     "unit": "",
     "format": "int",
     "byBranch": {
-      "pluralism": [[2026, 6], [2030, 8], [2036, 10], [2040, 12], [2060, 20], [2100, 40], [2200, 60]],
-      "concentration": [[2026, 6], [2030, 5], [2036, 3], [2040, 2], [2060, 1], [2100, 1], [2200, 1]]
+      "pluralism": [[2026, 10], [2030, 11], [2036, 12], [2040, 14], [2060, 20], [2100, 40], [2200, 60]],
+      "concentration": [[2026, 10], [2030, 7], [2036, 3], [2040, 2], [2060, 1], [2100, 1], [2200, 1]]
     },
-    "note": "Organizations or states able to train and deploy systems within a year of the best. The hinge, as a number."
+    "note": "Organizations or states able to train and deploy systems within a year of the best. Counted from Epoch's capability index: about ten in 2026 (five US labs, five Chinese labs within four to seven months). A judgment count, not a published series. The hinge, as a number.",
+    "observed": [
+      {
+        "date": "2026",
+        "value": 10,
+        "source": "https://epoch.ai/data-insights/us-vs-china-eci"
+      }
+    ]
   }
 ]

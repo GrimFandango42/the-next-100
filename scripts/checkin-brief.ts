@@ -39,13 +39,19 @@ out.push("");
 out.push(`## Metrics with observed anchors to refresh`);
 for (const m of d.metrics) out.push(`- [${m.id}] ${m.label} · ${m.observed.length} observed point(s)`);
 out.push("");
-out.push("## Standing search queries");
-const q = [
-  "frontier AI model release capabilities this week", "open-weight model frontier gap", "AI agents enterprise adoption layoffs entry-level hiring",
-  "AI export controls compute verification US China", "AI cyberattack critical infrastructure autonomous", "AI-designed drug Phase III results FDA approval",
-  "fusion net electricity grid milestone", "humanoid robot deployment hospital home price", "Artemis lunar base crew schedule",
-  "Doomsday Clock setting Bulletin of the Atomic Scientists", "UN world population projections revision fertility", "global mean temperature 1.5C Copernicus record",
-  "universal basic income national program law", "AI federal legislation United States Congress passed",
-];
-for (const s of q) out.push(`- ${s}`);
+out.push("## Registry sources to open first (SOURCES.md · data/sources.json)");
+const reg = read("sources.json") as { domains: Record<string, { name: string; url: string; pulls: string; cadence: string; tier: string }[]>; metrics: Record<string, { name: string; url: string }[]>; queries: { weekly: string[]; quarterly: string[] }; rules: string[] };
+const liveDomains = new Set(live.map((e) => e.domain));
+for (const [dom, list] of Object.entries(reg.domains)) if (liveDomains.has(dom as never)) { out.push(`- ${dom}:`); for (const r of list.filter((x) => x.tier === "primary" || x.tier === "institutional").slice(0, 4)) out.push(`    · ${r.name} — ${r.url} · ${r.cadence}`); }
+for (const m of d.metrics) { const list = reg.metrics[m.id] ?? []; if (list.length) out.push(`- metric ${m.id}: ${list.slice(0, 2).map((r) => `${r.name} — ${r.url}`).join(" · ")}`); }
+out.push("");
+out.push("## Standing search queries (weekly)");
+for (const s of reg.queries.weekly) out.push(`- ${s}`);
+const quarterStart = [0, 3, 6, 9].includes(today.getMonth()) && today.getDate() <= 10;
+out.push("");
+out.push(quarterStart ? "## Quarterly queries — due this week" : "## Quarterly queries (first check-in of Jan / Apr / Jul / Oct)");
+for (const s of reg.queries.quarterly) out.push(`- ${s}`);
+out.push("");
+out.push("## Source rules (SOURCES.md has the full list)");
+for (const r of reg.rules.slice(0, 5)) out.push(`- ${r}`);
 console.log(out.join("\n"));
