@@ -3,7 +3,7 @@
 You are working on **The Next 100**, a public, self-grading forecast of 2026–2200. Owner: Nithin. Live site: https://thenext100.duckdns.org · Source: https://github.com/GrimFandango42/the-next-100 (public). Read `CLAUDE.md` (repo map and conventions) and `CHECKIN.md` (how the forecast is edited) before changing anything.
 
 ## What it is
-- `data/*.json` **is the forecast**: 39 dated predictions (`events.json`), eras, metrics with keyframes to 2200, leading indicators, scenario odds, the Doomsday Clock path, and a changelog. Everything on the site is drawn from these files.
+- `data/*.json` **is the forecast**: 43 dated predictions (`events.json`), eras, metrics with keyframes to 2200, leading indicators, scenario odds, the Doomsday Clock path, and a changelog. Everything on the site is drawn from these files.
 - `src/` is a Vite + React + TypeScript + D3 site. `components/StoryJourney.tsx` is the book: native scroll, one page per prediction, chapter pages, one reader strip with an Overview that shows the whole century; `Figure.tsx` draws one data figure per prediction from `data/`; the evidence section below the book (`WorldState`, `Sections`) shows the numbers, odds, indicators, track record and method.
 - `scripts/` holds the validator and the check-in tooling; `qa/` holds headless Playwright checks; `deploy/` holds the VPS setup.
 

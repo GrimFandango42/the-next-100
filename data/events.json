@@ -215,8 +215,9 @@
       "Insurance markets reprice cyber risk sharply"
     ],
     "leadsTo": [
+      "compute-verification-talks",
       "federal-ai-statute",
-      "compute-verification-talks"
+      "federal-pqc-deadline-met"
     ],
     "hero": {
       "metric": "clock",
@@ -772,7 +773,8 @@
       "A regulator accepts an aging biomarker as a surrogate endpoint"
     ],
     "leadsTo": [
-      "healthy-lifespan-110"
+      "healthy-lifespan-110",
+      "in-vivo-editing-common-disease"
     ],
     "hero": {
       "metric": "lifespan",
@@ -1635,6 +1637,182 @@
     "timing": "window",
     "resolution": {
       "test": "The Global Carbon Budget identifies a peak year inside 2030–2033 followed by three consecutive lower years. Graded on the 2037 edition, so data revisions are in. Two declines alone identify a candidate, not the peak."
+    }
+  },
+  {
+    "id": "in-vivo-editing-common-disease",
+    "year": 2029,
+    "yearEnd": 2031,
+    "domain": "bio",
+    "confidence": "moderate",
+    "probability": 0.55,
+    "title": "An in-body gene editor is approved for a disease of the many",
+    "summary": "Casgevy edits cells in a dish. The next step is a one-time infusion that rewrites DNA inside the patient, approved for a condition with more than 100,000 US patients, not a rare one.",
+    "detail": "The first in-vivo CRISPR approval will be Intellia's lonvo-z for hereditary angioedema, a few thousand US patients, with a BLA in review and a launch planned for the first half of 2027. The line asks for the harder thing: the same technology approved for a common condition. The candidates are nex-z for transthyretin cardiomyopathy (MAGNITUDE, ~1,200 patients, event-driven, dosing paused for a Grade 4 liver event in October 2025 and resumed in the second quarter of 2026) and Lilly's VERVE-102 base editor for high cholesterol (Phase 2 starting by end-2026). Lonvo-z for HAE does not count; a bespoke single-patient therapy under FDA's plausible-mechanism pathway does not count.",
+    "signals": [
+      "FDA approves lonvo-z, the first in-vivo CRISPR therapy, in the first half of 2027",
+      "MAGNITUDE reads out its cardiovascular endpoint with no new liver safety signal",
+      "Lilly starts a Phase 3 of VERVE-102 in a population broader than familial hypercholesterolemia"
+    ],
+    "leadsTo": [
+      "healthy-lifespan-110"
+    ],
+    "hero": {
+      "num": 87,
+      "unit": "%",
+      "label": "fewer attacks after one infusion of an in-body CRISPR editor (HAELO Phase 3, 2026)",
+      "effect": "bloom"
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "The forecast had no gene-editing line. In-vivo editing now has a Phase 3 win (lonvo-z: 87% fewer HAE attacks, NEJM June 2026), a rolling BLA, and two common-disease programs (nex-z ATTR-CM, VERVE-102) with dated next steps, so a 2029-2031 window is gradable.",
+        "sources": [
+          "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-second-quarter-2026-financial",
+          "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-first-quarter-2026-financial",
+          "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-provides-update-magnitude-clinical-trials",
+          "https://ir.intelliatx.com/static-files/a57908a6-aaca-404d-9072-32471cd3d41e",
+          "https://investor.lilly.com/news-releases/news-release-details/single-dose-lillys-pcsk9-base-editor-verve-102-reduced-pcsk9-88",
+          "https://innovativegenomics.org/news/crispr-clinical-trials-2026/"
+        ]
+      }
+    ],
+    "timing": "window",
+    "resolution": {
+      "test": "Counts on FDA or EMA approval of a systemically delivered CRISPR, base or prime editor for ATTR cardiomyopathy, hypercholesterolemia or any other indication with more than 100,000 US patients. Miss if: No FDA/EMA approval of a systemically delivered in-vivo editor for an indication with >100,000 US patients by 31 Dec 2031."
+    }
+  },
+  {
+    "id": "federal-pqc-deadline-met",
+    "year": 2030,
+    "domain": "risk",
+    "confidence": "speculative",
+    "probability": 0.2,
+    "title": "US agencies hit the 2030 post-quantum deadline for their most important systems",
+    "summary": "The standards exist. The order exists. The question is whether every federal high-value system is actually using post-quantum key exchange by 31 December 2030, and whether an auditor says so.",
+    "detail": "Executive Order 14412 (22 June 2026) requires agencies to move all high-value assets and FIPS-199 high-impact systems to post-quantum key establishment by 31 December 2030 and to post-quantum signatures by 31 December 2031; OMB M-26-15 made migration plans due 22 October 2026. GAO's October 2026 audit found none of the 24 CFO Act agencies had the inventory, funding and testing practices in place. The web is further along: about 70% of browser traffic reaching Cloudflare already uses hybrid ML-KEM, with authentication lagging. Partial if 18 or more agencies did. Rescheduling the deadline by executive order is a miss.",
+    "signals": [
+      "OMB's FISMA report to Congress adds a post-quantum migration metric per agency",
+      "A GAO follow-up finds a majority of the 24 agencies with complete cryptographic inventories",
+      "The FAR rule requiring contractor PQC compliance by 31 December 2030 is finalised, not just proposed"
+    ],
+    "leadsTo": [],
+    "hero": {
+      "num": 0,
+      "unit": "/24",
+      "label": "agencies GAO found ready to migrate, four years before the deadline (October 2026)",
+      "effect": "alarm"
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "The forecast had nothing on the quantum transition. A dated, named, auditable deadline now exists (EO 14412, 31 December 2030, HVAs and high-impact systems) and a baseline audit (GAO-27-108740: 0 of 24 agencies with the practices in place), so the line can be graded.",
+        "sources": [
+          "https://www.whitehouse.gov/wp-content/uploads/2026/06/eo-14412.pdf",
+          "https://www.gao.gov/assets/gao-27-108740-highlights.pdf",
+          "https://blog.cloudflare.com/post-quantum-visibility/",
+          "https://postquantum.com/security-pqc/trump-pqc-executive-order-2030-deadline/"
+        ]
+      }
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "Counts if GAO, or OMB's annual FISMA report to Congress, confirms that all 24 CFO Act agencies' high-value assets and high-impact systems used post-quantum key establishment at the 31 December 2030 deadline. Miss if: By the time GAO or the FISMA report covers calendar 2030, fewer than 24 agencies have all HVAs and high-impact systems on PQC key establishment; or the 2030 deadline is moved by a later order or memo; or no audit ever reports it (treated as a miss, since the line is about audited migration)."
+    }
+  },
+  {
+    "id": "quantum-chemistry-advantage",
+    "year": 2030,
+    "yearEnd": 2033,
+    "domain": "ai",
+    "confidence": "speculative",
+    "probability": 0.4,
+    "title": "A quantum computer beats the best classical method on a real chemistry problem",
+    "summary": "Not a sampling benchmark. A molecule or material property computed on error-corrected hardware, beyond the best stated classical method, and still standing a year later.",
+    "detail": "Every 2025-2026 advantage claim is a sampling or spin-model task: Google's Quantum Echoes, IBM's 70-logical-qubit doped-Clifford circuit (July 2026), Quantinuum's Helios Fermi-Hubbard run. None is a chemistry result and none has an independent classical baseline that has held; the Quantum Advantage Tracker lists them as candidates. ETH's Reiher group puts routine useful chemistry at roughly 500-1,000 logical qubits; IBM's Starling (2029) targets about 200..",
+    "signals": [
+      "A machine with 100 or more logical qubits runs a circuit of a million or more logical gates",
+      "A chemistry entry on the Quantum Advantage Tracker survives a year without a classical match",
+      "A pharma or materials company publishes a decision it made on a quantum result it could not get classically"
+    ],
+    "leadsTo": [
+      "ai-drugs-phase-iii"
+    ],
+    "hero": {
+      "num": 70,
+      "label": "error-corrected qubits in the largest verified logical circuit so far (IBM, July 2026); useful chemistry needs hundreds",
+      "effect": "web"
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "Quantum computing had no line. The 2026 record is clear: logical qubits are real (IBM 70 logical, 2,415 logical two-qubit gates; Quantinuum Helios 98 physical at 99.92% two-qubit fidelity), advantage claims are all synthetic, and useful chemistry is estimated at 500-1,000 logical qubits. A 2030-2033 window with a reproduction requirement is the honest test.",
+        "sources": [
+          "https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits",
+          "https://www.nature.com/articles/s41586-026-10676-4",
+          "https://arxiv.org/html/2603.19081v1",
+          "https://quantumfrontiers.com/2026/02/28/what-is-next-in-quantum-advantage/",
+          "https://postquantum.com/industry-news/ibm-three-quantum-advantage-papers/"
+        ]
+      }
+    ],
+    "timing": "window",
+    "resolution": {
+      "test": "Counts on a peer-reviewed ground-state energy, reaction barrier or material property for a system of chemical interest, computed on error-corrected hardware, that beats the best classical method named in the paper on accuracy or cost, is reproduced or verified by a group outside the vendor, and is not matched classically within 12 months of publication. Miss if: No peer-reviewed chemistry/materials result on error-corrected hardware beating a named best classical method, independently reproduced and unmatched classically for 12 months, by 31 Dec 2033."
+    }
+  },
+  {
+    "id": "data-centres-tenth-us-power",
+    "year": 2030,
+    "domain": "energy",
+    "confidence": "moderate",
+    "probability": 0.5,
+    "title": "Data centres draw a tenth of US electricity",
+    "summary": "Power, not chips, becomes the limit on the AI buildout. The test is the meter: data centres at 10% or more of US electricity in 2030, up from 4.7% in 2024.",
+    "detail": "LBNL's June 2026 update puts US data centres at 192 TWh and 4.7% of US electricity in 2024, with a 2030 reference case of 649 TWh (11.8%) inside a 9.5-15.3% range; the IEA (2026) has global data-centre demand doubling from 485 TWh in 2025 to 950 TWh in 2030 with the US about half of installed capacity. Against the forecasts stands the grid: ERCOT's large-load queue went from 63 GW to over 230 GW in a year and Texas froze new interconnections in August 2026 pending an audit; Sightline expects 30-50% of 2026's large projects to slip; Goldman expects half of near-term capacity late. The number will be published in 2031 or 2032; the line is graded then.",
+    "signals": [
+      "EIA begins publishing data-centre load as its own category in the Short-Term Energy Outlook",
+      "A hyperscaler or frontier lab moves or cancels a gigawatt-scale US campus and names power as the reason",
+      "LBNL's next update holds its 2030 reference case at or above 11%"
+    ],
+    "leadsTo": [
+      "fusion-net-grid"
+    ],
+    "hero": {
+      "num": 4.7,
+      "unit": "%",
+      "label": "of US electricity went to data centres in 2024; the forecast says 10% by 2030",
+      "effect": "sun"
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "added",
+        "reason": "The forecast treats energy as abundant and never asks whether the grid can carry the AI buildout. LBNL (192 TWh, 4.7% in 2024; 9.5-15.3% in 2030), the IEA's 2026 numbers and the ERCOT/Texas freeze give a line that can be read off a published table.",
+        "sources": [
+          "https://www.energy.gov/documents/united-states-data-center-energy-usage-report-2025-update",
+          "https://iea.blob.core.windows.net/assets/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf",
+          "https://www.iea.org/reports/energy-and-ai/executive-summary",
+          "https://www.utilitydive.com/news/efforts-to-curb-data-center-speculation-gain-ground-across-the-us/830495/",
+          "https://www.latitudemedia.com/news/up-to-half-of-the-worlds-data-centers-may-be-delayed-this-year/",
+          "https://www.eia.gov/pressroom/releases/press592.php"
+        ]
+      }
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "Counts if LBNL/DOE, EIA or the IEA reports US data-centre consumption at 10% or more of total US electricity for calendar 2030. Miss if: LBNL/DOE, EIA and IEA all put US data-centre consumption below 10% of total US electricity for calendar 2030 - most plausibly because interconnection freezes and equipment lead times (transformers 2-3 years, turbines ~5) hold the 2026-2030 buildout to the LBNL low case or below, or because efficiency and workload shifts flatten demand per accelerator."
     }
   }
 ]
