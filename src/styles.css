@@ -457,9 +457,9 @@ button.icon{width:44px;height:44px;padding:0;flex:none;font-size:16px;display:gr
 .rail{height:36px}
 
 /* ================= film v2: beats ================= */
-html{scroll-snap-type:y proximity}
+html{scroll-snap-type:none}
 .snap{position:absolute;left:0;width:1px;height:1px;scroll-snap-align:start;pointer-events:none}
-.beat{position:absolute;inset:0;z-index:3;pointer-events:none;transition:opacity .25s}
+.beat{position:absolute;inset:0;z-index:3;pointer-events:none}
 .beat>*{position:absolute;pointer-events:auto}
 .w{display:inline-block;animation:wordin .7s cubic-bezier(.2,.8,.2,1) both}
 @keyframes wordin{from{opacity:0;transform:translateY(.4em);filter:blur(6px)}}
@@ -651,7 +651,7 @@ html{scroll-snap-type:y proximity}
 }
 
 /* ================= film v4: motion, sound, share ================= */
-.beat{transition:opacity .25s;will-change:transform,opacity}
+.beat{transition:none;will-change:transform,opacity}
 .yr{display:flex}
 .yr .digit{display:inline-block;animation:tick .45s cubic-bezier(.2,.8,.2,1) both}
 @keyframes tick{from{opacity:0;transform:translateY(-.32em);filter:blur(4px)}}
@@ -835,3 +835,19 @@ html.no-snap,html.no-snap-drag{scroll-snap-type:none}
 
 .cseg{overflow:visible}
 .cseg-l.end{top:auto}
+
+/* ================= v6: figures, smooth scroll ================= */
+.figure{position:absolute;z-index:2;right:max(40px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);width:min(42vw,600px);aspect-ratio:4/3;pointer-events:none;display:grid;place-items:center}
+.fig{width:100%;height:100%;overflow:visible;animation:rise .6s cubic-bezier(.2,.8,.2,1)}
+.fig-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.9;border-radius:18px;-webkit-mask-image:radial-gradient(ellipse at center,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse at center,#000 55%,transparent 100%)}
+.fig text{fill:#eef1fb;font-family:var(--body)}
+.fig .fig-mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em}
+.fig .fig-dim{fill:#8f9ab8}
+.fig .fig-big{font-family:var(--display);font-size:34px;fill:#fff}
+.fig .fig-unit{font-size:18px;fill:var(--d)}
+@media (max-width:760px){
+  .figure{right:max(34px,env(safe-area-inset-right,0px));left:max(16px,env(safe-area-inset-left,0px));width:auto;top:calc(env(safe-area-inset-top,0px) + 112px);bottom:calc(var(--beat-h,220px) + max(20px,env(safe-area-inset-bottom,0px)) + 86px);transform:none;aspect-ratio:auto;height:auto}
+  .fig{height:100%}
+  .fig .fig-big{font-size:30px}
+  .fig .fig-mono{font-size:12.5px}
+}

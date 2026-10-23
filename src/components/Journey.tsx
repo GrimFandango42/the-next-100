@@ -5,6 +5,7 @@ import { DOMAIN_META, type Branch, type Domain, type ForecastEvent, type Hero } 
 import { useStore } from "../store";
 import { useNarrow } from "../hooks";
 import World, { type Effect } from "./World";
+import Figure from "./Figure";
 
 /**
  * One way to move: scroll always moves through time. Zoom changes how much of time you see.
@@ -64,18 +65,33 @@ export default function Journey() {
   const toBeat = (f: number, smooth = false) => window.scrollTo({ top: beatTop(f), behavior: (smooth ? "smooth" : "instant") as ScrollBehavior });
   const totalVh = (beats.length - 1) * BEAT_VH + 130;
 
-  // scroll → position in the story
+  // scroll → position in the story. The raw position is smoothed every frame so the film glides instead of stepping.
   useEffect(() => {
-    let raf = 0;
-    const on = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => setBf(Math.max(0, (window.scrollY - top()) / (BEAT_VH * vh())))); };
-    on(); addEventListener("scroll", on, { passive: true }); addEventListener("resize", on);
-    return () => { removeEventListener("scroll", on); removeEventListener("resize", on); cancelAnimationFrame(raf); };
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let target = 0, cur = 0, raf = 0, last = performance.now(), idle = 0;
+    const read = () => { target = Math.max(0, (window.scrollY - top()) / (BEAT_VH * vh())); idle = 0; if (!raf) raf = requestAnimationFrame(tick); };
+    const tick = (now: number) => {
+      const dt = Math.min(64, now - last); last = now;
+      const k = reduced ? 1 : 1 - Math.exp(-dt / 110);
+      cur += (target - cur) * k;
+      if (Math.abs(target - cur) < 0.0008) { cur = target; idle++; }
+      setBf(cur);
+      raf = idle > 2 ? 0 : requestAnimationFrame(tick);
+    };
+    read(); addEventListener("scroll", read, { passive: true }); addEventListener("resize", read);
+    return () => { removeEventListener("scroll", read); removeEventListener("resize", read); cancelAnimationFrame(raf); };
   }, []);
   useEffect(() => {
     const el = stageRef.current!;
-    const ro = new ResizeObserver(() => setSize({ W: el.clientWidth, H: el.clientHeight }));
+    const ro = new ResizeObserver(() => {
+      setSize({ W: el.clientWidth, H: el.clientHeight });
+      const b = el.querySelector<HTMLElement>(".ev-beat");
+      el.style.setProperty("--beat-h", (b ? b.offsetHeight : 220) + "px");
+    });
     ro.observe(el);
-    return () => ro.disconnect();
+    const mo = new MutationObserver(() => { const b = el.querySelector<HTMLElement>(".ev-beat"); if (b) { el.style.setProperty("--beat-h", b.offsetHeight + "px"); ro.observe(b); } });
+    mo.observe(el, { childList: true, subtree: true });
+    return () => { ro.disconnect(); mo.disconnect(); };
   }, []);
 
   // deep link: #m-<event-id>
@@ -126,13 +142,11 @@ export default function Journey() {
       el.removeEventListener("gesturestart", gesture); el.removeEventListener("gesturechange", gesture); removeEventListener("keydown", key);
     };
   }, []);
-  // free scrolling when zoomed all the way out; snap to moments otherwise
-  useEffect(() => { document.documentElement.classList.toggle("no-snap", zoom === 0); }, [zoom]);
 
   const n = beats.length;
   const i0 = Math.min(n - 1, Math.floor(bf)), i1 = Math.min(n - 1, i0 + 1);
   const frac = Math.min(1, bf - i0);
-  const yf = beats[i0].year + (beats[i1].year - beats[i0].year) * ease(Math.max(0, Math.min(1, (frac - 0.35) / 0.65)));
+  const yf = beats[i0].year + (beats[i1].year - beats[i0].year) * ease(frac);
   const ai = Math.min(n - 1, Math.round(bf));
   const beat = beats[ai];
   const y = Math.round(yf);
@@ -140,8 +154,8 @@ export default function Journey() {
 
   const era = data.eras.find((e) => yf >= e.from && yf < e.to) ?? data.eras[data.eras.length - 1];
   const dist = Math.abs(bf - ai);
-  const near = dist < 0.36;
-  const contentOpacity = near ? 1 : Math.max(0, 1 - (dist - 0.36) / 0.12);
+  const near = dist < 0.3;
+  const contentOpacity = Math.max(0, Math.min(1, 1 - (dist - 0.22) / 0.2));
   const introOpacity = Math.max(0, 1 - bf / 0.6);
   const open = (e: ForecastEvent) => select(e.id);
   const pick = (e: ForecastEvent) => {
@@ -154,13 +168,13 @@ export default function Journey() {
   const isMoment = zoom === 2;
   const effect: Effect = !isMoment || beat.kind === "era" || beat.kind === "intro" ? "none" : beat.kind === "outro" ? "bloom" : hero?.effect ?? "none";
   const isHinge = isMoment && beat.kind === "hinge" && near;
-  const planetDim = !isMoment ? (narrow ? 0.62 : 0.15) : beat.kind === "era" && near ? 1 : 0;
+  const showFig = isMoment && beat.kind === "event";
+  const planetDim = !isMoment ? (narrow ? 0.7 : 0.35) : beat.kind === "era" && near ? 1 : showFig ? 0.95 : 0;
   const layout = !isMoment && !narrow ? { cx: 0.8, cy: 0.52, r: Math.min(0.2 * size.W, 0.27 * size.H) / Math.min(size.W, size.H) } : undefined;
   const drift = (ai - bf) * (narrow ? 60 : 90);
 
   return (
     <section className="journey" ref={ref} style={{ height: totalVh + "vh" }} aria-label="The Next 100: scroll through time, pinch to zoom">
-      {beats.map((_, i) => <div key={i} className="snap" style={{ top: i * BEAT_VH + "vh" }} aria-hidden="true" />)}
 
       <div ref={stageRef} className={"stage z" + zoom + (isHinge ? " at-hinge" : "") + (beat.kind === "outro" ? " at-outro" : "")} data-era={era.id}>
         <World year={yf} branch={branch} effect={isHinge ? "none" : effect} dim={isHinge ? 1 : planetDim} layout={layout} className="stage-world" />
@@ -218,6 +232,7 @@ export default function Journey() {
               </div>
             )}
             {beat.kind === "event" && <EventBeat ev={beat.ev} branch={branch} year={yf} onOpen={() => open(beat.ev)} />}
+            {beat.kind === "event" && <Figure ev={beat.ev} branch={branch} year={yf} active={near} />}
             {beat.kind === "hinge" && (
               <div className="hinge-copy">
                 <div className="moment-kicker"><span className="dot" />2039 · the hinge</div>
@@ -407,11 +422,11 @@ function Ruler({ beats, bf, year, toBeat }: { beats: Beat[]; bf: number; year: n
   const at = (cy: number) => { const r = ref.current!.getBoundingClientRect(); return Math.max(0, Math.min(1, (cy - r.top) / r.height)) * n; };
   const p = Math.min(1, bf / n);
   const marks = beats.map((b, i) => ({ b, i })).filter(({ b }) => b.kind === "era");
-  const release = () => document.documentElement.classList.remove("no-snap-drag");
+  const release = () => {};
   return (
     <div
       ref={ref} className={"ruler" + (drag ? " drag" : "")} role="slider" tabIndex={0} aria-label="Year" aria-valuemin={2026} aria-valuemax={2200} aria-valuenow={year}
-      onPointerDown={(e) => { e.currentTarget.setPointerCapture(e.pointerId); setDrag(true); document.documentElement.classList.add("no-snap-drag"); toBeat(at(e.clientY)); }}
+      onPointerDown={(e) => { e.currentTarget.setPointerCapture(e.pointerId); setDrag(true); toBeat(at(e.clientY)); }}
       onPointerMove={(e) => { if (drag) toBeat(at(e.clientY)); }}
       onPointerUp={(e) => { setDrag(false); release(); toBeat(Math.round(at(e.clientY)), true); }}
       onPointerCancel={() => { setDrag(false); release(); }}

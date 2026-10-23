@@ -4,7 +4,8 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 
 ## Shape of the repo
 - `data/*.json` — the forecast itself. Validated by `src/schema.ts` (zod) and `scripts/validate.ts`. This is what check-ins edit.
-- `src/` — Vite + React + TypeScript + D3. `store.tsx` holds year / branch / filters / selection; `components/Timeline.tsx` is the zoomable timeline; `WorldState.tsx` the metric tiles + explorer; `Sections.tsx` the rest.
+- `src/` — Vite + React + TypeScript + D3. `components/Journey.tsx` is the film: one scroll through time, three zoom levels (century / decade / moment). `Figure.tsx` draws one data figure per prediction; `World.tsx` is the canvas planet (now a backdrop). `store.tsx` holds year / branch / selection; `WorldState.tsx` the metric explorer; `Sections.tsx` the rest of the Explore section below the film.
+- `public/moments/<event-id>.webp` — optional artwork shown behind a moment's figure; `scripts/make-art.mjs` can generate it (needs OPENAI_API_KEY on the desktop; never commit keys).
 - `scripts/` — validator, check-in brief, check-in logger.
 - `deploy/` — Caddy site block, `deploy.ps1` (run from the Windows desktop) and the pull-and-build timer for the VPS.
 - `CHECKIN.md` — the weekly check-in protocol. `/checkin` skill runs it.
