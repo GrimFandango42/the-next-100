@@ -1,0 +1,699 @@
+{
+  "scope": "Local structure only. URLs are counted, not opened; source quality and claim support require review.",
+  "counts": {
+    "events": 39,
+    "domainRegistryEntries": 130,
+    "uniqueDomainRegistryURLs": 128,
+    "eventsWithHistoryCitations": 29,
+    "eventsWithoutHistoryCitations": 10,
+    "eventsWithoutSignals": 6,
+    "structuredResolution": 0,
+    "structuredProbabilityHistory": 0,
+    "metricsWithObservedAnchors": 5,
+    "metrics": 7,
+    "indicators": 7,
+    "indicatorsWithSourceFields": 0
+  },
+  "domains": {
+    "ai": 6,
+    "society": 11,
+    "risk": 3,
+    "bio": 5,
+    "energy": 4,
+    "space": 7,
+    "climate": 3
+  },
+  "registryTiers": {
+    "institutional": 43,
+    "primary": 62,
+    "trade": 13,
+    "vendor": 4,
+    "peer-reviewed": 3,
+    "quality-press": 3,
+    "weak": 2
+  },
+  "missingCitationIds": [
+    "ubi-pilots-national",
+    "labor-cost-irrelevant",
+    "mars-outpost",
+    "healthy-lifespan-110",
+    "bci-mainstream",
+    "orbital-industry",
+    "off-earth-population",
+    "human-ai-continuity",
+    "self-sustaining-settlement",
+    "clock-retired"
+  ],
+  "missingSignalIds": [
+    "off-earth-population",
+    "world-2100",
+    "human-ai-continuity",
+    "self-sustaining-settlement",
+    "clock-retired",
+    "the-silence"
+  ],
+  "hinge": {
+    "eventProbability": 0.57,
+    "pluralismProbability": 0.6,
+    "note": "These fields need explicitly distinct meanings or one canonical value. Current revision wording suggests drift."
+  },
+  "scenarioMixtures": [
+    {
+      "id": "flourish",
+      "stored": 45,
+      "implied": 44.8
+    },
+    {
+      "id": "diminished",
+      "stored": 35,
+      "implied": 34.8
+    },
+    {
+      "id": "catastrophe",
+      "stored": 15,
+      "implied": 15
+    },
+    {
+      "id": "extinction",
+      "stored": 5,
+      "implied": 5.4
+    }
+  ],
+  "events": [
+    {
+      "id": "agents-default-knowledge-work",
+      "title": "AI agents become the default for knowledge work",
+      "year": 2027,
+      "yearEnd": null,
+      "probability": 0.72,
+      "confidence": "high",
+      "citationURLs": [
+        "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf",
+        "https://www.nwsidebar.wsba.org/2026/03/23/new-oregon-state-bar-opinion-on-using-ai-agents-for-client-intake/",
+        "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
+        "https://fortune.com/2026/05/28/ai-slashes-white-collar-jobs-salesforce-ceo-marc-benioff-one-department-still-hiring-sales/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "entry-level-hiring-contracts",
+      "title": "Entry-level white-collar hiring contracts visibly",
+      "year": 2027,
+      "yearEnd": null,
+      "probability": 0.85,
+      "confidence": "high",
+      "citationURLs": [
+        "https://www.newyorkfed.org/research/college-labor-market",
+        "https://www.bls.gov/news.release/empsit.nr0.htm",
+        "https://digitaleconomy.stanford.edu/news/canariesaug26/",
+        "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "labs-pace-the-frontier",
+      "title": "Frontier labs agree to pace each other, with outside evaluators inside",
+      "year": 2027,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://darioamodei.com/post/we-must-pace-the-frontier",
+        "https://www.axios.com/2026/09/12/anthropic-ai-amodei-pacing",
+        "https://thenextweb.com/news/pacing-the-frontier-ai-employees-letter-us-government",
+        "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "state-ai-laws-preempted",
+      "title": "Congress preempts state AI laws",
+      "year": 2027,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an",
+        "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/",
+        "https://rollcall.com/2026/09/15/ai-threats-confront-a-congress-far-from-erecting-guardrails/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "ai-runs-rd-programs",
+      "title": "AI systems run multi-month R&D programs autonomously",
+      "year": 2028,
+      "yearEnd": null,
+      "probability": 0.68,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+        "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
+        "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "first-ai-election",
+      "title": "The first US presidential election fought substantially over AI",
+      "year": 2028,
+      "yearEnd": null,
+      "probability": 0.78,
+      "confidence": "high",
+      "citationURLs": [
+        "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/",
+        "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/",
+        "https://www.inquirer.com/politics/nation/bernie-sanders-artificial-superintelligence-ban-20260923.html"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "helion-delivers-microsoft",
+      "title": "Helion's Orion delivers fusion electricity to Microsoft",
+      "year": 2028,
+      "yearEnd": 2030,
+      "probability": 0.4,
+      "confidence": "speculative",
+      "citationURLs": [
+        "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "ai-cyberattack-infrastructure",
+      "title": "A major AI-driven cyberattack on infrastructure",
+      "year": 2029,
+      "yearEnd": null,
+      "probability": 0.78,
+      "confidence": "high",
+      "citationURLs": [
+        "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+        "https://gigazine.net/gsc_news/en/20260729-openai-hack-hugging-face-timeline/",
+        "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
+        "https://www.nextgov.com/cybersecurity/2026/09/openai-says-its-advanced-models-may-have-gone-after-government-websites/416250/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "federal-ai-statute",
+      "title": "The first serious US federal AI statute",
+      "year": 2029,
+      "yearEnd": null,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://rollcall.com/2026/09/15/ai-threats-confront-a-congress-far-from-erecting-guardrails/",
+        "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/",
+        "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "bci-permanent-approval",
+      "title": "The first permanent brain–computer interface wins FDA premarket approval",
+      "year": 2029,
+      "yearEnd": 2031,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.neuralinktrials.com/updates",
+        "https://www.techtimes.com/articles/317929/20260606/synchron-brain-implant-targets-2026-pivotal-trial-first-fda-approved-bci.htm"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "compute-verification-talks",
+      "title": "US and China open compute-verification talks",
+      "year": 2030,
+      "yearEnd": null,
+      "probability": 0.5,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+        "https://www.pbs.org/newshour/world/china-and-u-s-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks",
+        "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "china-crewed-moon",
+      "title": "China lands a crew on the Moon",
+      "year": 2030,
+      "yearEnd": 2031,
+      "probability": 0.6,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://news.cgtn.com/news/2026-02-27/China-plans-two-crewed-space-missions-for-2026-eyes-2030-moon-landing-1L6i9f4Z9le/share_amp.html"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "fossil-co2-peak",
+      "title": "Global fossil CO₂ emissions peak",
+      "year": 2030,
+      "yearEnd": 2033,
+      "probability": 0.6,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://geog.umd.edu/featured-content/fossil-fuel-co2-emissions-hit-record-high-2025"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "ai-drugs-phase-iii",
+      "title": "AI-designed drugs clear Phase III at scale",
+      "year": 2033,
+      "yearEnd": null,
+      "probability": 0.7,
+      "confidence": "high",
+      "citationURLs": [
+        "https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3",
+        "https://www.takeda.com/newsroom/newsreleases/2026/fda-priority-review-zasocitinib-psoriasis/",
+        "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals",
+        "https://www.drugtargetreview.com/insilico-medicine-launches-phase-iii-trial-of-ai-designed-rentosertib-drug/2135890.article"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "fusion-net-grid",
+      "title": "Fusion delivers net electricity to a grid",
+      "year": 2034,
+      "yearEnd": null,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/",
+        "https://www.world-nuclear-news.org/articles/google-backs-fusion-power",
+        "https://oodaloop.com/briefs/technology/commonwealth-fusion-installs-first-of-18-magnets-in-sparc-reactor-first-plasma-energy-targeted-for-2027/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "ubi-pilots-national",
+      "title": "A universal income program goes national in two OECD countries",
+      "year": 2034,
+      "yearEnd": null,
+      "probability": 0.6,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 3,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "superhuman-cognition",
+      "title": "Systems exceed every human at every measurable cognitive task",
+      "year": 2034,
+      "yearEnd": 2040,
+      "probability": 0.7,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://metr.org/blog/2026-01-29-time-horizon-1-1/",
+        "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "ai-chemistry-majority",
+      "title": "Most new FDA approvals have AI-originated chemistry",
+      "year": 2035,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals",
+        "https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3",
+        "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "lunar-base-occupied",
+      "title": "A continuously occupied lunar base",
+      "year": 2035,
+      "yearEnd": null,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/",
+        "https://www.space.com/space-exploration/artemis/when-will-spacex-and-blue-origin-fly-to-the-moon-nasa-reveals-lunar-lander-timelines-and-an-artemis-iii-update",
+        "https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket",
+        "https://www.space.com/space-exploration/artemis/nasa-giving-update-about-artemis-moon-plans-on-oct-23-watch-it-live"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "humanoids-in-homes",
+      "title": "Humanoid robots enter homes",
+      "year": 2036,
+      "yearEnd": null,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/",
+        "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid",
+        "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
+        "https://www.nextmsc.com/industry-deep-dive/humanoid-robots-announced-vs-shipped-units"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "hinge-resolves",
+      "title": "The hinge resolves: pluralism or concentration",
+      "year": 2039,
+      "yearEnd": null,
+      "probability": 0.57,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://epoch.ai/data-insights/open-closed-eci-gap",
+        "https://epoch.ai/data-insights/us-vs-china-eci",
+        "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
+        "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+        "https://darioamodei.com/post/we-must-pace-the-frontier"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 2,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "aging-therapy-approved",
+      "title": "The first approved therapy that slows biological aging",
+      "year": 2043,
+      "yearEnd": null,
+      "probability": 0.6,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.ined.fr/en/everything_about_population/data/europe-developed-countries/life-expectancy"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "labor-cost-irrelevant",
+      "title": "Labor cost no longer decides where things are made",
+      "year": 2045,
+      "yearEnd": null,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 2,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "population-peak",
+      "title": "Global population peaks near 9.6 billion",
+      "year": 2046,
+      "yearEnd": 2058,
+      "probability": 0.45,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+        "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth.pdf"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "two-degrees-breached",
+      "title": "2°C is breached, with emissions already falling",
+      "year": 2050,
+      "yearEnd": null,
+      "probability": 0.75,
+      "confidence": "high",
+      "citationURLs": [
+        "https://www.ecmwf.int/en/about/media-centre/news/2025/2025-third-warmest-year",
+        "https://climate.copernicus.eu/copernicus-second-warmest-september-global-temperatures-stay-above-15degc"
+      ],
+      "signalCount": 3,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "geoengineering-unilateral",
+      "title": "A mid-sized country starts unilateral stratospheric aerosol injection",
+      "year": 2052,
+      "yearEnd": null,
+      "probability": 0.5,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://srm360.org/outdoor-experiments/natural-materials-for-stratospheric-aerosol-injection/",
+        "https://srm360.org/news-reaction/for-profit-startup-secures-60-million/",
+        "https://www.gao.gov/products/gao-26-108837",
+        "https://solargeoengineeringupdates.substack.com/p/monthly-solar-geoengineering-updates-6d1"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "mars-outpost",
+      "title": "A permanent Mars outpost",
+      "year": 2052,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 2,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "superintelligence-regime",
+      "title": "Governance of superintelligent systems settles into a regime",
+      "year": 2055,
+      "yearEnd": null,
+      "probability": 0.62,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://www.pbs.org/newshour/world/china-and-u-s-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks",
+        "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
+        "https://darioamodei.com/post/we-must-pace-the-frontier",
+        "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "mass-casualty-event",
+      "title": "A mass-casualty AI-enabled bio or infrastructure event",
+      "year": 2055,
+      "yearEnd": null,
+      "probability": 0.17,
+      "confidence": "speculative",
+      "citationURLs": [
+        "https://thebulletin.org/2026/09/newly-created-viruses-are-a-warning-we-still-have-a-window-to-stop-ai-enabled-bioweapons/"
+      ],
+      "signalCount": 2,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "population-declining",
+      "title": "Global population in decline",
+      "year": 2065,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+        "https://webfs.oecd.org/els-com/Family_Database/SF_2_1_Fertility_rates.pdf"
+      ],
+      "signalCount": 1,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "healthy-lifespan-110",
+      "title": "Healthy lifespans past 110 become widely available",
+      "year": 2072,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 2,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "bci-mainstream",
+      "title": "Brain–computer interfaces mainstream for augmentation",
+      "year": 2075,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 1,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "orbital-industry",
+      "title": "Asteroid-sourced materials become economically meaningful",
+      "year": 2085,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 2,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "off-earth-population",
+      "title": "Tens of thousands of people live off-Earth",
+      "year": 2100,
+      "yearEnd": null,
+      "probability": 0.55,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 0,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "world-2100",
+      "title": "7.5 billion people, a managed climate, and non-human minds as normal",
+      "year": 2100,
+      "yearEnd": null,
+      "probability": 0.5,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
+      ],
+      "signalCount": 0,
+      "dependencyCount": 1,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "human-ai-continuity",
+      "title": "Human–AI continuity",
+      "year": 2125,
+      "yearEnd": 2175,
+      "probability": 0.4,
+      "confidence": "speculative",
+      "citationURLs": [],
+      "signalCount": 0,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "self-sustaining-settlement",
+      "title": "A self-sustaining off-Earth settlement",
+      "year": 2150,
+      "yearEnd": null,
+      "probability": 0.5,
+      "confidence": "moderate",
+      "citationURLs": [],
+      "signalCount": 0,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "clock-retired",
+      "title": "The Doomsday Clock is retired",
+      "year": 2150,
+      "yearEnd": null,
+      "probability": 0.4,
+      "confidence": "speculative",
+      "citationURLs": [],
+      "signalCount": 0,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    },
+    {
+      "id": "the-silence",
+      "title": "The silence continues",
+      "year": 2180,
+      "yearEnd": null,
+      "probability": 0.65,
+      "confidence": "moderate",
+      "citationURLs": [
+        "https://astrobiology.com/2026/02/23/undetected-past-contacts-with-technological-species-implications-for-technosignature-science/"
+      ],
+      "signalCount": 0,
+      "dependencyCount": 0,
+      "hasStructuredResolution": false,
+      "hasStructuredProbabilityHistory": false
+    }
+  ]
+}
