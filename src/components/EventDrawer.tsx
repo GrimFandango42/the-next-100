@@ -17,11 +17,23 @@ export default function EventDrawer() {
   }, [select]);
   useEffect(() => {
     if (!e) return;
+    const trigger = document.activeElement as HTMLElement | null;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     sheetRef.current?.scrollTo(0, 0);
     sheetRef.current?.focus();
-    return () => { document.body.style.overflow = prev; };
+    const trap = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") return;
+      const nodes = sheetRef.current?.querySelectorAll<HTMLElement>('button, a[href], input, select, textarea, [tabindex="0"]');
+      if (!nodes?.length) return;
+      const first = nodes[0], last = nodes[nodes.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !Array.from(nodes).includes(document.activeElement as HTMLElement))) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener("keydown", trap);
+    const content = document.querySelectorAll<HTMLElement>(".field-guide, .explore, .foot, .skip");
+    content.forEach(el => { el.inert = true; });
+    return () => { document.body.style.overflow = prev; document.removeEventListener("keydown", trap); content.forEach(el => { el.inert = false; }); trigger?.focus({ preventScroll: true }); };
   }, [narrow, e]);
   if (!e) return null;
   return (
@@ -37,8 +49,6 @@ export default function EventDrawer() {
 export function Detail() {
   const { selected, select } = useStore();
   const e = data.events.find((x) => x.id === selected);
-  const headRef = useRef<HTMLHeadingElement>(null);
-  useEffect(() => { if (e) headRef.current?.focus({ preventScroll: true }); }, [e]);
   if (!e) return (
     <aside className="drawer empty">
       <div className="eyebrow">Event detail</div>
@@ -54,11 +64,11 @@ export function Detail() {
       <div className="drawer-top">
         <div className="eyebrow" style={{ color }}>{DOMAIN_META[e.domain].name} · {e.year}{e.yearEnd ? `–${e.yearEnd}` : ""}</div>
         <span className="drawer-actions">
-          <button className="x" aria-label="Copy link to this event" title="Copy link" onClick={() => { const u = location.origin + location.pathname + "#" + e.id; navigator.clipboard?.writeText(u).catch(() => {}); }}>⧉</button>
+          <button className="x" aria-label="Copy link to this event" title="Copy link" onClick={() => { const u = location.origin + location.pathname + location.search + "#" + e.id; navigator.clipboard?.writeText(u).catch(() => {}); }}>⧉</button>
           <button className="x" aria-label="Close" onClick={() => select(null)}>×</button>
         </span>
       </div>
-      <h3 ref={headRef} tabIndex={-1}>{e.title}{e.cornerstone && <span className="corner">cornerstone</span>}</h3>
+      <h3>{e.title}{e.cornerstone && <span className="corner">cornerstone</span>}</h3>
       <div className="badges">
         <span className={"pill " + e.confidence}>{CONF_LABEL[e.confidence]}{e.probability != null && ` · ${Math.round(e.probability * 100)}%`}</span>
         <span className={"pill status " + e.status}>{STATUS_LABEL[e.status]}{e.resolvedOn ? ` · ${e.resolvedOn}` : ""}</span>

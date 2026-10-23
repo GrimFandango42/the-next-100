@@ -37,7 +37,7 @@ export function Scorecard() {
           );
         })}
       </div>
-      <p className="note">Bars show the odds if {branch} wins. The thin mark on each bar is the overall estimate, with the two branches weighted {Math.round(data.meta.hinge.pluralismProbability * 100)}/{Math.round((1 - data.meta.hinge.pluralismProbability) * 100)}. Flip the switch at the top to compare.</p>
+      <p className="note">Bars show the odds if {branch} wins. The thin mark on each bar is the overall estimate, with the two branches weighted {Math.round(data.meta.hinge.pluralismProbability * 100)}/{Math.round((1 - data.meta.hinge.pluralismProbability) * 100)}. Use the scenario buttons above to compare.</p>
     </div>
   );
 }
