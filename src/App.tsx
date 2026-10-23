@@ -5,6 +5,7 @@ import { useStore } from "./store";
 import Dial from "./components/Dial";
 import Timeline from "./components/Timeline";
 import Chronicle from "./components/Chronicle";
+import Journey from "./components/Journey";
 import { useNarrow } from "./hooks";
 import EventDrawer from "./components/EventDrawer";
 import WorldState from "./components/WorldState";
@@ -25,21 +26,21 @@ export default function App() {
   }, []);
   return (
     <>
-      <a className="skip" href="#timeline">Skip to the timeline</a>
-      <header className="hero">
+      <a className="skip" href="#explore">Skip to the forecast</a>
+      <Journey />
+      <div id="explore" className="explore">
+      <header className="explore-head">
         <nav className="nav">
-          <a className="brand" href="#top">The Next <span>100</span></a>
+          <span className="brand">The Next <span>100</span></span>
           <div className="nav-links">
             <a href="#timeline">Timeline</a><a href="#world">World state</a><a href="#odds">Odds</a><a href="#signals">Signals</a><a href="#log">Log</a><a href="#method">Method</a>
           </div>
         </nav>
-        <div className="hero-body" id="top">
-          <div className="eyebrow">Written {data.meta.written} · last check-in {data.meta.lastCheckin} · {data.events.length} forecast lines</div>
-          <h1>What happens to us, <em>year by year</em>, from here to 2200.</h1>
-          <p className="lede">{data.meta.tagline} {narrow ? "Scroll the timeline and watch the world change in the bar above." : "Zoom the timeline, scrub the year, flip the hinge, and see how every number on the page moves."}</p>
+        <div className="hero-body">
+          <div className="eyebrow">Explore the forecast · written {data.meta.written} · last check-in {data.meta.lastCheckin}</div>
+          <h2 className="explore-title">Every prediction, with its reasoning, odds and history.</h2>
         </div>
       </header>
-
       <div className="sticky" ref={stickyRef}><Dial /></div>
 
       <main>
@@ -93,6 +94,7 @@ export default function App() {
           <Method />
         </section>
       </main>
+      </div>
       <footer className="foot">The Next 100 · a living forecast · <a href="https://github.com/GrimFandango42/the-next-100" target="_blank" rel="noreferrer">source and data on GitHub</a></footer>
     </>
   );

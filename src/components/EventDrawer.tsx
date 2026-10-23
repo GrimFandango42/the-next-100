@@ -37,7 +37,7 @@ export default function EventDrawer() {
   return <Detail />;
 }
 
-function Detail() {
+export function Detail() {
   const { selected, select, setYear, year } = useStore();
   const e = data.events.find((x) => x.id === selected);
   const headRef = useRef<HTMLHeadingElement>(null);

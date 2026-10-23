@@ -42,12 +42,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const cornerstones = new Set(data.events.filter((e) => e.cornerstone).map((e) => e.year));
     let wait = 0;
     const tick = (ts: number) => {
-      if (ts - last.current > (reduced ? 900 : 120) + wait) {
+      if (ts - last.current > (reduced ? 900 : 260) + wait) {
         last.current = ts;
         setYearRaw((y) => {
           if (y >= YEAR_MAX) { setPlaying(false); return y; }
           const n = Math.min(YEAR_MAX, y + (reduced ? 10 : 1));
-          wait = !reduced && cornerstones.has(n) ? 1100 : 0;
+          wait = !reduced && cornerstones.has(n) ? 2600 : n > 2100 ? -180 : n > 2060 ? -120 : 0;
           return n;
         });
       }
