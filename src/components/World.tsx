@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { data } from "../data";
 import { lerp, metricKF } from "../lib";
-import type { Branch } from "../schema";
+import type { Branch, Domain } from "../schema";
 
 /**
  * The living planet. Every visual property is a forecast value:
@@ -12,7 +12,7 @@ import type { Branch } from "../schema";
  *  - the red arc       = the Doomsday Clock (longer arc = closer to midnight)
  */
 
-type Props = { year: number; branch: Branch; className?: string };
+type Props = { year: number; branch: Branch; focus?: Domain | null; pulse?: boolean; className?: string };
 
 const N_MAX = 720;
 const GOLDEN = Math.PI * (3 - Math.sqrt(5));
@@ -67,10 +67,10 @@ function geometry(): Geo {
 const smooth = (a: number, b: number, t: number) => { const x = Math.max(0, Math.min(1, (t - a) / (b - a))); return x * x * (3 - 2 * x); };
 const metric = (id: string, b: Branch, y: number) => { const m = data.metrics.find((x) => x.id === id)!; return lerp(metricKF(m, b), y); };
 
-export default function World({ year, branch, className }: Props) {
+export default function World({ year, branch, focus = null, pulse = false, className }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
-  const target = useRef({ year, branch });
-  target.current = { year, branch };
+  const target = useRef({ year, branch, focus, pulse });
+  target.current = { year, branch, focus, pulse };
 
   useEffect(() => {
     const canvas = ref.current!;
@@ -79,7 +79,7 @@ export default function World({ year, branch, className }: Props) {
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
     let raf = 0, rot = 0.6, last = performance.now();
     // smoothed state
-    const s = { year: target.current.year, conc: target.current.branch === "concentration" ? 1 : 0 };
+    const s = { year: target.current.year, conc: target.current.branch === "concentration" ? 1 : 0, f: { ai: 0, bio: 0, energy: 0, climate: 0, space: 0, society: 0, risk: 0 } as Record<Domain, number>, pulseAt: -1e9, wasPulse: false, t: 0 };
 
     const frame = (now: number) => {
       const dt = Math.min(64, now - last); last = now;
@@ -87,6 +87,11 @@ export default function World({ year, branch, className }: Props) {
       s.year += (t.year - s.year) * Math.min(1, dt / 220);
       s.conc += ((t.branch === "concentration" ? 1 : 0) - s.conc) * Math.min(1, dt / 700);
       if (!reduced) rot += dt * 0.00007;
+      s.t += dt;
+      for (const k of Object.keys(s.f) as Domain[]) s.f[k] += ((t.focus === k ? 1 : 0) - s.f[k]) * Math.min(1, dt / 450);
+      if (t.pulse && !s.wasPulse) s.pulseAt = s.t;
+      s.wasPulse = !!t.pulse;
+      const F = s.f;
 
       const dpr = Math.min(2, window.devicePixelRatio || 1);
       const W = canvas.clientWidth, H = canvas.clientHeight;
@@ -105,6 +110,18 @@ export default function World({ year, branch, className }: Props) {
       const cx = wide ? W * 0.62 : W * 0.5, cy = wide ? H * 0.5 : phone ? H * 0.43 : H * 0.52;
       const R = wide ? Math.min(W * 0.26, H * 0.31) : phone ? Math.min(W * 0.36, H * 0.17) : Math.min(W * 0.3, H * 0.26);
 
+      // nebula: hue drifts with the era (deep blue → violet → amber → teal)
+      {
+        const eraHue = y < 2040 ? lerpColor([40, 70, 160], [90, 50, 160], (y - 2026) / 14) : y < 2060 ? lerpColor([90, 50, 160], [40, 120, 150], (y - 2040) / 20) : y < 2100 ? lerpColor([40, 120, 150], [170, 90, 60], (y - 2060) / 40) : lerpColor([170, 90, 60], [40, 140, 120], (y - 2100) / 100);
+        const second = lerpColor([120, 40, 120], [30, 90, 160], (Math.sin(y / 23) + 1) / 2);
+        const drift = s.t * 0.00002;
+        for (const [nx, ny, nr, col, a] of [[0.18 + Math.sin(drift) * 0.05, 0.3, 0.75, eraHue, 0.22], [0.85, 0.78 + Math.cos(drift * 1.3) * 0.05, 0.6, second, 0.16], [0.6, 0.1, 0.5, eraHue, 0.1]] as [number, number, number, string, number][]) {
+          const g0 = ctx.createRadialGradient(nx * W, ny * H, 0, nx * W, ny * H, nr * Math.max(W, H));
+          g0.addColorStop(0, `rgba(${col},${a})`); g0.addColorStop(1, `rgba(${col},0)`);
+          ctx.fillStyle = g0; ctx.fillRect(0, 0, W, H);
+        }
+      }
+
       // stars
       for (const [sx, sy, sb] of stars) {
         ctx.globalAlpha = 0.15 + sb * 0.5;
@@ -118,7 +135,8 @@ export default function World({ year, branch, className }: Props) {
       const w = Math.max(0, Math.min(1, (warm - 1.2) / 1.1));
       const atm = w < 0.6 ? lerpColor([96, 170, 255], [255, 184, 92], w / 0.6) : lerpColor([255, 184, 92], [255, 96, 72], (w - 0.6) / 0.4);
       const glow = ctx.createRadialGradient(cx, cy, R * 0.92, cx, cy, R * 1.55);
-      glow.addColorStop(0, `rgba(${atm},0.42)`); glow.addColorStop(0.35, `rgba(${atm},0.12)`); glow.addColorStop(1, `rgba(${atm},0)`);
+      const atmA = 0.42 * (1 + F.climate * 0.9);
+      glow.addColorStop(0, `rgba(${atm},${atmA})`); glow.addColorStop(0.35, `rgba(${atm},${0.12 * (1 + F.climate)})`); glow.addColorStop(1, `rgba(${atm},0)`);
       ctx.fillStyle = glow; ctx.beginPath(); ctx.arc(cx, cy, R * 1.55, 0, Math.PI * 2); ctx.fill();
 
       // orb
@@ -127,16 +145,21 @@ export default function World({ year, branch, className }: Props) {
       ctx.fillStyle = body; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
       ctx.strokeStyle = `rgba(${atm},0.55)`; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.stroke();
 
-      // continents: faint dots, front hemisphere only
+      // the sun sits upper-left, slightly in front: day side faces the text, night side shows the cities
+      const SL = [-0.72, -0.38, 0.58]; const sl = Math.hypot(...SL); const Lx = SL[0] / sl, Ly = SL[1] / sl, Lz = SL[2] / sl;
+      const dayAt = (x: number, yy: number, z: number) => Math.max(0, Math.min(1, (x * Lx + yy * Ly + z * Lz) * 1.8 + 0.35));
+
+      // continents: dots lit by the sun
       {
         const cr0 = Math.cos(rot), sr0 = Math.sin(rot), ct0 = Math.cos(0.32), st0 = Math.sin(0.32);
-        ctx.fillStyle = "rgba(120,150,210,0.55)";
         for (const [lx, ly, lz] of landPts) {
           const x1 = lx * cr0 + lz * sr0, z1 = -lx * sr0 + lz * cr0;
           const y2 = ly * ct0 - z1 * st0, z2 = ly * st0 + z1 * ct0;
           if (z2 < 0.02) continue;
-          ctx.globalAlpha = 0.18 + z2 * 0.5;
-          const sz = 0.9 + z2 * 0.9;
+          const d = dayAt(x1, y2, z2);
+          ctx.fillStyle = d > 0.5 ? "rgb(150,200,235)" : "rgb(90,120,190)";
+          ctx.globalAlpha = (0.12 + z2 * 0.3) + d * 0.45;
+          const sz = 0.9 + z2 * 1.0 + d * 0.4;
           ctx.fillRect(cx + x1 * R - sz / 2, cy + y2 * R - sz / 2, sz, sz);
         }
         ctx.globalAlpha = 1;
@@ -157,7 +180,7 @@ export default function World({ year, branch, className }: Props) {
       const hub = [cx + R * 0.05, cy - R * 1.22];
       if (ai > 0.02) {
         ctx.lineWidth = 0.7;
-        const meshA = ai * (1 - hubOn) * 0.55;
+        const meshA = ai * (1 - hubOn) * 0.55 * (1 + F.ai * 0.9);
         if (meshA > 0.01) {
           ctx.strokeStyle = `rgba(120,190,255,${meshA})`;
           ctx.beginPath();
@@ -168,7 +191,7 @@ export default function World({ year, branch, className }: Props) {
           ctx.stroke();
         }
         if (hubOn > 0.01) {
-          ctx.strokeStyle = `rgba(255,120,110,${ai * hubOn * 0.22})`;
+          ctx.strokeStyle = `rgba(255,120,110,${ai * hubOn * 0.22 * (1 + F.ai * 0.8)})`;
           ctx.beginPath();
           for (let i = 0; i < visible; i += 2) { const a = P[i]; if (a[2] < 0.05) continue; ctx.moveTo(a[0], a[1]); ctx.lineTo(hub[0], hub[1]); }
           ctx.stroke();
@@ -184,8 +207,12 @@ export default function World({ year, branch, className }: Props) {
       for (let i = 0; i < visible; i++) {
         const [px, py, pz] = P[i];
         if (pz < -0.02) continue;
-        const sz = 5 + pz * 7;
-        ctx.globalAlpha = 0.35 + pz * 0.6;
+        const p0 = pts[i];
+        const x1 = p0.x * cr + p0.z * sr, z1 = -p0.x * sr + p0.z * cr;
+        const night = 1 - dayAt(x1, p0.y * ct - z1 * st, pz);
+        const boost = 1 + (F.society + F.bio + F.energy) * 0.5;
+        const sz = (4 + pz * 6) * (0.75 + night * 0.55) * (1 + (boost - 1) * 0.4);
+        ctx.globalAlpha = Math.min(1, (0.18 + pz * 0.35 + night * 0.5) * boost);
         ctx.drawImage(glowSprite, px - sz / 2, py - sz / 2, sz, sz);
       }
       ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
@@ -194,6 +221,15 @@ export default function World({ year, branch, className }: Props) {
       const limb = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, R);
       limb.addColorStop(0, "rgba(4,7,18,0)"); limb.addColorStop(1, "rgba(4,7,18,0.55)");
       ctx.fillStyle = limb; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+      // day/night terminator and a sunlit rim
+      {
+        const tg = ctx.createLinearGradient(cx + Lx * R, cy + Ly * R, cx - Lx * R, cy - Ly * R);
+        tg.addColorStop(0, "rgba(140,190,255,0.16)"); tg.addColorStop(0.45, "rgba(60,90,160,0.04)"); tg.addColorStop(0.62, "rgba(2,4,12,0.28)"); tg.addColorStop(1, "rgba(2,4,12,0.5)");
+        ctx.fillStyle = tg; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+        const ang = Math.atan2(Ly, Lx);
+        ctx.strokeStyle = `rgba(${atm},0.9)`; ctx.lineWidth = 2.2; ctx.lineCap = "round";
+        ctx.beginPath(); ctx.arc(cx, cy, R - 1, ang - 1.1, ang + 1.1); ctx.stroke();
+      }
 
       // off-Earth: orbiting lights, Moon base, Mars
       const nOrbit = Math.round(Math.max(0, Math.log10(Math.max(1, off))) * 9);
@@ -202,7 +238,8 @@ export default function World({ year, branch, className }: Props) {
         const ang = rot * (3.2 - (k % 3) * 0.7) * 6 + k * 2.399;
         const ox = cx + Math.cos(ang) * R * ring, oy = cy + Math.sin(ang) * R * ring * 0.32;
         if (Math.sin(ang) < 0 && Math.hypot(ox - cx, oy - cy) < R) continue; // behind the planet
-        ctx.fillStyle = "rgba(220,235,255,0.85)"; ctx.fillRect(ox - 1, oy - 1, 2, 2);
+        const os = 2 + F.space * 2;
+        ctx.fillStyle = "rgba(220,235,255,0.9)"; ctx.fillRect(ox - os / 2, oy - os / 2, os, os);
       }
       const moonOn = smooth(2033, 2036, y);
       if (moonOn > 0) {
@@ -245,6 +282,18 @@ export default function World({ year, branch, className }: Props) {
       ctx.fillStyle = "rgba(255,255,255,.75)"; ctx.fillRect(cx - 0.75, cy - ringR - 6, 1.5, 12);
       ctx.font = "11px 'IBM Plex Mono', monospace"; ctx.textAlign = "center"; ctx.fillStyle = "rgba(255,160,160,.85)";
       if (!phone) ctx.fillText(`${Math.round(clockSec)}s to midnight`, cx + Math.cos(a0 - 0.0) * ringR * 0.0 + 0, cy - ringR - 12);
+
+      // cornerstone shockwave: a gold ring that leaves the planet every 2.6s while the moment is on screen
+      if (t.pulse && !reduced) {
+        const k = ((s.t - s.pulseAt) % 2600) / 2600;
+        ctx.strokeStyle = `rgba(243,182,74,${0.55 * (1 - k)})`; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(cx, cy, R * (1.02 + k * 0.9), 0, Math.PI * 2); ctx.stroke();
+      }
+      if (F.risk > 0.02) {
+        const rg = ctx.createRadialGradient(cx, cy, R * 0.9, cx, cy, R * 1.8);
+        rg.addColorStop(0, `rgba(255,60,60,${0.22 * F.risk * (0.7 + 0.3 * Math.sin(s.t / 300))})`); rg.addColorStop(1, "rgba(255,60,60,0)");
+        ctx.fillStyle = rg; ctx.beginPath(); ctx.arc(cx, cy, R * 1.8, 0, Math.PI * 2); ctx.fill();
+      }
 
       raf = requestAnimationFrame(frame);
     };
