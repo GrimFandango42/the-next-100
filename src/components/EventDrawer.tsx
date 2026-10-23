@@ -16,29 +16,26 @@ export default function EventDrawer() {
     return () => window.removeEventListener("keydown", onKey);
   }, [select]);
   useEffect(() => {
-    if (!narrow || !e) return;
+    if (!e) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     sheetRef.current?.scrollTo(0, 0);
     sheetRef.current?.focus();
     return () => { document.body.style.overflow = prev; };
   }, [narrow, e]);
-  if (narrow) {
-    if (!e) return null;
-    return (
-      <div className="sheet-wrap" onClick={(ev) => { if (ev.target === ev.currentTarget) select(null); }}>
-        <div className="sheet" ref={sheetRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label={e.title}>
-          <div className="sheet-handle" aria-hidden="true" />
-          <Detail />
-        </div>
+  if (!e) return null;
+  return (
+    <div className={"sheet-wrap" + (narrow ? "" : " modal")} onClick={(ev) => { if (ev.target === ev.currentTarget) select(null); }}>
+      <div className="sheet" ref={sheetRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label={e.title}>
+        {narrow && <div className="sheet-handle" aria-hidden="true" />}
+        <Detail />
       </div>
-    );
-  }
-  return <Detail />;
+    </div>
+  );
 }
 
 export function Detail() {
-  const { selected, select, setYear, year } = useStore();
+  const { selected, select } = useStore();
   const e = data.events.find((x) => x.id === selected);
   const headRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => { if (e) headRef.current?.focus({ preventScroll: true }); }, [e]);
@@ -84,7 +81,6 @@ export function Detail() {
           <ul className="hist">{e.history.map((h, i) => <li key={i}><span className="mono">{h.date}</span> <b>{h.change}</b><br /><span className="muted">{h.reason}</span>{h.sources.length > 0 && <span className="src">{h.sources.map((s, j) => <a key={j} href={s} target="_blank" rel="noreferrer">[{j + 1}]</a>)}</span>}</li>)}</ul>
         )}
       </div>
-      {e.year !== year && <button className="ghost" onClick={() => setYear(e.year)}>See the world in {e.year} →</button>}
     </aside>
   );
 }

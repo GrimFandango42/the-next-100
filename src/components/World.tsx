@@ -58,7 +58,7 @@ export default function World({ year, branch, effect = "none", dim = 0, forceBra
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
     let raf = 0, rot = 0.6, last = performance.now();
     const fx: Record<string, number> = {};
-    const s = { year: target.current.year, conc: target.current.branch === "concentration" ? 1 : 0, dim: 0, t: 0, effectSince: 0, lastEffect: "", moonAng: 0.4 };
+    const s = { year: target.current.year, conc: target.current.branch === "concentration" ? 1 : 0, dim: 0, t: 0, effectSince: 0, lastEffect: "", moonAng: 0.4, L: null as null | Layout };
 
     const frame = (now: number) => {
       const dt = Math.min(64, now - last); last = now; s.t += dt;
@@ -85,7 +85,10 @@ export default function World({ year, branch, effect = "none", dim = 0, forceBra
 
       const wide = W > 900, phone = W <= 760;
       const L = t.layout ?? (wide ? { cx: 0.64, cy: 0.5, r: Math.min(0.25 * W, 0.3 * H) / Math.min(W, H) } : phone ? { cx: 0.5, cy: 0.37, r: Math.min(0.3 * W, 0.135 * H) / Math.min(W, H) } : { cx: 0.5, cy: 0.52, r: Math.min(0.3 * W, 0.26 * H) / Math.min(W, H) });
-      let cx = L.cx * W, cy = L.cy * H, R = Math.max(4, L.r * Math.min(W, H));
+      if (!s.L) s.L = { ...L };
+      const kL = reduced ? 1 : Math.min(1, dt / 380);
+      s.L.cx += (L.cx - s.L.cx) * kL; s.L.cy += (L.cy - s.L.cy) * kL; s.L.r += (L.r - s.L.r) * kL;
+      let cx = s.L.cx * W, cy = s.L.cy * H, R = Math.max(4, s.L.r * Math.min(W, H));
       const toMoon = fx.moon, sil = fx.silence;
       R *= 1 - sil * 0.45 + toMoon * 0.1;
       cx += toMoon * -R * 0.55; cy += toMoon * R * 0.12;
