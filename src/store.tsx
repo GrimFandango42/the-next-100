@@ -19,14 +19,14 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [year, setYearRaw] = useState(YEAR_MIN);
   const initialHash = typeof location !== "undefined" && !location.hash.startsWith("#m-") ? location.hash.slice(1) : "";
   const initialEvent = data.events.find((e) => e.id === initialHash);
-  const [branch, setBranchRaw] = useState<Branch>(() => (initialHash === "concentration" ? "concentration" : "pluralism"));
+  const [branch, setBranchRaw] = useState<Branch>(() => (new URLSearchParams(location.search).get("b") === "concentration" || initialHash === "concentration" ? "concentration" : "pluralism"));
   const [playing, setPlaying] = useState(false);
   const [pausedOnce, setPausedOnce] = useState(false);
   const [domains, setDomains] = useState<Set<Domain>>(new Set(ALL));
   const [selected, setSelectedRaw] = useState<string | null>(initialEvent?.id ?? null);
   const setSelected = (id: string | null) => {
     setSelectedRaw(id);
-    try { history.replaceState(null, "", id ? "#" + id : location.pathname); } catch { /* sandboxed */ }
+    try { history.replaceState(null, "", location.pathname + location.search + (id ? "#" + id : "")); } catch { /* sandboxed */ }
   };
   useEffect(() => { if (initialEvent) setYearRaw(initialEvent.year); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const [view, setView] = useState<[number, number]>(DEFAULT_VIEW);
@@ -59,7 +59,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<State>(() => ({
     year, setYear,
-    branch, setBranch: (b) => setBranchRaw(b),
+    branch, setBranch: (b) => {
+      setBranchRaw(b);
+      try { const url = new URL(location.href); url.searchParams.set("b", b); history.replaceState(null, "", url); } catch { /* sandboxed */ }
+    },
     playing,
     pausedOnce,
     togglePlay: () => {

@@ -1,5 +1,6 @@
 import { data } from "./data";
-import Journey from "./components/Journey";
+import Journey from "./components/StoryJourney";
+import { BranchChoice } from "./components/StoryJourney";
 import EventDrawer from "./components/EventDrawer";
 import WorldState from "./components/WorldState";
 import Clock from "./components/Clock";
@@ -17,15 +18,17 @@ export default function App() {
           <h2 className="explore-title">The numbers, the odds, and how the forecast grades itself.</h2>
         </header>
         <main>
+          <div className="evidence-scenario"><p>Compare the two futures. Your choice updates the charts and outcome estimates.</p><BranchChoice compact /></div>
           <section id="world">
             <div className="sec-head"><div><div className="eyebrow">World state</div><h2>Drag across any chart to stand in a different year.</h2></div></div>
             <div className="world-grid">
               <WorldState />
-              <div className="clock-card"><div className="eyebrow">Doomsday Clock · forecast</div><Clock /></div>
+              <details className="risk-detail"><summary>Explore the Doomsday Clock forecast</summary><div className="clock-card"><div className="eyebrow">Doomsday Clock · forecast</div><Clock /></div></details>
             </div>
           </section>
           <section id="odds">
             <div className="sec-head"><div><div className="eyebrow">Odds</div><h2>Does humanity make it?</h2></div></div>
+            <BranchChoice compact />
             <Scorecard />
           </section>
           <section id="signals">
