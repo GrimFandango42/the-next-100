@@ -1,0 +1,95 @@
+import { useEffect, useRef, useState } from "react";
+import * as d3 from "d3";
+import { data, YEAR_MAX, YEAR_MIN } from "../data";
+import { fmt, lerp, metricKF } from "../lib";
+import type { Metric } from "../schema";
+import { useStore } from "../store";
+
+export default function WorldState() {
+  const { year, branch } = useStore();
+  const [focus, setFocus] = useState(data.metrics[0].id);
+  const m = data.metrics.find((x) => x.id === focus)!;
+  return (
+    <div className="ws">
+      <div className="tiles">
+        {data.metrics.map((mm) => {
+          const v = fmt(mm, lerp(metricKF(mm, branch), year));
+          return (
+            <button key={mm.id} className={"tile" + (mm.id === focus ? " on" : "")} onClick={() => setFocus(mm.id)} aria-pressed={mm.id === focus}>
+              <div className="lbl">{mm.label}</div>
+              <div className="v mono">{v.value}<small>{v.unit}</small></div>
+              <Spark m={mm} />
+            </button>
+          );
+        })}
+      </div>
+      <Explorer m={m} />
+    </div>
+  );
+}
+
+function Spark({ m }: { m: Metric }) {
+  const ref = useRef<HTMLCanvasElement>(null);
+  const { year, branch } = useStore();
+  useEffect(() => {
+    const c = ref.current!, ctx = c.getContext("2d")!;
+    const dpr = window.devicePixelRatio || 1;
+    const W = c.clientWidth, H = 34;
+    c.width = W * dpr; c.height = H * dpr; ctx.scale(dpr, dpr); ctx.clearRect(0, 0, W, H);
+    const kf = metricKF(m, branch);
+    const raw: number[] = []; for (let y = YEAR_MIN; y <= YEAR_MAX; y++) raw.push(lerp(kf, y));
+    const vals = m.scale === "log" ? raw.map((v) => Math.log10(v + 1)) : raw;
+    const mn = Math.min(...vals), mx = Math.max(...vals);
+    const X = (i: number) => (i / (YEAR_MAX - YEAR_MIN)) * W, Y = (v: number) => H - 3 - ((v - mn) / ((mx - mn) || 1)) * (H - 6);
+    const css = getComputedStyle(document.documentElement);
+    const acc = css.getPropertyValue("--accent").trim(), mut = css.getPropertyValue("--muted").trim();
+    ctx.beginPath(); vals.forEach((v, i) => (i ? ctx.lineTo(X(i), Y(v)) : ctx.moveTo(X(i), Y(v))));
+    ctx.strokeStyle = mut; ctx.lineWidth = 1.4; ctx.stroke();
+    const i = year - YEAR_MIN;
+    ctx.beginPath(); ctx.arc(X(i), Y(vals[i]), 3.2, 0, Math.PI * 2); ctx.fillStyle = acc; ctx.fill();
+  }, [m, year, branch]);
+  return <canvas ref={ref} className="spark" height={34} />;
+}
+
+function Explorer({ m }: { m: Metric }) {
+  const ref = useRef<SVGSVGElement>(null);
+  const wrap = useRef<HTMLDivElement>(null);
+  const { year, branch, setYear } = useStore();
+  const [w, setW] = useState(800);
+  useEffect(() => { const ro = new ResizeObserver(([e]) => setW(e.contentRect.width)); ro.observe(wrap.current!); return () => ro.disconnect(); }, []);
+  const H = 240, ML = 48, MR = 16, MT = 20, MB = 28;
+  const x = d3.scaleLinear().domain([YEAR_MIN, YEAR_MAX]).range([ML, w - MR]);
+  const series = (["pluralism", "concentration"] as const).map((b) => ({ b, pts: d3.range(YEAR_MIN, YEAR_MAX + 1).map((y) => [y, lerp(metricKF(m, b), y)] as [number, number]) }));
+  const all = series.flatMap((s) => s.pts.map((p) => p[1]));
+  const y = (m.scale === "log" ? d3.scaleLog().domain([Math.max(1, d3.min(all)!), d3.max(all)!]) : d3.scaleLinear().domain([Math.min(0, d3.min(all)!), d3.max(all)! * 1.08])).range([H - MB, MT]).nice();
+  const line = d3.line<[number, number]>().x((p) => x(p[0])).y((p) => y(p[1])).curve(d3.curveMonotoneX);
+  const area = d3.area<[number, number]>().x((p) => x(p[0])).y0(H - MB).y1((p) => y(p[1])).curve(d3.curveMonotoneX);
+  const cur = lerp(metricKF(m, branch), year);
+  const diverges = !!m.byBranch;
+  const obs = m.observed ?? [];
+  return (
+    <div className="explorer" ref={wrap}>
+      <div className="explorer-head">
+        <div><div className="eyebrow">{m.label}</div><div className="explorer-v mono">{fmt(m, cur).value}<small>{fmt(m, cur).unit}</small> <span className="muted">in {year}</span></div></div>
+        {m.note && <p className="note">{m.note}</p>}
+      </div>
+      <svg ref={ref} width={w} height={H} role="img" aria-label={`${m.label} over time`} onMouseMove={(e) => { const r = e.currentTarget.getBoundingClientRect(); const yy = x.invert(e.clientX - r.left); if (yy >= YEAR_MIN && yy <= YEAR_MAX) setYear(yy); }}>
+        {y.ticks(5).map((t) => (
+          <g key={t} transform={`translate(0,${y(t)})`}><line x1={ML} x2={w - MR} stroke="var(--line)" /><text x={ML - 8} y={4} textAnchor="end" className="tick" fill="var(--muted)">{m.format === "people" ? d3.format("~s")(t) : t}</text></g>
+        ))}
+        {[YEAR_MIN, ...x.ticks(8).filter((t) => t > YEAR_MIN + 6)].map((t) => <text key={t} x={x(t)} y={H - 8} textAnchor="middle" className="tick" fill="var(--muted)">{t}</text>)}
+        {data.eras.map((er) => <rect key={er.id} x={x(er.from)} y={MT} width={x(er.to) - x(er.from)} height={H - MB - MT} fill={year >= er.from && year <= er.to ? "var(--accent)" : "transparent"} opacity={0.06} />)}
+        {series.map((s) => (
+          <g key={s.b} opacity={s.b === branch ? 1 : diverges ? 0.35 : 0}>
+            {s.b === branch && <path d={area(s.pts) ?? ""} fill="var(--accent)" opacity={0.12} />}
+            <path d={line(s.pts) ?? ""} fill="none" stroke={s.b === branch ? "var(--accent)" : "var(--muted)"} strokeWidth={s.b === branch ? 2.2 : 1.5} strokeDasharray={s.b === branch ? undefined : "4 4"} />
+          </g>
+        ))}
+        {obs.map((o, i) => <circle key={i} cx={x(+o.date.slice(0, 4) + (+o.date.slice(5, 7) - 1) / 12)} cy={y(o.value)} r={3.5} fill="var(--fg)" />)}
+        <line x1={x(year)} x2={x(year)} y1={MT} y2={H - MB} stroke="var(--accent)" strokeWidth={1.5} />
+        <circle cx={x(year)} cy={y(cur)} r={5} fill="var(--accent)" stroke="var(--bg)" strokeWidth={2} />
+        {diverges && <text x={w - MR} y={MT - 6} textAnchor="end" className="tick" fill="var(--muted)">dashed = other branch</text>}
+      </svg>
+    </div>
+  );
+}

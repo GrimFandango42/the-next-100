@@ -1,0 +1,11 @@
+{
+  "byBranch": {
+    "pluralism": [[2026, 85], [2030, 80], [2036, 60], [2040, 48], [2050, 70], [2065, 120], [2100, 240], [2150, 600], [2200, 900]],
+    "concentration": [[2026, 85], [2030, 80], [2036, 60], [2040, 40], [2050, 28], [2065, 33], [2100, 60], [2150, 120], [2200, 180]]
+  },
+  "notes": [
+    { "until": 2030, "pluralism": "Near its 2026 setting of 85 seconds. The Bulletin names AI as a primary driver by 2028.", "concentration": "Near its 2026 setting of 85 seconds. The Bulletin names AI as a primary driver by 2028." },
+    { "until": 2040, "pluralism": "Most likely moves inside 60 seconds for the first time as superhuman systems arrive.", "concentration": "Most likely moves inside 60 seconds for the first time as superhuman systems arrive." },
+    { "until": 2200, "pluralism": "Risk is measured and managed; the clock walks back as governance settles.", "concentration": "The clock stays near midnight. A single point of failure is the standing risk." }
+  ]
+}

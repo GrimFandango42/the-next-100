@@ -1,0 +1,42 @@
+[
+  {
+    "id": "deployment-shock",
+    "from": 2026, "to": 2030,
+    "name": "The deployment shock",
+    "thesis": "AI agents take over knowledge work faster than institutions can absorb it. Politics catches up through crisis rather than foresight.",
+    "good": ["Agents make expertise cheap", "Drug discovery accelerates", "First arms-control-style talks on compute"],
+    "bad": ["Entry-level jobs vanish first", "AI-driven cyberattack on infrastructure (~70%)", "A bio-adjacent scare (~40%)"]
+  },
+  {
+    "id": "restructuring",
+    "from": 2030, "to": 2040,
+    "name": "The restructuring",
+    "thesis": "The singularity question gets answered in a form nobody finds satisfying, and the hinge resolves one way or the other.",
+    "good": ["AI-designed drugs at scale", "Energy becomes functionally abundant", "Lunar base; robots in homes"],
+    "bad": ["A two-tier labor market", "The clock likely passes 60 seconds", "Concentration risk peaks"]
+  },
+  {
+    "id": "divergence",
+    "from": 2040, "to": 2060,
+    "name": "The divergence",
+    "thesis": "Population peaks, aging is slowed, 2°C is breached, and governance of superhuman systems settles into a regime, legitimate or not.",
+    "good": ["First aging therapies approved", "A Mars outpost", "Emissions falling fast"],
+    "bad": ["Geoengineering fights", "A mass-casualty event (~15%)", "The nation-state loses ground to firms and city-regions"]
+  },
+  {
+    "id": "slow-and-fast",
+    "from": 2060, "to": 2100,
+    "name": "The slow world and the fast world",
+    "thesis": "Population declines. Abundance for the well-governed; surveillance or disorder for the rest.",
+    "good": ["Healthy lifespans past 110", "Orbital industry", "Climate stabilized or managed"],
+    "bad": ["Intergenerational conflict replaces class conflict", "Surveillance states where institutions lost", "Humans mostly out of the decision loop"]
+  },
+  {
+    "id": "sketch",
+    "from": 2100, "to": 2200,
+    "name": "The sketch",
+    "thesis": "Humans and AI either merge into something continuous, or humans persist as a protected, long-lived population beside the systems that do the civilizational work.",
+    "good": ["A self-sustaining off-Earth settlement", "Risk measured, not just feared"],
+    "bad": ["Permanent loss of control remains a ~5% tail", "The silence continues"]
+  }
+]

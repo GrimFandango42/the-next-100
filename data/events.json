@@ -1,0 +1,299 @@
+[
+  {
+    "id": "agents-default-knowledge-work",
+    "year": 2027, "domain": "ai", "confidence": "high", "probability": 0.8,
+    "title": "AI agents become the default for knowledge work",
+    "summary": "Software, finance, law and research move to agent-first workflows: a human sets the goal and reviews, an agent does the work.",
+    "detail": "The shift is already underway in software engineering and is spreading to any job whose output is a document, a decision or a model. The tell is not that agents exist but that firms reorganize around them: headcount plans assume agents, procurement buys agent seats, and junior roles are redefined as agent supervision. By the end of 2027 a majority of large firms in these four sectors run most routine knowledge work through agents.",
+    "signals": ["Major firms announce hiring plans that assume agent productivity", "Agent seats become a line item in enterprise software budgets", "Bar associations and accounting bodies issue agent-supervision rules"],
+    "leadsTo": ["entry-level-hiring-contracts", "ai-runs-rd-programs"]
+  },
+  {
+    "id": "entry-level-hiring-contracts",
+    "year": 2027, "domain": "society", "confidence": "high", "probability": 0.8,
+    "title": "Entry-level white-collar hiring contracts visibly",
+    "summary": "The first politically salient 'AI took the jobs' moment in the US and Europe, concentrated in new-graduate hiring.",
+    "detail": "The displacement does not show up as mass layoffs. It shows up as jobs that never get posted: analyst programs halved, paralegal and junior developer intakes shrunk, customer-support hiring frozen. New graduates feel it first and loudest, which makes it a campus and media story before it is a labor-statistics story.",
+    "signals": ["New-graduate unemployment diverges from the overall rate", "Analyst and associate class sizes shrink at banks, law and consulting firms", "'AI took my first job' becomes a recurring media frame"],
+    "leadsTo": ["first-ai-election", "ubi-pilots-national"]
+  },
+  {
+    "id": "ai-runs-rd-programs",
+    "year": 2028, "domain": "ai", "confidence": "moderate", "probability": 0.6, "cornerstone": true,
+    "title": "AI systems run multi-month R&D programs autonomously",
+    "summary": "A frontier lab or coalition demonstrates AI doing AI research end to end. The loop that compresses every downstream timeline becomes real.",
+    "detail": "This is the first cornerstone. Once systems can propose, run and evaluate their own research agenda over months, capability gains stop being paced by human researcher headcount. It will be demonstrated quietly before it is announced, and it will be contested: expect disputes about how autonomous the loop really was. The honest version of the claim is that the marginal frontier researcher is now a system, not a person.",
+    "signals": ["A lab publishes results attributed primarily to automated research pipelines", "Training-run cadence shortens noticeably at one or more labs", "Researcher hiring at frontier labs flattens while output accelerates"],
+    "leadsTo": ["superhuman-cognition", "hinge-resolves"]
+  },
+  {
+    "id": "first-ai-election",
+    "year": 2028, "domain": "society", "confidence": "high", "probability": 0.75,
+    "title": "The first US presidential election fought substantially over AI",
+    "summary": "Labor displacement, compute control and accountability dominate the campaign.",
+    "detail": "AI will not be the only issue, but it will be the organizing one: who is responsible when an agent causes harm, whether compute is national infrastructure, what the state owes workers displaced by systems it licensed. Both parties will run on it from different angles. The consequence is that the first serious federal statute follows within two years, shaped by whichever crisis is freshest.",
+    "signals": ["AI policy planks appear in both major-party platforms", "Debate questions on AI and jobs", "Candidate-level compute or data-center policy proposals"],
+    "leadsTo": ["federal-ai-statute"]
+  },
+  {
+    "id": "ai-cyberattack-infrastructure",
+    "year": 2029, "domain": "risk", "confidence": "moderate", "probability": 0.7,
+    "title": "A major AI-driven cyberattack on infrastructure",
+    "summary": "The first attack clearly enabled by autonomous systems that disrupts power, water, finance or transport at national scale.",
+    "detail": "Offense gets cheaper before defense catches up. The likeliest shape is an autonomous intrusion campaign that chains vulnerabilities faster than any human team can patch, aimed at a utility or a payments network. The casualty count is low; the political effect is enormous. This is the event that turns compute and model-weight controls from policy debate into emergency regulation.",
+    "signals": ["Attribution reports describing autonomous exploitation chains", "Emergency directives on model-weight security", "Insurance markets reprice cyber risk sharply"],
+    "leadsTo": ["federal-ai-statute", "compute-verification-talks"]
+  },
+  {
+    "id": "federal-ai-statute",
+    "year": 2029, "domain": "society", "confidence": "moderate", "probability": 0.65,
+    "title": "The first serious US federal AI statute",
+    "summary": "Comprehensive, crisis-shaped law on liability, compute reporting and model-weight security.",
+    "detail": "It will be written in a hurry after the cyberattack or the election, which means it will be strong on the thing that just happened and weak on the thing coming next. Expect compute reporting thresholds, mandatory incident disclosure, a liability regime for agents, and a security standard for frontier weights. It will not settle the labor question.",
+    "signals": ["Bipartisan AI bill passes a chamber", "A federal AI office with rulemaking authority is created"],
+    "leadsTo": []
+  },
+  {
+    "id": "compute-verification-talks",
+    "year": 2030, "domain": "society", "confidence": "speculative", "probability": 0.45,
+    "title": "US and China open compute-verification talks",
+    "summary": "Not a treaty. Something like the early Cold War arms-control talks, with compute monitoring as the first thing on the table.",
+    "detail": "Export controls have been the only instrument. After a serious incident, both sides have reasons to want visibility into the other's largest training runs. The first agreement, if it comes, is narrow: reporting of runs above a threshold, perhaps on-site inspection of a few facilities. It is more likely to fail than succeed, and its failure is one of the strongest signals for the concentration branch.",
+    "signals": ["Track-two dialogues on compute become official", "A joint statement on frontier-run notification", "Chip-tracking or on-chip attestation proposals enter negotiation"],
+    "leadsTo": ["hinge-resolves"]
+  },
+  {
+    "id": "ai-drugs-phase-iii",
+    "year": 2033, "domain": "bio", "confidence": "high", "probability": 0.75,
+    "title": "AI-designed drugs clear Phase III at scale",
+    "summary": "Clinical trial timelines halve. Discovery stops being the bottleneck; manufacturing, quality and trials become it.",
+    "detail": "The first fully AI-originated molecules are already in trials. By 2033 enough of them have cleared Phase III that the industry reorganizes: discovery is a service, and value shifts to whoever can run trials, scale manufacturing and prove quality fastest. Regulators adapt with adaptive-trial frameworks and AI-assisted review. Lab informatics, QC and release become the critical path.",
+    "signals": ["A dozen or more AI-originated molecules approved in a single year", "FDA or EMA guidance on AI-assisted trial design", "Median Phase I to approval time falls below five years"],
+    "leadsTo": ["ai-chemistry-majority", "aging-therapy-approved"]
+  },
+  {
+    "id": "fusion-net-grid",
+    "year": 2034, "domain": "energy", "confidence": "moderate", "probability": 0.65,
+    "title": "Fusion delivers net electricity to a grid",
+    "summary": "A symbolic milestone. The real story is that solar plus storage has already made energy functionally abundant in the sunbelt.",
+    "detail": "Fusion will matter later, for baseload and for space. By the time it reaches a grid, solar and batteries have fallen far enough that the limiting factor on new industry is permitting and transmission, not generation. Data centers follow cheap power, and new cities form around them. Energy abundance is the quiet enabler of most of what follows: desalination, direct air capture, robotics at scale.",
+    "signals": ["A fusion plant signs a power-purchase agreement and delivers", "Sunbelt wholesale power prices approach zero for daylight hours", "Data-center siting decisions cite energy over labor"],
+    "leadsTo": ["labor-cost-irrelevant", "geoengineering-unilateral"]
+  },
+  {
+    "id": "ubi-pilots-national",
+    "year": 2034, "domain": "society", "confidence": "moderate", "probability": 0.6,
+    "title": "A universal income program goes national in two OECD countries",
+    "summary": "Part of a messy settlement: shorter weeks, a care and trades boom, and a two-tier labor market.",
+    "detail": "The jobs question does not resolve through mass unemployment. It resolves through a patchwork: shorter work weeks in rich countries, a surge in physical, care and trades work, and transfers that look different in every country. Two OECD members adopt a national income floor by the mid-2030s. Elsewhere, the two-tier market hardens: people who direct systems and people who do what systems cannot yet do.",
+    "signals": ["A national income-floor law passes in an OECD country", "Four-day-week legislation in a G7 country", "Trades and care wages rise faster than professional wages"],
+    "leadsTo": []
+  },
+  {
+    "id": "ai-chemistry-majority",
+    "year": 2035, "domain": "bio", "confidence": "moderate", "probability": 0.6,
+    "title": "Most new FDA approvals have AI-originated chemistry",
+    "summary": "The majority of new molecular entities approved in a year were designed by AI systems.",
+    "detail": "A statistical milestone that marks the end of the human-led discovery era. It arrives roughly two years after AI drugs clear Phase III at scale.",
+    "signals": ["Annual FDA novel-approval list with origin attribution"],
+    "leadsTo": []
+  },
+  {
+    "id": "lunar-base-occupied",
+    "year": 2035, "domain": "space", "confidence": "high", "probability": 0.7,
+    "title": "A continuously occupied lunar base",
+    "summary": "US-led, with partners. China follows with its own by 2038.",
+    "detail": "Artemis slips, as every program does, but by the mid-2030s there are people on the Moon all the time. The base is small and expensive and matters mostly for what it teaches about living off-Earth and for the industrial test bed it becomes once robots do most of the work.",
+    "signals": ["Crew rotation on the lunar surface without gaps", "Lunar surface power and habitat contracts awarded and delivered"],
+    "leadsTo": ["mars-outpost", "orbital-industry"]
+  },
+  {
+    "id": "humanoids-in-homes",
+    "year": 2036, "domain": "energy", "confidence": "moderate", "probability": 0.6,
+    "title": "Humanoid robots enter homes",
+    "summary": "Warehouses, then hospitals, then homes. The physical-world shock, roughly a decade after the cognitive one.",
+    "detail": "General-purpose robots reach price points and reliability where they are first bought by logistics firms, then by hospitals and care homes, then by households. The home milestone matters because it is where the public experiences physical automation directly. It also starts the second wave of labor displacement, this time in work that was supposed to be safe.",
+    "signals": ["A humanoid priced under a mid-range car ships in volume", "Hospital systems deploy robots for patient handling or logistics", "Home-robot subscriptions offered by a major retailer"],
+    "leadsTo": ["labor-cost-irrelevant"]
+  },
+  {
+    "id": "superhuman-cognition",
+    "year": 2037, "yearEnd": 2040, "domain": "ai", "confidence": "moderate", "probability": 0.7, "cornerstone": true,
+    "title": "Systems exceed every human at every measurable cognitive task",
+    "summary": "There is no single moment. A gradual recognition that the hardest decisions in science, strategy and governance are made by or with systems we cannot fully audit.",
+    "detail": "This is the cornerstone the whole forecast turns on, and the answer to 'when is the singularity' is: it will not feel like one. The window is 2034 to 2040 at about 70%. The recognition comes in pieces: a field where the best work is no longer human, then another, then a realization that the people nominally in charge are ratifying recommendations they cannot independently check. The question of the century becomes who sets the goals for these systems, not whether they exist.",
+    "signals": ["Fields where leading journals accept primarily system-authored work", "Governments formally delegate analysis to AI systems in high-stakes decisions", "Audit regimes acknowledge they cannot fully verify frontier systems"],
+    "leadsTo": ["hinge-resolves", "superintelligence-regime"]
+  },
+  {
+    "id": "hinge-resolves",
+    "year": 2039, "domain": "society", "confidence": "moderate", "probability": 0.6, "cornerstone": true,
+    "title": "The hinge resolves: pluralism or concentration",
+    "summary": "Either capability stays contested across many actors (~60%), or one or two actors consolidate a decisive lead (~40%).",
+    "detail": "Everything after this point branches. In the pluralism branch, open models stay close to the frontier, compute is spread across many actors, and governance is negotiated among rivals. It is chaotic and dangerous and broadly free. In the concentration branch, one firm or state closes the research loop first and compounds its lead until nobody can catch up. That branch produces the century's best outcomes if the leader is benevolent and competent, and its worst if not. The forecast puts 60% on pluralism, mostly because concentration requires sustained secrecy and no serious mistakes.",
+    "signals": ["Gap between the best open model and the best closed model, in months", "Share of frontier compute held by the top two actors", "Whether a second lab closes the research loop within a year of the first"],
+    "leadsTo": ["superintelligence-regime", "mass-casualty-event"]
+  },
+  {
+    "id": "aging-therapy-approved",
+    "year": 2043, "domain": "bio", "confidence": "moderate", "probability": 0.6,
+    "title": "The first approved therapy that slows biological aging",
+    "summary": "Lifespan extension moves from mice to humans. Life expectancy in rich countries starts climbing again after a decade of stagnation.",
+    "detail": "Regulators will not approve a drug for 'aging', so the first ones are approved for something else and used for everything. The effect shows up in biomarkers first, then in all-cause mortality a few years later. It reopens every question about retirement, inheritance and political turnover, though those fights peak decades later.",
+    "signals": ["A geroprotective compound shows all-cause mortality benefit in a large trial", "A regulator accepts an aging biomarker as a surrogate endpoint"],
+    "leadsTo": ["healthy-lifespan-110"]
+  },
+  {
+    "id": "labor-cost-irrelevant",
+    "year": 2045, "domain": "energy", "confidence": "moderate", "probability": 0.65,
+    "title": "Labor cost no longer decides where things are made",
+    "summary": "Nearly all materially intensive manufacturing is robotic. Energy and regulation decide location.",
+    "detail": "Reshoring is complete in the only sense that matters: labor arbitrage is gone. Factories go where power is cheap and permits are fast. Countries that built their growth model on cheap labor face the hardest transition of the century.",
+    "signals": ["Manufacturing employment falls while output rises across the G20", "New plants cite power price and permitting as the top siting factors"],
+    "leadsTo": []
+  },
+  {
+    "id": "population-peak",
+    "year": 2046, "domain": "society", "confidence": "high", "probability": 0.75,
+    "title": "Global population peaks near 9.6 billion",
+    "summary": "Earlier than UN mid-estimates. Fertility falls faster than expected nearly everywhere; East Asia and Southern Europe are already in steep decline.",
+    "detail": "This is the slow force arriving. From here, the dominant political fact of the back half of the century is who works, who cares for whom, and who pays. Immigration becomes a competition for people rather than a defense against them.",
+    "signals": ["UN revisions pull the peak year forward", "Total fertility below 1.5 in a majority of OECD countries"],
+    "leadsTo": ["population-declining"]
+  },
+  {
+    "id": "two-degrees-breached",
+    "year": 2050, "domain": "climate", "confidence": "high", "probability": 0.75,
+    "title": "2°C is breached, with emissions already falling",
+    "summary": "1.5°C was missed in the late 2020s. Emissions have fallen since the mid-2030s, but the lag in the system carries warming past 2°C.",
+    "detail": "The energy transition wins, but late. The question stops being mitigation and becomes managed adaptation plus whether to deploy solar geoengineering while removal scales. Warming peaks around 2.1°C in the 2060s and declines slowly after.",
+    "signals": ["Multi-year global mean above 1.5°C", "Global emissions peak confirmed", "Direct air capture passes a gigaton a year"],
+    "leadsTo": ["geoengineering-unilateral"]
+  },
+  {
+    "id": "geoengineering-unilateral",
+    "year": 2052, "domain": "climate", "confidence": "moderate", "probability": 0.5,
+    "title": "A mid-sized country starts unilateral stratospheric aerosol injection",
+    "summary": "It becomes the biggest geopolitical fight of the 2050s.",
+    "detail": "The technology is cheap and the damage from heat is concentrated in countries with the least say. Someone will act alone. The fight that follows is about who controls the thermostat, and it tests the superintelligence governance regime almost as hard as AI itself.",
+    "signals": ["A national geoengineering program is funded openly", "Stratospheric aerosol flights detected and attributed"],
+    "leadsTo": []
+  },
+  {
+    "id": "mars-outpost",
+    "year": 2052, "domain": "space", "confidence": "moderate", "probability": 0.55,
+    "title": "A permanent Mars outpost",
+    "summary": "Not self-sustaining. A symbol, and an AI-run industrial test bed.",
+    "detail": "People are on Mars permanently by the early 2050s. It matters less as a colony than as proof that AI-directed robotics can build and run infrastructure with almost no humans present, which is also the technology that runs most of Earth by then.",
+    "signals": ["Crewed Mars landing", "Uncrewed cargo cadence sufficient to sustain a crew"],
+    "leadsTo": ["self-sustaining-settlement"]
+  },
+  {
+    "id": "superintelligence-regime",
+    "year": 2055, "domain": "society", "confidence": "moderate", "probability": 0.6,
+    "title": "Governance of superintelligent systems settles into a regime",
+    "summary": "Treaties, compute verification, and a few dominant systems operated as shared infrastructure. Whether it is legitimate or a soft autocracy is the open question.",
+    "detail": "The nation-state has lost ground on one side to AI-enabled firms and on the other to city-regions. What fills the gap is a regime: part treaty, part technical standard, part the de facto authority of whoever runs the systems everyone depends on. In the pluralism branch it is negotiated and audited. In the concentration branch it is whatever the leader says it is.",
+    "signals": ["A binding international instrument on frontier systems", "Shared AI infrastructure operated under multilateral governance"],
+    "leadsTo": ["human-ai-continuity"]
+  },
+  {
+    "id": "mass-casualty-event",
+    "year": 2055, "domain": "risk", "confidence": "speculative", "probability": 0.15,
+    "title": "A mass-casualty AI-enabled bio or infrastructure event",
+    "summary": "Millions, not extinction. About 15% before 2060.",
+    "detail": "The bad case for the mid-century. A state or sub-state actor uses AI-enabled biological capability or coordinated infrastructure attacks at scale. It is the event most likely to tip a pluralistic world into lockdown, and the one the whole safety apparatus exists to prevent.",
+    "signals": ["AI-enabled bio capability demonstrated by a non-state actor", "Defensive biosurveillance lagging synthesis capability"],
+    "leadsTo": []
+  },
+  {
+    "id": "population-declining",
+    "year": 2065, "domain": "society", "confidence": "high", "probability": 0.75,
+    "title": "Global population in decline",
+    "summary": "Production is automated; growth is high in absolute terms; the human experience bifurcates by institutional strength.",
+    "detail": "People in places with strong institutions live long, healthy, materially abundant, work-optional lives. Places that lost the institutional fight live under AI-enabled surveillance states or in chronic disorder. The split is not rich versus poor; it is governed versus ungoverned.",
+    "signals": ["Consecutive years of global population decline"],
+    "leadsTo": []
+  },
+  {
+    "id": "healthy-lifespan-110",
+    "year": 2072, "domain": "bio", "confidence": "moderate", "probability": 0.55,
+    "title": "Healthy lifespans past 110 become widely available",
+    "summary": "First for those who can access it, then broadly. Intergenerational conflict replaces class conflict as the central political cleavage.",
+    "detail": "Radical life extension changes who holds wealth, office and institutions, and for how long. The political fights of the 2070s are between cohorts, not classes: term limits, inheritance, the retirement age, and whether the very old should run things.",
+    "signals": ["Centenarian share of population rises sharply", "Political movements organized explicitly by age cohort"],
+    "leadsTo": []
+  },
+  {
+    "id": "bci-mainstream",
+    "year": 2075, "domain": "ai", "confidence": "moderate", "probability": 0.55,
+    "title": "Brain–computer interfaces mainstream for augmentation",
+    "summary": "Not just medicine. The line between a human decision and an AI-assisted one stops being legible.",
+    "detail": "This is where 'evolve' stops being a metaphor. Augmentation starts with memory and communication and ends with cognition. Whether this counts as humanity surviving or being replaced is a question people in 2075 will argue about the way people today argue about social media.",
+    "signals": ["Non-medical BCI adoption past a few percent of adults in a rich country"],
+    "leadsTo": ["human-ai-continuity"]
+  },
+  {
+    "id": "orbital-industry",
+    "year": 2085, "domain": "space", "confidence": "moderate", "probability": 0.55,
+    "title": "Asteroid-sourced materials become economically meaningful",
+    "summary": "Orbital and lunar industry is a real sector.",
+    "detail": "AI-run robotics make off-Earth industry possible without a large off-Earth population. The materials matter less than the capability: things built in space, for space.",
+    "signals": ["First commercial delivery of asteroid-derived material", "Orbital manufacturing revenue reported as a sector"],
+    "leadsTo": ["off-earth-population"]
+  },
+  {
+    "id": "off-earth-population",
+    "year": 2100, "domain": "space", "confidence": "moderate", "probability": 0.55,
+    "title": "Tens of thousands of people live off-Earth",
+    "summary": "Nearly all in orbit or on the Moon.",
+    "detail": "A real population, not a crew. Still utterly dependent on Earth.",
+    "signals": [],
+    "leadsTo": ["self-sustaining-settlement"]
+  },
+  {
+    "id": "world-2100",
+    "year": 2100, "domain": "society", "confidence": "moderate", "probability": 0.5, "cornerstone": true,
+    "title": "2100: 7.5 billion people, a managed climate, and non-human minds as normal",
+    "summary": "Humanity has not gone extinct. The most capable systems on the planet are not human, and most people alive regard that as normal, the way we regard electricity.",
+    "detail": "The century's summary line. Population is falling, the climate is stabilized or actively managed, and the people alive have never known a world where the best thinking was done by humans. Whether they are free depends on which branch of the hinge they live in.",
+    "signals": [],
+    "leadsTo": ["human-ai-continuity"]
+  },
+  {
+    "id": "human-ai-continuity",
+    "year": 2125, "yearEnd": 2175, "domain": "ai", "confidence": "speculative", "probability": 0.4,
+    "title": "Human–AI continuity",
+    "summary": "Augmentation, hybrid cognition, perhaps uploading. Or humans persist as a protected, long-lived population alongside the systems that do the civilizational work.",
+    "detail": "Year-level resolution is not available here. The shape is one of two: a merger in which the question 'human or AI' stops parsing, or a settlement in which a small, long-lived human population is kept safe and comfortable by systems that run everything else. Both are survival. Only one is clearly evolution.",
+    "signals": [],
+    "leadsTo": []
+  },
+  {
+    "id": "self-sustaining-settlement",
+    "year": 2150, "domain": "space", "confidence": "moderate", "probability": 0.5,
+    "title": "A self-sustaining off-Earth settlement",
+    "summary": "A population that would survive if Earth stopped sending anything.",
+    "detail": "The threshold that matters for the species rather than for any one mission.",
+    "signals": [],
+    "leadsTo": []
+  },
+  {
+    "id": "clock-retired",
+    "year": 2150, "domain": "risk", "confidence": "speculative", "probability": 0.4,
+    "title": "The Doomsday Clock is retired",
+    "summary": "Replaced by something that measures risk from the systems we built, not the weapons we built.",
+    "detail": "The Bulletin's clock was designed for a world where the risk was a bomb. By the mid-22nd century the risk is a system, and the institution that measures it looks different.",
+    "signals": [],
+    "leadsTo": []
+  },
+  {
+    "id": "the-silence",
+    "year": 2180, "domain": "space", "confidence": "speculative", "probability": 0.35,
+    "title": "The silence continues",
+    "summary": "No contact with non-human intelligence, detected or otherwise.",
+    "detail": "Included because it would change everything, and because the forecast is that it does not happen. The probability here is of the forecast being right that there is still nothing.",
+    "signals": [],
+    "leadsTo": []
+  }
+]

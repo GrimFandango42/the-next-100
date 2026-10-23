@@ -1,0 +1,9 @@
+[Unit]
+Description=The Next 100 — pull main and rebuild if changed
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+WorkingDirectory=/srv/the-next-100
+ExecStart=/srv/the-next-100/deploy/update.sh
