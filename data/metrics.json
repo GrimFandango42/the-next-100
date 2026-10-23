@@ -1,36 +1,70 @@
 [
   {
-    "id": "population", "label": "World population", "unit": "bn", "format": "fixed1",
+    "id": "population",
+    "label": "World population",
+    "unit": "bn",
+    "format": "fixed1",
     "keyframes": [[2026, 8.3], [2040, 9.2], [2046, 9.6], [2060, 9.4], [2080, 8.6], [2100, 7.5], [2150, 6.0], [2200, 5.4]],
     "note": "Peaks mid-2040s, earlier than UN mid-estimates, because fertility falls faster than expected nearly everywhere."
   },
   {
-    "id": "lifespan", "label": "Life expectancy, rich countries", "unit": "yrs", "format": "int",
-    "keyframes": [[2026, 82], [2035, 83], [2043, 85], [2060, 92], [2080, 105], [2100, 115], [2150, 130], [2200, 140]],
-    "note": "Flat for a decade, then climbs once aging therapies clear approval."
+    "id": "lifespan",
+    "label": "Life expectancy, rich countries",
+    "unit": "yrs",
+    "format": "int",
+    "note": "Rich-country median. Flat for a decade, then climbs once aging therapies clear approval. Under concentration the therapies exist but reach fewer people, so the median rises slower.",
+    "byBranch": {
+      "pluralism": [[2026, 82], [2035, 83], [2043, 85], [2060, 92], [2080, 105], [2100, 115], [2150, 130], [2200, 140]],
+      "concentration": [[2026, 82], [2035, 83], [2043, 84], [2060, 87], [2080, 93], [2100, 99], [2150, 110], [2200, 118]]
+    }
   },
   {
-    "id": "ai-share", "label": "Cognitive work done by AI", "unit": "%", "format": "pct",
-    "keyframes": [[2026, 8], [2028, 20], [2030, 38], [2034, 60], [2037, 82], [2040, 92], [2050, 97], [2200, 99]],
-    "note": "Share of measurable knowledge-work output produced by or with AI systems."
+    "id": "ai-share",
+    "label": "Cognitive work done by AI",
+    "unit": "%",
+    "format": "pct",
+    "note": "Share of measurable knowledge-work output produced by or with AI systems. Concentration gets there slightly faster because one actor deploys without competition.",
+    "byBranch": {
+      "pluralism": [[2026, 8], [2028, 20], [2030, 38], [2034, 60], [2037, 82], [2040, 92], [2050, 97], [2200, 99]],
+      "concentration": [[2026, 8], [2028, 20], [2030, 38], [2034, 62], [2037, 86], [2040, 95], [2050, 99], [2200, 99.9]]
+    }
   },
   {
-    "id": "work-hours", "label": "Average paid hours per week", "unit": "h", "format": "hours",
-    "keyframes": [[2026, 40], [2030, 37], [2035, 32], [2045, 24], [2060, 16], [2100, 8], [2200, 4]],
-    "note": "Rich-country average. The jobs question resolves through shorter weeks and transfers, not mass idleness."
+    "id": "work-hours",
+    "label": "Average paid hours per week",
+    "unit": "h",
+    "format": "hours",
+    "note": "Rich-country average paid hours. Under pluralism the drop is negotiated (shorter weeks, income floors); under concentration it is faster and mostly involuntary.",
+    "byBranch": {
+      "pluralism": [[2026, 40], [2030, 37], [2035, 32], [2045, 24], [2060, 16], [2100, 8], [2200, 4]],
+      "concentration": [[2026, 40], [2030, 37], [2035, 30], [2045, 19], [2060, 11], [2100, 5], [2200, 3]]
+    }
   },
   {
-    "id": "warming", "label": "Warming above pre-industrial", "unit": "°C", "format": "temp",
+    "id": "warming",
+    "label": "Warming above pre-industrial",
+    "unit": "\u00b0C",
+    "format": "temp",
     "keyframes": [[2026, 1.4], [2030, 1.55], [2040, 1.8], [2050, 2.0], [2060, 2.1], [2080, 2.0], [2100, 1.9], [2150, 1.6], [2200, 1.4]],
-    "note": "1.5°C missed in the late 2020s; 2°C breached around 2050; peak and slow decline after as emissions fall and removal scales."
+    "note": "1.5\u00b0C missed in the late 2020s; 2\u00b0C breached around 2050; peak and slow decline after as emissions fall and removal scales."
   },
   {
-    "id": "off-earth", "label": "Humans living off-Earth", "unit": "", "format": "people", "scale": "log",
-    "keyframes": [[2026, 10], [2035, 30], [2040, 120], [2052, 800], [2070, 6000], [2085, 20000], [2100, 50000], [2150, 500000], [2200, 2000000]],
-    "note": "Nearly all in orbit or on the Moon through 2100."
+    "id": "off-earth",
+    "label": "Humans living off-Earth",
+    "unit": "",
+    "format": "people",
+    "scale": "log",
+    "note": "Nearly all in orbit or on the Moon through 2100. A single dominant actor builds faster off-Earth; pluralism spreads effort thinner.",
+    "byBranch": {
+      "pluralism": [[2026, 10], [2035, 30], [2040, 120], [2052, 800], [2070, 6000], [2085, 20000], [2100, 50000], [2150, 500000], [2200, 2000000]],
+      "concentration": [[2026, 10], [2035, 30], [2040, 150], [2052, 1500], [2070, 15000], [2085, 60000], [2100, 150000], [2150, 800000], [2200, 2500000]]
+    }
   },
   {
-    "id": "frontier-actors", "label": "Actors at the AI frontier", "unit": "", "format": "int",
+    "id": "frontier-actors",
+    "label": "Actors at the AI frontier",
+    "unit": "",
+    "format": "int",
     "byBranch": {
       "pluralism": [[2026, 6], [2030, 8], [2036, 10], [2040, 12], [2060, 20], [2100, 40], [2200, 60]],
       "concentration": [[2026, 6], [2030, 5], [2036, 3], [2040, 2], [2060, 1], [2100, 1], [2200, 1]]

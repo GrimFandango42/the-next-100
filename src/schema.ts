@@ -143,11 +143,11 @@ export const Dataset = z.object({
 export type Dataset = z.infer<typeof Dataset>;
 
 export const DOMAIN_META: Record<Domain, { name: string; color: string }> = {
-  ai: { name: "AI", color: "#6fb3ff" },
-  bio: { name: "Bio & health", color: "#5ec48f" },
-  energy: { name: "Energy & robots", color: "#f3b64a" },
-  climate: { name: "Climate", color: "#67d4d0" },
-  space: { name: "Space", color: "#c69cff" },
-  society: { name: "Society & politics", color: "#ff9d7a" },
-  risk: { name: "Risk", color: "#f06a6a" },
+  ai: { name: "AI", color: "var(--d-ai)" },
+  bio: { name: "Bio & health", color: "var(--d-bio)" },
+  energy: { name: "Energy & robots", color: "var(--d-energy)" },
+  climate: { name: "Climate", color: "var(--d-climate)" },
+  space: { name: "Space", color: "var(--d-space)" },
+  society: { name: "Society & politics", color: "var(--d-society)" },
+  risk: { name: "Risk", color: "var(--d-risk)" },
 };

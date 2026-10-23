@@ -35,8 +35,7 @@ export function fmt(m: Metric, v: number): { value: string; unit: string } {
 export const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
 
 export function clockLabel(sec: number): string {
-  if (sec >= 120) return (sec / 60).toFixed(1).replace(/\.0$/, "") + " min";
-  return Math.round(sec) + " sec";
+  return Math.round(sec).toLocaleString("en-US") + " sec";
 }
 
 export const CONF_LABEL = { high: "High", moderate: "Moderate", speculative: "Speculative" } as const;

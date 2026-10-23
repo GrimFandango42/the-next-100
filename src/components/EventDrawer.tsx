@@ -1,17 +1,47 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { data } from "../data";
+import { useNarrow } from "../hooks";
 import { CONF_LABEL, STATUS_LABEL } from "../lib";
 import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
 
 export default function EventDrawer() {
-  const { selected, select, setYear, year } = useStore();
+  const { selected, select } = useStore();
+  const narrow = useNarrow();
   const e = data.events.find((x) => x.id === selected);
+  const sheetRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const onKey = (ev: KeyboardEvent) => { if (ev.key === "Escape") select(null); };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [select]);
+  useEffect(() => {
+    if (!narrow || !e) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    sheetRef.current?.scrollTo(0, 0);
+    sheetRef.current?.focus();
+    return () => { document.body.style.overflow = prev; };
+  }, [narrow, e]);
+  if (narrow) {
+    if (!e) return null;
+    return (
+      <div className="sheet-wrap" onClick={(ev) => { if (ev.target === ev.currentTarget) select(null); }}>
+        <div className="sheet" ref={sheetRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label={e.title}>
+          <div className="sheet-handle" aria-hidden="true" />
+          <Detail />
+        </div>
+      </div>
+    );
+  }
+  return <Detail />;
+}
+
+function Detail() {
+  const { selected, select, setYear, year } = useStore();
+  const e = data.events.find((x) => x.id === selected);
+  const headRef = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { if (e) headRef.current?.focus({ preventScroll: true }); }, [e]);
   if (!e) return (
     <aside className="drawer empty">
       <div className="eyebrow">Event detail</div>
@@ -26,9 +56,12 @@ export default function EventDrawer() {
     <aside className="drawer" aria-live="polite">
       <div className="drawer-top">
         <div className="eyebrow" style={{ color }}>{DOMAIN_META[e.domain].name} · {e.year}{e.yearEnd ? `–${e.yearEnd}` : ""}</div>
-        <button className="x" aria-label="Close" onClick={() => select(null)}>×</button>
+        <span className="drawer-actions">
+          <button className="x" aria-label="Copy link to this event" title="Copy link" onClick={() => { const u = location.origin + location.pathname + "#" + e.id; navigator.clipboard?.writeText(u).catch(() => {}); }}>⧉</button>
+          <button className="x" aria-label="Close" onClick={() => select(null)}>×</button>
+        </span>
       </div>
-      <h3>{e.title}{e.cornerstone && <span className="corner">cornerstone</span>}</h3>
+      <h3 ref={headRef} tabIndex={-1}>{e.title}{e.cornerstone && <span className="corner">cornerstone</span>}</h3>
       <div className="badges">
         <span className={"pill " + e.confidence}>{CONF_LABEL[e.confidence]}{e.probability != null && ` · ${Math.round(e.probability * 100)}%`}</span>
         <span className={"pill status " + e.status}>{STATUS_LABEL[e.status]}{e.resolvedOn ? ` · ${e.resolvedOn}` : ""}</span>
@@ -41,8 +74,8 @@ export default function EventDrawer() {
       )}
       {(prev.length > 0 || next.length > 0) && (
         <div className="block links">
-          {prev.length > 0 && <div><div className="eyebrow">Follows from</div>{prev.map((p) => <button key={p.id} className="link" onClick={() => { select(p.id); setYear(p.year); }}>{p.year} · {p.title}</button>)}</div>}
-          {next.length > 0 && <div><div className="eyebrow">Leads to</div>{next.map((p) => <button key={p.id} className="link" onClick={() => { select(p.id); setYear(p.year); }}>{p.year} · {p.title}</button>)}</div>}
+          {prev.length > 0 && <div><div className="eyebrow">Follows from</div>{prev.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
+          {next.length > 0 && <div><div className="eyebrow">Leads to</div>{next.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
         </div>
       )}
       <div className="block">
@@ -51,7 +84,7 @@ export default function EventDrawer() {
           <ul className="hist">{e.history.map((h, i) => <li key={i}><span className="mono">{h.date}</span> <b>{h.change}</b><br /><span className="muted">{h.reason}</span>{h.sources.length > 0 && <span className="src">{h.sources.map((s, j) => <a key={j} href={s} target="_blank" rel="noreferrer">[{j + 1}]</a>)}</span>}</li>)}</ul>
         )}
       </div>
-      {e.year > year && <button className="ghost" onClick={() => setYear(e.year)}>Jump the world to {e.year} →</button>}
+      {e.year !== year && <button className="ghost" onClick={() => setYear(e.year)}>See the world in {e.year} →</button>}
     </aside>
   );
 }
@@ -62,7 +95,7 @@ function Upcoming() {
   return (
     <div className="block">
       <div className="eyebrow">Next up from {year}</div>
-      {next.map((e) => <button key={e.id} className="link" onClick={() => { select(e.id); setYear(e.year); }}><span className="mono" style={{ color: DOMAIN_META[e.domain].color }}>{e.year}</span> {e.title}</button>)}
+      {next.map((e) => <button key={e.id} className="link" onClick={() => select(e.id)}><span className="mono" style={{ color: DOMAIN_META[e.domain].color }}>{e.year}</span> {e.title}</button>)}
     </div>
   );
 }

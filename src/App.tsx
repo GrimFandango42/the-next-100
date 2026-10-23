@@ -1,8 +1,11 @@
+import { useEffect, useRef } from "react";
 import { data } from "./data";
 import { DOMAIN_META, type Domain } from "./schema";
 import { useStore } from "./store";
 import Dial from "./components/Dial";
 import Timeline from "./components/Timeline";
+import Chronicle from "./components/Chronicle";
+import { useNarrow } from "./hooks";
 import EventDrawer from "./components/EventDrawer";
 import WorldState from "./components/WorldState";
 import Clock from "./components/Clock";
@@ -12,8 +15,17 @@ const DOMAINS = Object.keys(DOMAIN_META) as Domain[];
 
 export default function App() {
   const { domains, toggleDomain } = useStore();
+  const narrow = useNarrow();
+  const stickyRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = stickyRef.current!;
+    const ro = new ResizeObserver(() => document.documentElement.style.setProperty("--sticky-h", el.offsetHeight + "px"));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
   return (
     <>
+      <a className="skip" href="#timeline">Skip to the timeline</a>
       <header className="hero">
         <nav className="nav">
           <a className="brand" href="#top">The Next <span>100</span></a>
@@ -24,24 +36,26 @@ export default function App() {
         <div className="hero-body" id="top">
           <div className="eyebrow">Written {data.meta.written} · last check-in {data.meta.lastCheckin} · {data.events.length} forecast lines</div>
           <h1>What happens to us, <em>year by year</em>, from here to 2200.</h1>
-          <p className="lede">{data.meta.tagline} Zoom the timeline, scrub the year, flip the hinge, and see how every number on the page moves.</p>
+          <p className="lede">{data.meta.tagline} {narrow ? "Scroll the timeline and watch the world change in the bar above." : "Zoom the timeline, scrub the year, flip the hinge, and see how every number on the page moves."}</p>
         </div>
       </header>
 
-      <div className="sticky"><Dial /></div>
+      <div className="sticky" ref={stickyRef}><Dial /></div>
 
       <main>
         <section id="timeline">
           <div className="sec-head">
-            <div><div className="eyebrow">Timeline</div><h2>Zoom in on any decade. Zoom out to see the shape.</h2></div>
-            <div className="filters">
+            <div><div className="eyebrow">Timeline</div><h2>{narrow ? "Scroll down to move through time." : "Zoom in on any decade. Zoom out to see the shape."}</h2></div>
+            <div className="filters" role="group" aria-label="Show domains">
               {DOMAINS.map((d) => <button key={d} className="chip dom" style={{ ["--d" as any]: DOMAIN_META[d].color }} aria-pressed={domains.has(d)} onClick={() => toggleDomain(d)}><i />{DOMAIN_META[d].name}</button>)}
             </div>
           </div>
-          <div className="tl-grid">
-            <Timeline />
-            <EventDrawer />
-          </div>
+          {narrow ? (<><Chronicle /><EventDrawer /></>) : (
+            <div className="tl-grid">
+              <Timeline />
+              <EventDrawer />
+            </div>
+          )}
         </section>
 
         <section id="world">

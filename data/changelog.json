@@ -5,5 +5,16 @@
     "headline": "The forecast goes live",
     "body": "Thirty-three forecast lines across seven domains, 2026 to 2200, written on 22 October 2026. From here on, a weekly check-in reads the news against the leading indicators and revises lines in public. Every revision is logged here with its reason.",
     "touched": []
+  },
+  {
+    "date": "2026-10-23",
+    "kind": "revision",
+    "headline": "Four world-state paths now split at the hinge",
+    "body": "Life expectancy, average paid hours, AI share of cognitive work and the off-Earth population now follow separate paths under pluralism and concentration instead of one shared path. Under concentration, aging therapies reach fewer people (median life expectancy in 2100: 99 vs 115), paid hours fall faster and mostly involuntarily (5 vs 8 a week in 2100), and a single dominant actor builds faster off-Earth (150k vs 50k people in 2100). Population and warming stay shared. No event probabilities moved.",
+    "touched": [
+      "world-2100",
+      "hinge-resolves"
+    ],
+    "sources": []
   }
 ]

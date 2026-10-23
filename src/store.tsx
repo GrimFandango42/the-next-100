@@ -1,11 +1,11 @@
-import { createContext, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { Branch, Domain } from "./schema";
-import { YEAR_MAX, YEAR_MIN } from "./data";
+import { data, DEFAULT_VIEW, YEAR_MAX, YEAR_MIN } from "./data";
 
 type State = {
   year: number; setYear: (y: number) => void;
   branch: Branch; setBranch: (b: Branch) => void;
-  playing: boolean; togglePlay: () => void; reset: () => void;
+  playing: boolean; pausedOnce: boolean; togglePlay: () => void; reset: () => void;
   domains: Set<Domain>; toggleDomain: (d: Domain) => void;
   selected: string | null; select: (id: string | null) => void;
   /** Timeline visible window [from, to] in years. */
@@ -17,24 +17,38 @@ const ALL: Domain[] = ["ai", "bio", "energy", "climate", "space", "society", "ri
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [year, setYearRaw] = useState(YEAR_MIN);
-  const [branch, setBranchRaw] = useState<Branch>(() => (location.hash.includes("concentration") ? "concentration" : "pluralism"));
+  const initialHash = typeof location !== "undefined" ? location.hash.slice(1) : "";
+  const initialEvent = data.events.find((e) => e.id === initialHash);
+  const [branch, setBranchRaw] = useState<Branch>(() => (initialHash === "concentration" ? "concentration" : "pluralism"));
   const [playing, setPlaying] = useState(false);
+  const [pausedOnce, setPausedOnce] = useState(false);
   const [domains, setDomains] = useState<Set<Domain>>(new Set(ALL));
-  const [selected, setSelected] = useState<string | null>(null);
-  const [view, setView] = useState<[number, number]>([YEAR_MIN, YEAR_MAX]);
+  const [selected, setSelectedRaw] = useState<string | null>(initialEvent?.id ?? null);
+  const setSelected = (id: string | null) => {
+    setSelectedRaw(id);
+    try { history.replaceState(null, "", id ? "#" + id : location.pathname); } catch { /* sandboxed */ }
+  };
+  useEffect(() => { if (initialEvent) setYearRaw(initialEvent.year); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const [view, setView] = useState<[number, number]>(DEFAULT_VIEW);
   const raf = useRef<number>(0);
   const last = useRef(0);
 
-  const setYear = (y: number) => setYearRaw(Math.round(Math.max(YEAR_MIN, Math.min(YEAR_MAX, y))));
+  const setYear = useCallback((y: number) => setYearRaw(Math.round(Math.max(YEAR_MIN, Math.min(YEAR_MAX, y)))), []);
 
   useEffect(() => {
     if (!playing) return;
+    // ~8 years a second; hold on cornerstone years so the moment registers. Reduced motion steps a decade at a time.
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const cornerstones = new Set(data.events.filter((e) => e.cornerstone).map((e) => e.year));
+    let wait = 0;
     const tick = (ts: number) => {
-      if (ts - last.current > 110) {
+      if (ts - last.current > (reduced ? 900 : 120) + wait) {
         last.current = ts;
         setYearRaw((y) => {
           if (y >= YEAR_MAX) { setPlaying(false); return y; }
-          return y + 1;
+          const n = Math.min(YEAR_MAX, y + (reduced ? 10 : 1));
+          wait = !reduced && cornerstones.has(n) ? 1100 : 0;
+          return n;
         });
       }
       raf.current = requestAnimationFrame(tick);
@@ -45,15 +59,20 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<State>(() => ({
     year, setYear,
-    branch, setBranch: (b) => { setBranchRaw(b); try { history.replaceState(null, "", b === "concentration" ? "#concentration" : "#pluralism"); } catch { /* ignore */ } },
+    branch, setBranch: (b) => setBranchRaw(b),
     playing,
-    togglePlay: () => { if (!playing && year >= YEAR_MAX) setYearRaw(YEAR_MIN); setPlaying((p) => !p); },
-    reset: () => { setPlaying(false); setYearRaw(YEAR_MIN); setView([YEAR_MIN, YEAR_MAX]); setSelected(null); },
+    pausedOnce,
+    togglePlay: () => {
+      if (playing) { setPausedOnce(true); setPlaying(false); return; }
+      if (year >= YEAR_MAX) { setYearRaw(YEAR_MIN); setPausedOnce(false); }
+      setPlaying(true);
+    },
+    reset: () => { setPlaying(false); setYearRaw(YEAR_MIN); setView(DEFAULT_VIEW); setSelected(null); setPausedOnce(false); },
     domains,
     toggleDomain: (d) => setDomains((s) => { const n = new Set(s); if (n.has(d) && n.size > 1) n.delete(d); else n.add(d); return n; }),
     selected, select: setSelected,
     view, setView,
-  }), [year, branch, playing, domains, selected, view]);
+  }), [year, branch, playing, pausedOnce, domains, selected, view]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

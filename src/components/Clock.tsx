@@ -19,7 +19,7 @@ export default function Clock() {
         <line x1={110} y1={110} x2={110} y2={52} stroke="var(--fg)" strokeWidth={5} strokeLinecap="round" style={{ transformOrigin: "110px 110px", transform: "rotate(-28deg)" }} />
         <circle cx={110} cy={110} r={5} fill="var(--fg)" />
       </svg>
-      <div className="clock-v"><span className="mono">{clockLabel(sec)}</span><small> to midnight</small></div>
+      <div className="clock-v"><span>{Math.round(sec).toLocaleString("en-US")}</span><small> seconds to midnight</small></div>
       <p className="note">{note[branch]}</p>
     </div>
   );

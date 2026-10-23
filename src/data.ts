@@ -11,5 +11,7 @@ import changelog from "../data/changelog.json";
 export const data = Dataset.parse({ meta, events, eras, metrics, clock, scenarios, indicators, changelog });
 export const YEAR_MIN = 2026;
 export const YEAR_MAX = 2200;
+/** Most forecast lines sit before 2070; open there and keep the long tail one click away. */
+export const DEFAULT_VIEW: [number, number] = [2025.5, 2070.5];
 export const TODAY = new Date();
 export const THIS_YEAR = TODAY.getFullYear() + (TODAY.getMonth() + 1) / 12;

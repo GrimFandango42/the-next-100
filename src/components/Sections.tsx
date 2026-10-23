@@ -4,11 +4,11 @@ import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
 
 export function Eras() {
-  const { year } = useStore();
+  const { year, setYear } = useStore();
   return (
     <div className="eras">
       {data.eras.map((er) => (
-        <article key={er.id} className={"era-card" + (year >= er.from && year <= er.to ? " on" : "")} onClick={() => (window as any).__tl?.zoomTo(er.from - 0.5, er.to + 0.5)}>
+        <article key={er.id} className={"era-card" + (year >= er.from && year <= er.to ? " on" : "")} onClick={() => { setYear(er.from); (window as any).__tl?.zoomTo(er.from - 0.5, er.to + 0.5); document.getElementById("timeline")?.scrollIntoView({ behavior: "smooth" }); }}>
           <div className="top"><h3>{er.name}</h3><span className="span mono">{er.from}–{er.to}</span></div>
           <p className="muted">{er.thesis}</p>
           <div className="gb">
@@ -31,13 +31,13 @@ export function Scorecard() {
           return (
             <div key={s.id} className="bar">
               <div><div className="bar-l">{s.label}</div><div className="muted small">{s.description}</div></div>
-              <div className="track"><div className={"fill " + s.tone} style={{ width: v + "%" }} /><span className="ghost-n mono">{s.unconditional}% overall</span></div>
-              <div className="n mono">{v}%</div>
+              <div className="track"><div className={"fill " + s.tone} style={{ width: v + "%" }} /><span className="tick-mark" style={{ left: s.unconditional + "%" }} title={`${s.unconditional}% overall`} /></div>
+              <div className="n"><b className="mono">{v}%</b><small>if {branch}</small><small className="muted">{s.unconditional}% overall</small></div>
             </div>
           );
         })}
       </div>
-      <p className="note">Bars are conditional on the {branch} branch. The faint figure is the unconditional estimate (branches weighted {Math.round(data.meta.hinge.pluralismProbability * 100)}/{Math.round((1 - data.meta.hinge.pluralismProbability) * 100)}).</p>
+      <p className="note">Bars show the odds if {branch} wins. The thin mark on each bar is the overall estimate, with the two branches weighted {Math.round(data.meta.hinge.pluralismProbability * 100)}/{Math.round((1 - data.meta.hinge.pluralismProbability) * 100)}. Flip the switch at the top to compare.</p>
     </div>
   );
 }
@@ -62,29 +62,34 @@ export function Indicators() {
 }
 
 export function TrackRecord() {
+  const { select } = useStore();
   const counts = data.events.reduce<Record<string, number>>((a, e) => { a[e.status] = (a[e.status] ?? 0) + 1; return a; }, {});
   const resolved = data.events.filter((e) => e.status !== "forecast");
   const due = data.events.filter((e) => e.status === "forecast" && (e.yearEnd ?? e.year) < new Date().getFullYear());
   return (
     <div className="record">
-      <div className="record-tiles">
+      {resolved.length > 0 && <div className="record-tiles">
         {(["forecast", "happened", "partial", "early", "late", "missed", "retired"] as const).map((s) => (
           <div key={s} className={"rt " + s}><div className="v mono">{counts[s] ?? 0}</div><div className="lbl">{STATUS_LABEL[s]}</div></div>
         ))}
-      </div>
+      </div>}
       {due.length > 0 && <p className="note">Past due and unresolved: {due.map((e) => e.title).join("; ")}. The next check-in has to grade these.</p>}
       {resolved.length > 0 && (
         <ul className="resolved">
           {resolved.sort((a, b) => a.year - b.year).map((e) => <li key={e.id}><span className="mono" style={{ color: DOMAIN_META[e.domain].color }}>{e.year}</span> <span className={"pill status " + e.status}>{STATUS_LABEL[e.status]}</span> {e.title}</li>)}
         </ul>
       )}
-      {resolved.length === 0 && <p className="muted">Nothing has resolved yet. The first lines come due in 2027.</p>}
+      {resolved.length === 0 && (() => {
+        const first = Math.min(...data.events.map((e) => e.year));
+        const due = data.events.filter((e) => e.year === first);
+        return <div className="first-due"><div className="eyebrow">First grades due · {first}</div><p>Nothing has resolved yet. {due.length} line{due.length === 1 ? "" : "s"} come due first:</p><ul>{due.map((e) => <li key={e.id}><button className="link" onClick={() => select(e.id)}>{e.title} <span className="muted mono">{Math.round((e.probability ?? 0) * 100)}%</span></button></li>)}</ul></div>;
+      })()}
     </div>
   );
 }
 
 export function Changelog() {
-  const { select, setYear } = useStore();
+  const { select } = useStore();
   const log = [...data.changelog].sort((a, b) => (a.date < b.date ? 1 : -1));
   return (
     <ol className="log">
@@ -92,7 +97,7 @@ export function Changelog() {
         <li key={i} className={"log-" + c.kind}>
           <div className="log-date mono">{c.date} <span className="pill">{c.kind}</span></div>
           <div><b>{c.headline}</b><p className="muted">{c.body}</p>
-            {c.touched.length > 0 && <div className="touched">{c.touched.map((id) => { const e = data.events.find((x) => x.id === id); return e ? <button key={id} className="link" onClick={() => { select(e.id); setYear(e.year); document.getElementById("timeline")?.scrollIntoView({ behavior: "smooth" }); }}>{e.year} · {e.title}</button> : null; })}</div>}
+            {c.touched.length > 0 && <div className="touched">{c.touched.map((id) => { const e = data.events.find((x) => x.id === id); return e ? <button key={id} className="link" onClick={() => { select(e.id); document.getElementById("timeline")?.scrollIntoView({ behavior: "smooth" }); }}>{e.year} · {e.title}</button> : null; })}</div>}
             {c.sources.length > 0 && <div className="src">{c.sources.map((s, j) => <a key={j} href={s} target="_blank" rel="noreferrer">source {j + 1}</a>)}</div>}
           </div>
         </li>
