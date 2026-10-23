@@ -3,6 +3,7 @@ import { data } from "../data";
 import { fmt, lerp, metricKF } from "../lib";
 import { DOMAIN_META, type Branch, type ForecastEvent } from "../schema";
 import { useStore } from "../store";
+import { useNarrow } from "../hooks";
 import { FutureMap, Network } from "./StoryArt";
 import Figure from "./Figure";
 
@@ -31,6 +32,7 @@ function Odds({ event }: { event: ForecastEvent }) {
 
 function PredictionScene({ event, index, current }: { event: ForecastEvent; index: number; current: boolean }) {
   const { select, branch, year } = useStore();
+  const narrow = useNarrow();
   const words = event.title.split(" ");
   const tail = words.splice(-Math.min(3, Math.max(1, Math.floor(words.length / 3)))).join(" ");
   return <section id={pageId(event)} className={`guide-scene event-scene ${index % 2 ? "verso" : "recto"} ${current ? "is-current" : ""}`} data-story-stop data-year={event.year} data-event-id={event.id} data-domain={event.domain} aria-labelledby={`title-${event.id}`} style={{ ["--d" as any]: DOMAIN_META[event.domain].color }}>
@@ -40,7 +42,9 @@ function PredictionScene({ event, index, current }: { event: ForecastEvent; inde
       <p className="guide-lead">{event.summary}</p>
       {event.branch && <span className="conditional-note">Only on the {event.branch} path</span>}
       <Odds event={event} />
-      {event.resolution && <p className="counts"><b>What counts.</b> {event.resolution.test}</p>}
+      {event.resolution && (narrow
+        ? <details className="counts counts-d"><summary><b>What counts</b></summary><p>{event.resolution.test}</p></details>
+        : <p className="counts"><b>What counts.</b> {event.resolution.test}</p>)}
       <Drivers event={event} />
       <div className="page-actions"><button className="guide-text-button" onClick={() => select(event.id)}>Why this forecast? <span>↗</span></button><Cited event={event} /></div>
     </div>

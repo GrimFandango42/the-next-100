@@ -171,7 +171,28 @@
     "hero": {
       "text": "Nov 2028",
       "label": "the first election fought over AI",
-      "effect": "ripple"
+      "effect": "ripple",
+      "ladder": [
+        {
+          "label": "Data centers a midterm issue",
+          "state": "done",
+          "note": "2026, both parties"
+        },
+        {
+          "label": "AI planks in both platforms",
+          "state": "next",
+          "note": "summer 2028"
+        },
+        {
+          "label": "A debate question on AI and jobs",
+          "state": "next"
+        },
+        {
+          "label": "Top-five issue in the exit poll",
+          "state": "next",
+          "note": "the bet, November 2028"
+        }
+      ]
     },
     "history": [
       {
@@ -197,7 +218,7 @@
     ],
     "timing": "around",
     "resolution": {
-      "test": "AI (including data centres and their power demand) is among the top five issues in the general-election exit poll or in Pew's post-election issue ranking, and both major-party platforms carry an AI plank."
+      "test": "AI (including data centers and their power demand) is among the top five issues in the general-election exit poll or in Pew's post-election issue ranking, and both major-party platforms carry an AI plank."
     }
   },
   {
@@ -267,7 +288,28 @@
     "hero": {
       "num": 1,
       "label": "comprehensive federal AI law, written in a hurry",
-      "effect": "ripple"
+      "effect": "ripple",
+      "ladder": [
+        {
+          "label": "Comprehensive bills introduced",
+          "state": "done",
+          "note": "several, 2025–26"
+        },
+        {
+          "label": "A frontier-AI bill passes a chamber",
+          "state": "next",
+          "note": "none by October 2026"
+        },
+        {
+          "label": "Signed into law",
+          "state": "next"
+        },
+        {
+          "label": "Binding rules in force",
+          "state": "next",
+          "note": "the bet, 2029"
+        }
+      ]
     },
     "history": [
       {
@@ -307,7 +349,31 @@
       "num": 45,
       "unit": "%",
       "label": "chance the talks even begin",
-      "effect": "web"
+      "effect": "web",
+      "ladder": [
+        {
+          "label": "Track-two dialogues",
+          "state": "done"
+        },
+        {
+          "label": "Official AI dialogue and incident channel",
+          "state": "done",
+          "note": "agreed 26 September 2026"
+        },
+        {
+          "label": "Verification on the agenda",
+          "state": "next",
+          "note": "the bet, 2030"
+        },
+        {
+          "label": "Run-notification agreement",
+          "state": "next"
+        },
+        {
+          "label": "Inspections",
+          "state": "next"
+        }
+      ]
     },
     "history": [
       {
@@ -635,7 +701,27 @@
     "hero": {
       "text": "Home",
       "label": "where robots arrive third, after warehouses and hospitals",
-      "effect": "bloom"
+      "effect": "bloom",
+      "bars": [
+        {
+          "label": "Unitree shipped, 2025",
+          "value": 5500,
+          "kind": "observed",
+          "note": "units"
+        },
+        {
+          "label": "Figure built, by July 2026",
+          "value": 1000,
+          "kind": "observed",
+          "note": "units"
+        },
+        {
+          "label": "1% of US households",
+          "value": 1300000,
+          "kind": "forecast",
+          "note": "the bet, 2036"
+        }
+      ]
     },
     "history": [
       {
@@ -1008,7 +1094,28 @@
     "hero": {
       "metric": "frontier-actors",
       "label": "actors at the AI frontier, under one regime",
-      "effect": "web"
+      "effect": "web",
+      "ladder": [
+        {
+          "label": "US–China incident channel",
+          "state": "done",
+          "note": "September 2026"
+        },
+        {
+          "label": "Third-party evaluators inside labs",
+          "state": "now",
+          "note": "committed, not yet publishing"
+        },
+        {
+          "label": "International body with audit access",
+          "state": "next"
+        },
+        {
+          "label": "A regime with teeth",
+          "state": "next",
+          "note": "the bet, 2055"
+        }
+      ]
     },
     "history": [
       {
@@ -1335,7 +1442,7 @@
     ],
     "timing": "through",
     "resolution": {
-      "test": "No confirmed technosignature or contact, by the standard of an IAU-recognised detection, through 2180."
+      "test": "No confirmed technosignature or contact, by the standard of an IAU-recognized detection, through 2180."
     }
   },
   {
@@ -1360,7 +1467,28 @@
       "num": 3,
       "unit": "+",
       "label": "labs pacing each other, watched from inside",
-      "effect": "web"
+      "effect": "web",
+      "ladder": [
+        {
+          "label": "A lab proposes pacing",
+          "state": "done",
+          "note": "September 2026"
+        },
+        {
+          "label": "Embedded evaluators committed",
+          "state": "now",
+          "note": "two labs"
+        },
+        {
+          "label": "Three labs under one agreement",
+          "state": "next",
+          "note": "the bet, 2027"
+        },
+        {
+          "label": "A government backs it",
+          "state": "next"
+        }
+      ]
     },
     "history": [
       {
@@ -1399,7 +1527,27 @@
     "hero": {
       "num": 1,
       "label": "federal law that decides who regulates, before any that decides what",
-      "effect": "ripple"
+      "effect": "ripple",
+      "ladder": [
+        {
+          "label": "White House calls for preemption",
+          "state": "done",
+          "note": "framework, March 2026"
+        },
+        {
+          "label": "Preemption bill passes a chamber",
+          "state": "next"
+        },
+        {
+          "label": "Signed",
+          "state": "next",
+          "note": "the bet, 2027"
+        },
+        {
+          "label": "State laws enjoined or repealed",
+          "state": "next"
+        }
+      ]
     },
     "history": [
       {
@@ -1456,7 +1604,7 @@
           "state": "next"
         },
         {
-          "label": "Grid licence",
+          "label": "Grid license",
           "state": "next"
         },
         {
@@ -1669,7 +1817,34 @@
       "num": 87,
       "unit": "%",
       "label": "fewer attacks after one infusion of an in-body CRISPR editor (HAELO Phase 3, 2026)",
-      "effect": "bloom"
+      "effect": "bloom",
+      "ladder": [
+        {
+          "label": "Ex-vivo editing approved",
+          "state": "done",
+          "note": "Casgevy, December 2023"
+        },
+        {
+          "label": "First in-vivo editor filed",
+          "state": "now",
+          "note": "lonvo-z for HAE, BLA 2026"
+        },
+        {
+          "label": "In-vivo approval, rare disease",
+          "state": "next",
+          "note": "expected 2027"
+        },
+        {
+          "label": "Common-disease Phase 3 readout",
+          "state": "next",
+          "note": "nex-z, ATTR-CM"
+        },
+        {
+          "label": "Approved for a disease of the many",
+          "state": "next",
+          "note": "the bet, 2029–2031"
+        }
+      ]
     },
     "cornerstone": false,
     "status": "forecast",
@@ -1712,7 +1887,34 @@
       "num": 0,
       "unit": "/24",
       "label": "agencies GAO found ready to migrate, four years before the deadline (October 2026)",
-      "effect": "alarm"
+      "effect": "alarm",
+      "ladder": [
+        {
+          "label": "NIST standards published",
+          "state": "done",
+          "note": "FIPS 203–205, August 2024"
+        },
+        {
+          "label": "Executive order with a deadline",
+          "state": "done",
+          "note": "EO 14412, June 2026"
+        },
+        {
+          "label": "Agency inventories and funding",
+          "state": "now",
+          "note": "0 of 24 ready, GAO October 2026"
+        },
+        {
+          "label": "Key establishment on all high-value systems",
+          "state": "next",
+          "note": "the bet, 31 December 2030"
+        },
+        {
+          "label": "Signatures",
+          "state": "next",
+          "note": "2031"
+        }
+      ]
     },
     "cornerstone": false,
     "status": "forecast",
@@ -1743,7 +1945,7 @@
     "probability": 0.4,
     "title": "A quantum computer beats the best classical method on a real chemistry problem",
     "summary": "Not a sampling benchmark. A molecule or material property computed on error-corrected hardware, beyond the best stated classical method, and still standing a year later.",
-    "detail": "Every 2025-2026 advantage claim is a sampling or spin-model task: Google's Quantum Echoes, IBM's 70-logical-qubit doped-Clifford circuit (July 2026), Quantinuum's Helios Fermi-Hubbard run. None is a chemistry result and none has an independent classical baseline that has held; the Quantum Advantage Tracker lists them as candidates. ETH's Reiher group puts routine useful chemistry at roughly 500-1,000 logical qubits; IBM's Starling (2029) targets about 200..",
+    "detail": "Every 2025–2026 advantage claim is a sampling or spin-model task: Google's Quantum Echoes, IBM's 70-logical-qubit doped-Clifford circuit (July 2026), Quantinuum's Helios Fermi-Hubbard run. None is a chemistry result and none has an independent classical baseline that has held; the Quantum Advantage Tracker lists them as candidates. ETH's Reiher group puts routine useful chemistry at roughly 500-1,000 logical qubits; IBM's Starling (2029) targets about 200..",
     "signals": [
       "A machine with 100 or more logical qubits runs a circuit of a million or more logical gates",
       "A chemistry entry on the Quantum Advantage Tracker survives a year without a classical match",
@@ -1755,7 +1957,31 @@
     "hero": {
       "num": 70,
       "label": "error-corrected qubits in the largest verified logical circuit so far (IBM, July 2026); useful chemistry needs hundreds",
-      "effect": "web"
+      "effect": "web",
+      "bars": [
+        {
+          "label": "Logical qubits, largest verified circuit",
+          "value": 70,
+          "kind": "observed",
+          "note": "IBM, July 2026"
+        },
+        {
+          "label": "IBM Starling target, 2029",
+          "value": 200,
+          "kind": "reference"
+        },
+        {
+          "label": "Useful chemistry, ETH estimate",
+          "value": 500,
+          "kind": "reference",
+          "note": "500–1,000"
+        },
+        {
+          "label": "The bet: a verified result by 2033",
+          "value": 1000,
+          "kind": "forecast"
+        }
+      ]
     },
     "cornerstone": false,
     "status": "forecast",
@@ -1784,11 +2010,11 @@
     "domain": "energy",
     "confidence": "moderate",
     "probability": 0.5,
-    "title": "Data centres draw a tenth of US electricity",
-    "summary": "Power, not chips, becomes the limit on the AI buildout. The test is the meter: data centres at 10% or more of US electricity in 2030, up from 4.7% in 2024.",
-    "detail": "LBNL's June 2026 update puts US data centres at 192 TWh and 4.7% of US electricity in 2024, with a 2030 reference case of 649 TWh (11.8%) inside a 9.5-15.3% range; the IEA (2026) has global data-centre demand doubling from 485 TWh in 2025 to 950 TWh in 2030 with the US about half of installed capacity. Against the forecasts stands the grid: ERCOT's large-load queue went from 63 GW to over 230 GW in a year and Texas froze new interconnections in August 2026 pending an audit; Sightline expects 30-50% of 2026's large projects to slip; Goldman expects half of near-term capacity late. The number will be published in 2031 or 2032; the line is graded then.",
+    "title": "Data centers draw a tenth of US electricity",
+    "summary": "Power, not chips, becomes the limit on the AI buildout. The test is the meter: data centers at 10% or more of US electricity in 2030, up from 4.7% in 2024.",
+    "detail": "LBNL's June 2026 update puts US data centers at 192 TWh and 4.7% of US electricity in 2024, with a 2030 reference case of 649 TWh (11.8%) inside a 9.5-15.3% range; the IEA (2026) has global data-center demand doubling from 485 TWh in 2025 to 950 TWh in 2030 with the US about half of installed capacity. Against the forecasts stands the grid: ERCOT's large-load queue went from 63 GW to over 230 GW in a year and Texas froze new interconnections in August 2026 pending an audit; Sightline expects 30-50% of 2026's large projects to slip; Goldman expects half of near-term capacity late. The number will be published in 2031 or 2032; the line is graded then.",
     "signals": [
-      "EIA begins publishing data-centre load as its own category in the Short-Term Energy Outlook",
+      "EIA begins publishing data-center load as its own category in the Short-Term Energy Outlook",
       "A hyperscaler or frontier lab moves or cancels a gigawatt-scale US campus and names power as the reason",
       "LBNL's next update holds its 2030 reference case at or above 11%"
     ],
@@ -1798,8 +2024,41 @@
     "hero": {
       "num": 4.7,
       "unit": "%",
-      "label": "of US electricity went to data centres in 2024; the forecast says 10% by 2030",
-      "effect": "sun"
+      "label": "of US electricity went to data centers in 2024; the forecast says 10% by 2030",
+      "effect": "sun",
+      "bars": [
+        {
+          "label": "2024, measured",
+          "value": 4.7,
+          "unit": "%",
+          "kind": "observed",
+          "note": "LBNL / DOE"
+        },
+        {
+          "label": "2030, LBNL low",
+          "value": 9.5,
+          "unit": "%",
+          "kind": "reference"
+        },
+        {
+          "label": "2030, the bet",
+          "value": 10,
+          "unit": "%",
+          "kind": "forecast"
+        },
+        {
+          "label": "2030, LBNL reference",
+          "value": 11.8,
+          "unit": "%",
+          "kind": "reference"
+        },
+        {
+          "label": "2030, LBNL high",
+          "value": 15.3,
+          "unit": "%",
+          "kind": "reference"
+        }
+      ]
     },
     "cornerstone": false,
     "status": "forecast",
@@ -1820,7 +2079,7 @@
     ],
     "timing": "around",
     "resolution": {
-      "test": "Counts if LBNL/DOE, EIA or the IEA reports US data-centre consumption at 10% or more of total US electricity for calendar 2030. Miss if: LBNL/DOE, EIA and IEA all put US data-centre consumption below 10% of total US electricity for calendar 2030 - most plausibly because interconnection freezes and equipment lead times (transformers 2-3 years, turbines ~5) hold the 2026-2030 buildout to the LBNL low case or below, or because efficiency and workload shifts flatten demand per accelerator."
+      "test": "Counts if LBNL/DOE, EIA or the IEA reports US data-center consumption at 10% or more of total US electricity for calendar 2030. Miss if: LBNL/DOE, EIA and IEA all put US data-center consumption below 10% of total US electricity for calendar 2030 - most plausibly because interconnection freezes and equipment lead times (transformers 2-3 years, turbines ~5) hold the 2026-2030 buildout to the LBNL low case or below, or because efficiency and workload shifts flatten demand per accelerator."
     }
   }
 ]
