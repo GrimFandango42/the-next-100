@@ -4,6 +4,6 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-User=www-data
-WorkingDirectory=/srv/the-next-100
-ExecStart=/srv/the-next-100/deploy/update.sh
+User=nithin
+WorkingDirectory=/srv/thenext100/repo
+ExecStart=/srv/thenext100/repo/deploy/update.sh

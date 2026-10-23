@@ -1,28 +1,18 @@
 #!/usr/bin/env bash
-# Pull main, rebuild if it changed, swap the site root atomically. Safe to run every 10 minutes.
+# Runs on the VPS every 10 minutes (systemd timer). Pulls main from the public repo;
+# if it changed, builds and swaps the site atomically. Read-only access to GitHub; no secrets.
 set -euo pipefail
-REPO=/srv/the-next-100
-WEB=/var/www/thenext100
-LOG=/var/log/thenext100-update.log
-
+REPO=/srv/thenext100/repo
+SITE=/srv/thenext100/site
+LOG=/srv/thenext100/update.log
 cd "$REPO"
-before=$(git rev-parse HEAD)
 git fetch -q origin main
-after=$(git rev-parse origin/main)
-if [[ "$before" == "$after" && -f "$WEB/index.html" && "${FORCE:-0}" != "1" ]]; then
-  exit 0
-fi
-
-echo "[$(date -Is)] updating $before -> $after" >> "$LOG"
+if [[ "$(git rev-parse HEAD)" == "$(git rev-parse origin/main)" && -f "$SITE/index.html" && "${FORCE:-0}" != "1" ]]; then exit 0; fi
+echo "[$(date -Is)] $(git rev-parse --short HEAD) -> $(git rev-parse --short origin/main)" >> "$LOG"
 git reset -q --hard origin/main
 npm ci --no-audit --no-fund --silent
 npm run build >> "$LOG" 2>&1
-
-# atomic swap: build into a sibling dir, then rename
-tmp="${WEB}.new"
-rm -rf "$tmp"
-cp -r dist "$tmp"
-if [[ -d "$WEB" ]]; then mv "$WEB" "${WEB}.old"; fi
-mv "$tmp" "$WEB"
-rm -rf "${WEB}.old"
-echo "[$(date -Is)] deployed $after" >> "$LOG"
+rm -rf "$SITE.new" && cp -r dist "$SITE.new"
+[[ -d "$SITE" ]] && mv "$SITE" "$SITE.old"
+mv "$SITE.new" "$SITE" && rm -rf "$SITE.old"
+echo "[$(date -Is)] deployed $(git rev-parse --short HEAD)" >> "$LOG"

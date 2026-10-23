@@ -13,7 +13,7 @@ Live: **https://thenext100.duckdns.org**
 | `scripts/` | `validate` (runs on every build), `checkin-brief`, `checkin-log`. |
 | `CHECKIN.md` | The weekly check-in protocol. |
 | `.claude/skills/checkin` | `/checkin` in Claude Code runs the protocol end to end. |
-| `deploy/` | nginx + systemd timer for the Hetzner VPS. Push to `main` and the site updates itself within ten minutes. |
+| `deploy/` | Caddy block, `deploy.ps1` and a systemd update timer for the Hetzner VPS. Push to `main` and the site updates itself within ten minutes. |
 
 ## Run it
 
@@ -29,11 +29,12 @@ Edit `data/*.json`. `npm run validate` tells you if you broke a rule (tiers vs p
 
 ## Deploy (first time)
 
-1. Claim `thenext100` at duckdns.org and point it at the VPS.
-2. On the VPS, as root: `curl -fsSL https://raw.githubusercontent.com/GrimFandango42/the-next-100/main/deploy/install.sh | bash`
-3. For HTTPS: `apt-get install -y certbot python3-certbot-nginx && certbot --nginx -d thenext100.duckdns.org --redirect`
+Same pattern as acl26: Caddy on the Hetzner VPS, deployed from the Windows desktop.
 
-After that, every push to `main` goes live on its own.
+1. Claim `thenext100` at duckdns.org, pointed at `5.161.210.111`.
+2. From `C:\AI_Projects\the-next-100`: `.\deploy\deploy.ps1 -FirstTime`. It clones on the VPS, builds, adds the Caddy block (after a `.bak`), and enables the 10-minute update timer. Caddy gets the HTTPS certificate on its own.
+
+After that, every push to `main` goes live within ten minutes. Rollback: `sudo systemctl disable --now thenext100-update.timer`, restore the Caddyfile `.bak`, `sudo caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile`.
 
 ## Method, in one paragraph
 

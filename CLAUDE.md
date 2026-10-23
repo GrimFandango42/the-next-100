@@ -6,7 +6,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - `data/*.json` — the forecast itself. Validated by `src/schema.ts` (zod) and `scripts/validate.ts`. This is what check-ins edit.
 - `src/` — Vite + React + TypeScript + D3. `store.tsx` holds year / branch / filters / selection; `components/Timeline.tsx` is the zoomable timeline; `WorldState.tsx` the metric tiles + explorer; `Sections.tsx` the rest.
 - `scripts/` — validator, check-in brief, check-in logger.
-- `deploy/` — nginx config, install script, and the pull-and-build loop for the Hetzner VPS.
+- `deploy/` — Caddy site block, `deploy.ps1` (run from the Windows desktop) and the pull-and-build timer for the VPS.
 - `CHECKIN.md` — the weekly check-in protocol. `/checkin` skill runs it.
 
 ## Commands
@@ -20,5 +20,6 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - Deploys happen by pushing to `main`; the VPS pulls and rebuilds every 10 minutes (`deploy/update.sh`). Never deploy by hand-copying files.
 
 ## On the VPS
-- Ubuntu at Hetzner; reachable from Nithin's desktop over Tailscale. Cloud sessions cannot reach it; they push to GitHub and the VPS pulls.
-- Site root `/var/www/thenext100`, checkout `/srv/the-next-100`, nginx site `thenext100`, systemd timer `thenext100-update.timer`.
+- Hetzner Ubuntu box at 5.161.210.111, user `nithin`. Caddy serves every site (acl26, ajntrip, indianrummy, thenext100). Reach it from the Windows desktop over SSH; cloud sessions cannot reach it, so they push to GitHub and the VPS pulls.
+- Checkout `/srv/thenext100/repo`, site root `/srv/thenext100/site`, Caddy block `thenext100.duckdns.org`, timer `thenext100-update.timer`, log `/srv/thenext100/update.log`.
+- `systemctl reload caddy` has hung before; use `sudo caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile`.
