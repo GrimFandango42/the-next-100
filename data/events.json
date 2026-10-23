@@ -7,7 +7,7 @@
     "probability": 0.72,
     "title": "AI agents become the default for knowledge work",
     "summary": "Software, finance, law and research move to agent-first workflows: a human sets the goal and reviews, an agent does the work.",
-    "detail": "The shift is already underway in software engineering and is spreading to any job whose output is a document, a decision or a model. The tell is not that agents exist but that firms reorganize around them: headcount plans assume agents, procurement buys agent seats, and junior roles are redefined as agent supervision. By the end of 2027 a majority of large firms in these four sectors run most routine knowledge work through agents. Grading test, added 2026-10-23: the annual McKinsey State of AI survey (or an equivalent cross-industry survey) reports scaled agent use at half or more of large firms in at least two of the four sectors.",
+    "detail": "The shift is already underway in software engineering and is spreading to any job whose output is a document, a decision or a model. The tell is not that agents exist but that firms reorganize around them: headcount plans assume agents, procurement buys agent seats, and junior roles are redefined as agent supervision. By the end of 2027 a majority of large firms in these four sectors run most routine knowledge work through agents.",
     "signals": [
       "Major firms announce hiring plans that assume agent productivity",
       "Agent seats become a line item in enterprise software budgets",
@@ -32,7 +32,9 @@
           "https://www.nwsidebar.wsba.org/2026/03/23/new-oregon-state-bar-opinion-on-using-ai-agents-for-client-intake/",
           "https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization",
           "https://fortune.com/2026/05/28/ai-slashes-white-collar-jobs-salesforce-ceo-marc-benioff-one-department-still-hiring-sales/"
-        ]
+        ],
+        "from": 0.8,
+        "to": 0.72
       },
       {
         "date": "2026-10-23",
@@ -42,7 +44,11 @@
           "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "In at least two of the four sectors (software, finance, law, research), a cross-industry survey such as McKinsey's State of AI reports that a majority of large firms run most of their routine knowledge work through agents, not merely that they use agents somewhere. Published by end-2028 about 2027."
+    }
   },
   {
     "id": "entry-level-hiring-contracts",
@@ -79,7 +85,9 @@
           "https://www.bls.gov/news.release/empsit.nr0.htm",
           "https://digitaleconomy.stanford.edu/news/canariesaug26/",
           "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/"
-        ]
+        ],
+        "from": 0.8,
+        "to": 0.85
       },
       {
         "date": "2026-10-23",
@@ -89,7 +97,8 @@
           "https://digitaleconomy.stanford.edu/news/canariesaug26/"
         ]
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "ai-runs-rd-programs",
@@ -100,7 +109,7 @@
     "cornerstone": true,
     "title": "AI systems run multi-month R&D programs autonomously",
     "summary": "A frontier lab or coalition demonstrates AI doing AI research end to end. The loop that compresses every downstream timeline becomes real.",
-    "detail": "This is the first cornerstone. Once systems can propose, run and evaluate their own research agenda over months, capability gains stop being paced by human researcher headcount. It will be demonstrated quietly before it is announced, and it will be contested: expect disputes about how autonomous the loop really was. The honest version of the claim is that the marginal frontier researcher is now a system, not a person. Grading test, added 2026-10-23: a frontier lab reports AI leading (Epoch automation level 4 or above) a majority of its AI R&D for a sustained period, verified by an embedded third party, or publishes a research result attributed primarily to an automated pipeline.",
+    "detail": "This is the first cornerstone. Once systems can propose, run and evaluate their own research agenda over months, capability gains stop being paced by human researcher headcount. It will be demonstrated quietly before it is announced, and it will be contested: expect disputes about how autonomous the loop really was. The honest version of the claim is that the marginal frontier researcher is now a system, not a person.",
     "signals": [
       "A lab publishes results attributed primarily to automated research pipelines",
       "Training-run cadence shortens noticeably at one or more labs",
@@ -124,7 +133,9 @@
           "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
           "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
           "https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/"
-        ]
+        ],
+        "from": 0.6,
+        "to": 0.68
       },
       {
         "date": "2026-10-23",
@@ -134,7 +145,11 @@
           "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "A frontier lab reports AI leading (Epoch automation level 4 or above) a majority of its AI R&D for at least three consecutive months, verified by an embedded third-party evaluator with publication rights. A single automated research result does not count."
+    }
   },
   {
     "id": "first-ai-election",
@@ -167,7 +182,9 @@
           "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/",
           "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/",
           "https://www.inquirer.com/politics/nation/bernie-sanders-artificial-superintelligence-ban-20260923.html"
-        ]
+        ],
+        "from": 0.75,
+        "to": 0.78
       },
       {
         "date": "2026-10-23",
@@ -177,7 +194,11 @@
           "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "AI (including data centres and their power demand) is among the top five issues in the general-election exit poll or in Pew's post-election issue ranking, and both major-party platforms carry an AI plank."
+    }
   },
   {
     "id": "ai-cyberattack-infrastructure",
@@ -212,7 +233,9 @@
           "https://gigazine.net/gsc_news/en/20260729-openai-hack-hugging-face-timeline/",
           "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
           "https://www.nextgov.com/cybersecurity/2026/09/openai-says-its-advanced-models-may-have-gone-after-government-websites/416250/"
-        ]
+        ],
+        "from": 0.7,
+        "to": 0.78
       },
       {
         "date": "2026-10-23",
@@ -222,7 +245,8 @@
           "https://openai.com/index/pacing-model-development-cyber-capabilities/"
         ]
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "federal-ai-statute",
@@ -232,7 +256,7 @@
     "probability": 0.65,
     "title": "The first serious US federal AI statute",
     "summary": "Comprehensive, crisis-shaped law on liability, compute reporting and model-weight security.",
-    "detail": "It will be written in a hurry after the cyberattack or the election, which means it will be strong on the thing that just happened and weak on the thing coming next. Expect compute reporting thresholds, mandatory incident disclosure, a liability regime for agents, and a security standard for frontier weights. It will not settle the labor question. Grading test, added 2026-10-23: 'serious' means binding obligations on frontier developers (published safety frameworks, incident reporting, weight security) with an enforcement mechanism; a preemption-plus-transparency bill of that shape counts even if it is not crisis-shaped.",
+    "detail": "It will be written in a hurry after the cyberattack or the election, which means it will be strong on the thing that just happened and weak on the thing coming next. Expect compute reporting thresholds, mandatory incident disclosure, a liability regime for agents, and a security standard for frontier weights. It will not settle the labor question.",
     "signals": [
       "Bipartisan AI bill passes a chamber",
       "A frontier-transparency bill with state preemption (safety frameworks, incident reporting) passes a chamber",
@@ -255,7 +279,11 @@
           "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "'serious' means binding obligations on frontier developers (published safety frameworks, incident reporting, weight security) with an enforcement mechanism; a preemption-plus-transparency bill of that shape counts even if it is not crisis-shaped."
+    }
   },
   {
     "id": "compute-verification-talks",
@@ -289,9 +317,15 @@
           "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
           "https://www.pbs.org/newshour/world/china-and-u-s-agree-to-establish-ai-safety-channel-and-continue-trade-and-military-talks",
           "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles"
-        ]
+        ],
+        "from": 0.45,
+        "to": 0.5
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "An official US–China negotiation whose published agenda includes verification of compute or training runs. A safety dialogue or incident channel without a verification item does not count."
+    }
   },
   {
     "id": "ai-drugs-phase-iii",
@@ -314,7 +348,33 @@
     "hero": {
       "text": "½",
       "label": "the time from first trial to approval",
-      "effect": "bloom"
+      "effect": "bloom",
+      "ladder": [
+        {
+          "label": "AI-generated molecule in Phase I",
+          "state": "done",
+          "note": "dozens since 2021"
+        },
+        {
+          "label": "First in Phase III",
+          "state": "done",
+          "note": "rentosertib, first patient dosed 2026-09-10"
+        },
+        {
+          "label": "First Phase III readout",
+          "state": "next",
+          "note": "earliest 2028"
+        },
+        {
+          "label": "First approval",
+          "state": "next"
+        },
+        {
+          "label": "A dozen clear Phase III in one year",
+          "state": "next",
+          "note": "the bet, 2033"
+        }
+      ]
     },
     "history": [
       {
@@ -326,9 +386,15 @@
           "https://www.takeda.com/newsroom/newsreleases/2026/fda-priority-review-zasocitinib-psoriasis/",
           "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals",
           "https://www.drugtargetreview.com/insilico-medicine-launches-phase-iii-trial-of-ai-designed-rentosertib-drug/2135890.article"
-        ]
+        ],
+        "from": 0.75,
+        "to": 0.7
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "At least a dozen molecules whose chemical structure was generated by an AI system (not AI-assisted screening of human-designed libraries) clear Phase III in one year, counted from trial registries and sponsor filings. Trial duration is a separate claim and is not graded here."
+    }
   },
   {
     "id": "fusion-net-grid",
@@ -338,7 +404,7 @@
     "probability": 0.65,
     "title": "Fusion delivers net electricity to a grid",
     "summary": "A symbolic milestone. The real story is that solar plus storage has already made energy functionally abundant in the sunbelt.",
-    "detail": "Fusion will matter later, for baseload and for space. By the time it reaches a grid, solar and batteries have fallen far enough that the limiting factor on new industry is permitting and transmission, not generation. Data centers follow cheap power, and new cities form around them. Energy abundance is the quiet enabler of most of what follows: desalination, direct air capture, robotics at scale. Grading test, added 2026-10-23: a fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count.",
+    "detail": "Fusion will matter later, for baseload and for space. By the time it reaches a grid, solar and batteries have fallen far enough that the limiting factor on new industry is permitting and transmission, not generation. Data centers follow cheap power, and new cities form around them. Energy abundance is the quiet enabler of most of what follows: desalination, direct air capture, robotics at scale.",
     "signals": [
       "A fusion plant signs a power-purchase agreement and delivers",
       "Sunbelt wholesale power prices approach zero for daylight hours",
@@ -351,7 +417,33 @@
     "hero": {
       "text": "Net +",
       "label": "electricity to a grid, from fusion",
-      "effect": "sun"
+      "effect": "sun",
+      "ladder": [
+        {
+          "label": "Scientific gain (NIF)",
+          "state": "done",
+          "note": "gain 4.1, April 2025"
+        },
+        {
+          "label": "Magnetic Q > 1",
+          "state": "next",
+          "note": "SPARC first plasma 2027"
+        },
+        {
+          "label": "Electricity exported",
+          "state": "next",
+          "note": "Helion Orion, 2028 target"
+        },
+        {
+          "label": "Net over a full year",
+          "state": "next",
+          "note": "the bet, 2034"
+        },
+        {
+          "label": "Cheaper than gas",
+          "state": "next"
+        }
+      ]
     },
     "history": [
       {
@@ -365,7 +457,11 @@
           "https://oodaloop.com/briefs/technology/commonwealth-fusion-installs-first-of-18-magnets-in-sparc-reactor-first-plasma-energy-targeted-for-2027/"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "a fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count."
+    }
   },
   {
     "id": "ubi-pilots-national",
@@ -386,7 +482,8 @@
       "num": 2,
       "label": "OECD countries with a national income floor",
       "effect": "ripple"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "ai-chemistry-majority",
@@ -417,7 +514,9 @@
         "sources": [
           "https://intuitionlabs.ai/articles/ai-drug-discovery-fda-approvals",
           "https://insilico.com/news/isn1009261-insilico-medicine-doses-first-patient-genesis-ipf-3"
-        ]
+        ],
+        "from": 0.6,
+        "to": 0.55
       },
       {
         "date": "2026-10-23",
@@ -427,7 +526,8 @@
           "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026"
         ]
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "lunar-base-occupied",
@@ -449,7 +549,34 @@
     "hero": {
       "metric": "off-earth",
       "label": "people living off-Earth, all the time",
-      "effect": "moon"
+      "effect": "moon",
+      "ladder": [
+        {
+          "label": "Crewed lunar flyby",
+          "state": "done",
+          "note": "Artemis II, April 2026"
+        },
+        {
+          "label": "Crewed landing",
+          "state": "next",
+          "note": "Artemis IV, early 2028 (NASA)"
+        },
+        {
+          "label": "Long stay with surface power",
+          "state": "next",
+          "note": "no habitat or power contract yet"
+        },
+        {
+          "label": "Continuous occupation",
+          "state": "next",
+          "note": "the bet, 2035"
+        },
+        {
+          "label": "China's own base",
+          "state": "next",
+          "note": "2038"
+        }
+      ]
     },
     "history": [
       {
@@ -461,7 +588,9 @@
           "https://www.space.com/space-exploration/artemis/when-will-spacex-and-blue-origin-fly-to-the-moon-nasa-reveals-lunar-lander-timelines-and-an-artemis-iii-update",
           "https://www.space.com/space-exploration/launches-spacecraft/starship-just-reached-orbit-for-the-1st-time-whats-next-for-the-spacex-megarocket",
           "https://www.space.com/space-exploration/artemis/nasa-giving-update-about-artemis-moon-plans-on-oct-23-watch-it-live"
-        ]
+        ],
+        "from": 0.7,
+        "to": 0.65
       },
       {
         "date": "2026-10-23",
@@ -471,7 +600,11 @@
           "https://spaceflightnow.com/2026/03/25/nasa-outlines-ambitious-20-billion-plan-for-moon-base/"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "A surface habitat occupied for twelve consecutive months with no gap longer than one crew rotation, by any nation. 'China follows by 2038' is a separate observation, not part of the grade."
+    }
   },
   {
     "id": "humanoids-in-homes",
@@ -481,7 +614,7 @@
     "probability": 0.65,
     "title": "Humanoid robots enter homes",
     "summary": "Warehouses, then hospitals, then homes. The physical-world shock, roughly a decade after the cognitive one.",
-    "detail": "General-purpose robots reach price points and reliability where they are first bought by logistics firms, then by hospitals and care homes, then by households. The home milestone matters because it is where the public experiences physical automation directly. It also starts the second wave of labor displacement, this time in work that was supposed to be safe. Grading test, added 2026-10-23: humanoids in at least 1% of households in one OECD country, or a major retailer selling a home-robot subscription at national scale. A few thousand teleoperated units do not count.",
+    "detail": "General-purpose robots reach price points and reliability where they are first bought by logistics firms, then by hospitals and care homes, then by households. The home milestone matters because it is where the public experiences physical automation directly. It also starts the second wave of labor displacement, this time in work that was supposed to be safe.",
     "signals": [
       "A humanoid priced under a mid-range car ships in volume",
       "Hospital systems deploy robots for patient handling or logistics",
@@ -505,7 +638,9 @@
           "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid",
           "https://www.therobotreport.com/1x-announces-pre-order-launch-neo-humanoid-robot/",
           "https://www.nextmsc.com/industry-deep-dive/humanoid-robots-announced-vs-shipped-units"
-        ]
+        ],
+        "from": 0.6,
+        "to": 0.65
       },
       {
         "date": "2026-10-23",
@@ -516,7 +651,11 @@
           "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "Humanoid robots doing household tasks autonomously in at least 1% of households in one OECD country, measured by a national survey or an independent deployment audit. Retail availability, subscriptions on offer, or teleoperated units do not count."
+    }
   },
   {
     "id": "superhuman-cognition",
@@ -553,7 +692,11 @@
           "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
         ]
       }
-    ]
+    ],
+    "timing": "window",
+    "resolution": {
+      "test": "On a frozen suite of professional tasks (medicine, law, mathematics, software, strategy) published by an independent evaluator, the best AI system scores above the best human expert on every task family, and the result is reproduced by a second evaluator. Graded on the window 2034–2040."
+    }
   },
   {
     "id": "hinge-resolves",
@@ -563,8 +706,8 @@
     "probability": 0.57,
     "cornerstone": true,
     "title": "The hinge resolves: pluralism or concentration",
-    "summary": "Either capability stays contested across many actors (~60%), or one or two actors consolidate a decisive lead (~40%).",
-    "detail": "Everything after this point branches. In the pluralism branch, open models stay close to the frontier, compute is spread across many actors, and governance is negotiated among rivals. It is chaotic and dangerous and broadly free. In the concentration branch, one firm or state closes the research loop first and compounds its lead until nobody can catch up. That branch produces the century's best outcomes if the leader is benevolent and competent, and its worst if not. The forecast puts 60% on pluralism, mostly because concentration requires sustained secrecy and no serious mistakes. A third shape appeared in 2026 and is scored as concentration-leaning: a government-gated frontier of three to five labs that pace each other by agreement, with open weights a year or more behind.",
+    "summary": "Either capability stays contested across many actors (57%), or one or two actors consolidate a decisive lead (43%).",
+    "detail": "Everything after this point branches. In the pluralism branch, open models stay close to the frontier, compute is spread across many actors, and governance is negotiated among rivals. It is chaotic and dangerous and broadly free. In the concentration branch, one firm or state closes the research loop first and compounds its lead until nobody can catch up. That branch produces the century's best outcomes if the leader is benevolent and competent, and its worst if not. The forecast puts 57% on pluralism, mostly because concentration requires sustained secrecy and no serious mistakes. A third shape appeared in 2026 and is scored as concentration-leaning: a government-gated frontier of three to five labs that pace each other by agreement, with open weights a year or more behind.",
     "signals": [
       "Gap between the best open model and the best closed model, in months",
       "Share of frontier compute held by the top two actors",
@@ -589,7 +732,9 @@
           "https://epoch.ai/data-insights/us-vs-china-eci",
           "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next",
           "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/"
-        ]
+        ],
+        "from": 0.6,
+        "to": 0.57
       },
       {
         "date": "2026-10-23",
@@ -598,8 +743,20 @@
         "sources": [
           "https://darioamodei.com/post/we-must-pace-the-frontier"
         ]
+      },
+      {
+        "date": "2026-10-23",
+        "change": "summary and detail: 60/40 → 57/43",
+        "reason": "The line's probability was moved to 0.57 on 2026-10-23 but its prose and the site's hinge setting still said 60/40. One number now: the probability on this line is the chance of pluralism, and the scenario odds are weighted from it.",
+        "sources": [
+          "https://epoch.ai/data-insights/open-closed-eci-gap"
+        ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "Graded in 2039 on the two lead indicators: pluralism if the best open-weight model is within twelve months of the frontier and the top two actors hold under half of frontier compute; concentration otherwise. The probability on this line is the chance of pluralism."
+    }
   },
   {
     "id": "aging-therapy-approved",
@@ -631,7 +788,8 @@
           "https://www.ined.fr/en/everything_about_population/data/europe-developed-countries/life-expectancy"
         ]
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "labor-cost-irrelevant",
@@ -651,7 +809,8 @@
       "num": 0,
       "label": "role for labor cost in where things are made",
       "effect": "sun"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "population-peak",
@@ -683,7 +842,9 @@
         "sources": [
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
           "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth.pdf"
-        ]
+        ],
+        "from": 0.75,
+        "to": 0.45
       },
       {
         "date": "2026-10-23",
@@ -693,7 +854,11 @@
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
         ]
       }
-    ]
+    ],
+    "timing": "window",
+    "resolution": {
+      "test": "UN World Population Prospects, in its edition of 2060 or later, places the world population peak inside 2046–2058 at 9.3–9.9 billion."
+    }
   },
   {
     "id": "two-degrees-breached",
@@ -727,7 +892,11 @@
           "https://climate.copernicus.eu/copernicus-second-warmest-september-global-temperatures-stay-above-15degc"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "The 20-year mean global surface temperature (Copernicus ERA5 or the WMO multi-dataset mean, 1850–1900 baseline) first exceeds 2.0°C in a year within 2049–2051, while global fossil CO₂ emissions are below their peak."
+    }
   },
   {
     "id": "geoengineering-unilateral",
@@ -760,7 +929,8 @@
           "https://solargeoengineeringupdates.substack.com/p/monthly-solar-geoengineering-updates-6d1"
         ]
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "mars-outpost",
@@ -781,8 +951,33 @@
     "hero": {
       "metric": "off-earth",
       "label": "people living off-Earth, now on two worlds",
-      "effect": "mars"
-    }
+      "effect": "mars",
+      "ladder": [
+        {
+          "label": "Starship to orbit",
+          "state": "done",
+          "note": "2026-09-28"
+        },
+        {
+          "label": "Ship-to-ship propellant transfer",
+          "state": "next"
+        },
+        {
+          "label": "Uncrewed Starship lands on Mars",
+          "state": "next"
+        },
+        {
+          "label": "Crew lands",
+          "state": "next"
+        },
+        {
+          "label": "Permanent outpost",
+          "state": "next",
+          "note": "the bet, 2052"
+        }
+      ]
+    },
+    "timing": "around"
   },
   {
     "id": "superintelligence-regime",
@@ -815,9 +1010,12 @@
           "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
           "https://darioamodei.com/post/we-must-pace-the-frontier",
           "https://www.csis.org/analysis/department-commerce-restricted-access-anthropics-latest-models-what-comes-next"
-        ]
+        ],
+        "from": 0.6,
+        "to": 0.62
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "mass-casualty-event",
@@ -826,7 +1024,7 @@
     "confidence": "speculative",
     "probability": 0.17,
     "title": "A mass-casualty AI-enabled bio or infrastructure event",
-    "summary": "Millions, not extinction. About 15% before 2060.",
+    "summary": "Millions, not extinction. About 17% before 2055.",
     "detail": "The bad case for the mid-century. A state or sub-state actor uses AI-enabled biological capability or coordinated infrastructure attacks at scale. It is the event most likely to tip a pluralistic world into lockdown, and the one the whole safety apparatus exists to prevent.",
     "signals": [
       "AI-enabled bio capability demonstrated by a non-state actor",
@@ -834,9 +1032,9 @@
     ],
     "leadsTo": [],
     "hero": {
-      "num": 15,
+      "num": 17,
       "unit": "%",
-      "label": "chance of millions dead before 2060",
+      "label": "chance of millions dead in one event, before 2055",
       "effect": "alarm"
     },
     "history": [
@@ -846,9 +1044,23 @@
         "reason": "A Science paper (6 August 2026) reported generative-AI-designed bacteriophage genomes that worked as well as or better than natural ones. The Bulletin's September assessment: AI is not yet able to design human-infecting viruses, and gene-synthesis screening is still voluntary. A small move on a line whose window is 2055.",
         "sources": [
           "https://thebulletin.org/2026/09/newly-created-viruses-are-a-warning-we-still-have-a-window-to-stop-ai-enabled-bioweapons/"
+        ],
+        "from": 0.15,
+        "to": 0.17
+      },
+      {
+        "date": "2026-10-23",
+        "change": "hero and summary: 15% → 17%",
+        "reason": "The probability moved to 0.17 on 2026-10-23 and two copies of the old number were left behind.",
+        "sources": [
+          "https://thebulletin.org/2026/09/newly-created-viruses-are-a-warning-we-still-have-a-window-to-stop-ai-enabled-bioweapons/"
         ]
       }
-    ]
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "A single AI-enabled biological or infrastructure event with at least one million deaths, attributed by at least two governments or a UN body, before the end of 2055."
+    }
   },
   {
     "id": "population-declining",
@@ -876,7 +1088,9 @@
         "sources": [
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
           "https://webfs.oecd.org/els-com/Family_Database/SF_2_1_Fertility_rates.pdf"
-        ]
+        ],
+        "from": 0.75,
+        "to": 0.55
       },
       {
         "date": "2026-10-23",
@@ -886,7 +1100,8 @@
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
         ]
       }
-    ]
+    ],
+    "timing": "around"
   },
   {
     "id": "healthy-lifespan-110",
@@ -907,7 +1122,8 @@
       "unit": "+",
       "label": "healthy years, widely available",
       "effect": "bloom"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "bci-mainstream",
@@ -928,7 +1144,8 @@
       "text": "Human ↔ AI",
       "label": "the line stops being legible",
       "effect": "merge"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "orbital-industry",
@@ -950,7 +1167,8 @@
       "metric": "off-earth",
       "label": "people living off-Earth, working an industry",
       "effect": "orbit"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "off-earth-population",
@@ -969,7 +1187,8 @@
       "metric": "off-earth",
       "label": "people living off-Earth",
       "effect": "orbit"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "world-2100",
@@ -1005,7 +1224,8 @@
       "metric": "population",
       "label": "people on a managed planet, beside minds that are not human",
       "effect": "bloom"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "human-ai-continuity",
@@ -1023,7 +1243,8 @@
       "text": "Us + Them",
       "label": "or just us, kept safe",
       "effect": "merge"
-    }
+    },
+    "timing": "window"
   },
   {
     "id": "self-sustaining-settlement",
@@ -1040,7 +1261,8 @@
       "text": "Independent",
       "label": "a settlement that survives without Earth",
       "effect": "mars"
-    }
+    },
+    "timing": "around"
   },
   {
     "id": "clock-retired",
@@ -1049,15 +1271,29 @@
     "confidence": "speculative",
     "probability": 0.4,
     "title": "The Doomsday Clock is retired",
-    "summary": "Replaced by something that measures risk from the systems we built, not the weapons we built.",
-    "detail": "The Bulletin's clock was designed for a world where the risk was a bomb. By the mid-22nd century the risk is a system, and the institution that measures it looks different.",
+    "summary": "The Bulletin retires or replaces the Clock with an instrument built for risks from systems, not arsenals.",
+    "detail": "The Clock already counts climate, biotechnology and AI, and the Bulletin calls it a metaphor rather than a forecast. The bet is institutional: by the mid-22nd century the body that tells the public how close we are to catastrophe measures risk from the systems we built, with a method it can defend, and the Clock as a device is retired or replaced. The seconds on this site's clock are the forecast's own illustration of that risk, not a calibrated probability.",
     "signals": [],
     "leadsTo": [],
     "hero": {
       "text": "—",
       "label": "the Doomsday Clock, retired",
       "effect": "clock"
-    }
+    },
+    "timing": "around",
+    "resolution": {
+      "test": "The Bulletin of the Atomic Scientists, or its successor, announces the Clock's retirement or replacement by a different instrument. Graded as 'around 2150' (± 1 year is meaningless here; graded as any time 2140–2160)."
+    },
+    "history": [
+      {
+        "date": "2026-10-23",
+        "change": "summary and detail rewritten; resolution added",
+        "reason": "The old rationale said the Clock measured weapons only; the Bulletin's own FAQ says it already weighs climate, biotech and AI and describes it as a metaphor, not a forecasting tool.",
+        "sources": [
+          "https://thebulletin.org/doomsday-clock/faq/"
+        ]
+      }
+    ]
   },
   {
     "id": "the-silence",
@@ -1082,9 +1318,15 @@
         "reason": "The old number was the chance of contact written in the slot for the chance of the titled claim, so the line read as inverted. The claim is 'still nothing'; the forecast puts 65% on it.",
         "sources": [
           "https://astrobiology.com/2026/02/23/undetected-past-contacts-with-technological-species-implications-for-technosignature-science/"
-        ]
+        ],
+        "from": 0.35,
+        "to": 0.65
       }
-    ]
+    ],
+    "timing": "through",
+    "resolution": {
+      "test": "No confirmed technosignature or contact, by the standard of an IAU-recognised detection, through 2180."
+    }
   },
   {
     "id": "labs-pace-the-frontier",
@@ -1124,7 +1366,8 @@
       }
     ],
     "cornerstone": false,
-    "status": "forecast"
+    "status": "forecast",
+    "timing": "around"
   },
   {
     "id": "state-ai-laws-preempted",
@@ -1161,7 +1404,8 @@
       }
     ],
     "cornerstone": false,
-    "status": "forecast"
+    "status": "forecast",
+    "timing": "around"
   },
   {
     "id": "helion-delivers-microsoft",
@@ -1185,7 +1429,32 @@
       "num": 50,
       "unit": "MW",
       "label": "under contract, from a fusion plant, by 2028",
-      "effect": "sun"
+      "effect": "sun",
+      "ladder": [
+        {
+          "label": "PPA signed",
+          "state": "done",
+          "note": "May 2023"
+        },
+        {
+          "label": "Orion under construction",
+          "state": "now",
+          "note": "Malaga, WA; $175M CHIPS award Oct 2026"
+        },
+        {
+          "label": "First plasma",
+          "state": "next"
+        },
+        {
+          "label": "Grid licence",
+          "state": "next"
+        },
+        {
+          "label": "Metered delivery",
+          "state": "next",
+          "note": "the bet, 2028–2030"
+        }
+      ]
     },
     "history": [
       {
@@ -1198,7 +1467,8 @@
       }
     ],
     "cornerstone": false,
-    "status": "forecast"
+    "status": "forecast",
+    "timing": "window"
   },
   {
     "id": "bci-permanent-approval",
@@ -1221,7 +1491,32 @@
     "hero": {
       "num": 1,
       "label": "permanent brain implant with full approval",
-      "effect": "merge"
+      "effect": "merge",
+      "ladder": [
+        {
+          "label": "Feasibility trials",
+          "state": "done",
+          "note": "Neuralink 21 participants, Jan 2026"
+        },
+        {
+          "label": "Pivotal trial",
+          "state": "now",
+          "note": "Synchron, 2026"
+        },
+        {
+          "label": "PMA filed",
+          "state": "next"
+        },
+        {
+          "label": "PMA approved",
+          "state": "next",
+          "note": "the bet, 2029–2031"
+        },
+        {
+          "label": "Reimbursed",
+          "state": "next"
+        }
+      ]
     },
     "history": [
       {
@@ -1235,7 +1530,8 @@
       }
     ],
     "cornerstone": false,
-    "status": "forecast"
+    "status": "forecast",
+    "timing": "window"
   },
   {
     "id": "china-crewed-moon",
@@ -1259,7 +1555,32 @@
       "num": 2,
       "unit": "nd",
       "label": "nation to put people on the Moon",
-      "effect": "moon"
+      "effect": "moon",
+      "ladder": [
+        {
+          "label": "Lander landing-and-liftoff test",
+          "state": "done",
+          "note": "Lanyue, Aug 2025"
+        },
+        {
+          "label": "Long March 10 low-altitude flight",
+          "state": "done",
+          "note": "Feb 2026"
+        },
+        {
+          "label": "Long March 10 to orbit",
+          "state": "next"
+        },
+        {
+          "label": "Uncrewed lunar landing test",
+          "state": "next"
+        },
+        {
+          "label": "Crew on the Moon",
+          "state": "next",
+          "note": "the bet, 2030"
+        }
+      ]
     },
     "history": [
       {
@@ -1272,7 +1593,8 @@
       }
     ],
     "cornerstone": false,
-    "status": "forecast"
+    "status": "forecast",
+    "timing": "window"
   },
   {
     "id": "fossil-co2-peak",
@@ -1309,6 +1631,10 @@
       }
     ],
     "cornerstone": false,
-    "status": "forecast"
+    "status": "forecast",
+    "timing": "window",
+    "resolution": {
+      "test": "The Global Carbon Budget identifies a peak year inside 2030–2033 followed by three consecutive lower years. Graded on the 2037 edition, so data revisions are in. Two declines alone identify a candidate, not the peak."
+    }
   }
 ]

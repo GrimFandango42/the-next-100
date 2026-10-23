@@ -13,7 +13,7 @@ import { DOMAIN_META, type Branch, type ForecastEvent, type Metric } from "../sc
  *   orbits   · Earth, Moon and Mars, lit when people live there
  * A hand-made image can sit behind any of them: drop public/moments/<event-id>.webp and it appears.
  */
-type Kind = "stripes" | "field" | "curve" | "clock" | "orbits";
+type Kind = "stripes" | "field" | "curve" | "clock" | "orbits" | "ladder";
 const W = 480, H = 360;
 
 /** A few lines are about a specific share or quantity that is not a tracked metric; say what the 100 dots mean. */
@@ -28,6 +28,7 @@ const CURVE_OVERRIDE: Record<string, string> = { "labor-cost-irrelevant": "work-
 function kindFor(ev: ForecastEvent): { kind: Kind; metric?: Metric } {
   const m = ev.hero?.metric;
   const metric = (id: string) => data.metrics.find((x) => x.id === id);
+  if (ev.hero?.ladder?.length) return { kind: "ladder" };
   if (CURVE_OVERRIDE[ev.id]) return { kind: "curve", metric: metric(CURVE_OVERRIDE[ev.id]) };
   if (m === "warming") return { kind: "stripes", metric: metric(m) };
   if (m === "ai-share") return { kind: "field", metric: metric(m) };
@@ -54,6 +55,7 @@ export default function Figure({ ev, branch, year, active }: { ev: ForecastEvent
       {kind === "curve" && metric && <Curve m={metric} branch={branch} year={year} ev={ev} />}
       {kind === "clock" && <Dial branch={branch} year={year} ev={ev} />}
       {kind === "orbits" && <Orbits m={metric} branch={branch} year={year} ev={ev} />}
+      {kind === "ladder" && <Ladder ev={ev} active={active} />}
     </div>
   );
 }
@@ -110,12 +112,13 @@ function Curve({ m, branch, year, ev }: { m: Metric; branch: Branch; year: numbe
   const other: Branch = branch === "pluralism" ? "concentration" : "pluralism";
   const a = metricKF(m, branch), b = metricKF(m, other);
   const log = m.scale === "log";
-  const vals = [...a, ...b].map((k) => k[1]);
+  const vals = [...a, ...b, ...(m.reference[0]?.points ?? [])].map((k) => k[1]);
   const lo = log ? Math.log10(Math.max(1, Math.min(...vals))) : Math.min(...vals) * 0.92, hi = log ? Math.log10(Math.max(...vals)) : Math.max(...vals) * 1.05;
   const px = 44, py = 40, pw = W - px - 24, ph = H - py - 60;
   const X = (y: number) => px + ((y - 2026) / 174) * pw;
   const Y = (v: number) => py + ph - (((log ? Math.log10(Math.max(1, v)) : v) - lo) / (hi - lo || 1)) * ph;
   const path = (kf: [number, number][]) => kf.map((k, i) => `${i ? "L" : "M"}${X(k[0]).toFixed(1)},${Y(k[1]).toFixed(1)}`).join(" ");
+  const ref = m.reference[0];
   const v = lerp(a, year), f = fmt(m, v);
   const yr = Math.round(year);
   const same = a === b;
@@ -123,6 +126,8 @@ function Curve({ m, branch, year, ev }: { m: Metric; branch: Branch; year: numbe
     <svg viewBox={`0 0 ${W} ${H}`} className="fig">
       <line x1={px} x2={px + pw} y1={py + ph} y2={py + ph} stroke="rgba(255,255,255,.18)" />
       {!same && <path d={path(b)} fill="none" stroke="rgba(255,255,255,.35)" strokeWidth={1.5} strokeDasharray="4 5" />}
+      {ref && <path d={path(ref.points as [number, number][])} fill="none" stroke="#fff" strokeOpacity={0.55} strokeWidth={2} strokeDasharray="1 6" strokeLinecap="round" />}
+      {ref && <text x={X(ref.points[ref.points.length - 1][0]) - 6} y={Y(ref.points[ref.points.length - 1][1]) - 10} textAnchor="end" className="fig-mono fig-dim">{ref.label}: {fmt(m, ref.points[ref.points.length - 1][1]).value}{fmt(m, ref.points[ref.points.length - 1][1]).unit}</text>}
       <path d={path(a) + ` L${X(2200).toFixed(1)},${(py + ph).toFixed(1)} L${X(2026).toFixed(1)},${(py + ph).toFixed(1)} Z`} fill="var(--d)" opacity={0.12} />
       <path d={path(a)} fill="none" stroke="var(--d)" strokeWidth={3} strokeLinejoin="round" />
       <line x1={X(yr)} x2={X(yr)} y1={py} y2={py + ph} stroke="#fff" strokeOpacity={0.5} />
@@ -176,8 +181,8 @@ function Orbits({ m, branch, year, ev }: { m?: Metric; branch: Branch; year: num
       <ellipse cx={ex} cy={ey} rx={86} ry={30} fill="none" stroke="rgba(255,255,255,.22)" />
       <ellipse cx={ex} cy={ey} rx={300} ry={104} fill="none" stroke="rgba(255,255,255,.14)" />
       <circle cx={ex} cy={ey} r={30} fill="#3f7fd6" />
-      <circle cx={ex} cy={ey} r={30} fill="url(#shade)" />
-      <defs><radialGradient id="shade" cx="35%" cy="35%" r="70%"><stop offset="0" stopColor="#fff" stopOpacity=".25" /><stop offset="1" stopColor="#000" stopOpacity=".55" /></radialGradient></defs>
+      <circle cx={ex} cy={ey} r={30} fill={`url(#shade-${ev.id})`} />
+      <defs><radialGradient id={`shade-${ev.id}`} cx="35%" cy="35%" r="70%"><stop offset="0" stopColor="#fff" stopOpacity=".25" /><stop offset="1" stopColor="#000" stopOpacity=".55" /></radialGradient></defs>
       <circle cx={ex + 86} cy={ey + 6} r={9} fill={moonOn ? "#f3e7c6" : "#6a6f80"} style={{ filter: moonOn ? "drop-shadow(0 0 10px #f3e7c6)" : "none", transition: "fill .6s" }} />
       <circle cx={ex + 300} cy={ey - 12} r={14} fill={marsOn ? "#ff8b5a" : "#6b4a40"} style={{ filter: marsOn ? "drop-shadow(0 0 14px #ff8b5a)" : "none", transition: "fill .6s" }} />
       {Array.from({ length: dots }, (_, i) => { const a = (i / Math.max(1, dots)) * Math.PI * 2; const r = 44 + (i % 3) * 6; return <circle key={i} cx={(marsOn && i % 2 ? ex + 300 : moonOn ? ex + 86 : ex) + Math.cos(a) * (moonOn ? r * 0.45 : r)} cy={(marsOn && i % 2 ? ey - 12 : moonOn ? ey + 6 : ey) + Math.sin(a) * (moonOn ? r * 0.45 : r)} r={2} fill="var(--d)" />; })}
@@ -187,6 +192,31 @@ function Orbits({ m, branch, year, ev }: { m?: Metric; branch: Branch; year: num
       {m && <text x={W - 24} y={44} textAnchor="end" className="fig-big">{f.value}{f.unit}</text>}
       {m && <text x={W - 24} y={66} textAnchor="end" className="fig-mono fig-dim">people living off-Earth · {Math.round(y)}</text>}
       {silence && <text x={W / 2} y={H - 18} textAnchor="middle" className="fig-mono fig-dim">no signal from anyone else, still</text>}
+    </svg>
+  );
+}
+
+/* ── what has to happen, in order ── */
+function Ladder({ ev, active }: { ev: ForecastEvent; active: boolean }) {
+  const steps = ev.hero!.ladder!;
+  const n = steps.length, x0 = 70, gap = (H - 60) / n;
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="fig ladder">
+      <line x1={x0} x2={x0} y1={gap / 2 + 20} y2={gap * (n - 0.5) + 20} stroke="rgba(255,255,255,.18)" strokeWidth={2} />
+      {steps.map((st, i) => {
+        const y = gap * (i + 0.5) + 20, done = st.state === "done", now = st.state === "now";
+        return (
+          <g key={i} style={{ opacity: active ? 1 : 0.6, transition: `opacity .4s ${i * 90}ms` }}>
+            {i > 0 && <line x1={x0} x2={x0} y1={y - gap + 10} y2={y - 10} stroke={done || now ? "var(--d)" : "rgba(255,255,255,.18)"} strokeWidth={2} />}
+            <circle cx={x0} cy={y} r={done ? 9 : now ? 11 : 7} fill={done ? "var(--d)" : "transparent"} stroke={done || now ? "var(--d)" : "rgba(255,255,255,.35)"} strokeWidth={now ? 3 : 2} />
+            {done && <path d={`M${x0 - 4} ${y}l3 3 6-6`} stroke="#04060f" strokeWidth={2} fill="none" strokeLinecap="round" />}
+            {now && <circle cx={x0} cy={y} r={4} fill="var(--d)" />}
+            <text x={x0 + 26} y={y - (st.note ? 2 : -5)} className={done || now ? "fig-step" : "fig-step fig-dim"}>{st.label}</text>
+            {st.note && <text x={x0 + 26} y={y + 16} className="fig-mono fig-dim">{st.note}</text>}
+            <text x={x0 - 24} y={y + 4} textAnchor="end" className="fig-mono fig-dim">{done ? "done" : now ? "now" : ""}</text>
+          </g>
+        );
+      })}
     </svg>
   );
 }

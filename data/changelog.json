@@ -87,5 +87,30 @@
       "https://news.cgtn.com/news/2026-02-27/China-plans-two-crewed-space-missions-for-2026-eyes-2030-moon-landing-1L6i9f4Z9le/share_amp.html",
       "https://geog.umd.edu/featured-content/fossil-fuel-co2-emissions-hit-record-high-2025"
     ]
+  },
+  {
+    "date": "2026-10-23",
+    "kind": "revision",
+    "headline": "One book, one strip; what counts is now a field; hinge is one number",
+    "body": "Merged the illustrated-book redesign with the data figures: every page now shows a figure drawn from the forecast's own numbers (stripes, field of 100, curve with the UN reference line, clock, orbits) or a milestone ladder of what has to happen first (drugs, lunar base, fusion, Helion, BCI, China's Moon, Mars). Navigation is one strip plus an Overview of the whole century; page-turn links, the second nav and the index are gone. Data: every line now carries a timing (around / by / window / through) and 17 carry a resolution test stated in advance, moved out of prose into a field and sharpened where the old test was weaker than the headline (agents, R&D loop, humanoids, CO₂ peak, election, compute talks). The hinge is one number: 57% pluralism everywhere, scenario odds re-weighted (flourish 45 → 44, extinction 5 → 6). Fixed a stale 15% on mass-casualty-event and the Clock line's rationale (the Bulletin already weighs climate, bio and AI). Probability moves in history now carry from/to so resolved lines can be Brier-scored against the number they were written with. No probabilities changed in this revision.",
+    "touched": [
+      "hinge-resolves",
+      "mass-casualty-event",
+      "clock-retired",
+      "agents-default-knowledge-work",
+      "ai-runs-rd-programs",
+      "humanoids-in-homes",
+      "fossil-co2-peak",
+      "first-ai-election",
+      "compute-verification-talks",
+      "two-degrees-breached",
+      "population-peak",
+      "superhuman-cognition",
+      "the-silence"
+    ],
+    "sources": [
+      "https://thebulletin.org/doomsday-clock/faq/",
+      "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
+    ]
   }
 ]

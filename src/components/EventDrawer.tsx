@@ -4,6 +4,7 @@ import { useNarrow } from "../hooks";
 import { CONF_LABEL, STATUS_LABEL } from "../lib";
 import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
+import { when } from "./StoryJourney";
 
 export default function EventDrawer() {
   const { selected, select } = useStore();
@@ -62,7 +63,7 @@ export function Detail() {
   return (
     <aside className="drawer" aria-live="polite">
       <div className="drawer-top">
-        <div className="eyebrow" style={{ color }}>{DOMAIN_META[e.domain].name} · {e.year}{e.yearEnd ? `–${e.yearEnd}` : ""}</div>
+        <div className="eyebrow" style={{ color }}>{DOMAIN_META[e.domain].name} · {when(e)}</div>
         <span className="drawer-actions">
           <button className="x" aria-label="Copy link to this event" title="Copy link" onClick={() => { const u = location.origin + location.pathname + location.search + "#" + e.id; navigator.clipboard?.writeText(u).catch(() => {}); }}>⧉</button>
           <button className="x" aria-label="Close" onClick={() => select(null)}>×</button>
@@ -76,6 +77,7 @@ export function Detail() {
       </div>
       <p className="lede">{e.summary}</p>
       <p>{e.detail}</p>
+      {e.resolution && <div className="block counts-block"><div className="eyebrow">What counts</div><p>{e.resolution.test}</p></div>}
       {e.signals.length > 0 && (
         <div className="block"><div className="eyebrow">What the check-in watches for</div><ul>{e.signals.map((s) => <li key={s}>{s}</li>)}</ul></div>
       )}

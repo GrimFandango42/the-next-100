@@ -12,6 +12,13 @@
         "value": 8.2,
         "source": "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
       }
+    ],
+    "reference": [
+      {
+        "label": "UN WPP 2024, medium",
+        "source": "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+        "points": [[2024, 8.2], [2030, 8.5], [2061, 10.0], [2084, 10.3], [2100, 10.2]]
+      }
     ]
   },
   {

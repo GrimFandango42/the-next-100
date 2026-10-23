@@ -26,6 +26,9 @@ export const Revision = z.object({
   change: z.string().min(1),
   reason: z.string().min(1),
   sources: z.array(z.string().url()).default([]),
+  /** Structured probability move, when the change was one. Lets the track record score against the original number. */
+  from: z.number().min(0).max(1).optional(),
+  to: z.number().min(0).max(1).optional(),
 });
 export type Revision = z.infer<typeof Revision>;
 
@@ -38,6 +41,8 @@ export const Hero = z.object({
   text: z.string().optional(),
   label: z.string(),
   effect: z.enum(["web", "hub", "bloom", "dim", "peak", "heat", "cool", "sun", "moon", "mars", "orbit", "alarm", "clock", "merge", "silence", "ripple"]),
+  /** A milestone ladder: what has to happen, in order, and where it stands today. */
+  ladder: z.array(z.object({ label: z.string(), state: z.enum(["done", "now", "next"]), note: z.string().optional() })).optional(),
 });
 export type Hero = z.infer<typeof Hero>;
 
@@ -64,6 +69,10 @@ export const ForecastEvent = z.object({
   leadsTo: z.array(z.string()).default([]),
   history: z.array(Revision).default([]),
   hero: Hero.optional(),
+  /** How the date reads: "around" = year ± 1 (the default), "by" = any time up to year, "window" = year..yearEnd, "through" = still true at year. */
+  timing: z.enum(["around", "by", "window", "through"]).default("around"),
+  /** What counts. The test the check-in grades against, stated in advance. */
+  resolution: z.object({ test: z.string().min(1), source: z.string().optional() }).optional(),
 });
 export type ForecastEvent = z.infer<typeof ForecastEvent>;
 
@@ -91,6 +100,8 @@ export const Metric = z.object({
   byBranch: z.record(Branch, z.array(Keyframe)).optional(),
   note: z.string().optional(),
   observed: z.array(z.object({ date: z.string(), value: z.number(), source: z.string().url().optional() })).default([]),
+  /** An outside projection to show next to the forecast's own path, so a bet against it is visible. */
+  reference: z.array(z.object({ label: z.string(), source: z.string().url(), points: z.array(Keyframe) })).default([]),
 });
 export type Metric = z.infer<typeof Metric>;
 

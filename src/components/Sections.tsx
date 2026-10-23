@@ -73,6 +73,7 @@ export function TrackRecord() {
           <div key={s} className={"rt " + s}><div className="v mono">{counts[s] ?? 0}</div><div className="lbl">{STATUS_LABEL[s]}</div></div>
         ))}
       </div>}
+      <p className="note">Scoring: when a line resolves it is scored with a Brier score against the probability it carried when first written (the <code>from</code> of its first revision, or its current number if never moved); partial and retired lines are listed but not scored. {resolved.length === 0 ? "Nothing has resolved yet; the first lines come due in 2027." : `${resolved.length} resolved so far.`}</p>
       {due.length > 0 && <p className="note">Past due and unresolved: {due.map((e) => e.title).join("; ")}. The next check-in has to grade these.</p>}
       {resolved.length > 0 && (
         <ul className="resolved">

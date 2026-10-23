@@ -4,7 +4,6 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { data } from "../src/data";
 import StoryJourney from "../src/components/StoryJourney";
-import { ART_PLANS } from "../src/components/PredictionArt";
 import { StoreProvider } from "../src/store";
 
 function render(search = "") {
@@ -32,16 +31,15 @@ test("all in-page destinations exist and no HTML/SVG ids collide",()=>{
   for(const m of html.matchAll(/href="#([^"]+)"/g)) assert.ok(destinations.has(m[1]),`Missing anchor: ${m[1]}`);
 });
 
-test("every current prediction has purpose-selected artwork",()=>{
-  for(const event of data.events){
-    if(["agents-default-knowledge-work","hinge-resolves"].includes(event.id))continue;
-    assert.ok(ART_PLANS[event.id],`Choose artwork for ${event.id}`);
-  }
-  assert.ok(new Set(Object.values(ART_PLANS).map(p=>p.kind)).size>=25,"The journey should not repeat a handful of generic visuals");
+test("every prediction page carries a figure drawn from data, and the ids in Figure.tsx overrides exist",()=>{
+  const html=render();
+  const figures=(html.match(/class="figure/g)||[]).length;
+  assert.equal(figures,data.events.length-1,"one figure per prediction page (the hinge has the fork instead)");
+  assert.ok((html.match(/class="fig ladder"/g)||[]).length>=5,"milestone ladders render for the lines that have them");
 });
 
 test("scenario deep links preserve the selected fork",()=>{
   const html=render("?b=concentration");
   assert.match(html,/class="future-option concentration" aria-pressed="true"/);
-  assert.match(html,/Following the <b>concentration<\/b> path/);
+  assert.match(html,/following<\/small>/);
 });

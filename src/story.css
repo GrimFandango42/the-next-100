@@ -65,3 +65,30 @@ html{scroll-behavior:auto;scroll-padding-top:0}
   @keyframes reactor-breathe{50%{opacity:.6;transform:scale(.97)}}
 }
 @media(prefers-reduced-motion:reduce){.full-book .reader-progress i{transition:none}.full-book .scene-art,.full-book .chapter-plate svg{transform:none!important;opacity:1!important}}
+
+/* ---- one strip, one overlay, data figures ---- */
+.scene-art .figure{max-width:620px;margin:0 auto}
+.scene-art .figure .fig{animation:none}
+.event-scene.is-current .scene-art .figure .fig{animation:rise .6s cubic-bezier(.2,.8,.2,1)}
+.art-caption{margin-top:14px;border-bottom:0;border-top:1px solid #ffffff16;padding:14px 0 0}
+.counts{font-size:12.5px;line-height:1.7;color:#aebdaf;margin:0 0 22px;max-width:44ch}.counts b{color:var(--ink);font-weight:500}
+.forecast-confidence>div{font-size:12px;color:#c0c9bf}.forecast-confidence small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:#8ba58e;margin-top:4px}
+.overview-btn{font:inherit;font-size:11px;color:#c5cbb0;background:none;border:1px solid #ffffff1c;border-radius:3px;padding:9px 12px;cursor:pointer;display:flex;align-items:center;gap:12px;white-space:nowrap}.overview-btn span{font-size:18px;color:var(--gold);line-height:1}.overview-btn:hover{border-color:var(--gold)}
+.overview{position:fixed;inset:0;z-index:40;background:#07120ee6;backdrop-filter:blur(10px);overflow:auto;padding:calc(var(--reader-height) + 24px) 24px 60px}
+.overview-panel{max-width:1100px;margin:0 auto;display:grid;gap:28px}
+.ov-era{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start;border-top:1px solid #ffffff14;padding-top:22px}
+.ov-chapter{display:grid;gap:6px}.ov-chapter .mono{font-size:10px;letter-spacing:.1em;color:#8ba58e}.ov-chapter b{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.1}.ov-chapter:hover b{color:var(--gold)}
+.ov-list{list-style:none;margin:0;padding:0;display:grid}
+.ov-list a{display:grid;grid-template-columns:48px 10px 1fr 44px;gap:12px;align-items:center;padding:8px 6px;border-radius:3px;font-size:14px;color:#d8dccc}
+.ov-list a:hover,.ov-list .here a{background:#dcc28e12;color:#fff}.ov-y{font-size:11px;color:#9eb29b}.ov-dot{width:8px;height:8px;border-radius:50%;display:block}.ov-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ov-p{font-size:11px;color:var(--gold);text-align:right}
+.differs{grid-column:1/-1;width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+.differs th{text-align:left;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:#8ba58e;font-weight:400;padding:10px 8px;border-bottom:1px solid #ffffff1c}.differs th small{display:block;color:var(--gold);letter-spacing:.06em;margin-top:3px}
+.differs td{padding:11px 8px;border-bottom:1px solid #ffffff0e;color:#c0c9bf}.differs td.mono{font-size:15px;color:#d8dccc;text-align:left}.differs td.on{color:var(--gold)}
+.fork-scene .guide-text-button{margin-top:20px}
+.chapter-copy .era-gb{display:grid;gap:8px;margin-top:22px;font-size:13px}.era-gb .g{color:#9fd6ae}.era-gb .b{color:#e6a28f}
+.end-odds{display:grid;gap:10px;max-width:520px;margin:34px auto 0;text-align:left}
+.end-odds .ob{display:grid;grid-template-columns:56px 1fr;grid-template-rows:auto auto;gap:2px 14px;align-items:center}.end-odds .ob-n{grid-row:1/3;font-size:22px;color:var(--ink)}.end-odds .ob-bar{height:8px;border-radius:4px;background:#ffffff14;overflow:hidden}.end-odds .ob-bar i{display:block;height:100%;border-radius:4px;transition:width .8s cubic-bezier(.2,.8,.2,1)}.end-odds .ob.good i{background:#9fd6ae}.end-odds .ob.warn i{background:var(--gold)}.end-odds .ob.bad i{background:#e6a28f}.end-odds .ob-l{font-size:12.5px;color:#aebdaf}
+.book-endnote>div:last-child{margin-top:34px}
+.counts-block p{font-size:14px;line-height:1.6;margin:0}
+@media(max-width:1000px){.ov-era{grid-template-columns:1fr}.ov-list a{grid-template-columns:44px 8px 1fr 40px}}
+@media(max-width:650px){.overview{padding:calc(var(--reader-height) + 16px) 14px 40px}.ov-t{white-space:normal;font-size:13px;line-height:1.3}.overview-btn{padding:8px 10px;font-size:0;gap:0}.overview-btn span{font-size:20px}.overview-btn[aria-expanded=true]{font-size:11px}.differs{font-size:12px}.differs td.mono{font-size:13px}.scene-art .figure{max-width:none}.counts{font-size:12px}}

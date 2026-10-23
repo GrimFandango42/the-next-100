@@ -1,6 +1,46 @@
 [
-  { "id": "flourish", "label": "Flourish", "tone": "good", "description": "Long lives, abundance, pluralistic governance, humans still in the loop on what matters.", "unconditional": 45, "byBranch": { "pluralism": 52, "concentration": 34 } },
-  { "id": "diminished", "label": "Survive, diminished", "tone": "warn", "description": "Locked-in autocracy or a permanent two-tier world; humans mostly irrelevant to decisions.", "unconditional": 35, "byBranch": { "pluralism": 28, "concentration": 45 } },
-  { "id": "catastrophe", "label": "Catastrophe short of extinction", "tone": "bad", "description": "A civilizational setback from bio, war or misaligned systems.", "unconditional": 15, "byBranch": { "pluralism": 15, "concentration": 15 } },
-  { "id": "extinction", "label": "Extinction or permanent loss of control", "tone": "bad", "description": "The tail.", "unconditional": 5, "byBranch": { "pluralism": 5, "concentration": 6 } }
+  {
+    "id": "flourish",
+    "label": "Flourish",
+    "tone": "good",
+    "description": "Long lives, abundance, pluralistic governance, humans still in the loop on what matters.",
+    "unconditional": 44,
+    "byBranch": {
+      "pluralism": 52,
+      "concentration": 34
+    }
+  },
+  {
+    "id": "diminished",
+    "label": "Survive, diminished",
+    "tone": "warn",
+    "description": "Locked-in autocracy or a permanent two-tier world; humans mostly irrelevant to decisions.",
+    "unconditional": 35,
+    "byBranch": {
+      "pluralism": 28,
+      "concentration": 45
+    }
+  },
+  {
+    "id": "catastrophe",
+    "label": "Catastrophe short of extinction",
+    "tone": "bad",
+    "description": "A civilizational setback from bio, war or misaligned systems.",
+    "unconditional": 15,
+    "byBranch": {
+      "pluralism": 15,
+      "concentration": 15
+    }
+  },
+  {
+    "id": "extinction",
+    "label": "Extinction or permanent loss of control",
+    "tone": "bad",
+    "description": "The tail.",
+    "unconditional": 6,
+    "byBranch": {
+      "pluralism": 5,
+      "concentration": 6
+    }
+  }
 ]

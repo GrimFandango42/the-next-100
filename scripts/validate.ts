@@ -25,6 +25,9 @@ if (!parsed.success) {
     if (ids.has(e.id)) errors.push(`duplicate event id ${e.id}`);
     ids.add(e.id);
     if (e.yearEnd && e.yearEnd < e.year) errors.push(`${e.id}: yearEnd before year`);
+    if (e.yearEnd && e.timing !== "window") errors.push(`${e.id}: has yearEnd so timing must be "window"`);
+    if (!e.yearEnd && e.timing === "window") errors.push(`${e.id}: timing "window" needs yearEnd`);
+    for (const h of e.history) { if ((h.from == null) !== (h.to == null)) errors.push(`${e.id}: history ${h.date} has one of from/to`); if (h.to != null && h === e.history[e.history.length - 1] && Math.abs(h.to - (e.probability ?? -1)) > 1e-9 && /probability/.test(h.change) && !/added/.test(h.change)) errors.push(`${e.id}: last probability move (${h.to}) does not match probability ${e.probability}`); }
     if (e.status !== "forecast" && !e.resolvedOn) errors.push(`${e.id}: status ${e.status} needs resolvedOn`);
     if (e.status !== "forecast" && e.history.length === 0) errors.push(`${e.id}: a resolved event needs a history entry explaining the resolution`);
     const band = e.confidence === "high" ? [0.7, 1] : e.confidence === "moderate" ? [0.45, 0.7] : [0, 0.45];

@@ -4,7 +4,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 
 ## Shape of the repo
 - `data/*.json` — the forecast itself. Validated by `src/schema.ts` (zod) and `scripts/validate.ts`. This is what check-ins edit.
-- `src/` — Vite + React + TypeScript + D3. `components/Journey.tsx` is the film: one scroll through time, three zoom levels (century / decade / moment). `Figure.tsx` draws one data figure per prediction; `World.tsx` is the canvas planet (now a backdrop). `store.tsx` holds year / branch / selection; `WorldState.tsx` the metric explorer; `Sections.tsx` the rest of the Explore section below the film.
+- `src/` — Vite + React + TypeScript + D3. `components/StoryJourney.tsx` is the book: native scroll, one page per prediction, chapter pages, one reader strip with an Overview (the whole century on one screen). `Figure.tsx` draws one data figure per prediction (stripes, field of 100, curve with reference line, clock, orbits, milestone ladder). `store.tsx` holds year / branch / selection; `WorldState.tsx` the metric explorer; `Sections.tsx` the evidence section below the book. Styles: `styles.css` (tokens, evidence) + `story.css` (the book).
 - `public/moments/<event-id>.webp` — optional artwork shown behind a moment's figure; `scripts/make-art.mjs` can generate it (needs OPENAI_API_KEY on the desktop; never commit keys).
 - `scripts/` — validator, check-in brief, check-in logger.
 - `deploy/` — Caddy site block, `deploy.ps1` (run from the Windows desktop) and the pull-and-build timer for the VPS.
@@ -14,10 +14,11 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - `npm run dev` · `npm run build` (validates + typechecks + builds) · `npm run validate` · `npm run checkin:brief` · `npm run checkin:log -- …`
 
 ## Conventions
-- Every forecast edit gets a `history` entry; every check-in gets a `changelog` entry. The validator enforces tiers (high ≥ .70, moderate .45–.70, speculative < .45) and that scenarios sum to 100.
+- Every forecast edit gets a `history` entry (with `from`/`to` when a probability moves); every check-in gets a `changelog` entry. Each line carries `timing` (around / by / window / through) and, where it has one, a `resolution.test` that says what counts. The validator enforces tiers (high ≥ .70, moderate .45–.70, speculative < .45) and that scenarios sum to 100.
 - Event ids are kebab-case and permanent; `leadsTo` and `changelog.touched` reference them.
 - Colors and fonts are tokens in `src/styles.css`; domain colors live in `src/schema.ts` (`DOMAIN_META`).
 - Keep the forecast's voice: plain, specific, no hedging filler.
+- One navigation model: scroll reads, the strip shows where you are, Overview zooms out. Don't add a second way to move.
 - Deploys happen by pushing to `main`; the VPS pulls and rebuilds every 10 minutes (`deploy/update.sh`). Never deploy by hand-copying files.
 
 ## On the VPS
