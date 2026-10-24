@@ -4,9 +4,10 @@ import { fmt, lerp, metricKF } from "../lib";
 import { DOMAIN_META, type Branch, type ForecastEvent } from "../schema";
 import { useStore } from "../store";
 import { exhibitFor } from "./Exhibit";
+import ChapterWeave from "./ChapterWeave";
 import { useNarrow } from "../hooks";
 import { FutureMap, Network } from "./StoryArt";
-import Figure, { figureCaption } from "./Figure";
+import Figure, { figureCaption, signatureFor } from "./Figure";
 
 /**
  * The book. One way to move: scroll. One strip at the top tells you where you are and opens the overview
@@ -40,9 +41,9 @@ function PredictionScene({ event, index, current }: { event: ForecastEvent; inde
   const narrow = useNarrow();
   const words = event.title.split(" ");
   const tail = words.splice(-Math.min(3, Math.max(1, Math.floor(words.length / 3)))).join(" ");
-  return <section id={pageId(event)} className={`guide-scene event-scene ${index % 2 ? "verso" : "recto"} ${current ? "is-current" : ""}`} data-story-stop data-year={event.year} data-event-id={event.id} data-domain={event.domain} aria-labelledby={`title-${event.id}`} style={{ ["--d" as any]: DOMAIN_META[event.domain].color }}>
+  return <section id={pageId(event)} className={`guide-scene event-scene ${event.cornerstone || exhibitFor(event) || signatureFor(event) ? "feature-spread" : "compact-spread"} ${index % 2 ? "verso" : "recto"} ${current ? "is-current" : ""}`} data-story-stop data-year={event.year} data-event-id={event.id} data-domain={event.domain} aria-labelledby={`title-${event.id}`} style={{ ["--d" as any]: DOMAIN_META[event.domain].color }}>
     <div className="scene-copy">
-      <div className="guide-kicker"><span>{pad(index + 1)} / {DOMAIN_META[event.domain].name.toUpperCase()}</span><span className="ruler" title="How old someone born in 2026 is when this happens">A child born in 2026 is {age(event.year, event.yearEnd)}</span><span>{event.year}{event.yearEnd ? `–${event.yearEnd}` : ""}</span></div>
+      <div className="guide-kicker"><span>{pad(index + 1)} / {DOMAIN_META[event.domain].name.toUpperCase()}</span><span className="ruler" title="How old someone born in 2026 is when this happens">{event.year>2126 ? "Future generations" : `2026 cohort · age ${age(event.year,event.yearEnd)}`}</span><span>{event.year}{event.yearEnd ? `–${event.yearEnd}` : ""}</span></div>
       <h2 id={`title-${event.id}`}>{words.join(" ")} <em>{tail}</em></h2>
       <p className="guide-lead">{event.summary}</p>
       {event.branch && <span className="conditional-note">Only on the {event.branch} path</span>}
@@ -53,7 +54,7 @@ function PredictionScene({ event, index, current }: { event: ForecastEvent; inde
       <Drivers event={event} />
       <div className="page-actions"><button className="guide-text-button" onClick={() => select(event.id)}>Why this forecast? <span>↗</span></button><Cited event={event} /></div>
     </div>
-    <div className="scene-art"><Figure ev={event} branch={branch} year={event.year} active={current} />{!exhibitFor(event) && <div className="art-caption"><span>{figureCaption(event)}</span><span>{event.hero?.ladder ? "MILESTONES · STATUS AS OF LAST REVIEW" : "DRAWN FROM THE FORECAST'S OWN NUMBERS"}</span></div>}</div>
+    <div className="scene-art"><Figure ev={event} branch={branch} year={event.year} active={current} />{!exhibitFor(event) && !signatureFor(event) && <div className="art-caption"><span>{figureCaption(event)}</span><span>{event.hero?.ladder ? "MILESTONES · STATUS AS OF LAST REVIEW" : "DRAWN FROM THE FORECAST'S OWN NUMBERS"}</span></div>}</div>
   </section>;
 }
 
@@ -63,8 +64,8 @@ function Drivers({ event }: { event: ForecastEvent }) {
   if (!before.length && !after.length) return null;
   const chip = (e: ForecastEvent, kind: string) => <a key={e.id} className="drv" href={`#${pageId(e)}`} style={{ ["--d" as any]: DOMAIN_META[e.domain].color }}><i /><span className="mono">{e.year}</span>{e.title}<small>{kind}</small></a>;
   return <div className="drivers">
-    {before.length > 0 && <div><span className="drv-k">Comes before</span>{before.map(e=>chip(e,e.relationshipKinds[event.id] ?? "related"))}</div>}
-    {after.length > 0 && <div><span className="drv-k">Leads to</span>{after.map(e=>chip(e,event.relationshipKinds[e.id] ?? "related"))}</div>}
+    {before.length > 0 && <div><span className="drv-k">Connected to</span>{before.map(e=>chip(e,e.relationshipKinds[event.id] ?? "related"))}</div>}
+    {after.length > 0 && <div><span className="drv-k">May influence</span>{after.map(e=>chip(e,event.relationshipKinds[e.id] ?? "related"))}</div>}
   </div>;
 }
 
@@ -107,19 +108,20 @@ function ForkScene({ event, index, current }: { event: ForecastEvent; index: num
   </section>;
 }
 
-function ChapterPage({ era, index, current }: { era: Era; index: number; current: boolean }) {
+function ChapterPage({ era, index, current, onThread }: { era: Era; index: number; current: boolean; onThread:(id:string)=>void }) {
   const events = ordered.filter((e) => chapterFor(e.year).id === era.id);
   return <section id={`chapter-${era.id}`} className={`guide-scene chapter-scene ${current ? "is-current" : ""}`} data-story-stop data-year={era.from} aria-labelledby={`chapter-title-${era.id}`}>
-    <div className="chapter-copy"><div className="guide-kicker">CHAPTER {pad(index + 1)} / {pad(data.eras.length)}</div><div className="chapter-dates">{era.from} — {era.to} · <span className="ruler">a child born in 2026 is {era.from - 2026} to {era.to - 2026}</span></div><h2 id={`chapter-title-${era.id}`}>{era.name}<em>.</em></h2><p className="guide-lead">{era.thesis}</p>{era.life && <p className="era-life"><b>What changes for you.</b> {era.life}</p>}{era.uncertainty && <p className="era-life"><b>The open question.</b> {era.uncertainty}</p>}{Object.keys(era.threads).length > 0 && <dl className="threads">{data.meta.forces.map((f) => era.threads[f.id] && <div key={f.id}><dt>{f.name}</dt><dd>{era.threads[f.id]}</dd></div>)}</dl>}<div className="era-gb"><span className="g">▲ {era.good[0]}</span><span className="b">▼ {era.bad[0]}</span></div></div>
-    <div className="chapter-plate" aria-hidden="true"><span className="chapter-numeral">{pad(index + 1)}</span><svg viewBox="0 0 600 500">{Array.from({ length: 9 }, (_, i) => <path key={i} d={`M${70 + i * 11} 440C${60 + i * 23} ${290 - index * 12} ${490 - i * 24} ${340 - index * 18} ${510 - i * 11} 60`} fill="none" stroke={i === 4 ? "#dbc08b" : "#79a58b"} strokeOpacity={i === 4 ? .9 : .15 + i * .035} />)}<circle cx="300" cy="250" r="156" fill="none" stroke="#b9c897" strokeOpacity=".2" strokeDasharray="2 12" /></svg><span className="chapter-plate-label">{events.length} PREDICTIONS · {events.filter((e) => e.cornerstone).length} CORNERSTONE{events.filter((e) => e.cornerstone).length === 1 ? "" : "S"}</span></div>
+    <div className="chapter-copy"><div className="guide-kicker">CHAPTER {pad(index + 1)} / {pad(data.eras.length)}</div><div className="chapter-dates">{era.from} — {era.to} · <span className="ruler">{era.to>2126?"Future generations":`2026 cohort · ages ${era.from-2026}–${era.to-2026}`}</span></div><h2 id={`chapter-title-${era.id}`}>{era.name}<em>.</em></h2><p className="guide-lead">{era.thesis}</p>{era.life && <p className="era-life"><b>What changes for you.</b> {era.life}</p>}{era.uncertainty && <p className="era-life"><b>The open question.</b> {era.uncertainty}</p>}<div className="era-gb"><span className="g">▲ {era.good[0]}</span><span className="b">▼ {era.bad[0]}</span></div></div>
+    <ChapterWeave index={index} onThread={onThread} />
   </section>;
 }
 
 /** The one strip: where you are, the chapters, and the overview (zoom out). */
-function ReaderBar({ active }: { active: string }) {
+function ReaderBar({ active, threadRequest }: { active: string; threadRequest:{force:string;nonce:number}|null }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("all");
+  useEffect(()=>{if(threadRequest){setFilter("force:"+threadRequest.force);setQuery("");setOpen(true);}},[threadRequest]);
   const matches = (e:ForecastEvent) => `${e.title} ${e.summary} ${DOMAIN_META[e.domain].name}`.toLowerCase().includes(query.toLowerCase()) && (filter === "all" || filter === "near" && e.year <= 2035 || filter.startsWith("force:") && e.force === filter.slice(6) || filter === "scenario" && e.resolution?.mode === "scenario" || filter === "gaps" && !e.history.some(h=>h.sources.length));
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLButtonElement>(null);
@@ -156,7 +158,7 @@ function ReaderBar({ active }: { active: string }) {
         <div className="overview-tools"><label>Find a forecast<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Quantum, health, energy…" /></label><label>Show<select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All forecasts</option><option value="near">Through 2035</option>{data.meta.forces.map((f) => <option key={f.id} value={"force:" + f.id}>Thread: {f.name}</option>)}<option value="scenario">Unscored scenarios</option><option value="gaps">Citation gaps</option></select></label></div>
         <p className="overview-result" role="status">{ordered.filter(matches).length} matching forecasts</p>
         {data.eras.filter(er=>ordered.some(e=>chapterFor(e.year).id===er.id && matches(e))).map((er, i) => <div key={er.id} className="ov-era">
-          <a className="ov-chapter" href={`#chapter-${er.id}`} onClick={() => setOpen(false)}><span className="mono">{pad(i + 1)} · {er.from}–{er.to}</span><b>{er.name}</b></a>
+          <a className="ov-chapter" href={`#chapter-${er.id}`} onClick={() => setOpen(false)}><span className="mono">{pad(data.eras.indexOf(er) + 1)} · {er.from}–{er.to}</span><b>{er.name}</b></a>
           <ol className="ov-list">{ordered.filter((e) => chapterFor(e.year).id === er.id && matches(e)).map((e) => <li key={e.id} className={e.id === event?.id ? "here" : ""}><a href={`#${pageId(e)}`} onClick={() => { setOpen(false); requestAnimationFrame(()=>document.getElementById(pageId(e))?.scrollIntoView()); }}><span className="mono ov-y">{e.year}</span><i className="ov-dot" style={{ background: DOMAIN_META[e.domain].color }} /><span className="ov-t">{e.title}</span><span className="mono ov-p">{e.resolution?.mode === "scenario" ? "Scenario" : e.probability != null ? Math.round(e.probability * 100) + "%" : ""}</span></a></li>)}</ol>
         </div>)}
         <a className="ov-chapter" href="#explore" onClick={() => setOpen(false)}><span className="mono">BELOW THE BOOK</span><b>The evidence: numbers, odds, indicators, track record</b></a>
@@ -168,6 +170,7 @@ function ReaderBar({ active }: { active: string }) {
 export default function StoryJourney() {
   const { setYear, select } = useStore();
   const [active, setActive] = useState("opening");
+  const [threadRequest,setThreadRequest]=useState<{force:string;nonce:number}|null>(null);
   const [resume] = useState(() => { try { return localStorage.getItem("next100-reading"); } catch { return null; } });
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -188,10 +191,10 @@ export default function StoryJourney() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return <div className="field-guide full-book" ref={root}>
     <section id="opening" className="guide-scene opening-scene" data-story-stop data-year="2026" aria-labelledby="guide-title">
-      <div className="scene-copy"><div className="guide-kicker"><span>THE NEXT 100 · A LIVING FORECAST</span><span>2026 — 2200</span></div><h1 id="guide-title">The future isn’t<br />a straight <em>line.</em></h1><p className="guide-lead">{ordered.length} predictions, year by year, each with its odds and what would prove it wrong. Checked against the news every week.</p><a className="guide-cta" href={`#chapter-${data.eras[0].id}`}>Open the first chapter <span>↓</span></a><div className="reading-options">{resume && ordered.some(e=>pageId(e)===resume) && <a href={`#${resume}`}>Continue where you left off →</a>}</div><div className="guide-footnote">Written {data.meta.written} · last check-in {data.meta.lastCheckin}. Scroll to read. Press − or Overview to see the whole century.</div></div>
+      <div className="scene-copy"><div className="guide-kicker"><span>THE NEXT 100 · A LIVING FORECAST</span><span>2026 — 2200</span></div><h1 id="guide-title">The future isn’t<br />a straight <em>line.</em></h1><p className="guide-lead">{ordered.length} predictions, year by year, each with its odds and what would prove it wrong. Checked against the news every week.</p><a className="guide-cta" href={`#chapter-${data.eras[0].id}`}>Open the first chapter <span>↓</span></a><div className="reading-options">{resume && ordered.some(e=>pageId(e)===resume) && <a href={`#${resume}`}>Continue where you left off →</a>}</div><div className="guide-footnote">Written {data.meta.written} · last check-in {data.meta.lastCheckin}. The age marker follows a child born in 2026. Scroll to read. Press − or Overview to see the whole century.</div></div>
       <div className="scene-art"><FutureMap /></div>
     </section>
-    <div className="book-body"><ReaderBar active={active} />{data.eras.map((era, i) => <div className="book-chapter" key={era.id}><ChapterPage era={era} index={i} current={active === `chapter-${era.id}`} />{ordered.filter((e) => chapterFor(e.year).id === era.id).map((event) => event.id === "hinge-resolves" ? <ForkScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} /> : <PredictionScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} />)}<div className="chapter-recap"><span className="guide-kicker">CHAPTER {pad(i+1)} / TAKEAWAY</span><p>{era.life ?? era.thesis}</p><small>Keep watching: {era.uncertainty}</small>{i<data.eras.length-1 && <a href={`#chapter-${data.eras[i+1].id}`}>Next chapter →</a>}</div></div>)}</div>
+    <div className="book-body"><ReaderBar active={active} threadRequest={threadRequest} />{data.eras.map((era, i) => <div className="book-chapter" key={era.id}><ChapterPage era={era} index={i} current={active === `chapter-${era.id}`} onThread={force=>setThreadRequest({force,nonce:Date.now()})} />{ordered.filter((e) => chapterFor(e.year).id === era.id).map((event) => event.id === "hinge-resolves" ? <ForkScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} /> : <PredictionScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} />)}<div className="chapter-recap"><span className="guide-kicker">CHAPTER {pad(i+1)} / TAKEAWAY</span><p>{era.uncertainty}</p><small>THE QUESTION WE CARRY INTO THE NEXT CHAPTER</small>{i<data.eras.length-1 && <a href={`#chapter-${data.eras[i+1].id}`}>Next chapter →</a>}</div></div>)}</div>
     <Endnote />
   </div>;
 }

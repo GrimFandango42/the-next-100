@@ -75,7 +75,7 @@ export function TrackRecord() {
           <div key={s} className={"rt " + s}><div className="v mono">{counts[s] ?? 0}</div><div className="lbl">{STATUS_LABEL[s]}</div></div>
         ))}
       </div>}
-      <p className="note">Scoring: a resolved line is Brier-scored against the probability in the earliest frozen vintage that holds the same question (title and window); if its resolution test was reworded after that vintage, the score is shown with that caveat rather than thrown out. Partial and retired lines and the unscored scenarios are listed, not scored. {resolved.length === 0 ? "Nothing has resolved yet; the first lines come due in 2027." : `${resolved.length} resolved so far.`}</p>
+      <p className="note">Scoring requires an explicit outcome, rationale and sources. The probability comes from the earliest pre-resolution vintage with the exact definition, time window and branch. Original and revised questions are scored separately; founding odds remain preserved. Early or late status alone never establishes a hit. Partial and retired lines and the unscored scenarios are listed, not scored. {resolved.length === 0 ? "Nothing has resolved yet; the first lines come due in 2027." : `${resolved.length} resolved so far.`}</p>
       {due.length > 0 && <p className="note">Past due and unresolved: {due.map((e) => e.title).join("; ")}. The next check-in has to grade these.</p>}
       {resolved.length > 0 && (
         <ul className="resolved">

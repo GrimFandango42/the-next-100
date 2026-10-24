@@ -186,5 +186,23 @@
       "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
       "https://www.pewresearch.org/internet/2026/02/24/how-teens-use-and-view-ai/"
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "revision",
+    "headline": "Evidence becomes explorable; grading matches the frozen question",
+    "body": "Added UN age-group variants and NSIDC September observations, connected chapter threads and a return-visit revision digest. Aligned three headlines to their tests, removed the autonomous-weapons count loophole, separated unlike chart measures, corrected source attribution and restored evidence-backed scoring against the exact question. No probabilities moved.",
+    "touched": [
+      "superhuman-cognition",
+      "ai-tutor-daily-majority",
+      "provenance-required-political-ads",
+      "autonomous-weapons-at-scale",
+      "taiwan-chip-supply-shock",
+      "africa-largest-working-age-population"
+    ],
+    "sources": [
+      "https://population.un.org/wpp/",
+      "https://nsidc.org/data/seaice_index/data-and-image-archive"
+    ]
   }
 ]

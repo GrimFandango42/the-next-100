@@ -27,7 +27,7 @@ if (!parsed.success) {
     ids.add(e.id);
     for (const v of vintages) {
       const old = v.events[e.id];
-      if (old?.resolution?.version && old.resolution.version === e.resolution?.version && old.resolution.test !== e.resolution?.test) errors.push(`${e.id}: resolution changed without a new version (${v.date})`);
+      if (old?.resolution?.version && old.resolution.version === e.resolution?.version && (old.resolution.test !== e.resolution?.test || old.year !== e.year || (old.yearEnd ?? null) !== (e.yearEnd ?? null) || (old.timing ?? "around") !== e.timing || (old.branch ?? null) !== (e.branch ?? null))) errors.push(`${e.id}: resolution changed without a new version (${v.date})`);
     }
     for (const [target] of Object.entries(e.relationshipKinds)) if (!e.leadsTo.includes(target)) errors.push(`${e.id}: relationship type without a link to ${target}`);
     if (!e.resolution?.version) errors.push(`${e.id}: needs a versioned resolution definition`);

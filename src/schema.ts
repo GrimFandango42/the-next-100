@@ -44,7 +44,7 @@ export const Hero = z.object({
   /** A milestone ladder: what has to happen, in order, and where it stands today. */
   ladder: z.array(z.object({ label: z.string(), state: z.enum(["done", "now", "next"]), note: z.string().optional() })).optional(),
   /** A small scoreboard: measured numbers beside the number the forecast bets on. */
-  bars: z.array(z.object({ label: z.string(), value: z.number(), unit: z.string().optional(), kind: z.enum(["observed", "forecast", "reference"]), note: z.string().optional() })).optional(),
+  bars: z.array(z.object({ label: z.string(), value: z.number(), unit: z.string().optional(), kind: z.enum(["observed", "forecast", "reference"]), comparisonGroup: z.string().optional(), sourceNote: z.string().optional(), note: z.string().optional() })).optional(),
 });
 export type Hero = z.infer<typeof Hero>;
 
