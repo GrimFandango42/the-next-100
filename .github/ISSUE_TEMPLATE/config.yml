@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the forecast
+    url: https://thenext100.duckdns.org
+    about: The live site.
+  - name: How check-ins work
+    url: https://github.com/GrimFandango42/the-next-100/blob/main/CHECKIN.md
+    about: The weekly protocol every revision follows.

@@ -8,7 +8,8 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - `public/moments/<event-id>.webp` — optional artwork shown behind a moment's figure; `scripts/make-art.mjs` can generate it (needs OPENAI_API_KEY on the desktop; never commit keys).
 - `scripts/` — validator, check-in brief, check-in logger.
 - `deploy/` — Caddy site block, `deploy.ps1` (run from the Windows desktop) and the pull-and-build timer for the VPS.
-- `CHECKIN.md` — the weekly check-in protocol. `/checkin` skill runs it.
+- `CHECKIN.md` — the weekly check-in protocol. `/checkin` skill runs it. `SOURCES.md` is the source registry.
+- `README.md` (public front door), `CONTRIBUTING.md` (rules for humans), `ONBOARDING.md` (brief for agents), `docs/data-model.md`, `docs/architecture.md`, `docs/reviews/` (past outside reviews). `.github/` has issue templates, a PR template and `ci.yml` (move it to `.github/workflows/` from the desktop to enable; cloud sessions can't push workflow files).
 
 ## Commands
 - `npm run dev` · `npm run build` (validates + typechecks + builds) · `npm run validate` · `npm run checkin:brief` · `npm run checkin:log -- …`

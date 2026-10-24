@@ -1,6 +1,6 @@
 # Working on The Next 100 — brief for any AI model or collaborator
 
-You are working on **The Next 100**, a public, self-grading forecast of 2026–2200. Owner: Nithin. Live site: https://thenext100.duckdns.org · Source: https://github.com/GrimFandango42/the-next-100 (public). Read `CLAUDE.md` (repo map and conventions) and `CHECKIN.md` (how the forecast is edited) before changing anything.
+You are working on **The Next 100**, a public, self-grading forecast of 2026–2200. Owner: Nithin. Live site: https://thenext100.duckdns.org · Source: https://github.com/GrimFandango42/the-next-100 (public). Read `CLAUDE.md` (repo map and conventions), `CONTRIBUTING.md` (the rules) and `CHECKIN.md` (how the forecast is edited) before changing anything; `docs/data-model.md` explains every field and `docs/architecture.md` how the site is put together.
 
 ## What it is
 - `data/*.json` **is the forecast**: 43 dated predictions (`events.json`), eras, metrics with keyframes to 2200, leading indicators, scenario odds, the Doomsday Clock path, and a changelog. Everything on the site is drawn from these files.

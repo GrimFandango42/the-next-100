@@ -1,0 +1,37 @@
+name: Propose a line
+description: Something the forecast should have a dated, gradable claim about.
+title: "[new line] "
+labels: [proposal]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: The claim, in one line
+      placeholder: "A quantum computer beats the best classical method on a real chemistry problem"
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When
+      placeholder: "around 2031" · "by 2030" · "2030–2033"
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: What would count
+      description: The test a future check-in could grade without arguing. What would make it a miss?
+    validations:
+      required: true
+  - type: input
+    id: odds
+    attributes:
+      label: Your odds, and why in one sentence
+      placeholder: "40% — every 2026 advantage claim is a sampling task, not chemistry"
+  - type: textarea
+    id: sources
+    attributes:
+      label: Two sources you opened
+    validations:
+      required: true

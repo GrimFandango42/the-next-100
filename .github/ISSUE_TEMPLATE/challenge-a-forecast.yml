@@ -1,0 +1,39 @@
+name: Challenge a forecast
+description: A line's date, odds, framing or test looks wrong, and you have a source.
+title: "[challenge] <line id>: "
+labels: [challenge]
+body:
+  - type: input
+    id: line
+    attributes:
+      label: Which line?
+      description: The id from the URL (e.g. `fusion-net-grid`) or the title.
+    validations:
+      required: true
+  - type: dropdown
+    id: what
+    attributes:
+      label: What's wrong?
+      multiple: true
+      options: [The date, The probability, The framing or title, The resolution test, A signal, A source]
+    validations:
+      required: true
+  - type: textarea
+    id: argument
+    attributes:
+      label: The argument
+      description: What the evidence says and what the line should say instead. Numbers and dates beat adjectives.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources you actually opened
+      description: One URL per line. Primary data, institutional reports and peer-reviewed work count most; press and vendor posts are leads.
+    validations:
+      required: true
+  - type: input
+    id: proposed
+    attributes:
+      label: Proposed change (optional)
+      placeholder: "probability 0.65 → 0.55" or "year 2034 → 2037"

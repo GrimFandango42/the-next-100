@@ -1,41 +1,99 @@
 # The Next 100
 
-A living, self-grading forecast of the next 100 years of humanity — 2026 to 2200. Zoom the timeline, scrub the year, flip the hinge between a pluralistic and a concentrated AI future, and watch every number on the page move. Every week an automated check-in reads the news against the forecast's own leading indicators, revises probabilities in public, and grades lines whose windows have closed.
+**A living, self-grading forecast of humanity from 2026 to 2200.** Forty-three dated predictions, each with its odds, what would prove it wrong, and the sources behind it. Every week a check-in reads the news against the forecast, revises it in public, and grades the lines whose time has come.
 
-Live: **https://thenext100.duckdns.org**
+**Read it: [thenext100.duckdns.org](https://thenext100.duckdns.org)**
 
-## What's here
+![The cover on desktop, and a prediction page on a phone](docs/screens/hero.png)
 
-| Path | What |
-| --- | --- |
-| `data/` | The forecast: events, eras, metrics, the clock, scenarios, indicators, change log. Plain JSON, schema-checked. |
-| `src/` | The site. Vite + React + TypeScript + D3. |
-| `scripts/` | `validate` (runs on every build), `checkin-brief`, `checkin-log`. |
-| `CHECKIN.md` | The weekly check-in protocol. |
-| `.claude/skills/checkin` | `/checkin` in Claude Code runs the protocol end to end. |
-| `deploy/` | Caddy block, `deploy.ps1` and a systemd update timer for the Hetzner VPS. Push to `main` and the site updates itself within ten minutes. |
+## What you're looking at
+
+The site is a book you scroll. Five chapters, one page per prediction, and a fork in 2039 where the future splits between *many hands* and *one center* — pick a path and every number after it follows your choice. Each page shows one figure drawn from the forecast's own data, never decoration: a metric across the century with the UN's projection dotted beside it, a ladder of what has to happen first with what's already done, warming stripes one bar per year, or a field of 100 futures.
+
+![Four pages: the population curve against the UN median, a milestone ladder, warming stripes, and the fork](docs/screens/pages.png)
+
+Below the book sits the evidence: the metrics, the odds of flourishing on each path, seven leading indicators that say which path we're on, the track record, and every revision ever made with its reason and sources.
+
+## How it works
+
+```mermaid
+flowchart LR
+    news[(The news)] -->|weekly check-in| data
+    subgraph data["data/*.json — the forecast"]
+        events[events.json<br/>43 lines · odds · what counts · history]
+        metrics[metrics.json · indicators.json<br/>scenarios.json · clock.json]
+        cites[citations.json · sources.json]
+        vint[vintages/<br/>frozen snapshots]
+    end
+    data -->|zod schema + rules| validate{validate}
+    validate -->|npm run build| site[Vite + React site]
+    site -->|git push main| vps[VPS pulls every 10 min<br/>builds, swaps atomically]
+    vint -->|npm run score| brier[Brier score<br/>when lines resolve]
+```
+
+Three rules make it a forecast rather than an essay:
+
+1. **Every line says what counts.** A `resolution.test` written in advance, a `timing` (around a year, by a deadline, inside a window, or through a date), and signals a check-in can actually search for.
+2. **Every change is logged with a source.** Editing a line appends a `history` entry with the URL that was opened. No source, no change. Nothing is ever rewritten or deleted from history.
+3. **The original odds are frozen.** `data/vintages/` holds a snapshot of every number after each check-in. When a line resolves it is scored against the earliest vintage that holds that question — the forecast cannot quietly move the goalposts.
+
+## Anatomy of a line
+
+```jsonc
+{
+  "id": "fusion-net-grid",                 // permanent, kebab-case
+  "year": 2034, "timing": "around",        // around · by · window (year–yearEnd) · through
+  "domain": "energy",
+  "title": "Fusion delivers net electricity to a grid",
+  "summary": "A symbolic milestone. …",    // one or two sentences, the forecast's voice
+  "detail": "…",                            // the reasoning
+  "probability": 0.65, "confidence": "moderate",   // tiers: high ≥ .70 · moderate .45–.70 · speculative < .45
+  "resolution": { "test": "A fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count.", "version": "2026-10-24" },
+  "signals": ["A fusion plant signs a power-purchase agreement and delivers", "…"],
+  "leadsTo": ["labor-cost-irrelevant", "geoengineering-unilateral"],
+  "hero": { "text": "Net +", "label": "electricity to a grid, from fusion", "effect": "sun",
+            "ladder": [{ "label": "Scientific gain (NIF)", "state": "done", "note": "gain 4.1, April 2025" }, "…"] },
+  "history": [{ "date": "2026-10-23", "change": "detail: 'net electricity' defined", "reason": "…", "sources": ["https://…"] }]
+}
+```
+
+The full field reference is in [docs/data-model.md](docs/data-model.md).
 
 ## Run it
 
-```
+```bash
 npm ci
-npm run dev        # http://localhost:5173
-npm run build      # validates data, typechecks, builds to dist/
+npm run dev          # http://localhost:5173
+npm run build        # validates the data, typechecks, builds dist/
+npm run qa:book      # structural tests: one page per line, anchors resolve, figures render
+npm run score        # the track record (empty until the first lines resolve in 2027)
 ```
 
-## Edit the forecast
+Headless browser checks for layout, overflow and console errors on desktop and phone are in [`qa/`](qa/README.md).
 
-Edit `data/*.json`. `npm run validate` tells you if you broke a rule (tiers vs probabilities, scenarios summing to 100, dangling ids, closed windows left ungraded). Every event edit appends a `history` entry; every check-in appends a `changelog` entry. See `CHECKIN.md`.
+## Challenge the forecast
 
-## Deploy (first time)
+That's the point of publishing it. Three ways in, from lightest to heaviest:
 
-Same pattern as acl26: Caddy on the Hetzner VPS, deployed from the Windows desktop.
+- **[Open an issue](https://github.com/GrimFandango42/the-next-100/issues/new/choose)** — *Challenge a forecast* (a date, a probability, a framing, with a source) or *Propose a line* (something the forecast is missing).
+- **Edit `data/`** and open a pull request. The validator and the tests run on every PR once `.github/ci.yml` is moved into `.github/workflows/` (one step the repo owner does from the desktop). Follow [CONTRIBUTING.md](CONTRIBUTING.md): a `history` entry with the URL you opened, the forecast's voice, no rewriting of history.
+- **Run the check-in yourself.** [`CHECKIN.md`](CHECKIN.md) is the protocol; [`SOURCES.md`](SOURCES.md) is the registry of what to read and how to judge it. In Claude Code, `/checkin` runs it end to end. Any model or agent starts with [`ONBOARDING.md`](ONBOARDING.md).
 
-1. Claim `thenext100` at duckdns.org, pointed at `5.161.210.111`.
-2. From `C:\AI_Projects\the-next-100`: `.\deploy\deploy.ps1 -FirstTime`. It clones on the VPS, builds, adds the Caddy block (after a `.bak`), and enables the 10-minute update timer. Caddy gets the HTTPS certificate on its own.
+## The method, in one paragraph
 
-After that, every push to `main` goes live within ten minutes. Rollback: `sudo systemctl disable --now thenext100-update.timer`, restore the Caddyfile `.bak`, `sudo caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile`.
+Three forces drive the forecast: AI compounds while institutions lag; demographic decline is the slowest, most certain force; and whether the most capable systems end up in a few hands or many is the hinge on which the back half of the century turns. Odds are judgments, not measurements, and the site says so once, in the method, rather than on every page. A 100-year forecast is reliably wrong in its details; the shape is the claim, and the point of this site is to find out, in public, how wrong it was.
 
-## Method, in one paragraph
+## Repo map
 
-Three forces drive the forecast: AI compounds while institutions lag; demographic decline is the slowest, most certain force; and whether the most capable systems end up in a few hands or many is the hinge on which the back half of the century turns. Lines are tiered high (≥70%), moderate (45–70%) and speculative (<45%). Dates are midpoints of ranges. The point of publishing it this way is to find out, in public and on a schedule, how wrong it was.
+| Path | What |
+| --- | --- |
+| `data/` | The forecast. Plain JSON, schema-checked. `vintages/` are frozen snapshots; `citations.json` is every cited URL with publisher, title and date. |
+| `src/` | The site: `StoryJourney.tsx` (the book), `Figure.tsx` (the data figures), `Exhibit*.tsx` (stage explainers), `WorldState.tsx` and `Sections.tsx` (the evidence). |
+| `scripts/` | `validate`, `checkin-brief`, `checkin-log`, `vintage`, `score`, `sources-check`. |
+| `qa/` | Node tests and Playwright sweeps. |
+| `docs/` | [Data model](docs/data-model.md), [architecture](docs/architecture.md), screenshots, and past reviews. |
+| `deploy/` | Caddy site block and the VPS update timer. Pushing to `main` is the deploy. |
+
+## License
+
+Code is MIT. The forecast itself — everything under `data/` — is [CC BY 4.0](data/LICENSE): quote it, fork it, grade it, with attribution.
