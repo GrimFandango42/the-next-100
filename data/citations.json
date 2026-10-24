@@ -726,5 +726,805 @@
     "tier": "official projection",
     "checked": "2026-10-24",
     "status": "Checked for the specific contextual claim; not verification of forecast odds."
+  },
+  "https://airfinity.com/articles/a-strong-pandemic-defence-system-could-reduce-the-chance-of-another-covid": {
+    "title": "A strong pandemic defence system could reduce the chance of another COVID-like pandemic",
+    "publisher": "Airfinity",
+    "date": "2023-04-13",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://asianews.network/south-korea-pulls-plug-on-ai-textbooks/": {
+    "title": "South Korea pulls plug on AI textbooks",
+    "publisher": "Asia News Network (republished from The Korea Herald)",
+    "date": "2025-08-05",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://cdn.openai.com/signals/how-india-uses-chatgpt.pdf": {
+    "title": "How India uses ChatGPT: Early evidence from OpenAI Signals",
+    "publisher": "OpenAI",
+    "date": "2026-02",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://cdn.who.int/media/docs/default-source/influenza/human-animal-interface-risk-assessments/influenza-at-the-human-animal-interface-summary-and-assessment--from-23-january-to-31-march-2026.pdf?sfvrsn=187c5d77_3&download=true": {
+    "title": "Influenza at the human-animal interface: Summary and risk assessment, 23 January to 31 March 2026",
+    "publisher": "World Health Organization",
+    "date": null,
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://chinapower.csis.org/survey-experts-us-china-relations-2026/": {
+    "title": "Surveying the Experts: The State of U.S.-China Relations Entering 2026",
+    "publisher": "CSIS ChinaPower Project",
+    "date": "2026-01-13",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://chinapower.csis.org/surveying-experts-us-and-taiwan-views-china-approach-taiwan-2024/": {
+    "title": "Surveying the Experts: U.S. and Taiwan Views on China's Approach to Taiwan in 2024 and Beyond",
+    "publisher": "CSIS ChinaPower Project",
+    "date": "2024-01-22",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights/transparency-and-targeting-political-advertising_en": {
+    "title": "Transparency and targeting of political advertising",
+    "publisher": "European Commission",
+    "date": null,
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://csis-website-prod.s3.amazonaws.com/s3fs-public/2025-07/250730_Cancian_Taiwan_Blockade.pdf": {
+    "title": "Lights Out? Wargaming a Chinese Blockade of Taiwan",
+    "publisher": "CSIS Defense and Security Department (Cancian, Cancian, Heginbotham)",
+    "date": "2025-07",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://cyberscoop.com/morelle-fcc-ai-political-ad-disclosure-election-campaign-regulation/": {
+    "title": "House Dem urges FCC to press ahead with disclosure rule around AI in political ads",
+    "publisher": "CyberScoop",
+    "date": "2024-09-16",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://digital-skills-jobs.europa.eu/en/latest/news/oecd-digital-education-outlook-2026-how-generative-ai-can-support-learning-when-used": {
+    "title": "OECD Digital Education Outlook 2026: how generative AI can support learning when used with purpose",
+    "publisher": "European Commission Digital Skills and Jobs Platform (reporting OECD)",
+    "date": "2026-02-03",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content": {
+    "title": "Commission publishes Code of Practice on marking and labelling AI-generated content",
+    "publisher": "European Commission (Shaping Europe's digital future)",
+    "date": "2026-06-10",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content": {
+    "title": "Marking and labelling of AI-generated content (Code of Practice on transparency of AI-generated content)",
+    "publisher": "European Commission AI Office",
+    "date": null,
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/edn-20260210-1": {
+    "title": "64% of 16-24-year-olds used AI in 2025",
+    "publisher": "Eurostat",
+    "date": "2026-02-10",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://estonia.ee/estonias-ambitious-initiative-the-ai-leap-programme-brings-ai-tools-to-all-schools/": {
+    "title": "Estonia's groundbreaking AI Leap 2025 programme brings innovative AI tools to all schools",
+    "publisher": "Estonia.ee (Enterprise Estonia / Trade with Estonia)",
+    "date": "2025-02",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://euromaidanpress.com/2026/08/25/a-russian-drone-chose-its-own-target-and-killed-three-the-code-that-told-it-what-to-look-for-was-readable/": {
+    "title": "A Russian drone chose its own target and killed three. The code that told it what to look for was readable",
+    "publisher": "Euromaidan Press",
+    "date": "2026-08-25",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fas.org/publication/the-expiration-of-new-start/": {
+    "title": "The Aftermath: The Expiration of New START and What It Means For Us All",
+    "publisher": "Federation of American Scientists",
+    "date": "2026-02-05",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://features.csis.org/chinapower/china-blockade-taiwan/": {
+    "title": "How China Could Blockade Taiwan",
+    "publisher": "CSIS ChinaPower Project",
+    "date": "2024-08-22",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://focustaiwan.tw/politics/202610150010": {
+    "title": "Taiwan watching for large-scale PLA drills as peak season nears",
+    "publisher": "Focus Taiwan (Central News Agency)",
+    "date": "2026-10-15",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fortune.com/2026/06/29/bis-central-bank-warning-hyperscaler-data-center-1-trillion-gamble-recession/": {
+    "title": "The central bank of central banks just released its flagship annual report — and it sees a $1 trillion AI investment boo",
+    "publisher": "Fortune",
+    "date": "2026-06-29",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fortune.com/2026/07/28/why-are-stocks-down-chips-panic-semiconductors/": {
+    "title": "'A lot of panic around the AI investment': How a chip slump is driving the Nasdaq toward correction",
+    "publisher": "Fortune",
+    "date": "2026-07-28",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fortune.com/2026/08/02/wall-street-ai-trade-chip-stocks-volatility-sox-selloff/": {
+    "title": "Wall Street's favorite bet comes undone as chips whipsaw market",
+    "publisher": "Fortune (Bloomberg)",
+    "date": "2026-08-02",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fred.stlouisfed.org/data/MPU4910062": {
+    "title": "Private Nonfarm Business Sector: Labor Productivity (MPU4910062), annual, index 2017=100",
+    "publisher": "FRED, Federal Reserve Bank of St. Louis (data: BLS)",
+    "date": "2026-03-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fred.stlouisfed.org/data/OPHNFB": {
+    "title": "Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers (OPHNFB)",
+    "publisher": "FRED, Federal Reserve Bank of St. Louis (data: BLS)",
+    "date": "2026-08-06",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://fred.stlouisfed.org/series/NASDAQSOX": {
+    "title": "PHLX Semiconductor (NASDAQSOX), daily",
+    "publisher": "FRED, Federal Reserve Bank of St. Louis (data: Nasdaq)",
+    "date": "2026-10-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://historyofmarket.com/semi/semi-price/": {
+    "title": "Philadelphia Semiconductor Index (SOX): Historical Chart Since 1994",
+    "publisher": "History of Market (historyofmarket.com)",
+    "date": "2026-10-23",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://insight.factset.com/hyperscalers-tap-external-financing-as-ai-capex-outruns-cash-flow": {
+    "title": "Hyperscalers Tap External Financing as AI Capex Outruns Cash Flow",
+    "publisher": "FactSet Insight",
+    "date": "2026-07-23",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://law.washu.edu/ai-policy-and-regulation-resources/political-advertising/": {
+    "title": "Political Media (AI Policy and Regulation Resources: Political Advertising)",
+    "publisher": "Washington University in St. Louis School of Law",
+    "date": "2026-06-29",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://link.springer.com/10.1038/s41467-023-38511-8": {
+    "title": "Observationally-constrained projections of an ice-free Arctic even under a low emission scenario",
+    "publisher": "Nature Communications 14:3139 (Kim, Min, Gillett, Notz, Malinina)",
+    "date": "2023",
+    "tier": "peer-reviewed",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://meduza.io/en/feature/2026/08/24/nyt-a-fully-autonomous-russian-ai-drone-run-by-an-nvidia-minicomputer-killed-3-civilians-in-the-ukrainian-city-of-zaporizhzhia": {
+    "title": "NYT: A fully autonomous Russian AI drone run by an Nvidia minicomputer killed 3 civilians in Zaporizhzhia",
+    "publisher": "Meduza (reporting The New York Times)",
+    "date": "2026-08-24",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://news.gallup.com/poll/712157/glp-usage-reaches-new-high.aspx": {
+    "title": "In U.S., GLP-1 Usage Reaches New High",
+    "publisher": "Gallup",
+    "date": "2026-07-07",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://news.uchicago.edu/story/doomsday-clock-ticks-down-85-seconds-midnight-2026-closest-ever-apocalypse": {
+    "title": "Doomsday Clock ticks down to 85 seconds to midnight in 2026—closest ever to apocalypse",
+    "publisher": "University of Chicago News",
+    "date": "2026-01-27",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://news.un.org/en/story/2026/08/1168196": {
+    "title": "UN chief, Red Cross renew call for rules on lethal autonomous weapons",
+    "publisher": "UN News",
+    "date": "2026-08-25",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://nsidc.org/sea-ice-today/analyses": {
+    "title": "Sea Ice Today: Analyses (index)",
+    "publisher": "National Snow and Ice Data Center",
+    "date": "2026-10-07",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://nsidc.org/sea-ice-today/analyses/arctic-sea-ice-minimum-ties-tenth-lowest-0": {
+    "title": "Arctic sea ice minimum ties for tenth lowest",
+    "publisher": "National Snow and Ice Data Center",
+    "date": "2026-09-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://oecdedutoday.com/generative-ai-and-student-learning-what-the-pisa-data-reveal/": {
+    "title": "Generative AI and student learning: What the PISA data reveal",
+    "publisher": "OECD Education and Skills Today (Andreas Schleicher)",
+    "date": "2026-10-13",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://opensky.library.ucar.edu/islandora/object/articles%3A27063": {
+    "title": "Projections of an ice-free Arctic Ocean",
+    "publisher": "Nature Reviews Earth & Environment 5:164-176 (Jahn, Holland, Kay), via UCAR OpenSky",
+    "date": "2024",
+    "tier": "peer-reviewed",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://ourworldindata.org/grapher/cumulative-covid-deaths-region": {
+    "title": "Cumulative confirmed COVID-19 deaths by world region",
+    "publisher": "Our World in Data (data: WHO)",
+    "date": "2026-10-24",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://pharmashots.com/32510/eli-lilly-reports-us-fda-approval-of-foundayo-orforglipron-for-weight-loss/": {
+    "title": "Eli Lilly Reports US FDA Approval of Foundayo (Orforglipron) for Weight Loss",
+    "publisher": "PharmaShots",
+    "date": "2026-04-02",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://pmc.ncbi.nlm.nih.gov/articles/PMC11615213/": {
+    "title": "The first ice-free day in the Arctic Ocean could occur before 2030",
+    "publisher": "Nature Communications 15:10101 (Heuzé, Jahn), via PubMed Central",
+    "date": "2024-12-03",
+    "tier": "peer-reviewed",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/EXCEL_FILES/2_Population/WPP2024_POP_F03_1_POPULATION_SELECT_AGE_GROUPS_BOTH_SEXES.xlsx": {
+    "title": "WPP2024_POP_F03_1: Population by select age groups, both sexes (xlsx, 154 MB)",
+    "publisher": "UN DESA Population Division, World Population Prospects 2024",
+    "date": "2024-07",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://ppc.land/meta-blocks-political-ads-in-eu-as-ttpa-regulation-takes-effect": {
+    "title": "Meta blocks political ads in EU as TTPA regulation takes effect",
+    "publisher": "PPC Land",
+    "date": "2025-10-08",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://press.un.org/en/2025/ga12736.doc.htm": {
+    "title": "General Assembly Adopts More Than 60 Resolutions, Decisions of Its First Committee (GA/12736)",
+    "publisher": "United Nations Meetings Coverage and Press Releases",
+    "date": null,
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://research.unipd.it/bitstream/11577/3457653/2/marani-et-al-2021-intensity-and-frequency-of-extreme-novel-epidemics.pdf": {
+    "title": "Intensity and frequency of extreme novel epidemics",
+    "publisher": "PNAS 118(35) e2105482118 (Marani, Katul, Pan, Parolari), via University of Padua repository",
+    "date": "2021-08-23",
+    "tier": "peer-reviewed",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://seekingalpha.com/news/4509109-openai-to-offer-one-year-free-chatgpt-go-access-in-india": {
+    "title": "OpenAI to offer one-year free ChatGPT Go access in India",
+    "publisher": "Seeking Alpha (citing The Times of India)",
+    "date": null,
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://svs.gsfc.nasa.gov/5677": {
+    "title": "Arctic Sea Ice Minimum 2026",
+    "publisher": "NASA Scientific Visualization Studio",
+    "date": "2026-09-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://tass.com/politics/2204727": {
+    "title": "No grounds exist for resuming strategic stability dialogue with US for now — MFA",
+    "publisher": "TASS (Russian state news agency)",
+    "date": "2026-10-20",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://techcrunch.com/?p=3095753": {
+    "title": "India's AI boom pushes firms to trade near-term revenue for users",
+    "publisher": "TechCrunch",
+    "date": "2026-02-24",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://tele.net.in/indias-internet-user-base-crosses-950-million-in-2025-as-per-iamai-report/": {
+    "title": "India's internet user base crosses 950 million in 2025, as per IAMAI report",
+    "publisher": "Tele.net",
+    "date": "2026-01-30",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://thebulletin.org/doomsday-clock/": {
+    "title": "Doomsday Clock",
+    "publisher": "Bulletin of the Atomic Scientists",
+    "date": "2026-01-27",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://tsm.schar.gmu.edu/creeping-closer-timeline-and-analysis-of-the-justice-mission-2025-joint-exercise/": {
+    "title": "Creeping Closer: Timeline and Analysis of the Justice Mission-2025 Joint Exercise",
+    "publisher": "Taiwan Security Monitor, Schar School, George Mason University",
+    "date": "2026-01-05",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://united24media.com/war-in-ukraine/ukrainian-drone-strikes-using-ai-target-homing-increase-tenfold-brave1-reports-22362": {
+    "title": "Ukrainian Drone Strikes Using AI Target Homing Increase Tenfold, Brave1 Reports",
+    "publisher": "UNITED24 Media (Ukrainian state-backed)",
+    "date": "2026-09-08",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.actuia.com/en/news/ai-act-obligations-in-force-and-delays-under-omnibus-2026-1744/": {
+    "title": "AI Act: obligations in force and delays under omnibus 2026/1744",
+    "publisher": "ActuIA",
+    "date": "2026-10-06",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.aljazeera.com/news/2026/10/21/iran-determined-to-keep-uranium-amid-increased-war-odds-flurry-of-meetings": {
+    "title": "Iran determined to keep uranium amid increased war odds, flurry of meetings",
+    "publisher": "Al Jazeera",
+    "date": "2026-10-21",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.aljazeera.com/news/2026/9/14/attacks-will-be-fully-autonomous-russia-ukraine-race-towards-ai-warfare": {
+    "title": "'Attacks will be fully autonomous': Russia, Ukraine race towards AI warfare",
+    "publisher": "Al Jazeera",
+    "date": "2026-09-14",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.armscontrol.org/act/2026-03/news/new-start-expires-us-urges-modernized-treaty": {
+    "title": "New START Expires As U.S. Urges 'Modernized' Treaty",
+    "publisher": "Arms Control Association (Arms Control Today)",
+    "date": "2026-03",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.bankofengland.co.uk/-/media/boe/files/financial-policy-committee-record/2026/fpc-summary-and-record-september-2026.pdf": {
+    "title": "Record of the Financial Policy Committee meeting on 25 September 2026",
+    "publisher": "Bank of England",
+    "date": "2026-09-30",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.benton.org/blog/how-kids-use-ai": {
+    "title": "How Kids Use AI",
+    "publisher": "Benton Institute for Broadband & Society (reporting Common Sense Media census)",
+    "date": "2026-06-26",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.biopharmadive.com/news/novo-nordisk-oral-wegovy-fda-approve-glp-1/808578/": {
+    "title": "Novo Nordisk's weight loss pill approved by FDA",
+    "publisher": "BioPharma Dive",
+    "date": "2025-12-23",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.bls.gov/news.release/prod3.nr0.htm": {
+    "title": "Total factor productivity, 2025 (USDL-26-0504)",
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "date": "2026-03-19",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.bls.gov/news.release/prod3.t01.htm": {
+    "title": "Table 1. Private nonfarm business sector: productivity and related measures for the 1987-2020 period",
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "date": "2021-03-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.bnnbloomberg.ca/goldman-says-ai-will-spur-us-productivity-jump-global-growth-1.1901016": {
+    "title": "Goldman Says AI Will Spur US Productivity Jump, Global Growth",
+    "publisher": "BNN Bloomberg (Bloomberg News)",
+    "date": "2023",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.brookings.edu/articles/what-comes-after-new-start/": {
+    "title": "What comes after New START?",
+    "publisher": "Brookings Institution (Steven Pifer)",
+    "date": "2026-02-19",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.cdc.gov/bird-flu/spotlights/global-summary-06262026.html": {
+    "title": "Global Summary of Human Cases of H5N1 Bird Flu from August 2025 to June 2026",
+    "publisher": "U.S. Centers for Disease Control and Prevention",
+    "date": "2026-06-26",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran": {
+    "title": "Conflict With Iran | Global Conflict Tracker",
+    "publisher": "Council on Foreign Relations",
+    "date": "2026-10-23",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.conference-board.org/research/policy-backgrounders/fec-interpretive-rule-on-ai-in-political-ads": {
+    "title": "Policy Backgrounder: FEC Interpretive Rule on AI in Political Ads",
+    "publisher": "The Conference Board",
+    "date": "2024-09-25",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.congress.gov/118/bills/s4853/BILLS-118s4853pcs.htm": {
+    "title": "S. 4853, Ending FCC Meddling in Our Elections Act (118th Congress, placed on calendar)",
+    "publisher": "U.S. Government Publishing Office via Congress.gov",
+    "date": "2024-07-31",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.csis.org/analysis/defining-autonomy-why-software-not-drones-will-decide-next-war": {
+    "title": "Defining Autonomy: Why Software, Not Drones, Will Decide the Next War",
+    "publisher": "CSIS (Bondar, Mande)",
+    "date": "2026-06-10",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.engadget.com/ai/google-brings-free-gemini-access-to-indias-largest-carrier-130627625.html": {
+    "title": "Google brings free Gemini access to India's largest carrier",
+    "publisher": "Engadget",
+    "date": "2025-10-31",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.faegredrinker.com/en/insights/publications/2026/7/eu-ai-act-commission-confirms-transparency-code-of-practice-as-adequate-and-publishes-final-version-of-its-guidelines-on-transparency-obligations": {
+    "title": "EU AI Act — Commission Confirms Transparency Code of Practice as Adequate and Publishes Final Guidelines on Transparency",
+    "publisher": "Faegre Drinker Biddle & Reath LLP",
+    "date": "2026-07-30",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.fastcompany.com/91615997/states-laws-struggling-ai-election-deepfakes": {
+    "title": "How states' laws are struggling to keep up with AI election deepfakes",
+    "publisher": "Fast Company (republished from The Conversation)",
+    "date": "2026-10-03",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.federalreserve.gov/newsevents/speech/cook20260928a.htm": {
+    "title": "An Update on AI and the Economy (Governor Lisa D. Cook)",
+    "publisher": "Board of Governors of the Federal Reserve System",
+    "date": "2026-09-28",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.fool.com/earnings/call-transcripts/2026/10/15/tsmc-tsm-q3-2026-earnings-call-transcript/": {
+    "title": "TSMC (TSM) Q3 2026 Earnings Call Transcript",
+    "publisher": "The Motley Fool (transcript of TSMC call)",
+    "date": "2026-10-15",
+    "tier": "vendor",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.fppc.ca.gov/siteassets/documents/agendadocuments/general-items/2026/aug/Staff_Memo_18450.12_18401_adopt.pdf": {
+    "title": "Adoption of Proposed Regulation 18450.12 and Amendments to Regulation 18401 (staff memo)",
+    "publisher": "California Fair Political Practices Commission",
+    "date": "2026-08-10",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.gallego.senate.gov/wp-content/uploads/2026/06/Final_Gallego-Letter_Directive-3000.09.pdf": {
+    "title": "Letter from Sen. Ruben Gallego to Secretary Hegseth on DoD Directive 3000.09 and NSPM-11",
+    "publisher": "Office of Senator Ruben Gallego, U.S. Senate",
+    "date": "2026-06-12",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.hko.gov.hk/en/climate_change/proj_global_ice_snow.htm": {
+    "title": "Global Climate Projections - Ice and snow",
+    "publisher": "Hong Kong Observatory",
+    "date": null,
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks": {
+    "title": "Global Financial Markets Face Rising Risks From AI, Bond Yields, and Cyberattacks",
+    "publisher": "IMF Blog (Vamvakidis, Wu)",
+    "date": "2026-10-13",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.imf.org/en/publications/gfsr/issues/2026/10/13/global-financial-stability-report-october-2026": {
+    "title": "Global Financial Stability Report, October 2026: Resilience, Risk, and Transformation",
+    "publisher": "International Monetary Fund",
+    "date": "2026-10-13",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.indiatvnews.com/technology/news/india-becomes-second-largest-market-worldwide-with-100-million-chatgpt-users-per-week-sam-altman-2026-02-16-1030489": {
+    "title": "India becomes second-largest market worldwide with 100 million ChatGPT users per week: Sam Altman",
+    "publisher": "India TV News",
+    "date": "2026-02-16",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.kff.org/health-costs/poll-1-in-8-adults-say-theyve-taken-a-glp-1-drug-including-4-in-10-of-those-with-diabetes-and-1-in-4-of-those-with-heart-disease/": {
+    "title": "Poll: 1 in 8 Adults Say They've Taken a GLP-1 Drug, Including 4 in 10 of Those with Diabetes",
+    "publisher": "KFF",
+    "date": "2024-05-10",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.kff.org/medicare/what-to-know-about-the-balance-model-for-glp-1s-in-medicare-and-medicaid/": {
+    "title": "What to Know About the BALANCE Model for GLP-1s in Medicare and Medicaid and the Medicare GLP-1 Bridge",
+    "publisher": "KFF",
+    "date": "2026-05-11",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.kff.org/public-opinion/poll-1-in-8-adults-say-they-are-currently-taking-a-glp-1-drug-for-weight-loss-diabetes-or-another-condition-even-as-half-say-the-drugs-are-difficult-to-afford/": {
+    "title": "Poll: 1 in 8 Adults Say They Are Currently Taking a GLP-1 Drug, Even as Half Say the Drugs Are Difficult to Afford",
+    "publisher": "KFF",
+    "date": "2025-11-14",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.koreaherald.com/article/10546695": {
+    "title": "South Korea pulls plug on AI textbooks",
+    "publisher": "The Korea Herald",
+    "date": "2025-08-04",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/arctic-and-antarctic-end-of-season-report---october-2026": {
+    "title": "Arctic and Antarctic end-of-season report - October 2026",
+    "publisher": "Met Office (West, Blockley)",
+    "date": "2026-10-14",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.nber.org/papers/w25148": {
+    "title": "The Productivity J-Curve: How Intangibles Complement General Purpose Technologies (NBER WP 25148)",
+    "publisher": "National Bureau of Economic Research (Brynjolfsson, Rock, Syverson)",
+    "date": "2018-10",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.nber.org/papers/w32487": {
+    "title": "The Simple Macroeconomics of AI (NBER WP 32487)",
+    "publisher": "National Bureau of Economic Research (Acemoglu)",
+    "date": "2024-05",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.oecd.org/en/publications/2026/09/pisa-2025-results-volume-i_5265bfb1.html": {
+    "title": "PISA 2025 Results (Volume I): Future-Ready Students",
+    "publisher": "OECD Publishing",
+    "date": "2026-09-08",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.pewresearch.org/internet/2026/02/24/how-teens-use-and-view-ai/": {
+    "title": "How Teens Use and View AI",
+    "publisher": "Pew Research Center",
+    "date": "2026-02-24",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.pewresearch.org/wp-content/uploads/sites/20/2026/02/PI_2026.02.24_Teens-and-AI_REPORT.pdf": {
+    "title": "How Teens Use and View AI (full report PDF)",
+    "publisher": "Pew Research Center",
+    "date": "2026-02-24",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.prb.org/news/new-prb-analysis-offers-insights-as-indias-population-surpasses-chinas-notes-overlooked-rise-of-sub-saharan-africa/": {
+    "title": "New PRB Analysis Offers Insights as India's Population Surpasses China's, Notes Overlooked Rise of Sub-Saharan Africa",
+    "publisher": "Population Reference Bureau",
+    "date": "2023-04-26",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf": {
+    "title": "SIPRI Yearbook 2026, Chapter 8: World nuclear forces",
+    "publisher": "SIPRI (Kristensen, Korda)",
+    "date": "2026",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.statnews.com/2026/04/21/trump-medicare-weight-loss-drug-plan-unraveling-insurer-pushback/": {
+    "title": "Insurers refuse to join Medicare pilot offering weight loss drugs to seniors at steep discount",
+    "publisher": "STAT",
+    "date": "2026-04-21",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.stlouisfed.org/from-the-president/remarks/2026/productivity-growth-and-monetary-policy-iceland": {
+    "title": "How Should the Promise of Higher Productivity Growth Change the Reality of Monetary Policy Today?",
+    "publisher": "Federal Reserve Bank of St. Louis (Alberto Musalem)",
+    "date": "2026-05-28",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.techpolicy.press/fcc-proposes-ai-disclosure-rules-for-political-ads-implementation-uncertain/": {
+    "title": "FCC Proposes AI Disclosure Rules for Political Ads, Implementation Uncertain",
+    "publisher": "Tech Policy Press",
+    "date": "2024-07-30",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.techrepublic.com/article/news-india-100-million-weekly-chatgpt-users/": {
+    "title": "India Hits 100M Weekly ChatGPT Users, Becoming OpenAI's Second-Largest Market",
+    "publisher": "TechRepublic",
+    "date": "2026-02-16",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.trendforce.com/news/2025/12/18/news-tsmc-reportedly-accelerates-arizona-2nd-fab-eyes-3q26-tool-install-2027-3nm-production/": {
+    "title": "TSMC Reportedly Accelerates Arizona 2nd Fab, Eyes 3Q26 Tool Install, 2027 3nm Production",
+    "publisher": "TrendForce News (citing Nikkei)",
+    "date": "2025-12-18",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.trendforce.com/presscenter/news/20250305-12504.html": {
+    "title": "U.S. to Hold Over 20% of Advanced Semiconductor Capacity by 2030, TSMC Expands Investment to US$165 Billion",
+    "publisher": "TrendForce",
+    "date": "2025-03-05",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.un.org/development/desa/pd/world-population-prospects-2024": {
+    "title": "World Population Prospects 2024",
+    "publisher": "UN DESA Population Division",
+    "date": "2024-07-11",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.whitehouse.gov/presidential-actions/2026/06/national-security-presidential-memorandum-nspm-11/": {
+    "title": "National Security Presidential Memorandum/NSPM-11: Artificial Intelligence in the National Security Enterprise",
+    "publisher": "The White House",
+    "date": "2026-06-05",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.who.int/news/item/12-10-2026-who-welcomes-adoption-of-united-nations-political-declaration-on-pandemic-prevention-preparedness-and-response": {
+    "title": "WHO welcomes adoption of United Nations political declaration on pandemic prevention, preparedness and response",
+    "publisher": "World Health Organization",
+    "date": "2026-10-12",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
+  },
+  "https://www.who.int/news/item/28-03-2026-who-member-states-agree-to-extend-negotiations-on-key-annex-to-the-pandemic-agreement": {
+    "title": "WHO Member States agree to extend negotiations on key annex to the Pandemic Agreement",
+    "publisher": "World Health Organization",
+    "date": "2026-03-28",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-10-24"
   }
 }

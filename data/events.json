@@ -3308,12 +3308,20 @@
           "https://www.nber.org/papers/w25148",
           "https://www.bnnbloomberg.ca/goldman-says-ai-will-spur-us-productivity-jump-global-growth-1.1901016"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "resolution: BLS table reference corrected (version 2026-10-24b)",
+        "reason": "The cited prod3.t01 page serves a 2021 vintage ending in 2020; the headline release and Table A carry current values.",
+        "sources": [
+          "https://www.bls.gov/news.release/prod3.nr0.htm"
+        ]
       }
     ],
     "timing": "window",
     "resolution": {
-      "test": "Resolve on BLS private nonfarm business sector labor productivity (output per hour), annual percent change, as published in Table 1 of the BLS Total Factor Productivity news release. A hit is any three consecutive calendar years, the last of them between 2032 and 2036, each above 2.5%, using the figures as they stand in the first TFP release published after the third year (the release covering 2036, due in early 2037, closes the window). A qualifying run that ends before 2032 grades early. If BLS discontinues the TFP tables, use the nonfarm business sector annual-average labor productivity change from the Productivity and Costs release. Total factor productivity is not the test.",
-      "version": "2026-10-24",
+      "test": "Resolve on BLS private nonfarm business sector labor productivity (output per hour), annual percent change, as published in the BLS Total Factor Productivity news release (headline text or Table A; FRED series OPHNFB as the fallback). A hit is any three consecutive calendar years, the last of them between 2032 and 2036, each above 2.5%, using the figures as they stand in the first TFP release published after the third year (the release covering 2036, due in early 2037, closes the window). A qualifying run that ends before 2032 grades early. If BLS discontinues the TFP tables, use the nonfarm business sector annual-average labor productivity change from the Productivity and Costs release. Total factor productivity is not the test.",
+      "version": "2026-10-24b",
       "mode": "testable",
       "assessAfter": "2037-06-30"
     },
