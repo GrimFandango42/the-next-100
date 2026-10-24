@@ -137,7 +137,7 @@ function ReaderBar({ active, brief, setBrief }: { active: string; brief: boolean
   const era = event ? chapterFor(event.year) : data.eras.find((e) => `chapter-${e.id}` === active) ?? data.eras[0];
   const reading = brief ? ordered.filter(e=>highlights.has(e.id)) : ordered;
   const index = event ? reading.indexOf(event) : -1;
-  const progress = event ? (index + 1) / reading.length : Math.max(0, ordered.findIndex((e) => chapterFor(e.year).id === era.id)) / ordered.length;
+  const progress = event ? (index + 1) / reading.length : reading.filter(e=>e.year < era.from).length / reading.length;
   return <>
     <div className="reader-bar" aria-label="Where you are">
       <a className="reader-cover" href="#opening" aria-label="Back to the cover">N<span>100</span></a>
