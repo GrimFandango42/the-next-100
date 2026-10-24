@@ -4,6 +4,7 @@ import { useNarrow } from "../hooks";
 import { CONF_LABEL, STATUS_LABEL } from "../lib";
 import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
+import ProbabilityHistory from "./ProbabilityHistory";
 import { when } from "./StoryJourney";
 
 export default function EventDrawer() {
@@ -75,7 +76,7 @@ export function Detail() {
         <span className={"pill status " + e.status}>{STATUS_LABEL[e.status]}{e.resolvedOn ? ` · ${e.resolvedOn}` : ""}</span>
         {e.branch && <span className="pill">{e.branch} branch only</span>}
       </div>
-      <p className="lede">{e.summary}</p>
+      <p className="lede">{e.summary}</p><ProbabilityHistory event={e} />
       <p>{e.detail}</p>
       {e.resolution && <div className="block counts-block"><div className="eyebrow">What counts · {when(e)}</div><p>{e.resolution.test}</p>{e.resolution.assessAfter && <p className="note">Assessment after {e.resolution.assessAfter}. This allows for reporting and verification; it does not extend the event deadline.</p>}</div>}
       {e.evidenceNote && <p className="note">{e.evidenceNote}</p>}
@@ -84,8 +85,8 @@ export function Detail() {
       )}
       {(prev.length > 0 || next.length > 0) && (
         <div className="block links">
-          {prev.length > 0 && <div><div className="eyebrow">Comes before</div>{prev.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
-          {next.length > 0 && <div><div className="eyebrow">Leads to</div>{next.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
+          {prev.length > 0 && <div><div className="eyebrow">Connected to</div>{prev.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
+          {next.length > 0 && <div><div className="eyebrow">May influence</div>{next.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
         </div>
       )}
       <div className="block">

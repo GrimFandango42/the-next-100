@@ -76,7 +76,7 @@ Headless browser checks for layout, overflow and console errors on desktop and p
 That's the point of publishing it. Three ways in, from lightest to heaviest:
 
 - **[Open an issue](https://github.com/GrimFandango42/the-next-100/issues/new/choose)** — *Challenge a forecast* (a date, a probability, a framing, with a source) or *Propose a line* (something the forecast is missing).
-- **Edit `data/`** and open a pull request. The validator and the tests run on every PR once `.github/ci.yml` is moved into `.github/workflows/` (one step the repo owner does from the desktop). Follow [CONTRIBUTING.md](CONTRIBUTING.md): a `history` entry with the URL you opened, the forecast's voice, no rewriting of history.
+- **Edit `data/`** and open a pull request. The validator and the tests run on every PR via `.github/workflows/ci.yml`. Follow [CONTRIBUTING.md](CONTRIBUTING.md): a `history` entry with the URL you opened, the forecast's voice, no rewriting of history.
 - **Run the check-in yourself.** [`CHECKIN.md`](CHECKIN.md) is the protocol; [`SOURCES.md`](SOURCES.md) is the registry of what to read and how to judge it. In Claude Code, `/checkin` runs it end to end. Any model or agent starts with [`ONBOARDING.md`](ONBOARDING.md).
 
 ## The method, in one paragraph

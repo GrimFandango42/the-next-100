@@ -1009,7 +1009,7 @@
     "confidence": "moderate",
     "probability": 0.7,
     "cornerstone": true,
-    "title": "Systems exceed every human at every measurable cognitive task",
+    "title": "AI beats human experts across an independently tested professional task suite",
     "summary": "There is no single moment. A gradual recognition that the hardest decisions in science, strategy and governance are made by or with systems we cannot fully audit.",
     "detail": "This is the cornerstone the whole forecast turns on, and the answer to 'when is the singularity' is: it will not feel like one. The window is 2034 to 2040 at about 70%. The recognition comes in pieces: a field where the best work is no longer human, then another, then a realization that the people nominally in charge are ratifying recommendations they cannot independently check. The question of the century becomes who sets the goals for these systems, not whether they exist.",
     "signals": [
@@ -1046,6 +1046,12 @@
         "date": "2026-10-24",
         "change": "title restored",
         "reason": "The cornerstone's title was reworded earlier today to mirror its test. The title is the claim in plain words; the test ('What counts') is what gets graded, and it already names the finite task suite. Restored.",
+        "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Headline aligned with the existing resolution test",
+        "reason": "Clarifies what is actually measured; no probability or grading threshold changed.",
         "sources": []
       }
     ],
@@ -2700,12 +2706,18 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the explicit by-2030 deadline",
+        "reason": "The prior display correction changed around to by. This version makes the frozen timing match the existing December deadline; probability unchanged.",
+        "sources": []
       }
     ],
     "timing": "by",
     "resolution": {
       "test": "Counts if GAO, or OMB's annual FISMA report to Congress, confirms that all 24 CFO Act agencies' high-value assets and high-impact systems used post-quantum key establishment at the 31 December 2030 deadline. Miss if: By the time GAO or the FISMA report covers calendar 2030, fewer than 24 agencies have all HVAs and high-impact systems on PQC key establishment; or the 2030 deadline is moved by a later order or memo; no published audit by 31 December 2033 leaves the line unresolved.",
-      "version": "2026-10-24",
+      "version": "2026-10-24c",
       "mode": "testable",
       "assessAfter": "2033-12-31"
     },
@@ -2934,8 +2946,8 @@
     "status": "forecast",
     "timing": "by",
     "resolution": {
-      "test": "By 31 December 2028, a government, a UN body (including the UN Human Rights Monitoring Mission in Ukraine), the ICRC, SIPRI or a peer-reviewed forensic study documents at least 1,000 engagements in a war between states in which a weapon selected the specific target it struck without a human authorizing that target, or a belligerent states that a majority of a named class of its strikes were flown in fully autonomous mode. Counts whether the targets were people, vehicles or ground infrastructure. Does not count: terminal homing on a target a human designated before launch; automatic defence against incoming drones, missiles or aircraft (Phalanx, Aegis, interceptor drones); decision-support systems where a person approves each strike. Documentation published by 31 December 2029 about engagements that occurred by the deadline counts.",
-      "version": "2026-10-24",
+      "test": "By 31 December 2028, a government, a UN body (including the UN Human Rights Monitoring Mission in Ukraine), the ICRC, SIPRI or a peer-reviewed forensic study documents at least 1,000 engagements in a war between states in which a weapon selected the specific target it struck without a human authorizing that target. Counts whether the targets were people, vehicles or ground infrastructure. Does not count: terminal homing on a target a human designated before launch; automatic defence against incoming drones, missiles or aircraft (Phalanx, Aegis, interceptor drones); decision-support systems where a person approves each strike. Documentation published by 31 December 2029 about engagements that occurred by the deadline counts.",
+      "version": "2026-10-24c",
       "mode": "testable",
       "assessAfter": "2029-12-31"
     },
@@ -2955,6 +2967,12 @@
           "https://www.aljazeera.com/news/2026/9/14/attacks-will-be-fully-autonomous-russia-ukraine-race-towards-ai-warfare",
           "https://www.gallego.senate.gov/wp-content/uploads/2026/06/Final_Gallego-Letter_Directive-3000.09.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Removed the unquantified alternative resolution clause",
+        "reason": "All qualifying evidence must establish at least 1,000 engagements. A belligerent saying most strikes were autonomous no longer bypasses the count. The 75% editorial probability is carried forward unchanged, not recalibrated; this is a new scoreable definition.",
+        "sources": []
       }
     ],
     "force": "hinge"
@@ -2995,28 +3013,36 @@
           "value": 41,
           "unit": "%",
           "kind": "observed",
-          "note": "3nm 33%, 2nm 8%; 7nm and below 79%. TSMC earnings call, 15 October 2026."
+          "note": "3nm 33%, 2nm 8%; 7nm and below 79%. TSMC earnings call, 15 October 2026.",
+          "comparisonGroup": "TSMC revenue mix",
+          "sourceNote": "3nm 33%, 2nm 8%; 7nm and below 79%. TSMC earnings call, 15 October 2026."
         },
         {
           "label": "Taiwan share of advanced-node capacity, 2021",
           "value": 71,
           "unit": "%",
           "kind": "observed",
-          "note": "TrendForce, March 2025."
+          "note": "TrendForce, March 2025.",
+          "comparisonGroup": "Advanced-node capacity share",
+          "sourceNote": "TrendForce, March 2025."
         },
         {
           "label": "Taiwan share of advanced-node capacity, 2030",
           "value": 58,
           "unit": "%",
-          "kind": "forecast",
-          "note": "TrendForce projection with Arizona, Japan and Germany fabs built."
+          "kind": "reference",
+          "note": "TrendForce projection with Arizona, Japan and Germany fabs built.",
+          "comparisonGroup": "Advanced-node capacity share",
+          "sourceNote": "TrendForce projection with Arizona, Japan and Germany fabs built."
         },
         {
           "label": "US share of advanced-node capacity, 2030",
           "value": 22,
           "unit": "%",
           "kind": "reference",
-          "note": "TrendForce projection; TSMC's $165bn Arizona plan is most of it."
+          "note": "TrendForce projection; TSMC's $165bn Arizona plan is most of it.",
+          "comparisonGroup": "Advanced-node capacity share",
+          "sourceNote": "TrendForce projection; TSMC's $165bn Arizona plan is most of it."
         }
       ]
     },
@@ -3046,6 +3072,12 @@
           "https://focustaiwan.tw/politics/202610150010",
           "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Attributed the 2030 capacity projection to TrendForce",
+        "reason": "The 58% Taiwan capacity share is an outside projection, not this forecast’s own estimate.",
+        "sources": []
       }
     ],
     "force": "hinge"
@@ -3081,25 +3113,33 @@
           "label": "Total inventory, January 2026",
           "value": 12187,
           "kind": "observed",
-          "note": "SIPRI Yearbook 2026. About 9,745 in military stockpiles; the rest retired and awaiting dismantlement."
+          "note": "SIPRI Yearbook 2026. About 9,745 in military stockpiles; the rest retired and awaiting dismantlement.",
+          "comparisonGroup": "Global inventory and subsets",
+          "sourceNote": "SIPRI Yearbook 2026. About 9,745 in military stockpiles; the rest retired and awaiting dismantlement."
         },
         {
           "label": "Deployed with missiles and aircraft",
           "value": 4012,
           "kind": "observed",
-          "note": "Up about 100 on January 2025 (SIPRI)."
+          "note": "Up about 100 on January 2025 (SIPRI).",
+          "comparisonGroup": "Global inventory and subsets",
+          "sourceNote": "Up about 100 on January 2025 (SIPRI)."
         },
         {
           "label": "On high operational alert",
           "value": 2100,
           "kind": "observed",
-          "note": "SIPRI: 2,100 to 2,200, nearly all Russian and American."
+          "note": "SIPRI: 2,100 to 2,200, nearly all Russian and American.",
+          "comparisonGroup": "Global inventory and subsets",
+          "sourceNote": "SIPRI: 2,100 to 2,200, nearly all Russian and American."
         },
         {
           "label": "New START ceiling on deployed strategic warheads",
           "value": 1550,
           "kind": "reference",
-          "note": "Per side. Expired 5 February 2026 with no replacement."
+          "note": "Per side. Expired 5 February 2026 with no replacement.",
+          "comparisonGroup": "Treaty ceiling per country",
+          "sourceNote": "Per side. Expired 5 February 2026 with no replacement."
         }
       ]
     },
@@ -3167,27 +3207,35 @@
           "value": 26,
           "unit": "%",
           "kind": "observed",
-          "note": "14,635 to 10,779, Nasdaq via FRED"
+          "note": "14,635 to 10,779, Nasdaq via FRED",
+          "comparisonGroup": "Peak-to-date drawdown",
+          "sourceNote": "14,635 to 10,779, Nasdaq via FRED"
         },
         {
           "label": "2021-22, year-end to year-end",
           "value": 36,
           "unit": "%",
           "kind": "reference",
-          "note": "peak-to-trough was deeper"
+          "note": "peak-to-trough was deeper",
+          "comparisonGroup": "Calendar-year changes",
+          "sourceNote": "peak-to-trough was deeper"
         },
         {
           "label": "The bet, close to close",
           "value": 50,
           "unit": "%",
-          "kind": "forecast"
+          "kind": "forecast",
+          "comparisonGroup": "Peak-to-date drawdown",
+          "sourceNote": "See cited sources in the forecast reasoning."
         },
         {
           "label": "2000-02, year-end to year-end",
           "value": 50,
           "unit": "%",
           "kind": "reference",
-          "note": "peak-to-trough was far deeper"
+          "note": "peak-to-trough was far deeper",
+          "comparisonGroup": "Calendar-year changes",
+          "sourceNote": "peak-to-trough was far deeper"
         }
       ]
     },
@@ -3255,38 +3303,50 @@
           "value": 1.5,
           "unit": "%/yr",
           "kind": "observed",
-          "note": "BLS private nonfarm business"
+          "note": "BLS private nonfarm business",
+          "comparisonGroup": "Annual labor productivity growth",
+          "sourceNote": "BLS private nonfarm business"
         },
         {
           "label": "2019-25, average",
           "value": 2.2,
           "unit": "%/yr",
-          "kind": "observed"
+          "kind": "observed",
+          "comparisonGroup": "Annual labor productivity growth",
+          "sourceNote": "See cited sources in the forecast reasoning."
         },
         {
           "label": "2024",
           "value": 3.0,
           "unit": "%",
-          "kind": "observed"
+          "kind": "observed",
+          "comparisonGroup": "Annual labor productivity growth",
+          "sourceNote": "See cited sources in the forecast reasoning."
         },
         {
           "label": "2025",
           "value": 2.2,
           "unit": "%",
-          "kind": "observed"
+          "kind": "observed",
+          "comparisonGroup": "Annual labor productivity growth",
+          "sourceNote": "See cited sources in the forecast reasoning."
         },
         {
           "label": "The bet, each of three years",
           "value": 2.5,
           "unit": "%",
-          "kind": "forecast"
+          "kind": "forecast",
+          "comparisonGroup": "Annual labor productivity growth",
+          "sourceNote": "See cited sources in the forecast reasoning."
         },
         {
           "label": "1998-2004, average",
           "value": 3.5,
           "unit": "%/yr",
           "kind": "reference",
-          "note": "the IT boom"
+          "note": "the IT boom",
+          "comparisonGroup": "Annual labor productivity growth",
+          "sourceNote": "the IT boom"
         }
       ]
     },
@@ -3438,34 +3498,44 @@
           "value": 6,
           "unit": "%",
           "kind": "observed",
-          "note": "KFF"
+          "note": "KFF",
+          "comparisonGroup": "Current adult use · any indication",
+          "sourceNote": "KFF"
         },
         {
           "label": "Nov 2025, any reason",
           "value": 12,
           "unit": "%",
           "kind": "observed",
-          "note": "KFF"
+          "note": "KFF",
+          "comparisonGroup": "Current adult use · any indication",
+          "sourceNote": "KFF"
         },
         {
           "label": "Jun 2026, weight loss only",
           "value": 11,
           "unit": "%",
           "kind": "observed",
-          "note": "Gallup"
+          "note": "Gallup",
+          "comparisonGroup": "Current use · weight loss only",
+          "sourceNote": "Gallup"
         },
         {
           "label": "The bet, around 2032",
           "value": 25,
           "unit": "%",
-          "kind": "forecast"
+          "kind": "forecast",
+          "comparisonGroup": "Current adult use · any indication",
+          "sourceNote": "See cited sources in the forecast reasoning."
         },
         {
           "label": "US adults with obesity, 2026",
           "value": 36.8,
           "unit": "%",
           "kind": "reference",
-          "note": "Gallup"
+          "note": "Gallup",
+          "comparisonGroup": "Adult obesity prevalence",
+          "sourceNote": "Gallup"
         }
       ]
     },
@@ -3529,28 +3599,36 @@
           "value": 3.39,
           "unit": "M km²",
           "kind": "observed",
-          "note": "NSIDC Sea Ice Index, 17 September 2012"
+          "note": "NSIDC Sea Ice Index, 17 September 2012",
+          "comparisonGroup": "Daily minimum",
+          "sourceNote": "NSIDC Sea Ice Index, 17 September 2012"
         },
         {
           "label": "2026 minimum",
           "value": 4.6,
           "unit": "M km²",
           "kind": "observed",
-          "note": "12 September 2026; tied tenth lowest with 2025, 2010, 2008"
+          "note": "12 September 2026; tied tenth lowest with 2025, 2010, 2008",
+          "comparisonGroup": "Daily minimum",
+          "sourceNote": "12 September 2026; tied tenth lowest with 2025, 2010, 2008"
         },
         {
           "label": "September 2026 mean",
           "value": 4.81,
           "unit": "M km²",
           "kind": "observed",
-          "note": "NSIDC monthly mean, the quantity the line is graded on"
+          "note": "NSIDC monthly mean, the quantity the line is graded on",
+          "comparisonGroup": "September monthly mean",
+          "sourceNote": "NSIDC monthly mean, the quantity the line is graded on"
         },
         {
           "label": "Ice-free threshold, the bet",
           "value": 1.0,
           "unit": "M km²",
           "kind": "forecast",
-          "note": "first September mean below this, 2036–2050"
+          "note": "first September mean below this, 2036–2050",
+          "comparisonGroup": "September monthly mean",
+          "sourceNote": "first September mean below this, 2036–2050"
         }
       ]
     },
@@ -3589,7 +3667,7 @@
     "domain": "society",
     "confidence": "moderate",
     "probability": 0.5,
-    "title": "Most teenagers in three OECD countries use an AI tutor every school day",
+    "title": "Most teens in three OECD countries use AI for schoolwork on most school days",
     "summary": "Not 'has tried': a majority of secondary students reporting daily or near-daily use of a generative-AI tutor for schoolwork, measured by a published survey, in at least three OECD countries.",
     "detail": "Ever-use is already a majority. Pew (autumn 2025) has 64% of US 13–17-year-olds using AI chatbots and 54% using them for schoolwork; Eurostat has 63.8% of EU 16–24-year-olds using generative AI in 2025, with 39.3% using it for formal education. Daily use is the open question: Pew puts about three in ten teens on a chatbot daily, and Common Sense (March 2026) finds roughly 24% of 13–15-year-olds and 30% of 16–17-year-olds using AI for schoolwork every day. PISA 2025 asked 15-year-olds how often they use AI to draft writing: more than 40% weekly or daily in nine systems and 52% in Viet Nam, with Singapore and Türkiye the OECD-adjacent highs. Governments are split. Estonia's AI Leap gave 20,000 upper-secondary students and 3,000 teachers school AI accounts from September 2025 and adds 38,000 more in 2026; Korea, after spending at least 533 billion won, stripped AI textbooks of textbook status in August 2025 with adoption at about 30% of schools. 'AI tutor' here means any generative-AI system a student uses for learning or homework, general-purpose or school-issued; the OECD's own finding that general tools raise output but not learning is the reason the line is about habit, not benefit.",
     "signals": [
@@ -3614,28 +3692,36 @@
           "value": 54,
           "unit": "%",
           "kind": "observed",
-          "note": "Pew, 1,458 teens 13–17, Sept–Oct 2025"
+          "note": "Pew, 1,458 teens 13–17, Sept–Oct 2025",
+          "comparisonGroup": "US teens · ever used for schoolwork",
+          "sourceNote": "Pew, 1,458 teens 13–17, Sept–Oct 2025"
         },
         {
           "label": "US 16–17s, AI for schoolwork daily",
           "value": 30,
           "unit": "%",
           "kind": "observed",
-          "note": "Common Sense census, March 2026; 24% for 13–15s"
+          "note": "Common Sense census, March 2026; 24% for 13–15s",
+          "comparisonGroup": "US ages 16–17 · daily schoolwork use",
+          "sourceNote": "Common Sense census, March 2026; 24% for 13–15s"
         },
         {
           "label": "EU 16–24s, used generative AI in 2025",
           "value": 63.8,
           "unit": "%",
           "kind": "observed",
-          "note": "Eurostat isoc_ai_iaiu; 39.3% for formal education"
+          "note": "Eurostat isoc_ai_iaiu; 39.3% for formal education",
+          "comparisonGroup": "EU ages 16–24 · any generative AI use",
+          "sourceNote": "Eurostat isoc_ai_iaiu; 39.3% for formal education"
         },
         {
           "label": "Daily majority, the bet",
           "value": 50,
           "unit": "%",
           "kind": "forecast",
-          "note": "in each of three OECD countries, around 2030"
+          "note": "in each of three OECD countries, around 2030",
+          "comparisonGroup": "Secondary students · daily schoolwork use",
+          "sourceNote": "in each of three OECD countries, around 2030"
         }
       ]
     },
@@ -3666,6 +3752,12 @@
           "https://asianews.network/south-korea-pulls-plug-on-ai-textbooks/",
           "https://www.koreaherald.com/article/10546695"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Headline aligned with the existing resolution test",
+        "reason": "Clarifies what is actually measured; no probability or grading threshold changed.",
+        "sources": []
       }
     ],
     "force": "ai"
@@ -3676,7 +3768,7 @@
     "domain": "society",
     "confidence": "speculative",
     "probability": 0.35,
-    "title": "Political ads must prove where their pictures came from",
+    "title": "Political ads face a federal AI-disclosure rule or a signed-provenance mandate",
     "summary": "A binding US federal rule that political ads disclose AI-made content, or a US or EU rule that political-ad media carry signed provenance credentials. The EU labels ads and marks AI output already; nobody yet requires the ad itself to carry its origin.",
     "detail": "The pieces exist and do not join up. The EU's political-advertising regulation (2024/900) has applied since 10 October 2025 and requires a label saying who paid, how much and who was targeted; Meta and Google stopped selling political ads in the EU rather than comply. The AI Act's Article 50 has applied since 2 August 2026: providers must mark generative output in a machine-readable way (existing systems have until 2 December 2026) and deployers must label deepfakes, with a Commission code of practice (June 2026) specifying signed metadata plus watermarking. Neither says a political ad's footage must carry a credential. In the US the FCC proposed on-air AI disclosure for broadcast political ads in July 2024 (MB Docket 24-211); Republican commissioners opposed it, a Senate bill was filed to forbid it, and it has not moved. The FEC voted 5–1 in September 2024 to apply existing fraud rules instead of writing AI ones. The states filled the gap: NCSL counted 31 with election-deepfake laws by June 2026, 28 of them disclosure laws, and California's FPPC is writing the regulation for its AB 2355 ad-disclosure statute. The courts are the headwind: California's AB 2655 was struck in August 2025 and a federal judge blocked Montana's law in September 2026. The bet is that a 2028-cycle deepfake incident, or an EU Democracy Shield review of the TTPA, turns labels into required provenance.",
     "signals": [
@@ -3752,6 +3844,12 @@
           "https://law.washu.edu/ai-policy-and-regulation-resources/political-advertising/",
           "https://www.fppc.ca.gov/siteassets/documents/agendadocuments/general-items/2026/aug/Staff_Memo_18450.12_18401_adopt.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Headline aligned with the existing resolution test",
+        "reason": "Clarifies what is actually measured; no probability or grading threshold changed.",
+        "sources": []
       }
     ],
     "force": "ai"
@@ -3787,28 +3885,36 @@
           "value": 100,
           "unit": "M",
           "kind": "observed",
-          "note": "OpenAI, February 2026; 'more than 100 million'"
+          "note": "OpenAI, February 2026; 'more than 100 million'",
+          "comparisonGroup": "ChatGPT weekly active users",
+          "sourceNote": "OpenAI, February 2026; 'more than 100 million'"
         },
         {
           "label": "India, ChatGPT monthly actives (app estimate)",
           "value": 180,
           "unit": "M",
           "kind": "reference",
-          "note": "Sensor Tower, January 2026; does not count for grading"
+          "note": "Sensor Tower, January 2026; does not count for grading",
+          "comparisonGroup": "ChatGPT monthly app users",
+          "sourceNote": "Sensor Tower, January 2026; does not count for grading"
         },
         {
           "label": "ChatGPT weekly users, world",
           "value": 800,
           "unit": "M",
           "kind": "reference",
-          "note": "OpenAI, 'about 800 million', February 2026"
+          "note": "OpenAI, 'about 800 million', February 2026",
+          "comparisonGroup": "ChatGPT weekly active users",
+          "sourceNote": "OpenAI, 'about 800 million', February 2026"
         },
         {
           "label": "India, active internet users",
           "value": 958,
           "unit": "M",
           "kind": "reference",
-          "note": "IAMAI, 2025; the ceiling"
+          "note": "IAMAI, 2025; the ceiling",
+          "comparisonGroup": "Active internet users",
+          "sourceNote": "IAMAI, 2025; the ceiling"
         }
       ]
     },
@@ -3848,7 +3954,7 @@
     "confidence": "high",
     "probability": 0.8,
     "title": "Africa's working-age population passes China and India combined",
-    "summary": "The UN's 2024 medium projection has Africans aged 15–64 overtaking China and India together in 2058, 1,773 million to 1,744 million, the same year Africa passes every other UN region. Most of those workers are already born.",
+    "summary": "The UN's 2024 medium projection has Africans aged 15–64 overtaking China and India together in 2058, 1,773 million to 1,744 million, the same year Africa passes every other UN region. The timing depends on births, survival and migration.",
     "detail": "In 2024 Africa had 867 million people aged 15–64 against 1,974 million in China and India. The UN's 2024 medium variant has Africa at 1,559 million by 2050 and 1,825 million by 2060 while China falls below 900 million in 2038 and India's working-age population peaks in 2048 at 1,135 million; the lines cross in 2058. The same year Africa passes Central and Southern Asia, the largest of the UN's SDG regions, so the two natural framings of the line agree. Africa's share of the world's working-age population goes from 16% to 29% by 2060 and 41% by 2100; between 2024 and 2060 Africa adds more working-age people than the world does, because everywhere else is shrinking. The demography is firm because everyone who will be 15–64 in 2058 is born by 2043, and China's decline is already in the pyramid. What can move the year is African fertility falling faster than the UN assumes, which recent revisions have tended to find, so the window runs four years either side of the UN's date. Whether the dividend is collected is the story of the second half of the century; this line only grades the arithmetic.",
     "signals": [
       "WPP 2026 or 2028 moves the Africa-versus-China-plus-India crossing by more than two years",
@@ -3872,28 +3978,36 @@
           "value": 867,
           "unit": "M",
           "kind": "observed",
-          "note": "UN WPP 2024 estimate"
+          "note": "UN WPP 2024 estimate",
+          "comparisonGroup": "Population ages 15–64",
+          "sourceNote": "UN WPP 2024 estimate"
         },
         {
           "label": "China + India, 15–64, 2024",
           "value": 1974,
           "unit": "M",
           "kind": "observed",
-          "note": "UN WPP 2024 estimate"
+          "note": "UN WPP 2024 estimate",
+          "comparisonGroup": "Population ages 15–64",
+          "sourceNote": "UN WPP 2024 estimate"
         },
         {
           "label": "Africa, 15–64, 2058",
           "value": 1773,
           "unit": "M",
           "kind": "reference",
-          "note": "UN WPP 2024 medium variant"
+          "note": "UN WPP 2024 medium variant",
+          "comparisonGroup": "Population ages 15–64",
+          "sourceNote": "UN WPP 2024 medium variant"
         },
         {
           "label": "China + India, 15–64, 2058",
           "value": 1744,
           "unit": "M",
           "kind": "reference",
-          "note": "UN WPP 2024 medium variant; the crossing year"
+          "note": "UN WPP 2024 medium variant; the crossing year",
+          "comparisonGroup": "Population ages 15–64",
+          "sourceNote": "UN WPP 2024 medium variant; the crossing year"
         }
       ]
     },
@@ -3918,6 +4032,12 @@
           "https://www.un.org/development/desa/pd/world-population-prospects-2024",
           "https://www.prb.org/news/new-prb-analysis-offers-insights-as-indias-population-surpasses-chinas-notes-overlooked-rise-of-sub-saharan-africa/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Added an explorable UN age-group dataset",
+        "reason": "Shows low, medium and high variants. Removes the unsupported claim that most of the 2058 workers are already born; ages 15–64 in 2058 include births through 2043.",
+        "sources": []
       }
     ],
     "force": "demography"

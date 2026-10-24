@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { interpolateRdYlBu } from "d3";
 import Exhibit, { exhibitFor } from "./Exhibit";
 import { data } from "../data";
@@ -14,6 +14,13 @@ import { DOMAIN_META, type Branch, type ForecastEvent, type Metric } from "../sc
  *   orbits   · Earth, Moon and Mars, lit when people live there
  * A hand-made image can sit behind any of them: drop public/moments/<event-id>.webp and it appears.
  */
+const Signature = lazy(()=>import('./SignatureExhibits'));
+export const signatureFor=(ev:ForecastEvent)=>['africa-largest-working-age-population','ice-free-arctic-september'].includes(ev.id);
+function SignatureFigure({ev}:{ev:ForecastEvent}) {
+ const ref=useRef<HTMLDivElement>(null);const [near,setNear]=useState(false);
+ useEffect(()=>{const obs=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){setNear(true);obs.disconnect();}},{rootMargin:'500px'});if(ref.current)obs.observe(ref.current);return()=>obs.disconnect();},[]);
+ return <div ref={ref} className="figure exhibit signature" style={{['--d' as any]:DOMAIN_META[ev.domain].color}} aria-label={`${ev.title}: interactive source data`}>{near?<Suspense fallback={<p className="signature-placeholder">Loading source data…</p>}><Signature id={ev.id}/></Suspense>:<p className="signature-placeholder">Explore the evidence ↓</p>}</div>;
+}
 type Kind = "stripes" | "field" | "curve" | "clock" | "orbits" | "ladder" | "bars";
 const W = 480, H = 360;
 
@@ -45,6 +52,7 @@ export function figureCaption(ev: ForecastEvent) {
 }
 
 export default function Figure({ ev, branch, year, active }: { ev: ForecastEvent; branch: Branch; year: number; active: boolean }) {
+  if (signatureFor(ev)) return <SignatureFigure ev={ev}/>;
   if (exhibitFor(ev)) return <Exhibit ev={ev} branch={branch} active={active} />;
   const { kind, metric } = kindFor(ev);
   const color = DOMAIN_META[ev.domain].color;
@@ -225,6 +233,10 @@ function Ladder({ ev, active }: { ev: ForecastEvent; active: boolean }) {
 }
 
 function Bars({ev}: {ev: ForecastEvent}) {
- const rows = ev.hero!.bars!; const max = Math.max(...rows.map(r=>Math.abs(r.value)),1);
- return <div className="figure-bars">{rows.map(r=><div key={r.label} className={`figure-bar ${r.kind}`}><div><span>{r.label}</span><strong>{r.value}{r.unit}</strong></div><div className="bar-track"><i style={{width:`${Math.abs(r.value)/max*100}%`}}/></div><small>{r.kind === 'observed' ? 'Historical estimate' : r.kind === 'reference' ? 'Outside projection / target' : 'Our forecast'}{r.note ? ` · ${r.note}` : ''}</small></div>)}</div>;
+ const rows=ev.hero!.bars!;
+ const groups=[...new Set(rows.map(r=>r.comparisonGroup??'Comparable values'))];
+ return <div className="figure-bars">{groups.map(group=>{
+  const members=rows.filter(r=>(r.comparisonGroup??'Comparable values')===group),max=Math.max(...members.map(r=>Math.abs(r.value)),1);
+  return <div className="bar-measure-group" key={group}>{groups.length>1&&<p className="bar-group-label">{group}</p>}{members.map(r=><div key={r.label} className={`figure-bar ${r.kind}`}><div><span>{r.label}</span><strong>{r.value}{r.unit}</strong></div>{members.length>1&&<div className="bar-track"><i style={{width:`${Math.abs(r.value)/max*100}%`}}/></div>}<small>{r.kind==='observed'?'Reported observation':r.kind==='reference'?'External reference':'Forecast threshold'}{r.sourceNote||r.note?` · ${r.sourceNote??r.note}`:''}</small></div>)}</div>;
+ })}{groups.length>1&&<p className="signature-note">Different measures are separated. Bar lengths are comparable only within each group.</p>}</div>;
 }
