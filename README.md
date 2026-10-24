@@ -91,7 +91,7 @@ Three forces drive the forecast: AI compounds while institutions lag; demographi
 | `src/` | The site: `StoryJourney.tsx` (the book), `Figure.tsx` (the data figures), `Exhibit*.tsx` (stage explainers), `WorldState.tsx` and `Sections.tsx` (the evidence). |
 | `scripts/` | `validate`, `checkin-brief`, `checkin-log`, `vintage`, `score`, `sources-check`. |
 | `qa/` | Node tests and Playwright sweeps. |
-| `docs/` | [Data model](docs/data-model.md), [architecture](docs/architecture.md), screenshots, and past reviews. |
+| `docs/` | [Roadmap](docs/ROADMAP.md), [data model](docs/data-model.md), [architecture](docs/architecture.md), screenshots, and past reviews. |
 | `deploy/` | Caddy site block and the VPS update timer. Pushing to `main` is the deploy. |
 
 ## License

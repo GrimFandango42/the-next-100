@@ -151,3 +151,13 @@ summary:focus-visible,select:focus-visible{outline:2px solid var(--accent);outli
 .probability-history{padding:24px 0;border-block:1px solid var(--line);margin:24px 0}.probability-steps{display:flex;gap:18px;overflow:auto;margin:18px 0}.probability-steps>div{flex:0 0 100px;display:grid;gap:5px;text-align:center}.probability-column{height:90px;display:flex;align-items:flex-end;justify-content:center;background:#ffffff03}.probability-column i{width:26px;background:var(--accent);border-radius:3px 3px 0 0}.probability-steps strong{font:25px var(--display);color:var(--accent)}.probability-steps time,.probability-steps span{font:10px var(--mono);color:var(--muted)}
 
 .chapter-weave .signature-kicker { display:flex; justify-content:space-between; gap:1rem; font:10px var(--mono); letter-spacing:.14em; color:var(--muted); }
+
+.thread-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}
+.thread-list li{display:grid;gap:6px;padding:12px 0;border-top:1px solid #ffffff12}
+.thread-list button{display:flex;align-items:baseline;gap:10px;background:none;border:0;padding:0;color:var(--ink);font:inherit;cursor:pointer;text-align:left}
+.thread-list button i{width:9px;height:9px;border-radius:50%;background:var(--thread);flex:none;transform:translateY(-1px)}
+.thread-list button b{font-family:var(--display);font-weight:400;font-size:22px}
+.thread-list button small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:#8ba58e;margin-left:auto}
+.thread-list button:hover b{color:var(--thread)}
+.thread-list p{margin:0 0 0 19px;font-size:13.5px;line-height:1.65;color:#aebdaf}
+@media(max-width:650px){.thread-list button b{font-size:19px}.thread-list p{font-size:13px}}

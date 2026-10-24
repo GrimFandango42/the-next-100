@@ -49,7 +49,9 @@ The VPS pulls `main` every 10 minutes and rebuilds, so a push is a deploy.
 
 ## Scoring
 
-`npm run score` scores every resolved line against the probability it carried in the earliest vintage that contains it (Brier; happened / early / late = 1, missed = 0; partial and retired listed, not scored). Vintages are frozen snapshots in `data/vintages/`, one per check-in, never edited.
+Two scores, both shown, neither optional. The **founding** score grades a resolved line against the probability in the earliest frozen vintage that holds the same claim (same title and window); if the test was reworded after that vintage the score stands and the rewording is a caveat. The **strict** score grades only an explicit adjudication (outcome, rationale, sources) against a vintage whose test, version, window, timing and branch are identical. Narrative scenarios, partial and retired lines are never scored. `npm run score` prints both. Do not change this policy in a UI or scripts commit; it is a forecast-method decision and changes here first.
+
+Titles are the claim in plain words; `resolution.test` carries the precision. Do not retitle a line to mirror its test.
 
 ## Grading rules
 

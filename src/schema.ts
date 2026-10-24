@@ -162,7 +162,7 @@ export const Meta = z.object({
     pluralism: z.string(),
     concentration: z.string(),
   }),
-  forces: z.array(z.object({ id: z.string(), name: z.string(), text: z.string() })),
+  forces: z.array(z.object({ id: z.string(), name: z.string(), short: z.string().optional(), text: z.string() })),
   caveat: z.string(),
 });
 export type Meta = z.infer<typeof Meta>;

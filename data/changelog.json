@@ -204,5 +204,17 @@
       "https://population.un.org/wpp/",
       "https://nsidc.org/data/seaice_index/data-and-image-archive"
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "revision",
+    "headline": "Review of the evidence-exhibit pass; a roadmap",
+    "body": "Kept: the UN population and NSIDC Arctic exhibits with pinned source extracts, the probability-history strip in the drawer, the return-visit digest, thread buttons on chapter pages, CI in workflows. Changed: the per-chapter thread sentences are back (they had been replaced by a decorative diagram), the ruler reads 'a child born in 2026 is N' again, three titles return to plain language (titles are the claim; tests carry the precision), and scoring is now two numbers rather than a third reversal: a founding score against the earliest vintage holding the same claim, and a strict score against the identical frozen test with a sourced adjudication. The policy is written in CHECKIN.md. docs/ROADMAP.md sets out the next two quarters by track. No probabilities changed.",
+    "touched": [
+      "superhuman-cognition",
+      "ai-tutor-daily-majority",
+      "provenance-required-political-ads"
+    ],
+    "sources": []
   }
 ]

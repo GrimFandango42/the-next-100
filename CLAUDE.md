@@ -9,7 +9,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - `scripts/` — validator, check-in brief, check-in logger.
 - `deploy/` — Caddy site block, `deploy.ps1` (run from the Windows desktop) and the pull-and-build timer for the VPS.
 - `CHECKIN.md` — the weekly check-in protocol. `/checkin` skill runs it. `SOURCES.md` is the source registry.
-- `README.md` (public front door), `CONTRIBUTING.md` (rules for humans), `ONBOARDING.md` (brief for agents), `docs/data-model.md`, `docs/architecture.md`, `docs/reviews/` (past outside reviews). `.github/` has issue templates, a PR template and `workflows/ci.yml` (build, evidence, book and deploy checks on pushes and PRs).
+- `README.md` (public front door), `CONTRIBUTING.md` (rules for humans), `ONBOARDING.md` (brief for agents), `docs/ROADMAP.md` (what's next, by track), `docs/data-model.md`, `docs/architecture.md`, `docs/reviews/` (past outside reviews). `.github/` has issue templates, a PR template and `workflows/ci.yml` (build, evidence, book and deploy checks on pushes and PRs).
 
 ## Commands
 - `npm run dev` · `npm run build` (validates + typechecks + builds) · `npm run validate` · `npm run checkin:brief` · `npm run checkin:log -- …`
@@ -18,7 +18,8 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - Every forecast edit gets a `history` entry (with `from`/`to` when a probability moves); every check-in gets a `changelog` entry. Each line carries `timing` (around / by / window / through) and, where it has one, a `resolution.test` that says what counts. The validator enforces tiers (high ≥ .70, moderate .45–.70, speculative < .45) and that scenarios sum to 100.
 - Event ids are kebab-case and permanent; `leadsTo` and `changelog.touched` reference them.
 - Colors and fonts are tokens in `src/styles.css`; domain colors live in `src/schema.ts` (`DOMAIN_META`).
-- Keep the forecast's voice: plain, specific, no hedging filler.
+- Keep the forecast's voice: plain, specific, no hedging filler. Titles are the plain-language claim; the test carries the precision — don't retitle to match tests.
+- Scoring is two numbers (founding and strict), defined in `CHECKIN.md`; change the policy there before the code.
 - One navigation model: scroll reads, the strip shows where you are, Overview zooms out. Don't add a second way to move.
 - Deploys happen by pushing to `main`; the VPS pulls and rebuilds every 10 minutes (`deploy/update.sh`). Never deploy by hand-copying files.
 

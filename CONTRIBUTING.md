@@ -15,7 +15,8 @@ The forecast is meant to be argued with. Here is how to do it so the argument la
 - **Tiers follow the number:** high ≥ .70, moderate .45–.70, speculative < .45.
 - **Ids are permanent.** Rename nothing; add a new line instead.
 - **The test is frozen by version.** To change what counts, bump `resolution.version` and say why in history.
-- **Keep the voice:** plain, specific, no hedging filler. Say what you think; the odds carry the uncertainty.
+- **Keep the voice:** plain, specific, no hedging filler. Say what you think; the odds carry the uncertainty. Titles are the claim in plain words — the test carries the precision, so don't retitle a line to mirror its test.
+- **Scoring is a method decision**, written in `CHECKIN.md` (two scores: founding and strict). Change it there, with a reason, before touching `scripts/scoring.ts`.
 - **Data edits are data edits.** A check-in or a forecast PR touches `data/` only. UI and scripts are separate PRs.
 
 ## Editing a line, step by step

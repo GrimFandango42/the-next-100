@@ -22,20 +22,26 @@ test('all six exhibits expose meaningful controls and avoid invented numeric thr
 });
 const e:Scorable={id:'deadline',title:'A deadline',year:2030,yearEnd:2032,timing:'window',status:'late',resolvedOn:'2034-01-01',resolution:{version:'v2',mode:'testable',test:'new question'},adjudication:{definitionVersion:'v2',outcome:0,rationale:'Missed the event deadline',sources:['https://example.org/report']}};
 const vintages:Vintage[]=[{date:'2026-01-01',events:{deadline:{probability:.9,title:e.title,year:2030,yearEnd:2031,timing:'window',resolution:{version:'v1',mode:'testable',test:'old question'}}}},{date:'2027-01-01',events:{deadline:{...e,probability:.8}}}];
-test('a late deadline miss scores zero outcome against the matching question',()=>{
- const r=scoreEvent(e,vintages);assert.equal(r.score,.8**2);assert.match(r.caveat??'',/Revised-question/);
+test('two scores: founding against the earliest same-claim vintage, strict against the exact definition',()=>{
+ const r=scoreEvent(e,vintages);
+ assert.equal(r.founding,.8**2,'the 2026 vintage has a different window (2031), so founding is the 2027 vintage');
+ assert.equal(r.strict,.8**2);
+ const same=scoreEvent({...e,yearEnd:2031,resolution:{version:'v1',mode:'testable',test:'old question'},adjudication:{...e.adjudication!,definitionVersion:'v1'}},vintages);
+ assert.equal(same.founding,.9**2);assert.equal(same.strict,.9**2);
 });
-test('status, changed windows, versions and retrospective odds cannot substitute for adjudication',()=>{
- for(const status of ['happened','early','late','missed'])assert.equal(scoreEvent({...e,status,adjudication:undefined},vintages).score,null);
- assert.equal(scoreEvent({...e,yearEnd:2033},vintages).score,null);
- assert.equal(scoreEvent({...e,timing:'by'},vintages).score,null);
- assert.equal(scoreEvent({...e,branch:'concentration'},vintages).score,null);
- assert.equal(scoreEvent({...e,adjudication:{...e.adjudication!,definitionVersion:'v1'}},vintages).score,null);
- assert.equal(scoreEvent({...e,resolvedOn:'2026-06-01'},vintages).score,null);
- assert.equal(scoreEvent({...e,resolution:{...e.resolution!,mode:'scenario'}},vintages).score,null);
+test('status alone yields a founding score with a caveat, never a strict score',()=>{
+ for(const status of ['happened','early','late'])assert.equal(scoreEvent({...e,status,adjudication:undefined},vintages).founding,(.8-1)**2);
+ const r=scoreEvent({...e,status:'missed',adjudication:undefined},vintages);assert.equal(r.founding,.8**2);assert.equal(r.strict,null);assert.match(r.caveat??'',/no adjudication/);
 });
-test('a wording change needs a matching frozen definition even if its title is unchanged',()=>{
- assert.equal(scoreEvent({...e,resolution:{...e.resolution!,test:'easier question'}},vintages).score,null);
+test('a reworded test keeps the founding score with a caveat and loses the strict score',()=>{
+ const r=scoreEvent({...e,resolution:{...e.resolution!,test:'easier question'}},vintages);
+ assert.equal(r.founding,.8**2);assert.equal(r.strict,null);assert.match(r.caveat??'',/reworded/);
+});
+test('changed windows, wrong versions, retrospective odds and scenarios are not scored',()=>{
+ assert.equal(scoreEvent({...e,yearEnd:2033},vintages).founding,null);
+ assert.equal(scoreEvent({...e,adjudication:{...e.adjudication!,definitionVersion:'v1'}},vintages).strict,null);
+ assert.equal(scoreEvent({...e,resolvedOn:'2026-06-01'},vintages).founding,null);
+ assert.equal(scoreEvent({...e,resolution:{...e.resolution!,mode:'scenario'}},vintages).founding,null);
 });
 test('every forecast states a versioned test or explicit scenario limitation, and real signals',()=>{
  for(const e of data.events){assert.ok(e.resolution?.version,e.id);assert.ok(e.signals.length,e.id);assert.ok(!e.signals.some(s=>/published resolution definition/.test(s)),e.id)}
