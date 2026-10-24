@@ -46,17 +46,14 @@ export default function Exhibit({ev, branch, active}: {ev:ForecastEvent;branch:B
   const [step, setStep] = useState(0);
   const uid = useId().replace(/:/g,'');
   return <div className={`figure exhibit ${active?'live':''} exhibit-${topic}`} aria-label={`${titles[topic]} interactive exhibit`}>
-    <div className="exhibit-heading"><span>FIELD NOTES / {topic.toUpperCase()}</span><span>EXPLORE ↓</span></div>
     <h3>{titles[topic]}</h3>
     {topic === 'population' ? <Population branch={branch} initial={ev.year} uid={uid}/> : topic === 'power' ? <Power ev={ev} uid={uid}/> : <>
-      <div className="exhibit-status"><span>● Documented precedent</span><span>◌ Future milestones remain unverified</span></div>
       <Schematic topic={topic} step={step} uid={uid}/>
       <div className="exhibit-controls" role="group" aria-label={`Explore ${topic} stages`}>
         {steps.map((s,i)=><button key={s[0]} aria-pressed={step===i} onClick={()=>setStep(i)}><span>{String(i+1).padStart(2,'0')}</span>{s[0]}</button>)}
       </div>
       <div className="exhibit-reading" aria-live="polite"><span className="exhibit-tag">{steps[step][1]}</span><p>{steps[step][2]}</p></div>
       {topic === 'fusion' ? <FusionLab/> : topic === 'quantum' ? <QuantumLab/> : topic === 'gene' ? <GeneLab/> : null}
-      <div className="exhibit-foot">Conceptual illustration · geometry is not quantitative</div>
     </>}
   </div>;
 }
@@ -107,5 +104,5 @@ function Population({branch,initial,uid}:{branch:Branch;initial:number;uid:strin
  <text x="45" y="295" className="diagram-label">2026</text><text x="555" y="295" textAnchor="end" className="diagram-label">2100</text>
  </svg><label className="exhibit-slider" htmlFor={uid+'-year'}><span>Explore the year <strong>{year}</strong></span><input id={uid+'-year'} type="range" min="2026" max="2100" value={year} onChange={e=>setYear(Number(e.target.value))}/></label>
  <div className="population-values" aria-live="polite"><div><span>Our {m.keyframes ? "forecast" : `${branch} path`}</span><strong>{fmt(m,value).value}{fmt(m,value).unit}</strong></div>{base!==null&&<div><span>UN WPP 2024 reference</span><strong>{fmt(m,base).value}{fmt(m,base).unit}</strong></div>}</div>
- <p className="exhibit-reading">Our earlier peak is a deliberate departure from the UN projection. The curves interpolate published anchor points; they are scenarios, not measured future populations.</p><div className="exhibit-foot">Solid: our forecast · {m.keyframes ? "" : "dashed: other path · "}dotted gold: UN</div></>;
+ <div className="exhibit-foot">Solid: our forecast · {m.keyframes ? "" : "dashed: other path · "}dotted gold: UN</div></>;
 }

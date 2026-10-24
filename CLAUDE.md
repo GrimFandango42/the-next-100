@@ -21,6 +21,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - Keep the forecast's voice: plain, specific, no hedging filler. Titles are the plain-language claim; the test carries the precision — don't retitle to match tests.
 - Scoring is two numbers (founding and strict), defined in `CHECKIN.md`; change the policy there before the code.
 - One navigation model: scroll reads, the strip shows where you are, Overview zooms out. Don't add a second way to move.
+- A page is light: claim, one sentence, odds, figure, three linked lines, a collapsed "What counts". Everything else (full test, all links with kinds, revisions, probability history) lives in the drawer. Figures carry one caption, no boilerplate, no disclaimers — the method says once what the figures are.
 - Deploys happen by pushing to `main`; the VPS pulls and rebuilds every 10 minutes (`deploy/update.sh`). Never deploy by hand-copying files.
 
 ## On the VPS

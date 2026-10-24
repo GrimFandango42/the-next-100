@@ -110,9 +110,9 @@ html{scroll-behavior:auto;scroll-padding-top:0}
   .event-scene:not(.fork-scene)>.scene-copy>.guide-kicker{order:1}.event-scene:not(.fork-scene)>.scene-copy>h2{order:2;margin:0}.event-scene:not(.fork-scene)>.scene-copy>.guide-lead{order:3;margin:16px 0 8px}
   .event-scene:not(.fork-scene)>.scene-art{order:4;margin:6px 0 10px}
   .event-scene:not(.fork-scene)>.scene-copy>.conditional-note{order:5}.event-scene:not(.fork-scene)>.scene-copy>.forecast-confidence{order:6;margin:10px 0 14px}.event-scene:not(.fork-scene)>.scene-copy>.counts{order:7}.event-scene:not(.fork-scene)>.scene-copy>.drivers{order:8}.event-scene:not(.fork-scene)>.scene-copy>.page-actions{order:9}
-  .counts-d summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px}.counts-d summary::after{content:"+";color:var(--gold);font-size:16px}.counts-d[open] summary::after{content:"−"}.counts-d p{margin:8px 0 0}
   .scene-art .art-caption{margin-top:8px;padding-top:10px}
 }
+.counts-d summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px}.counts-d summary::-webkit-details-marker{display:none}.counts-d summary::after{content:"+";color:var(--gold);font-size:16px}.counts-d[open] summary::after{content:"−"}.counts-d p{margin:8px 0 0}
 /* The book is intentionally dark, regardless of the evidence dashboard theme. */
 .field-guide{--fg:#eeeadd;--muted:#a9b7ac;--d-ai:#8fc6ff;--d-bio:#88d7ae;--d-energy:#e8c27d;--d-climate:#80d8cf;--d-space:#c8adf0;--d-society:#e9ad95;--d-risk:#ed9a91;color-scheme:dark}
 .scene-art .figure.exhibit{place-items:normal}

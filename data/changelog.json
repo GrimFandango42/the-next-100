@@ -216,5 +216,12 @@
       "provenance-required-political-ads"
     ],
     "sources": []
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "note",
+    "headline": "The page gets lighter",
+    "body": "Each prediction page now shows the claim, one sentence, the odds, the figure, three linked lines and a collapsed 'What counts'. The full test, every link with its kind, the revision count and the probability history stay one tap away in the drawer. Chapter pages lead with the era's open question and the four threads. The exhibits lose their kickers, legends and disclaimers; the figures already say what they are. Nothing in the forecast moved.",
+    "touched": []
   }
 ]
