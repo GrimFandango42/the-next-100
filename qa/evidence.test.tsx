@@ -56,7 +56,7 @@ test('population extract covers every year and region and preserves UN variant c
   let crossing:number|undefined;
   for(let year=2024;year<=2100;year++){
    const r=rows.filter(p=>p.year===year);assert.equal(new Set(r.map(p=>p.region)).size,3);
-   assert.ok(r.every(p=>p.working>0&&p.children>0&&p.older>0));
+   assert.ok(r.every(p=>p.working>0&&p.working<=4000&&p.children>0&&p.older>0));
    if(!crossing&&r.find(p=>p.region==='Africa')!.working>r.filter(p=>p.region!=='Africa').reduce((s,p)=>s+p.working,0))crossing=year;
   }
   assert.equal(crossing,expected);

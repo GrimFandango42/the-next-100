@@ -18,7 +18,7 @@ export function DemographicCrossing() {
  const [year,setYear]=useState(2058);const [variant,setVariant]=useState<Variant>('medium');const uid=useId();
  const rows=population.variants[variant],current=regions.map(region=>rows.find(r=>r.region===region&&r.year===year)!);
  const cross=crossingYear(variant);
- const x=(y:number)=>36+(y-2024)/76*528,y=(v:number)=>240-v/3000*210;
+ const x=(y:number)=>36+(y-2024)/76*528,y=(v:number)=>240-v/4000*210;
  const africa=rows.filter(r=>r.region==='Africa');
  const combined=africa.map(r=>({year:r.year,working:rows.filter(s=>s.year===r.year&&s.region!=='Africa').reduce((sum,s)=>sum+s.working,0)}));
  const path=(rs:{year:number;working:number}[])=>rs.map((r,i)=>`${i?'L':'M'}${x(r.year)},${y(r.working)}`).join(' ');
@@ -28,7 +28,7 @@ export function DemographicCrossing() {
   <p className="signature-deck">Three populations. Three generations. One changing balance.</p>
   <div className="signature-readout" aria-live="polite"><strong>{year}</strong><span>Africa has <b>{million(Math.abs(ca-ci))} million {ca>ci?'more':'fewer'}</b><br/>people aged 15–64 than China + India.</span></div>
   <svg viewBox="0 0 600 278" className="signature-chart" role="img" aria-label={`UN ${variant} projection: working-age population in ${year}, Africa ${million(ca)} million, China and India ${million(ci)} million. Crossing ${cross??'outside range'}.`}>
-   {[0,1000,2000,3000].map(v=><g key={v}><path d={`M36 ${y(v)}H564`} stroke="currentColor" opacity=".12"/><text x="30" y={y(v)+4} textAnchor="end">{v/1000}B</text></g>)}
+   {[0,1000,2000,3000,4000].map(v=><g key={v}><path d={`M36 ${y(v)}H564`} stroke="currentColor" opacity=".12"/><text x="30" y={y(v)+4} textAnchor="end">{v/1000}B</text></g>)}
    <rect x={x(2054)} y="20" width={x(2062)-x(2054)} height="220" fill="#e1bb83" opacity=".08"/>
    <path d={path(africa)} stroke={colors[0]} fill="none" strokeWidth="3"/><path d={path(combined)} stroke={colors[1]} fill="none" strokeWidth="2" strokeDasharray="5 5"/>
    <path d={`M${x(year)} 20V240`} stroke="currentColor" opacity=".4"/>{[ca,ci].map((v,i)=><circle key={i} cx={x(year)} cy={y(v)} r="5" fill={colors[i]}/>)}
