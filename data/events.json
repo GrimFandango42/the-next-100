@@ -15,7 +15,10 @@
     ],
     "leadsTo": [
       "entry-level-hiring-contracts",
-      "ai-runs-rd-programs"
+      "ai-runs-rd-programs",
+      "ai-productivity-in-statistics",
+      "ai-tutor-daily-majority",
+      "india-largest-ai-user-base"
     ],
     "hero": {
       "metric": "ai-share",
@@ -49,6 +52,24 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to ai-productivity-in-statistics",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to ai-tutor-daily-majority",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to india-largest-ai-user-base",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "around",
@@ -60,7 +81,10 @@
     },
     "relationshipKinds": {
       "entry-level-hiring-contracts": "accelerator",
-      "ai-runs-rd-programs": "accelerator"
+      "ai-runs-rd-programs": "accelerator",
+      "ai-productivity-in-statistics": "related",
+      "ai-tutor-daily-majority": "related",
+      "india-largest-ai-user-base": "related"
     },
     "force": "ai"
   },
@@ -223,7 +247,8 @@
       "Candidate-level compute or data-center policy proposals"
     ],
     "leadsTo": [
-      "federal-ai-statute"
+      "federal-ai-statute",
+      "provenance-required-political-ads"
     ],
     "hero": {
       "text": "Nov 2028",
@@ -277,6 +302,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to provenance-required-political-ads",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "around",
@@ -287,7 +318,8 @@
       "assessAfter": "2031-12-31"
     },
     "relationshipKinds": {
-      "federal-ai-statute": "related"
+      "federal-ai-statute": "related",
+      "provenance-required-political-ads": "related"
     },
     "force": "ai"
   },
@@ -308,7 +340,8 @@
     "leadsTo": [
       "compute-verification-talks",
       "federal-ai-statute",
-      "federal-pqc-deadline-met"
+      "federal-pqc-deadline-met",
+      "nuclear-use-in-anger"
     ],
     "hero": {
       "metric": "clock",
@@ -342,6 +375,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to nuclear-use-in-anger",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "around",
@@ -354,7 +393,8 @@
     "relationshipKinds": {
       "compute-verification-talks": "related",
       "federal-ai-statute": "related",
-      "federal-pqc-deadline-met": "related"
+      "federal-pqc-deadline-met": "related",
+      "nuclear-use-in-anger": "related"
     },
     "force": "ai"
   },
@@ -442,7 +482,8 @@
       "Chip-tracking or on-chip attestation proposals enter negotiation"
     ],
     "leadsTo": [
-      "hinge-resolves"
+      "hinge-resolves",
+      "taiwan-chip-supply-shock"
     ],
     "hero": {
       "num": 45,
@@ -492,6 +533,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to taiwan-chip-supply-shock",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "around",
@@ -502,7 +549,8 @@
       "assessAfter": "2033-12-31"
     },
     "relationshipKinds": {
-      "hinge-resolves": "related"
+      "hinge-resolves": "related",
+      "taiwan-chip-supply-shock": "related"
     },
     "force": "hinge"
   },
@@ -1189,7 +1237,8 @@
       "Total fertility below 1.5 in a majority of OECD countries"
     ],
     "leadsTo": [
-      "population-declining"
+      "population-declining",
+      "africa-largest-working-age-population"
     ],
     "hero": {
       "metric": "population",
@@ -1230,6 +1279,12 @@
         "change": "cornerstone: false → true",
         "reason": "The demographic force had no anchor line marked as one. The peak is the line the back half of the century turns on.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to africa-largest-working-age-population",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "window",
@@ -1241,7 +1296,8 @@
     },
     "evidenceNote": "The UN WPP 2024 baseline peaks around 10.3 billion in the mid-2080s. Our earlier, lower peak is an explicit contrary scenario, not the UN consensus.",
     "relationshipKinds": {
-      "population-declining": "related"
+      "population-declining": "related",
+      "africa-largest-working-age-population": "related"
     },
     "force": "demography",
     "cornerstone": true
@@ -1497,7 +1553,9 @@
       "AI-enabled bio capability demonstrated by a non-state actor",
       "Defensive biosurveillance lagging synthesis capability"
     ],
-    "leadsTo": [],
+    "leadsTo": [
+      "next-pandemic"
+    ],
     "hero": {
       "num": 17,
       "unit": "%",
@@ -1528,6 +1586,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to next-pandemic",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "by",
@@ -1537,7 +1601,9 @@
       "mode": "testable",
       "assessAfter": "2058-12-31"
     },
-    "relationshipKinds": {},
+    "relationshipKinds": {
+      "next-pandemic": "related"
+    },
     "force": "ai"
   },
   {
@@ -2424,7 +2490,8 @@
       "Global coal use falls for three consecutive years"
     ],
     "leadsTo": [
-      "two-degrees-breached"
+      "two-degrees-breached",
+      "ice-free-arctic-september"
     ],
     "hero": {
       "num": 38.1,
@@ -2446,6 +2513,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to ice-free-arctic-september",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "cornerstone": false,
@@ -2458,7 +2531,8 @@
       "assessAfter": "2037-12-31"
     },
     "relationshipKinds": {
-      "two-degrees-breached": "related"
+      "two-degrees-breached": "related",
+      "ice-free-arctic-september": "related"
     },
     "force": "planet"
   },
@@ -2478,7 +2552,8 @@
       "Lilly starts a Phase 3 of VERVE-102 in a population broader than familial hypercholesterolemia"
     ],
     "leadsTo": [
-      "healthy-lifespan-110"
+      "healthy-lifespan-110",
+      "glp1-quarter-of-us-adults"
     ],
     "hero": {
       "num": 87,
@@ -2536,6 +2611,12 @@
         "sources": [
           "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to glp1-quarter-of-us-adults",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "window",
@@ -2547,7 +2628,8 @@
     },
     "evidenceNote": "FDA approval of ex-vivo Casgevy is established. Intellia’s HAE results are sponsor-reported evidence for a different indication; they do not establish approval for a common disease or longevity benefits.",
     "relationshipKinds": {
-      "healthy-lifespan-110": "accelerator"
+      "healthy-lifespan-110": "accelerator",
+      "glp1-quarter-of-us-adults": "related"
     },
     "force": "ai"
   },
@@ -2705,7 +2787,8 @@
       "LBNL's next update holds its 2030 reference case at or above 11%"
     ],
     "leadsTo": [
-      "fusion-net-grid"
+      "fusion-net-grid",
+      "ai-equity-drawdown"
     ],
     "hero": {
       "num": 4.7,
@@ -2769,6 +2852,12 @@
         "sources": [
           "https://www.energy.gov/powering-americas-ai-future-data-center-resource-hub"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "leadsTo: linked to ai-equity-drawdown",
+        "reason": "A new line was added that this one bears on; the graph shows the dependency.",
+        "sources": []
       }
     ],
     "timing": "around",
@@ -2780,8 +2869,1049 @@
     },
     "evidenceNote": "DOE/LBNL supplies historical estimates and 2030 scenarios. The 9.5–15.3% range is an assumption-driven scenario range, not a statistical confidence interval.",
     "relationshipKinds": {
-      "fusion-net-grid": "related"
+      "fusion-net-grid": "related",
+      "ai-equity-drawdown": "related"
     },
     "force": "planet"
+  },
+  {
+    "id": "autonomous-weapons-at-scale",
+    "year": 2028,
+    "domain": "risk",
+    "confidence": "high",
+    "probability": 0.75,
+    "title": "Autonomous weapons kill at scale in a war between states",
+    "summary": "Munitions that pick their own target and strike with no human approving that target, documented in the thousands. The first kills are already on record; what is missing is the count.",
+    "detail": "The capability arrived before the rules. On 6 July 2026 a Russian Molniya drone with an Nvidia Jetson Orin board and no radio antenna chose propane tanks at a Zaporizhzhia filling station and killed three civilians; Ukrainian forensics read the unencrypted targeting code (New York Times, 24 August 2026). CSIS's June 2026 brief says Russia is already fielding fully autonomous systems and that drones fly roughly 80% of strike missions on both sides. Ukraine's Brave1 says successful strikes with AI auto-homing rose tenfold in the first eight months of 2026, and a defence-ministry adviser wrote that navigation, target search and attack 'will be fully autonomous'. On 25 August 2026 the UN Secretary-General and the ICRC president said the world is 'dangerously close' to autonomous targeting of humans, 'amid unconfirmed reports' it is already happening. The 2025 UN resolution passed 164 to 6; the US, Russia and Israel voted no, and NSPM-11 (5 June 2026) ordered the Pentagon to rewrite Directive 3000.09 within 90 days to remove barriers to fielding. The bet is that by the end of 2028 someone credible counts it: a belligerent, a UN monitoring mission, the ICRC or SIPRI documents thousands of engagements in which the machine, not a person, selected the target. Terminal homing on a target a human picked does not count; a human choosing an area and the munition choosing what to hit inside it does.",
+    "signals": [
+      "A belligerent publishes counts of strikes flown in fully autonomous mode",
+      "The UN human rights mission in Ukraine, the ICRC or SIPRI attributes a pattern of attacks to self-targeting munitions",
+      "The CCW Seventh Review Conference (Geneva, November 2026) opens, or refuses, negotiations on a binding instrument"
+    ],
+    "leadsTo": [
+      "mass-casualty-event",
+      "compute-verification-talks",
+      "nuclear-use-in-anger"
+    ],
+    "relationshipKinds": {
+      "mass-casualty-event": "related",
+      "compute-verification-talks": "accelerator",
+      "nuclear-use-in-anger": "related"
+    },
+    "hero": {
+      "num": 6,
+      "label": "states that voted no on the 2025 UN resolution on autonomous weapons, the US, Russia and Israel among them; the weapons were in the field before the rules",
+      "effect": "alarm",
+      "ladder": [
+        {
+          "label": "Automatic target recognition routine on both sides",
+          "state": "done",
+          "note": "CSIS, June 2026: roughly 80% of strike missions are drones"
+        },
+        {
+          "label": "First documented self-targeting kill",
+          "state": "done",
+          "note": "Zaporizhzhia, 6 July 2026; Russian Molniya with a Jetson Orin, no antenna"
+        },
+        {
+          "label": "Use at scale reported but unconfirmed",
+          "state": "now",
+          "note": "UN and ICRC appeal, 25 August 2026; Brave1 says auto-homing strikes up tenfold"
+        },
+        {
+          "label": "Thousands of engagements documented",
+          "state": "next",
+          "note": "the bet, by end 2028"
+        },
+        {
+          "label": "A binding instrument",
+          "state": "next",
+          "note": "CCW Review Conference, November 2026, decides whether talks begin"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "by",
+    "resolution": {
+      "test": "By 31 December 2028, a government, a UN body (including the UN Human Rights Monitoring Mission in Ukraine), the ICRC, SIPRI or a peer-reviewed forensic study documents at least 1,000 engagements in a war between states in which a weapon selected the specific target it struck without a human authorizing that target, or a belligerent states that a majority of a named class of its strikes were flown in fully autonomous mode. Counts whether the targets were people, vehicles or ground infrastructure. Does not count: terminal homing on a target a human designated before launch; automatic defence against incoming drones, missiles or aircraft (Phalanx, Aegis, interceptor drones); decision-support systems where a person approves each strike. Documentation published by 31 December 2029 about engagements that occurred by the deadline counts.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2029-12-31"
+    },
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast had a line for AI cyberattack and for an AI-enabled mass-casualty event but nothing on the weapons already killing people. The 2026 record: a forensically documented Russian self-targeting strike (6 July), a tenfold rise in Ukrainian AI auto-homing strikes (Brave1, 8 September), a joint UN-ICRC appeal citing unconfirmed reports of battlefield use (25 August), the 164-6 UN vote with the US, Russia and Israel opposed (November 2025), and NSPM-11 ordering the US directive loosened (5 June). The line is set near-certain on a short fuse because the capability is fielded and only the count is missing.",
+        "sources": [
+          "https://news.un.org/en/story/2026/08/1168196",
+          "https://press.un.org/en/2025/ga12736.doc.htm",
+          "https://www.whitehouse.gov/presidential-actions/2026/06/national-security-presidential-memorandum-nspm-11/",
+          "https://www.csis.org/analysis/defining-autonomy-why-software-not-drones-will-decide-next-war",
+          "https://meduza.io/en/feature/2026/08/24/nyt-a-fully-autonomous-russian-ai-drone-run-by-an-nvidia-minicomputer-killed-3-civilians-in-the-ukrainian-city-of-zaporizhzhia",
+          "https://euromaidanpress.com/2026/08/25/a-russian-drone-chose-its-own-target-and-killed-three-the-code-that-told-it-what-to-look-for-was-readable/",
+          "https://united24media.com/war-in-ukraine/ukrainian-drone-strikes-using-ai-target-homing-increase-tenfold-brave1-reports-22362",
+          "https://www.aljazeera.com/news/2026/9/14/attacks-will-be-fully-autonomous-russia-ukraine-race-towards-ai-warfare",
+          "https://www.gallego.senate.gov/wp-content/uploads/2026/06/Final_Gallego-Letter_Directive-3000.09.pdf"
+        ]
+      }
+    ],
+    "force": "hinge"
+  },
+  {
+    "id": "taiwan-chip-supply-shock",
+    "year": 2026,
+    "yearEnd": 2032,
+    "domain": "risk",
+    "confidence": "speculative",
+    "probability": 0.15,
+    "title": "A Taiwan Strait blockade or war cuts off leading-edge chips for 90 days",
+    "summary": "Every TSMC 3nm and 2nm wafer is made on the island until Arizona's second fab starts in late 2027. The bet is a 90-day interruption, not a crisis of days.",
+    "detail": "In the third quarter of 2026, 41% of TSMC's wafer revenue came from 3nm and 2nm, nodes made nowhere else; 79% came from 7nm and below. Arizona's second fab reaches volume in the third quarter of 2027 (3nm) and Japan's second fab in 2028 (3nm), and TrendForce has Taiwan's share of advanced-node capacity falling from 71% in 2021 to 58% in 2030, so the exposure shrinks through the window but never goes away. The PLA has run a named blockade rehearsal around the island every year since 2022; Justice Mission-2025 (29-31 December) put rockets inside Taiwan's contiguous zone and drilled 'integrated blockade and control' with 28 navy and coast-guard ships. Taiwan holds under two months of coal and gas, so a full blockade stops the fabs through the grid before it stops the ships. Against that: CSIS's 26 wargames found a blockade 'a serious gamble' that does not guarantee success, experts polled by CSIS in December 2025 named the South China Sea, not the Strait, as 2026's likeliest flashpoint, and no large named exercise had been held in 2026 as of mid-October. The 1996 missile crisis interrupted shipping for days, not months. A seven-year window at a hazard of two to three percent a year gives 13-20%; the 90-day bar and the fact that chips move by air cut the quarantine scenarios out. Fifteen percent. The midterm reading is the one to watch: the leaders' detente excludes chips, and 68% of CSIS's experts think Beijing now sees Washington as less committed to Taiwan.",
+    "signals": [
+      "A PLA exercise holds an inspection or exclusion regime around the main island for more than a week, or boards a merchant ship bound for Kaohsiung",
+      "TSMC invokes force majeure, suspends a Taiwan fab, or reports a quarter with Taiwan wafer shipments down by half",
+      "Taiwan's LNG or specialty-chemical imports are interrupted; the island holds under two months of gas"
+    ],
+    "leadsTo": [
+      "compute-verification-talks",
+      "data-centres-tenth-us-power",
+      "nuclear-use-in-anger"
+    ],
+    "relationshipKinds": {
+      "compute-verification-talks": "accelerator",
+      "data-centres-tenth-us-power": "related",
+      "nuclear-use-in-anger": "related"
+    },
+    "hero": {
+      "num": 41,
+      "unit": "%",
+      "label": "of TSMC's wafer revenue in Q3 2026 came from 3nm and 2nm, nodes made nowhere but Taiwan until Arizona's second fab starts in Q3 2027",
+      "effect": "alarm",
+      "bars": [
+        {
+          "label": "TSMC revenue from 3nm and 2nm, Q3 2026",
+          "value": 41,
+          "unit": "%",
+          "kind": "observed",
+          "note": "3nm 33%, 2nm 8%; 7nm and below 79%. TSMC earnings call, 15 October 2026."
+        },
+        {
+          "label": "Taiwan share of advanced-node capacity, 2021",
+          "value": 71,
+          "unit": "%",
+          "kind": "observed",
+          "note": "TrendForce, March 2025."
+        },
+        {
+          "label": "Taiwan share of advanced-node capacity, 2030",
+          "value": 58,
+          "unit": "%",
+          "kind": "forecast",
+          "note": "TrendForce projection with Arizona, Japan and Germany fabs built."
+        },
+        {
+          "label": "US share of advanced-node capacity, 2030",
+          "value": 22,
+          "unit": "%",
+          "kind": "reference",
+          "note": "TrendForce projection; TSMC's $165bn Arizona plan is most of it."
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "window",
+    "resolution": {
+      "test": "Between 1 January 2026 and 31 December 2032, a blockade, quarantine, exclusion zone or armed conflict in or around the Taiwan Strait interrupts shipments of 3nm-class-or-better logic wafers or chips from Taiwan for at least 90 consecutive days. Evidence: TSMC discloses force majeure or a suspension of Taiwan fab output or shipments covering the period, or Taiwan's customs data show integrated-circuit exports down by more than half for a full quarter with the interruption attributed to the blockade or conflict by TSMC, Taiwan's government or the US government. A quarantine of outlying islands, a crisis that ends inside 90 days, or an interruption caused by an earthquake, drought or power failure unrelated to military action does not count. 'Leading edge' moves with the window: the test applies to the most advanced node TSMC ships in volume in Taiwan at the time.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-06-30"
+    },
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "Nothing in the forecast priced the one geopolitical event that would stall every AI and compute line at once. The window starts now because the exposure is at its peak: 41% of TSMC revenue from nodes made only in Taiwan (Q3 2026), the first overseas 3nm fab not before Q3 2027. Probability is judgment against a 2-3% annual hazard, CSIS's expert surveys (2024: a kinetic blockade is the likeliest route to forced unification within five years; December 2025: 41% see the risk of war higher than a year ago, 33% name the Strait as 2026's likeliest flashpoint) and the 90-day bar, which rules out the short crises that are the historical base rate.",
+        "sources": [
+          "https://www.fool.com/earnings/call-transcripts/2026/10/15/tsmc-tsm-q3-2026-earnings-call-transcript/",
+          "https://www.trendforce.com/presscenter/news/20250305-12504.html",
+          "https://www.trendforce.com/news/2025/12/18/news-tsmc-reportedly-accelerates-arizona-2nd-fab-eyes-3q26-tool-install-2027-3nm-production/",
+          "https://chinapower.csis.org/survey-experts-us-china-relations-2026/",
+          "https://chinapower.csis.org/surveying-experts-us-and-taiwan-views-china-approach-taiwan-2024/",
+          "https://features.csis.org/chinapower/china-blockade-taiwan/",
+          "https://csis-website-prod.s3.amazonaws.com/s3fs-public/2025-07/250730_Cancian_Taiwan_Blockade.pdf",
+          "https://tsm.schar.gmu.edu/creeping-closer-timeline-and-analysis-of-the-justice-mission-2025-joint-exercise/",
+          "https://focustaiwan.tw/politics/202610150010",
+          "https://www.csis.org/analysis/takeaways-trump-xi-summit-economic-security-angles"
+        ]
+      }
+    ],
+    "force": "hinge"
+  },
+  {
+    "id": "nuclear-use-in-anger",
+    "year": 2060,
+    "domain": "risk",
+    "confidence": "moderate",
+    "probability": 0.68,
+    "title": "The nuclear taboo holds",
+    "summary": "No nuclear weapon detonated in anger through 2060. The forecast puts 68% on the taboo holding, which is a 32% chance that one is used in the next 34 years.",
+    "detail": "Eighty-one years without a weapon used in war is the base rate, and a naive reading of it gives about a 29% chance of use in the next 34 years. The 2026 picture argues for a little worse than that. New START expired on 5 February 2026 and for the first time since 1972 no treaty caps the two largest arsenals; Russia says it observes the old limits only as long as the US does, and on 20 October 2026 its deputy foreign minister said there were 'no grounds' for strategic stability talks. SIPRI counts 12,187 warheads in January 2026, 4,012 deployed and 2,100 to 2,200 on high alert; the stockpiles of China, India, Pakistan and North Korea are growing, and the Pentagon expects China's to reach 1,000 by 2030. Three nuclear-armed states fought in 2025-26: Russia in Ukraine, India against Pakistan, and the US and Israel against Iran in a war that began on 28 February 2026, has not formally ended, and has Iranian officials asking aloud whether to stay in the NPT. The Bulletin set the Clock to 85 seconds on 27 January 2026, its closest ever. The line is written as the null, as the-silence is: the claim is that the taboo holds, and the number is the chance it does. A single detonation counts against it, however small.",
+    "signals": [
+      "A nuclear-armed state is assessed to exceed the old New START ceiling of 1,550 deployed strategic warheads",
+      "Iran leaves the NPT, or the IAEA reports enrichment above 90%",
+      "A nuclear-armed state resumes explosive testing"
+    ],
+    "leadsTo": [
+      "mass-casualty-event",
+      "clock-retired"
+    ],
+    "relationshipKinds": {
+      "mass-casualty-event": "related",
+      "clock-retired": "related"
+    },
+    "hero": {
+      "num": 12187,
+      "label": "nuclear warheads in the world in January 2026; 4,012 deployed, about 2,100 on high alert, and for the first time since 1972 no treaty caps the two largest arsenals",
+      "effect": "alarm",
+      "bars": [
+        {
+          "label": "Total inventory, January 2026",
+          "value": 12187,
+          "kind": "observed",
+          "note": "SIPRI Yearbook 2026. About 9,745 in military stockpiles; the rest retired and awaiting dismantlement."
+        },
+        {
+          "label": "Deployed with missiles and aircraft",
+          "value": 4012,
+          "kind": "observed",
+          "note": "Up about 100 on January 2025 (SIPRI)."
+        },
+        {
+          "label": "On high operational alert",
+          "value": 2100,
+          "kind": "observed",
+          "note": "SIPRI: 2,100 to 2,200, nearly all Russian and American."
+        },
+        {
+          "label": "New START ceiling on deployed strategic warheads",
+          "value": 1550,
+          "kind": "reference",
+          "note": "Per side. Expired 5 February 2026 with no replacement."
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "through",
+    "resolution": {
+      "test": "No nuclear explosive device is detonated as an act of hostility by any state or non-state actor, against any target, from 2026 through 31 December 2060. A detonation counts when the CTBTO International Monitoring System or a national technical means detects it and at least two governments or the UN Security Council attribute it to a hostile act. Does not count: nuclear tests (announced or not), accidental detonations without hostile intent, peaceful nuclear explosions, radiological dispersal devices, and conventional attacks on reactors or nuclear sites. The line resolves true if the period ends with zero such detonations; a single one, of any yield, resolves it false on that date.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2061-12-31"
+    },
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The risk domain had an AI-enabled mass-casualty line and the Clock, but no number on the oldest catastrophic risk. The number is a base rate (81 years clean, about 29% for use in 34 more years by the rule of succession) adjusted a few points worse for the 2026 facts: New START expired without replacement on 5 February, SIPRI's January 2026 count of 12,187 warheads with deployments rising for the first time in decades, three nuclear-armed states at war in 2025-26 including the US-Iran war that began on 28 February, and the Clock at 85 seconds. Metaculus's community median of about one offensive detonation by 2050 is noted as context, not evidence.",
+        "sources": [
+          "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf",
+          "https://www.armscontrol.org/act/2026-03/news/new-start-expires-us-urges-modernized-treaty",
+          "https://fas.org/publication/the-expiration-of-new-start/",
+          "https://www.brookings.edu/articles/what-comes-after-new-start/",
+          "https://tass.com/politics/2204727",
+          "https://thebulletin.org/doomsday-clock/",
+          "https://news.uchicago.edu/story/doomsday-clock-ticks-down-85-seconds-midnight-2026-closest-ever-apocalypse",
+          "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+          "https://www.aljazeera.com/news/2026/10/21/iran-determined-to-keep-uranium-amid-increased-war-odds-flurry-of-meetings"
+        ]
+      }
+    ],
+    "force": "hinge"
+  },
+  {
+    "id": "ai-equity-drawdown",
+    "year": 2027,
+    "yearEnd": 2030,
+    "domain": "society",
+    "confidence": "moderate",
+    "probability": 0.5,
+    "title": "The AI trade halves",
+    "summary": "The chip index that carries the AI boom closes 50% below its record. It has done that twice before, in 2000-02 and 2008, each time after a capex cycle outran the cash to pay for it. About even odds it happens between 2027 and 2030.",
+    "detail": "The five big hyperscalers will spend more than $690 billion on capex in fiscal 2026, up over 80% in a year, with free cash flow near zero or negative at three of the five and new debt covering 32% of capex, up from 9% in 2024 (FactSet, July 2026). The IMF counts $1.4 trillion of circular revenue commitments across 14 vendor-financing deals; the BIS says the boom's scale and pace resemble the canal, railway and dot-com manias, each of which ended in an investment bust; the Bank of England's FPC says a sharper correction than July's remains possible. The market has already flinched: the Philadelphia Semiconductor Index (SOX) hit a record 14,635 on 22 June 2026, fell 21% in July, its worst month since October 2008, and closed at 10,779 on 23 October, 26% below the peak. The bet is that this is the first leg, not the last. A halving does not require the technology to fail; the internet worked and the Nasdaq still lost about three-quarters of its value from March 2000 to October 2002. It requires only that returns on roughly a trillion dollars a year of spending disappoint for a few quarters.",
+    "signals": [
+      "A hyperscaler guides next year's capex below this year's, or Nvidia's data-center revenue falls year on year for two consecutive quarters",
+      "A data-center financing vehicle or AI-linked bond defaults or is cut to junk, and spreads widen across the sector",
+      "SOX closes below 9,760, a third below the June 2026 record and two-thirds of the way to the bet"
+    ],
+    "leadsTo": [
+      "ai-productivity-in-statistics",
+      "data-centres-tenth-us-power"
+    ],
+    "relationshipKinds": {
+      "ai-productivity-in-statistics": "related",
+      "data-centres-tenth-us-power": "related"
+    },
+    "hero": {
+      "num": 690,
+      "prefix": "$",
+      "unit": "bn",
+      "label": "of capital spending by the five big hyperscalers in fiscal 2026, up more than 80% in a year, a third of it borrowed",
+      "effect": "ripple",
+      "bars": [
+        {
+          "label": "SOX fall from 22 Jun 2026 record, to 23 Oct",
+          "value": 26,
+          "unit": "%",
+          "kind": "observed",
+          "note": "14,635 to 10,779, Nasdaq via FRED"
+        },
+        {
+          "label": "2021-22, year-end to year-end",
+          "value": 36,
+          "unit": "%",
+          "kind": "reference",
+          "note": "peak-to-trough was deeper"
+        },
+        {
+          "label": "The bet, close to close",
+          "value": 50,
+          "unit": "%",
+          "kind": "forecast"
+        },
+        {
+          "label": "2000-02, year-end to year-end",
+          "value": 50,
+          "unit": "%",
+          "kind": "reference",
+          "note": "peak-to-trough was far deeper"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast bets on AI capability and never prices the financing cycle underneath it. Capex above $690 billion growing 80% a year, debt at a third of it, $1.4 trillion of circular commitments and warnings from the BoE, IMF and BIS in one quarter make a bust a live line, and the SOX is a public daily series that grades itself.",
+        "sources": [
+          "https://insight.factset.com/hyperscalers-tap-external-financing-as-ai-capex-outruns-cash-flow",
+          "https://www.bankofengland.co.uk/-/media/boe/files/financial-policy-committee-record/2026/fpc-summary-and-record-september-2026.pdf",
+          "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+          "https://www.imf.org/en/publications/gfsr/issues/2026/10/13/global-financial-stability-report-october-2026",
+          "https://fortune.com/2026/06/29/bis-central-bank-warning-hyperscaler-data-center-1-trillion-gamble-recession/",
+          "https://fortune.com/2026/08/02/wall-street-ai-trade-chip-stocks-volatility-sox-selloff/",
+          "https://fortune.com/2026/07/28/why-are-stocks-down-chips-panic-semiconductors/",
+          "https://fred.stlouisfed.org/series/NASDAQSOX",
+          "https://historyofmarket.com/semi/semi-price/"
+        ]
+      }
+    ],
+    "timing": "window",
+    "resolution": {
+      "test": "Resolve on the PHLX Semiconductor Index (SOX, published by Nasdaq; FRED series NASDAQSOX), daily closing values. A hit is any close between 1 January 2027 and 31 December 2030 that is at least 50% below the highest close recorded up to that day. The peak may be before 2027, so the record of 14,634.72 on 22 June 2026 counts if not exceeded. Intraday lows do not count. If the first qualifying close comes before 2027 the line grades early. If Nasdaq renames or reconstitutes the index, use the series Nasdaq designates as its continuation.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2031-01-31"
+    },
+    "evidenceNote": "Capex, debt-share and circular-financing figures are FactSet, BoE FPC and IMF numbers; the SOX peak value is from a secondary index-history site and should be re-checked against Nasdaq before grading. The 2000-02 and 2021-22 bars are year-end to year-end and understate the true drawdowns. Odds are the author's.",
+    "force": "ai"
+  },
+  {
+    "id": "ai-productivity-in-statistics",
+    "year": 2032,
+    "yearEnd": 2036,
+    "domain": "society",
+    "confidence": "moderate",
+    "probability": 0.5,
+    "title": "AI shows up in the productivity statistics",
+    "summary": "Solow's line again: AI is everywhere but in the numbers. The test is three straight years of US labor productivity growth above 2.5%, a run last seen in 1998-2004, with the third year landing between 2032 and 2036.",
+    "detail": "BLS private nonfarm business labor productivity grew 2.3% in 2023, 3.0% in 2024 and 2.2% in 2025; total factor productivity slowed to 0.8% in 2025. That is better than the 1.5% a year of 2007-19 but not the 3.5% a year of 1998-2004, the only stretch since 1987 with three consecutive years above 2.5%. The St. Louis Fed's Musalem (May 2026): AI is 'everywhere but in the aggregate productivity statistics', staff put a 25% probability on a high-productivity regime, and the 2023-25 gains owe as much to post-pandemic automation as to AI. The estimates straddle the bet: Acemoglu's task-based arithmetic gives at most 0.66% of TFP over ten years, under 0.07 points a year; Goldman's 2023 note gives 1.5 points a year for a decade. The J-curve (Brynjolfsson, Rock, Syverson) says the early years undercount because the complementary investment is intangible and unmeasured, and the payoff shows later; the PC arrived around 1981 and the statistics turned in 1995. The window is placed where that lag would put it.",
+    "signals": [
+      "BLS reports private nonfarm business labor productivity above 2.5% for 2026 or 2027, making a run of three possible before 2030",
+      "BLS or BEA publishes an AI-specific adjustment, satellite account or capitalized-AI-investment series that lifts measured output",
+      "The St. Louis Fed's high-productivity-regime probability stays above 50% for four consecutive quarters"
+    ],
+    "leadsTo": [
+      "labor-cost-irrelevant",
+      "ubi-pilots-national"
+    ],
+    "relationshipKinds": {
+      "labor-cost-irrelevant": "accelerator",
+      "ubi-pilots-national": "related"
+    },
+    "hero": {
+      "num": 2.2,
+      "unit": "%",
+      "label": "US labor productivity growth in 2025; the bet is three straight years above 2.5%, last done in 1998-2004",
+      "effect": "ripple",
+      "bars": [
+        {
+          "label": "2007-19, average",
+          "value": 1.5,
+          "unit": "%/yr",
+          "kind": "observed",
+          "note": "BLS private nonfarm business"
+        },
+        {
+          "label": "2019-25, average",
+          "value": 2.2,
+          "unit": "%/yr",
+          "kind": "observed"
+        },
+        {
+          "label": "2024",
+          "value": 3.0,
+          "unit": "%",
+          "kind": "observed"
+        },
+        {
+          "label": "2025",
+          "value": 2.2,
+          "unit": "%",
+          "kind": "observed"
+        },
+        {
+          "label": "The bet, each of three years",
+          "value": 2.5,
+          "unit": "%",
+          "kind": "forecast"
+        },
+        {
+          "label": "1998-2004, average",
+          "value": 3.5,
+          "unit": "%/yr",
+          "kind": "reference",
+          "note": "the IT boom"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast asserts AI transforms work by 2030 but has no line that the national accounts can falsify. BLS annual data give a clean threshold: three consecutive years above 2.5% has happened once since 1987 (1998-2004), so hitting it in 2032-36 would be the IT boom repeating, and missing it would mean the agents-at-work lines were wrong about the economy even if right about the tools.",
+        "sources": [
+          "https://www.bls.gov/news.release/prod3.nr0.htm",
+          "https://www.bls.gov/news.release/prod3.t01.htm",
+          "https://fred.stlouisfed.org/data/MPU4910062",
+          "https://fred.stlouisfed.org/data/OPHNFB",
+          "https://www.stlouisfed.org/from-the-president/remarks/2026/productivity-growth-and-monetary-policy-iceland",
+          "https://www.federalreserve.gov/newsevents/speech/cook20260928a.htm",
+          "https://www.nber.org/papers/w32487",
+          "https://www.nber.org/papers/w25148",
+          "https://www.bnnbloomberg.ca/goldman-says-ai-will-spur-us-productivity-jump-global-growth-1.1901016"
+        ]
+      }
+    ],
+    "timing": "window",
+    "resolution": {
+      "test": "Resolve on BLS private nonfarm business sector labor productivity (output per hour), annual percent change, as published in Table 1 of the BLS Total Factor Productivity news release. A hit is any three consecutive calendar years, the last of them between 2032 and 2036, each above 2.5%, using the figures as they stand in the first TFP release published after the third year (the release covering 2036, due in early 2037, closes the window). A qualifying run that ends before 2032 grades early. If BLS discontinues the TFP tables, use the nonfarm business sector annual-average labor productivity change from the Productivity and Costs release. Total factor productivity is not the test.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2037-06-30"
+    },
+    "evidenceNote": "Historical growth rates are BLS annual averages from the TFP program (private nonfarm business); the headline Productivity and Costs series (nonfarm business) differs by a few tenths in some years. Period averages are computed from the BLS index levels. Acemoglu and Goldman figures are model estimates, not measurements.",
+    "force": "ai"
+  },
+  {
+    "id": "next-pandemic",
+    "year": 2050,
+    "domain": "risk",
+    "confidence": "speculative",
+    "probability": 0.4,
+    "title": "Another pandemic kills a million, confirmed",
+    "summary": "COVID-19 has 7.1 million confirmed deaths on WHO's count. The bet is a new outbreak that passes one million confirmed deaths before 2051: about 40%, roughly what the historical record says, nudged up for spillover and down for vaccines.",
+    "detail": "The base rate is not small. Marani and colleagues (PNAS 2021), fitting 400 years of epidemic records, put the recurrence time of a COVID-intensity pandemic at about 129 years and the lifetime chance of living through one at 38%, with the rate rising as spillover rises; Airfinity's 2023 model gave 27.5% in ten years for a pandemic as deadly as COVID, falling to 8% if vaccines arrive within 100 days. Spread over 2027-2050 those rates give anywhere from a one-in-six to a better-than-even chance. The bar here is lower than COVID: one million confirmed deaths is a seventh of COVID's count, roughly a 1957- or 1968-flu-sized event reported with modern surveillance. The watch list is unchanged. H5N1 has infected 1,022 people since 1997 with 12 cases and 3 deaths worldwide from August 2025 to June 2026, no person-to-person spread, and WHO's risk to the public 'remains low'. The institutions are half-built: the WHO Pandemic Agreement was adopted in May 2025, but its pathogen-sharing annex missed the May 2026 Assembly and is now due by May 2027, and the Agreement cannot open for signature until the annex is done. Origin does not matter for this line; an engineered pathogen that clears the bar also resolves mass-casualty-event.",
+    "signals": [
+      "WHO confirms sustained human-to-human transmission of a novel influenza A or coronavirus, or declares a new Public Health Emergency of International Concern for a respiratory pathogen",
+      "The PABS annex is adopted and the Pandemic Agreement enters into force, or misses the May 2027 Assembly again",
+      "A 100-day vaccine is actually delivered against a new outbreak, from sequence to first doses"
+    ],
+    "leadsTo": [],
+    "relationshipKinds": {},
+    "hero": {
+      "num": 7.1,
+      "unit": "M",
+      "label": "confirmed COVID-19 deaths reported to WHO by August 2026; the bet is a new outbreak passing one million before 2051",
+      "effect": "alarm",
+      "ladder": [
+        {
+          "label": "COVID-19 passes 1M confirmed deaths",
+          "state": "done",
+          "note": "January 2021"
+        },
+        {
+          "label": "WHO Pandemic Agreement adopted",
+          "state": "done",
+          "note": "World Health Assembly, May 2025"
+        },
+        {
+          "label": "Pathogen-sharing annex agreed",
+          "state": "now",
+          "note": "missed May 2026; due by May 2027"
+        },
+        {
+          "label": "Agreement in force",
+          "state": "next",
+          "note": "opens for signature after the annex"
+        },
+        {
+          "label": "Next outbreak with 1M confirmed deaths",
+          "state": "next",
+          "note": "the bet, before 2051"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast's only pandemic line is the engineered AI-bio case. Natural pandemics have a published base rate (Marani 2021; Airfinity 2023) that puts a COVID-scale event in any 24-year window somewhere between one-in-six and even, and WHO's confirmed-death count is a public series that grades the line without modelling.",
+        "sources": [
+          "https://research.unipd.it/bitstream/11577/3457653/2/marani-et-al-2021-intensity-and-frequency-of-extreme-novel-epidemics.pdf",
+          "https://airfinity.com/articles/a-strong-pandemic-defence-system-could-reduce-the-chance-of-another-covid",
+          "https://ourworldindata.org/grapher/cumulative-covid-deaths-region",
+          "https://www.cdc.gov/bird-flu/spotlights/global-summary-06262026.html",
+          "https://cdn.who.int/media/docs/default-source/influenza/human-animal-interface-risk-assessments/influenza-at-the-human-animal-interface-summary-and-assessment--from-23-january-to-31-march-2026.pdf?sfvrsn=187c5d77_3&download=true",
+          "https://www.who.int/news/item/28-03-2026-who-member-states-agree-to-extend-negotiations-on-key-annex-to-the-pandemic-agreement",
+          "https://www.who.int/news/item/12-10-2026-who-welcomes-adoption-of-united-nations-political-declaration-on-pandemic-prevention-preparedness-and-response"
+        ]
+      }
+    ],
+    "timing": "by",
+    "resolution": {
+      "test": "A hit if, between 24 October 2026 and 31 December 2050, WHO's reported cumulative confirmed deaths from a single new outbreak reach one million, counted from the outbreak's start. Confirmed means deaths reported to WHO by member states as caused by the pathogen, the basis of COVID-19's 7.1 million, not modelled excess deaths. The outbreak must be one WHO has declared a Public Health Emergency of International Concern or a pandemic. Continuing COVID-19 deaths do not count; a SARS-CoV-2 descendant counts only under a new PHEIC declaration. Origin, natural, accidental or deliberate, does not matter. If WHO stops publishing confirmed counts, use the successor series WHO designates.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2051-12-31"
+    },
+    "evidenceNote": "Base rates are model estimates from two sources with different methods (Marani: extreme-value fit to 1600-1945 records; Airfinity: proprietary risk model). The confirmed-death bar is deliberately conservative: COVID's confirmed count was roughly half of WHO's excess-mortality estimate, so a 1-million-confirmed event likely means 2 million or more actual deaths.",
+    "force": "planet"
+  },
+  {
+    "id": "glp1-quarter-of-us-adults",
+    "year": 2032,
+    "domain": "bio",
+    "confidence": "speculative",
+    "probability": 0.35,
+    "title": "A quarter of American adults are on a GLP-1",
+    "summary": "Six percent of US adults were taking a GLP-1 drug in May 2024; twelve percent by November 2025. The bet is 25% around 2032, which needs the pills, the prices and Medicare to keep moving and the dropout rate to fall.",
+    "detail": "KFF's tracking poll has current use at 12% of adults (November 2025), double the 6% of May 2024, with 18% having ever taken one; among adults with diabetes 45% are on one now. Gallup's weight-loss-only measure went from 3% in 2024 to 11% in June 2026, and the adult obesity rate it tracks has fallen from a 39.9% peak in 2022 to 36.8%. The supply side has turned: oral Wegovy was approved on 22 December 2025 (14% weight loss over 71 weeks), Lilly's Foundayo (orforglipron) followed in April 2026 at $149 a month self-pay and $25 insured, and from 1 July 2026 Medicare's GLP-1 Bridge covers obesity prescriptions at $50 a month through 2027 after insurers refused the Part D version of the BALANCE model. The brakes are real: 56% of users call the drugs hard to afford, 14% have quit over cost, 18% of users are on compounded copies, and Medicare's permanent coverage for obesity is indefinitely delayed. Getting from 12% to 25% means roughly six in ten adults with obesity or diabetes on treatment at any one time, and persistence is the weak link: in KFF's sample 14% of ever-users had already quit over cost and 13% over side effects.",
+    "signals": [
+      "KFF or Gallup reads current use at 18% or more of adults by the end of 2028",
+      "FDA approves a generic semaglutide, or an oral GLP-1 is sold for under $100 a month",
+      "Medicare covers GLP-1s for obesity as a standard Part D benefit rather than a demonstration"
+    ],
+    "leadsTo": [
+      "aging-therapy-approved",
+      "healthy-lifespan-110"
+    ],
+    "relationshipKinds": {
+      "aging-therapy-approved": "related",
+      "healthy-lifespan-110": "related"
+    },
+    "hero": {
+      "num": 12,
+      "unit": "%",
+      "label": "of US adults said they were taking a GLP-1 drug in November 2025, double the share of eighteen months earlier; the bet is 25% around 2032",
+      "effect": "bloom",
+      "bars": [
+        {
+          "label": "May 2024, any reason",
+          "value": 6,
+          "unit": "%",
+          "kind": "observed",
+          "note": "KFF"
+        },
+        {
+          "label": "Nov 2025, any reason",
+          "value": 12,
+          "unit": "%",
+          "kind": "observed",
+          "note": "KFF"
+        },
+        {
+          "label": "Jun 2026, weight loss only",
+          "value": 11,
+          "unit": "%",
+          "kind": "observed",
+          "note": "Gallup"
+        },
+        {
+          "label": "The bet, around 2032",
+          "value": 25,
+          "unit": "%",
+          "kind": "forecast"
+        },
+        {
+          "label": "US adults with obesity, 2026",
+          "value": 36.8,
+          "unit": "%",
+          "kind": "reference",
+          "note": "Gallup"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast's health lines are gene editors and aging drugs decades out; the drug class already reshaping American bodies, budgets and food demand had no line. KFF and Gallup publish the share of adults on a GLP-1 every year, so a 25% threshold grades itself.",
+        "sources": [
+          "https://www.kff.org/public-opinion/poll-1-in-8-adults-say-they-are-currently-taking-a-glp-1-drug-for-weight-loss-diabetes-or-another-condition-even-as-half-say-the-drugs-are-difficult-to-afford/",
+          "https://www.kff.org/health-costs/poll-1-in-8-adults-say-theyve-taken-a-glp-1-drug-including-4-in-10-of-those-with-diabetes-and-1-in-4-of-those-with-heart-disease/",
+          "https://news.gallup.com/poll/712157/glp-usage-reaches-new-high.aspx",
+          "https://www.kff.org/medicare/what-to-know-about-the-balance-model-for-glp-1s-in-medicare-and-medicaid/",
+          "https://www.statnews.com/2026/04/21/trump-medicare-weight-loss-drug-plan-unraveling-insurer-pushback/",
+          "https://www.biopharmadive.com/news/novo-nordisk-oral-wegovy-fda-approve-glp-1/808578/",
+          "https://pharmashots.com/32510/eli-lilly-reports-us-fda-approval-of-foundayo-orforglipron-for-weight-loss/"
+        ]
+      }
+    ],
+    "timing": "around",
+    "resolution": {
+      "test": "Resolve on the share of US adults (18 and over) who say they are currently taking a GLP-1 drug for any reason, in a KFF Health Tracking Poll fielded between 1 January 2031 and 31 December 2033 (the measure that read 6% in May 2024 and 12% in November 2025). 25% or more in any such poll is a hit. If KFF stops asking, use Gallup's National Health and Well-Being Index current-use measure for any reason, or failing that a federal survey estimate (NHIS, MEPS or NHANES) of current use among adults. Prescription-fill counts (IQVIA and the like) do not count, since they count fills, not people. A weight-loss-only measure does not count unless it alone reaches 25%.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2034-06-30"
+    },
+    "evidenceNote": "KFF (n=1,350, +/-3 points) and Gallup (n=5,065, +/-1.5 points) measure different things: KFF asks about any reason, Gallup about weight loss. Self-reported use may overstate persistence. Price figures are manufacturer and CMS announcements as reported by KFF, STAT and trade press.",
+    "force": "demography"
+  },
+  {
+    "id": "ice-free-arctic-september",
+    "year": 2036,
+    "yearEnd": 2050,
+    "domain": "climate",
+    "confidence": "moderate",
+    "probability": 0.55,
+    "title": "The first ice-free Arctic September",
+    "summary": "A September monthly mean below 1 million km² of sea ice, the standard 'ice-free' threshold. 2026's minimum was 4.60 million km²; the models say the first crossing is likely before 2050, the data say the decline has stalled for two decades.",
+    "detail": "The September minimum fell from about 7 million km² in 1980 to 3.39 million in 2012 and has not set a record since. NSIDC's 2026 minimum was 4.60 million km² on 12 September, tied for tenth lowest with 2008, 2010 and 2025, and NSIDC notes no significant decline in the minimum over the past two decades. The physics still points down: the 1979–2026 trend is 11.8% a decade, and the review literature (Jahn, Holland and Kay, 2024) puts the first ice-free September in the 2020s–2030s under every scenario and 'likely by 2050', with consistently ice-free Septembers between 2035 and 2067. The IPCC's AR6 wording is that the Arctic is likely to be practically ice-free in September at least once before 2050. The line uses extent, which NSIDC publishes monthly, rather than the area the papers use; extent is the higher number, so this is the harder of the two tests by a year or more. The window is 2036–2050 with the odds centred in the mid-2040s. A first ice-free day (Heuzé and Jahn, 2024: possible within three to six years of 2023 conditions in the fastest models) would come first and does not count.",
+    "signals": [
+      "A September daily extent below 2.0 million km² (NSIDC), well under the 2012 record of 3.39",
+      "A first ice-free day: daily Arctic sea-ice area at or below 1 million km² in any dataset",
+      "The stall ends: three of five consecutive September minima below 4.0 million km²"
+    ],
+    "leadsTo": [
+      "two-degrees-breached"
+    ],
+    "relationshipKinds": {
+      "two-degrees-breached": "related"
+    },
+    "hero": {
+      "num": 4.6,
+      "unit": "M km²",
+      "label": "Arctic sea-ice minimum on 12 September 2026 (NSIDC); 'ice-free' means a September mean below 1.0",
+      "effect": "heat",
+      "bars": [
+        {
+          "label": "2012 record minimum",
+          "value": 3.39,
+          "unit": "M km²",
+          "kind": "observed",
+          "note": "NSIDC Sea Ice Index, 17 September 2012"
+        },
+        {
+          "label": "2026 minimum",
+          "value": 4.6,
+          "unit": "M km²",
+          "kind": "observed",
+          "note": "12 September 2026; tied tenth lowest with 2025, 2010, 2008"
+        },
+        {
+          "label": "September 2026 mean",
+          "value": 4.81,
+          "unit": "M km²",
+          "kind": "observed",
+          "note": "NSIDC monthly mean, the quantity the line is graded on"
+        },
+        {
+          "label": "Ice-free threshold, the bet",
+          "value": 1.0,
+          "unit": "M km²",
+          "kind": "forecast",
+          "note": "first September mean below this, 2036–2050"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "window",
+    "resolution": {
+      "test": "The NSIDC Sea Ice Index (version 3 or its successor) reports a September monthly mean Arctic sea-ice extent below 1.0 million km² in any year from 2036 to 2050 inclusive. A daily extent below 1 million, or sea-ice area (rather than extent) below 1 million, does not count. A qualifying September mean before 2036 resolves the line early; none by the end of 2050 is a miss.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2051-03-31"
+    },
+    "evidenceNote": "The observed numbers are NSIDC's; the Met Office's OSI SAF series gives a higher September 2026 mean (5.34 million km²) because the algorithms differ, which is why the test names one dataset. The model projections are of sea-ice area, a lower number than extent, so they slightly flatter the line.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The climate lines assume a warming world but had no Arctic marker, and this is the cleanest one: a single published monthly number crossing a fixed threshold. NSIDC's 2026 minimum was 4.60 million km², tied tenth lowest, with no significant decline in two decades; the review literature says first ice-free September likely by 2050; the window and the 0.55 split the difference between the stall and the models.",
+        "sources": [
+          "https://nsidc.org/sea-ice-today/analyses/arctic-sea-ice-minimum-ties-tenth-lowest-0",
+          "https://nsidc.org/sea-ice-today/analyses",
+          "https://www.metoffice.gov.uk/research/approach/monitoring/sea-ice/2026/arctic-and-antarctic-end-of-season-report---october-2026",
+          "https://svs.gsfc.nasa.gov/5677",
+          "https://opensky.library.ucar.edu/islandora/object/articles%3A27063",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC11615213/",
+          "https://link.springer.com/10.1038/s41467-023-38511-8",
+          "https://www.hko.gov.hk/en/climate_change/proj_global_ice_snow.htm"
+        ]
+      }
+    ],
+    "force": "planet"
+  },
+  {
+    "id": "ai-tutor-daily-majority",
+    "year": 2030,
+    "domain": "society",
+    "confidence": "moderate",
+    "probability": 0.5,
+    "title": "Most teenagers in three OECD countries use an AI tutor every school day",
+    "summary": "Not 'has tried': a majority of secondary students reporting daily or near-daily use of a generative-AI tutor for schoolwork, measured by a published survey, in at least three OECD countries.",
+    "detail": "Ever-use is already a majority. Pew (autumn 2025) has 64% of US 13–17-year-olds using AI chatbots and 54% using them for schoolwork; Eurostat has 63.8% of EU 16–24-year-olds using generative AI in 2025, with 39.3% using it for formal education. Daily use is the open question: Pew puts about three in ten teens on a chatbot daily, and Common Sense (March 2026) finds roughly 24% of 13–15-year-olds and 30% of 16–17-year-olds using AI for schoolwork every day. PISA 2025 asked 15-year-olds how often they use AI to draft writing: more than 40% weekly or daily in nine systems and 52% in Viet Nam, with Singapore and Türkiye the OECD-adjacent highs. Governments are split. Estonia's AI Leap gave 20,000 upper-secondary students and 3,000 teachers school AI accounts from September 2025 and adds 38,000 more in 2026; Korea, after spending at least 533 billion won, stripped AI textbooks of textbook status in August 2025 with adoption at about 30% of schools. 'AI tutor' here means any generative-AI system a student uses for learning or homework, general-purpose or school-issued; the OECD's own finding that general tools raise output but not learning is the reason the line is about habit, not benefit.",
+    "signals": [
+      "PISA 2029 or TALIS carries a daily-use item and the OECD reports a country above 50%",
+      "Estonia publishes AI Leap usage data showing most enrolled students active on school days",
+      "A second OECD government reverses a school AI rollout, as Korea did in August 2025"
+    ],
+    "leadsTo": [
+      "world-2100"
+    ],
+    "relationshipKinds": {
+      "world-2100": "related"
+    },
+    "hero": {
+      "num": 54,
+      "unit": "%",
+      "label": "of US teens have used an AI chatbot for schoolwork (Pew, autumn 2025); about three in ten use one daily. The bet is a daily majority in three countries by 2030.",
+      "effect": "web",
+      "bars": [
+        {
+          "label": "US teens, ever used for schoolwork",
+          "value": 54,
+          "unit": "%",
+          "kind": "observed",
+          "note": "Pew, 1,458 teens 13–17, Sept–Oct 2025"
+        },
+        {
+          "label": "US 16–17s, AI for schoolwork daily",
+          "value": 30,
+          "unit": "%",
+          "kind": "observed",
+          "note": "Common Sense census, March 2026; 24% for 13–15s"
+        },
+        {
+          "label": "EU 16–24s, used generative AI in 2025",
+          "value": 63.8,
+          "unit": "%",
+          "kind": "observed",
+          "note": "Eurostat isoc_ai_iaiu; 39.3% for formal education"
+        },
+        {
+          "label": "Daily majority, the bet",
+          "value": 50,
+          "unit": "%",
+          "kind": "forecast",
+          "note": "in each of three OECD countries, around 2030"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "around",
+    "resolution": {
+      "test": "By 31 December 2031, published surveys with stated samples and methods (OECD PISA or TALIS, a national ministry or statistics office, Eurostat, Pew, Common Sense, Ofcom, or an equivalent) show that in each of at least three OECD member countries, 50% or more of secondary students (ages 13–18 or grades 7–12, nationally representative) report using a generative-AI chatbot or tutor for schoolwork or learning on most school days ('daily or almost daily', 'every day', or at least four days a week). The three findings may come from different surveys and years within 2029–2031. 'Ever used', weekly use, teacher use, and school-licence counts do not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2032-06-30"
+    },
+    "evidenceNote": "Pew and Common Sense are US-only and self-reported; the Common Sense daily figures are summarised from a secondary write-up and should be checked against the report. PISA 2025 measured frequency of AI use for drafting, not tutoring in general, and did not publish an OECD average for daily use.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast tracks AI in work and had nothing on the cohort growing up with it. Ever-use is past half in the US (Pew 54% for schoolwork) and the EU (Eurostat 63.8% of 16–24s); daily use is about three in ten; Estonia is scaling a national rollout and Korea reversed one. A daily-majority test in three countries by 2030 is close to a coin flip and reads off published surveys.",
+        "sources": [
+          "https://www.pewresearch.org/internet/2026/02/24/how-teens-use-and-view-ai/",
+          "https://www.pewresearch.org/wp-content/uploads/sites/20/2026/02/PI_2026.02.24_Teens-and-AI_REPORT.pdf",
+          "https://www.benton.org/blog/how-kids-use-ai",
+          "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/edn-20260210-1",
+          "https://oecdedutoday.com/generative-ai-and-student-learning-what-the-pisa-data-reveal/",
+          "https://www.oecd.org/en/publications/2026/09/pisa-2025-results-volume-i_5265bfb1.html",
+          "https://digital-skills-jobs.europa.eu/en/latest/news/oecd-digital-education-outlook-2026-how-generative-ai-can-support-learning-when-used",
+          "https://estonia.ee/estonias-ambitious-initiative-the-ai-leap-programme-brings-ai-tools-to-all-schools/",
+          "https://asianews.network/south-korea-pulls-plug-on-ai-textbooks/",
+          "https://www.koreaherald.com/article/10546695"
+        ]
+      }
+    ],
+    "force": "ai"
+  },
+  {
+    "id": "provenance-required-political-ads",
+    "year": 2028,
+    "domain": "society",
+    "confidence": "speculative",
+    "probability": 0.35,
+    "title": "Political ads must prove where their pictures came from",
+    "summary": "A binding US federal rule that political ads disclose AI-made content, or a US or EU rule that political-ad media carry signed provenance credentials. The EU labels ads and marks AI output already; nobody yet requires the ad itself to carry its origin.",
+    "detail": "The pieces exist and do not join up. The EU's political-advertising regulation (2024/900) has applied since 10 October 2025 and requires a label saying who paid, how much and who was targeted; Meta and Google stopped selling political ads in the EU rather than comply. The AI Act's Article 50 has applied since 2 August 2026: providers must mark generative output in a machine-readable way (existing systems have until 2 December 2026) and deployers must label deepfakes, with a Commission code of practice (June 2026) specifying signed metadata plus watermarking. Neither says a political ad's footage must carry a credential. In the US the FCC proposed on-air AI disclosure for broadcast political ads in July 2024 (MB Docket 24-211); Republican commissioners opposed it, a Senate bill was filed to forbid it, and it has not moved. The FEC voted 5–1 in September 2024 to apply existing fraud rules instead of writing AI ones. The states filled the gap: NCSL counted 31 with election-deepfake laws by June 2026, 28 of them disclosure laws, and California's FPPC is writing the regulation for its AB 2355 ad-disclosure statute. The courts are the headwind: California's AB 2655 was struck in August 2025 and a federal judge blocked Montana's law in September 2026. The bet is that a 2028-cycle deepfake incident, or an EU Democracy Shield review of the TTPA, turns labels into required provenance.",
+    "signals": [
+      "A deepfake ad in the 2026 midterms or 2028 primaries forces a floor vote on a federal disclosure bill",
+      "The FCC revives, or formally closes, MB Docket 24-211",
+      "The Commission proposes content credentials for political ads in a TTPA review or Democracy Shield measure"
+    ],
+    "leadsTo": [
+      "federal-ai-statute"
+    ],
+    "relationshipKinds": {
+      "federal-ai-statute": "related"
+    },
+    "hero": {
+      "num": 31,
+      "label": "US states with election-deepfake laws by June 2026 (NCSL); federal rules: none. The bet is a binding US federal or EU provenance rule for political ads around 2028.",
+      "effect": "ripple",
+      "ladder": [
+        {
+          "label": "EU political-ad labels in force",
+          "state": "done",
+          "note": "TTPA, 10 October 2025; Meta and Google quit EU political ads"
+        },
+        {
+          "label": "EU machine-readable AI marking in force",
+          "state": "done",
+          "note": "AI Act Article 50, 2 August 2026"
+        },
+        {
+          "label": "31 US states with deepfake-ad laws",
+          "state": "done",
+          "note": "NCSL, June 2026; courts blocking some"
+        },
+        {
+          "label": "FCC broadcast-disclosure proposal",
+          "state": "now",
+          "note": "proposed July 2024, stalled"
+        },
+        {
+          "label": "Federal disclosure rule or provenance mandate",
+          "state": "next",
+          "note": "the bet, 2027–2029"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "around",
+    "resolution": {
+      "test": "By 31 December 2029, either (a) a US federal statute or a final FCC or FEC rule is in force requiring paid political advertisements to disclose AI-generated or materially altered audio or visual content, or (b) a binding US federal or EU-level rule is in force requiring paid political advertisements' audio-visual media to carry machine-readable content credentials (C2PA or an equivalent signed-provenance standard) attesting origin. State laws, platform policies, voluntary codes, and the EU AI Act's general Article 50 marking and deepfake-labelling duties do not count. A rule enjoined before it takes effect does not count until the injunction lifts.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2030-03-31"
+    },
+    "evidenceNote": "Under a loose reading the EU already requires AI disclosure that reaches political ads (Article 50(4) deepfake labelling plus TTPA labels), which is why the test demands either a US federal rule or provenance credentials on the ad itself. The state count is NCSL's as reported by Fast Company; the law.washu tracker lists 24 jurisdictions on a narrower definition.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "first-ai-election assumes an information fight and the forecast had no line on the rule that would govern it. The EU's TTPA (October 2025) and AI Act Article 50 (August 2026) are in force; the FCC's 2024 proposal is stalled and the FEC declined to act; 31 states have laws and courts are striking some. A US federal rule or an EU provenance mandate by 2029 is plausible and unlikely, so 0.35.",
+        "sources": [
+          "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights/transparency-and-targeting-political-advertising_en",
+          "https://ppc.land/meta-blocks-political-ads-in-eu-as-ttpa-regulation-takes-effect",
+          "https://www.actuia.com/en/news/ai-act-obligations-in-force-and-delays-under-omnibus-2026-1744/",
+          "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content",
+          "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content",
+          "https://www.faegredrinker.com/en/insights/publications/2026/7/eu-ai-act-commission-confirms-transparency-code-of-practice-as-adequate-and-publishes-final-version-of-its-guidelines-on-transparency-obligations",
+          "https://www.congress.gov/118/bills/s4853/BILLS-118s4853pcs.htm",
+          "https://www.techpolicy.press/fcc-proposes-ai-disclosure-rules-for-political-ads-implementation-uncertain/",
+          "https://www.conference-board.org/research/policy-backgrounders/fec-interpretive-rule-on-ai-in-political-ads",
+          "https://cyberscoop.com/morelle-fcc-ai-political-ad-disclosure-election-campaign-regulation/",
+          "https://www.fastcompany.com/91615997/states-laws-struggling-ai-election-deepfakes",
+          "https://law.washu.edu/ai-policy-and-regulation-resources/political-advertising/",
+          "https://www.fppc.ca.gov/siteassets/documents/agendadocuments/general-items/2026/aug/Staff_Memo_18450.12_18401_adopt.pdf"
+        ]
+      }
+    ],
+    "force": "ai"
+  },
+  {
+    "id": "india-largest-ai-user-base",
+    "year": 2028,
+    "domain": "society",
+    "confidence": "moderate",
+    "probability": 0.6,
+    "title": "India becomes the largest country on a frontier AI assistant",
+    "summary": "OpenAI or Google says on the record that India, not the United States, has the most weekly or monthly users of ChatGPT or Gemini. India passed 100 million weekly ChatGPT users in February 2026, second to the US.",
+    "detail": "Altman put India at more than 100 million weekly ChatGPT users in February 2026, 'second globally after the US', out of about 800 million worldwide, and said no country has more student users. OpenAI opened a Delhi office in August 2025, launched its cheapest plan (ChatGPT Go, 399 rupees) in India first, then made it free for a year from 4 November 2025; Google and Reliance Jio began giving 18 months of Google AI Pro to Jio subscribers in October 2025, and Airtel gave 360 million customers a year of Perplexity Pro. The ceiling is high: IAMAI counts 958 million active internet users in India in 2025, growing 8% a year. By app-analytics measures India may already be first: Sensor Tower counted 180 million ChatGPT monthly actives in India in January 2026 and put India at 19% of the global user base of leading assistant apps against 10% for the US. The line does not accept those estimates. It asks the companies to say it, because they count logged-in users rather than installs, and because neither has yet published a US figure to compare against. The money runs the other way: India is about 1% of generative-AI in-app purchases, and ChatGPT's Indian in-app revenue fell a third when Go went free.",
+    "signals": [
+      "OpenAI or Google publishes a US weekly- or monthly-active figure for ChatGPT or Gemini",
+      "The free tiers end (ChatGPT Go in November 2026, Jio's AI Pro in spring 2027) and Indian usage holds",
+      "An independent tracker puts India above 20% of global ChatGPT or Gemini monthly actives"
+    ],
+    "leadsTo": [
+      "hinge-resolves"
+    ],
+    "relationshipKinds": {
+      "hinge-resolves": "related"
+    },
+    "hero": {
+      "num": 100,
+      "unit": "M",
+      "label": "weekly ChatGPT users in India (Altman, February 2026), second only to the United States. The bet: first, on the company's own count, around 2028.",
+      "effect": "web",
+      "bars": [
+        {
+          "label": "India, weekly ChatGPT users",
+          "value": 100,
+          "unit": "M",
+          "kind": "observed",
+          "note": "OpenAI, February 2026; 'more than 100 million'"
+        },
+        {
+          "label": "India, ChatGPT monthly actives (app estimate)",
+          "value": 180,
+          "unit": "M",
+          "kind": "reference",
+          "note": "Sensor Tower, January 2026; does not count for grading"
+        },
+        {
+          "label": "ChatGPT weekly users, world",
+          "value": 800,
+          "unit": "M",
+          "kind": "reference",
+          "note": "OpenAI, 'about 800 million', February 2026"
+        },
+        {
+          "label": "India, active internet users",
+          "value": 958,
+          "unit": "M",
+          "kind": "reference",
+          "note": "IAMAI, 2025; the ceiling"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "around",
+    "resolution": {
+      "test": "By 31 December 2029, OpenAI or Google states publicly and on the record (company blog, regulatory filing, earnings call, or a named executive's published statement) that India is the single largest country by weekly or monthly active users of ChatGPT or of the Gemini app respectively, ahead of the United States. Third-party estimates (Sensor Tower, Similarweb, Statista), download counts, API-user rankings, and statements that India is 'among the largest' or 'second-largest' do not count. Either company qualifying is a hit.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2030-03-31"
+    },
+    "evidenceNote": "The 100 million figure is OpenAI's own and covers free and paid tiers; the US comparison exists only as a rank because OpenAI has not published a US number. Sensor Tower's India-first finding is an app-install estimate reported through TechCrunch and is a lead, not the test.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "The forecast's AI lines are written from the US and China and say nothing about where the users are. India has 100 million weekly ChatGPT users (OpenAI, February 2026), 958 million internet users (IAMAI), free or near-free frontier tiers from OpenAI and Google, and app trackers already put it first. A company statement by 2029 is more likely than not; 0.6 because neither firm has to say it and the US base is still growing.",
+        "sources": [
+          "https://www.techrepublic.com/article/news-india-100-million-weekly-chatgpt-users/",
+          "https://www.indiatvnews.com/technology/news/india-becomes-second-largest-market-worldwide-with-100-million-chatgpt-users-per-week-sam-altman-2026-02-16-1030489",
+          "https://cdn.openai.com/signals/how-india-uses-chatgpt.pdf",
+          "https://techcrunch.com/?p=3095753",
+          "https://www.engadget.com/ai/google-brings-free-gemini-access-to-indias-largest-carrier-130627625.html",
+          "https://seekingalpha.com/news/4509109-openai-to-offer-one-year-free-chatgpt-go-access-in-india",
+          "https://tele.net.in/indias-internet-user-base-crosses-950-million-in-2025-as-per-iamai-report/"
+        ]
+      }
+    ],
+    "force": "ai"
+  },
+  {
+    "id": "africa-largest-working-age-population",
+    "year": 2054,
+    "yearEnd": 2062,
+    "domain": "society",
+    "confidence": "high",
+    "probability": 0.8,
+    "title": "Africa's working-age population passes China and India combined",
+    "summary": "The UN's 2024 medium projection has Africans aged 15–64 overtaking China and India together in 2058, 1,773 million to 1,744 million, the same year Africa passes every other UN region. Most of those workers are already born.",
+    "detail": "In 2024 Africa had 867 million people aged 15–64 against 1,974 million in China and India. The UN's 2024 medium variant has Africa at 1,559 million by 2050 and 1,825 million by 2060 while China falls below 900 million in 2038 and India's working-age population peaks in 2048 at 1,135 million; the lines cross in 2058. The same year Africa passes Central and Southern Asia, the largest of the UN's SDG regions, so the two natural framings of the line agree. Africa's share of the world's working-age population goes from 16% to 29% by 2060 and 41% by 2100; between 2024 and 2060 Africa adds more working-age people than the world does, because everywhere else is shrinking. The demography is firm because everyone who will be 15–64 in 2058 is born by 2043, and China's decline is already in the pyramid. What can move the year is African fertility falling faster than the UN assumes, which recent revisions have tended to find, so the window runs four years either side of the UN's date. Whether the dividend is collected is the story of the second half of the century; this line only grades the arithmetic.",
+    "signals": [
+      "WPP 2026 or 2028 moves the Africa-versus-China-plus-India crossing by more than two years",
+      "Nigeria's or Ethiopia's next census or DHS puts fertility below the UN medium path",
+      "China's 15–64 population falls below 900 million (UN medium: 2038)"
+    ],
+    "leadsTo": [
+      "population-declining"
+    ],
+    "relationshipKinds": {
+      "population-declining": "related"
+    },
+    "hero": {
+      "num": 867,
+      "unit": "M",
+      "label": "working-age (15–64) Africans in 2024, against 1,974 million in China and India together. The UN says the lines cross in 2058.",
+      "effect": "peak",
+      "bars": [
+        {
+          "label": "Africa, 15–64, 2024",
+          "value": 867,
+          "unit": "M",
+          "kind": "observed",
+          "note": "UN WPP 2024 estimate"
+        },
+        {
+          "label": "China + India, 15–64, 2024",
+          "value": 1974,
+          "unit": "M",
+          "kind": "observed",
+          "note": "UN WPP 2024 estimate"
+        },
+        {
+          "label": "Africa, 15–64, 2058",
+          "value": 1773,
+          "unit": "M",
+          "kind": "reference",
+          "note": "UN WPP 2024 medium variant"
+        },
+        {
+          "label": "China + India, 15–64, 2058",
+          "value": 1744,
+          "unit": "M",
+          "kind": "reference",
+          "note": "UN WPP 2024 medium variant; the crossing year"
+        }
+      ]
+    },
+    "cornerstone": false,
+    "status": "forecast",
+    "timing": "window",
+    "resolution": {
+      "test": "The UN World Population Prospects edition published in or after 2064, using its estimates (not projections), shows Africa's population aged 15–64 first exceeding the combined population aged 15–64 of China and India in a year from 2054 to 2062 inclusive. If the UN discontinues the series, use the successor UN estimate or, failing that, IHME. A crossing before 2054 resolves early; none by the end of 2062 is a miss.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2065-12-31"
+    },
+    "evidenceNote": "Every number is read from the UN WPP 2024 file POP/03-1 (population by select age group, both sexes, thousands), estimates sheet for 2024 and medium-variant sheet for projections. Projections 30 years out carry fertility and migration uncertainty; the window, not the point year, is the claim.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "added",
+        "reason": "population-peak and population-declining describe a shrinking world and the forecast had nothing on where the people will be. The UN WPP 2024 medium variant puts the Africa-versus-China-plus-India working-age crossing in 2058 (1,773 million to 1,744 million), the same year Africa passes every other UN region. A 2054–2062 window at 0.8 reflects that the cohort is mostly born and that recent revisions have cut African fertility.",
+        "sources": [
+          "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/EXCEL_FILES/2_Population/WPP2024_POP_F03_1_POPULATION_SELECT_AGE_GROUPS_BOTH_SEXES.xlsx",
+          "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+          "https://www.un.org/development/desa/pd/world-population-prospects-2024",
+          "https://www.prb.org/news/new-prb-analysis-offers-insights-as-indias-population-surpasses-chinas-notes-overlooked-rise-of-sub-saharan-africa/"
+        ]
+      }
+    ],
+    "force": "demography"
   }
 ]

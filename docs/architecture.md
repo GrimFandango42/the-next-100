@@ -24,7 +24,7 @@ flowchart TB
 
 ## The reading model
 
-Scroll is the only way to read. The reader strip at the top shows where you are (chapter, year, page n of 43) and the path you're following; **Overview** (or the `−` key) opens the whole century on one screen with search and a filter. There is deliberately no second navigation: no page-turn links, no tours, no autoplay. See `ONBOARDING.md` rule 5 before adding UI.
+Scroll is the only way to read. The reader strip at the top shows where you are (chapter, year, page n of 55) and the path you're following; **Overview** (or the `−` key) opens the whole century on one screen with search and a filter. There is deliberately no second navigation: no page-turn links, no tours, no autoplay. See `ONBOARDING.md` rule 5 before adding UI.
 
 `StoryJourney` renders one `<section data-story-stop>` per cover, chapter, page and ending. An `IntersectionObserver` picks the section nearest the viewport centre and sets `active` and the store's `year`; the figures and the fork read `branch` from the store, so flipping the path on the fork page (or the pill in the strip) re-renders every branch-aware figure after it.
 

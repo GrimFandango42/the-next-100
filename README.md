@@ -1,6 +1,6 @@
 # The Next 100
 
-**A living, self-grading forecast of humanity from 2026 to 2200.** Forty-three dated predictions, each with its odds, what would prove it wrong, and the sources behind it. Every week a check-in reads the news against the forecast, revises it in public, and grades the lines whose time has come.
+**A living, self-grading forecast of humanity from 2026 to 2200.** Fifty-five dated predictions, each with its odds, what would prove it wrong, and the sources behind it. Every week a check-in reads the news against the forecast, revises it in public, and grades the lines whose time has come.
 
 **Read it: [thenext100.duckdns.org](https://thenext100.duckdns.org)**
 
@@ -20,7 +20,7 @@ Below the book sits the evidence: the metrics, the odds of flourishing on each p
 flowchart LR
     news[(The news)] -->|weekly check-in| data
     subgraph data["data/*.json — the forecast"]
-        events[events.json<br/>43 lines · odds · what counts · history]
+        events[events.json<br/>55 lines · odds · what counts · history]
         metrics[metrics.json · indicators.json<br/>scenarios.json · clock.json]
         cites[citations.json · sources.json]
         vint[vintages/<br/>frozen snapshots]

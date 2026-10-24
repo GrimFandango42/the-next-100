@@ -1,0 +1,968 @@
+{
+  "date": "2026-10-24",
+  "note": "Frozen at this check-in. Never edited. Scores use the earliest pre-resolution vintage with the same definition version. Earlier unversioned snapshots remain historical records, not scoreable replacements.",
+  "hinge": 0.57,
+  "scenarios": {
+    "flourish": {
+      "unconditional": 44,
+      "pluralism": 52,
+      "concentration": 34
+    },
+    "diminished": {
+      "unconditional": 35,
+      "pluralism": 28,
+      "concentration": 45
+    },
+    "catastrophe": {
+      "unconditional": 15,
+      "pluralism": 15,
+      "concentration": 15
+    },
+    "extinction": {
+      "unconditional": 6,
+      "pluralism": 5,
+      "concentration": 6
+    }
+  },
+  "indicators": {
+    "open-weights-gap": 0.25,
+    "compute-ownership": -0.25,
+    "research-loop": 0.1,
+    "compute-treaty": 0,
+    "labor-response": 0,
+    "who-decides": 0.1,
+    "incidents": 0
+  },
+  "events": {
+    "agents-default-knowledge-work": {
+      "title": "AI agents become the default for knowledge work",
+      "summary": "Software, finance, law and research move to agent-first workflows: a human sets the goal and reviews, an agent does the work.",
+      "resolution": {
+        "test": "In at least two of the four sectors (software, finance, law, research), a cross-industry survey such as McKinsey's State of AI reports that a majority of large firms run most of their routine knowledge work through agents, not merely that they use agents somewhere. Published by end-2028 about 2027.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2030-12-31"
+      },
+      "branch": null,
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.72,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "entry-level-hiring-contracts": {
+      "title": "Entry-level white-collar hiring contracts visibly",
+      "summary": "The first politically salient 'AI took the jobs' moment in the US and Europe, concentrated in new-graduate hiring.",
+      "resolution": {
+        "test": "During 2026–2028, at least one independent payroll or vacancy study in the US and one in Europe reports a decline of at least 10% in entry-level hiring or employment in AI-exposed white-collar occupations relative to a stated 2022–2024 baseline or less-exposed comparison group. Both studies must publish their sample, age or seniority definition and method. This tests contraction, not proof that AI caused it.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2030-12-31"
+      },
+      "branch": null,
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.85,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "ai-runs-rd-programs": {
+      "title": "AI systems run multi-month R&D programs autonomously",
+      "summary": "A frontier lab or coalition demonstrates AI doing AI research end to end. The loop that compresses every downstream timeline becomes real.",
+      "resolution": {
+        "test": "A frontier lab reports AI leading (Epoch automation level 4 or above) a majority of its AI R&D for at least three consecutive months, verified by an embedded third-party evaluator with publication rights. A single automated research result does not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2031-12-31"
+      },
+      "branch": null,
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.68,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "first-ai-election": {
+      "title": "The first US presidential election fought substantially over AI",
+      "summary": "Labor displacement, compute control and accountability dominate the campaign.",
+      "resolution": {
+        "test": "AI (including data centers and their power demand) is among the top five issues in the general-election exit poll or in Pew's post-election issue ranking, and both major-party platforms carry an AI plank.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2031-12-31"
+      },
+      "branch": null,
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.78,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "ai-cyberattack-infrastructure": {
+      "title": "A major AI-driven cyberattack on infrastructure",
+      "summary": "The first attack clearly enabled by autonomous systems that disrupts power, water, finance or transport at national scale.",
+      "resolution": {
+        "test": "During 2028–2030, a government incident report attributes a disruption of electricity, water, transport or payments affecting at least 100,000 people for at least 24 hours to an intrusion in which AI autonomously performed a material operational step. Use of AI only to write phishing text does not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2032-12-31"
+      },
+      "branch": null,
+      "year": 2029,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.78,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "federal-ai-statute": {
+      "title": "The first serious US federal AI statute",
+      "summary": "Comprehensive, crisis-shaped law on liability, compute reporting and model-weight security.",
+      "resolution": {
+        "test": "'serious' means binding obligations on frontier developers (published safety frameworks, incident reporting, weight security) with an enforcement mechanism; a preemption-plus-transparency bill of that shape counts even if it is not crisis-shaped.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2032-12-31"
+      },
+      "branch": null,
+      "year": 2029,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "compute-verification-talks": {
+      "title": "US and China open compute-verification talks",
+      "summary": "Not a treaty. Something like the early Cold War arms-control talks, with compute monitoring as the first thing on the table.",
+      "resolution": {
+        "test": "An official US–China negotiation whose published agenda includes verification of compute or training runs. A safety dialogue or incident channel without a verification item does not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-12-31"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-drugs-phase-iii": {
+      "title": "AI-designed drugs clear Phase III at scale",
+      "summary": "At least a dozen AI-generated molecules clear Phase III in a year. Discovery accelerates, but safety, clinical benefit and regulatory review still have to be demonstrated.",
+      "resolution": {
+        "test": "At least a dozen molecules whose chemical structure was generated by an AI system (not AI-assisted screening of human-designed libraries) clear Phase III in one year, counted from trial registries and sponsor filings. Trial duration is a separate claim and is not graded here.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2036-12-31"
+      },
+      "branch": null,
+      "year": 2033,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.7,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "fusion-net-grid": {
+      "title": "Fusion delivers net electricity to a grid",
+      "summary": "A symbolic milestone. The real story is that solar plus storage has already made energy functionally abundant in the sunbelt.",
+      "resolution": {
+        "test": "a fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2037-12-31"
+      },
+      "branch": null,
+      "year": 2034,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ubi-pilots-national": {
+      "title": "A universal income program goes national in two OECD countries",
+      "summary": "Part of a messy settlement: shorter weeks, a care and trades boom, and a two-tier labor market.",
+      "resolution": {
+        "test": "By the end of 2035, two OECD member countries have each operated a statutory nationwide income-floor program for at least 12 months, open to all adult residents meeting published income and residency rules, without a work requirement. Regional pilots and temporary emergency transfers do not count. National statutes and implementation reports are the evidence.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2037-12-31"
+      },
+      "branch": null,
+      "year": 2034,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-chemistry-majority": {
+      "title": "Most new FDA approvals have AI-originated chemistry",
+      "summary": "The majority of new molecular entities approved in a year were designed by AI systems.",
+      "resolution": {
+        "test": "In a calendar year during 2034–2036, more than half of FDA CDER novel small-molecule drug approvals have public discovery records showing that AI generated the chemical structure. Biologics and AI-assisted screening alone are excluded. Count every eligible approval; undisclosed design provenance does not count as AI-generated.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2038-12-31"
+      },
+      "branch": null,
+      "year": 2035,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "lunar-base-occupied": {
+      "title": "A continuously occupied lunar base",
+      "summary": "US-led, with partners. China follows with its own by 2038.",
+      "resolution": {
+        "test": "A surface habitat occupied for twelve consecutive months with no gap longer than one crew rotation, by any nation. 'China follows by 2038' is a separate observation, not part of the grade.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2038-12-31"
+      },
+      "branch": null,
+      "year": 2035,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "humanoids-in-homes": {
+      "title": "Humanoid robots enter homes",
+      "summary": "Warehouses, then hospitals, then homes. The physical-world shock, roughly a decade after the cognitive one.",
+      "resolution": {
+        "test": "Humanoid robots doing household tasks autonomously in at least 1% of households in one OECD country, measured by a national survey or an independent deployment audit. Retail availability, subscriptions on offer, or teleoperated units do not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2039-12-31"
+      },
+      "branch": null,
+      "year": 2036,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "superhuman-cognition": {
+      "title": "Systems exceed every human at every measurable cognitive task",
+      "summary": "There is no single moment. A gradual recognition that the hardest decisions in science, strategy and governance are made by or with systems we cannot fully audit.",
+      "resolution": {
+        "test": "On a frozen suite of professional tasks (medicine, law, mathematics, software, strategy) published by an independent evaluator, the best AI system scores above the best human expert on every task family, and the result is reproduced by a second evaluator. Graded on the window 2034–2040.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2042-12-31"
+      },
+      "branch": null,
+      "year": 2034,
+      "yearEnd": 2040,
+      "timing": "window",
+      "probability": 0.7,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "hinge-resolves": {
+      "title": "The hinge resolves: pluralism or concentration",
+      "summary": "Either capability stays contested across many actors (57%), or one or two actors consolidate a decisive lead (43%).",
+      "resolution": {
+        "test": "Graded in 2039 on the two lead indicators: pluralism if the best open-weight model is within twelve months of the frontier and the top two actors hold under half of frontier compute; concentration otherwise. The probability on this line is the chance of pluralism.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2042-12-31"
+      },
+      "branch": null,
+      "year": 2039,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.57,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "aging-therapy-approved": {
+      "title": "The first approved therapy that slows biological aging",
+      "summary": "Lifespan extension moves from mice to humans. Life expectancy in rich countries, flat since the late 2010s once the pandemic dip is netted out, starts climbing again.",
+      "resolution": {
+        "test": "During 2042–2044, FDA or EMA approves a therapy for any indication and a randomized controlled human trial also demonstrates a statistically significant reduction in all-cause mortality or onset of at least two age-related diseases. An aging biomarker change alone does not count. Regulatory decisions and peer-reviewed trial results must both be available.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2046-12-31"
+      },
+      "branch": null,
+      "year": 2043,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "labor-cost-irrelevant": {
+      "title": "Labor cost no longer decides where things are made",
+      "summary": "Nearly all materially intensive manufacturing is robotic. Energy and regulation decide location.",
+      "resolution": {
+        "test": "Scenario, not currently scored: the claim concerns global manufacturing location decisions, for which there is no agreed measure of labor cost being irrelevant. Wage shares, factory location studies and industrial investment patterns are signposts, not a binary test. A measurable replacement must receive a new definition and new forecast vintage.",
+        "version": "2026-10-24",
+        "mode": "scenario"
+      },
+      "branch": null,
+      "year": 2045,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "population-peak": {
+      "title": "Global population peaks near 9.6 billion",
+      "summary": "Earlier than UN mid-estimates. Fertility falls faster than expected nearly everywhere; East Asia and Southern Europe are already in steep decline.",
+      "resolution": {
+        "test": "UN World Population Prospects, in its edition of 2060 or later, places the world population peak inside 2046–2058 at 9.3–9.9 billion.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2062-12-31"
+      },
+      "branch": null,
+      "year": 2046,
+      "yearEnd": 2058,
+      "timing": "window",
+      "probability": 0.45,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "two-degrees-breached": {
+      "title": "2°C is breached, with emissions already falling",
+      "summary": "1.5°C was missed in the late 2020s. Emissions have fallen since the mid-2030s, but the lag in the system carries warming past 2°C.",
+      "resolution": {
+        "test": "The 20-year mean global surface temperature (Copernicus ERA5 or the WMO multi-dataset mean, 1850–1900 baseline) first exceeds 2.0°C in a year within 2049–2051, while global fossil CO₂ emissions are below their peak.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2053-12-31"
+      },
+      "branch": null,
+      "year": 2050,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.75,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "geoengineering-unilateral": {
+      "title": "A mid-sized country starts unilateral stratospheric aerosol injection",
+      "summary": "It becomes the biggest geopolitical fight of the 2050s.",
+      "resolution": {
+        "test": "During 2051–2053, a national government starts and funds deliberate stratospheric aerosol releases for climate cooling, sustained for at least 12 months, without authorization through a multilateral climate agreement. Small research trials without a climate-cooling program do not count. Require public government records and independent atmospheric monitoring.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2055-12-31"
+      },
+      "branch": null,
+      "year": 2052,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "mars-outpost": {
+      "title": "A permanent Mars outpost",
+      "summary": "Not self-sustaining. A symbol, and an AI-run industrial test bed.",
+      "resolution": {
+        "test": "By the end of 2053, humans have continuously occupied a fixed surface outpost on Mars for at least 24 months. A visiting mission, orbital station or uncrewed installation does not count. Require mission logs plus independent tracking or published imagery.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2055-12-31"
+      },
+      "branch": null,
+      "year": 2052,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "superintelligence-regime": {
+      "title": "Governance of superintelligent systems settles into a regime",
+      "summary": "Treaties, compute verification, and a few dominant systems operated as shared infrastructure. Whether it is legitimate or a soft autocracy is the open question.",
+      "resolution": {
+        "test": "Scenario, not currently scored: a stable regime governing superintelligence has no agreed operational definition. Track binding international rules, enforceable technical standards, ownership concentration and actual compliance. Do not score a treaty announcement as proof of this broader claim.",
+        "version": "2026-10-24",
+        "mode": "scenario"
+      },
+      "branch": null,
+      "year": 2055,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.62,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "mass-casualty-event": {
+      "title": "A mass-casualty AI-enabled bio or infrastructure event",
+      "summary": "Millions, not extinction. About 17% before 2055.",
+      "resolution": {
+        "test": "A single AI-enabled biological or infrastructure event with at least one million deaths, attributed by at least two governments or a UN body, before the end of 2055.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2058-12-31"
+      },
+      "branch": null,
+      "year": 2055,
+      "yearEnd": null,
+      "timing": "by",
+      "probability": 0.17,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "population-declining": {
+      "title": "Global population in decline",
+      "summary": "Production is automated; growth is high in absolute terms; the human experience bifurcates by institutional strength.",
+      "resolution": {
+        "test": "The UN World Population Prospects edition published in 2070, or its first successor after that year, estimates global population in 2065 below the maximum estimated population in any previous year. Projection changes alone do not count as observed decline.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2072-12-31"
+      },
+      "branch": null,
+      "year": 2065,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "healthy-lifespan-110": {
+      "title": "Healthy lifespans past 110 become widely available",
+      "summary": "First for those who can access it, then broadly. Intergenerational conflict replaces class conflict as the central political cleavage.",
+      "resolution": {
+        "test": "Scenario, not currently scored: availability of a therapy cannot demonstrate a healthy lifespan beyond 110 without validated long-term outcomes and an agreed definition of health. Track disability-free survival, access and prospective cohort evidence; do not substitute a biomarker or a single long-lived individual.",
+        "version": "2026-10-24",
+        "mode": "scenario"
+      },
+      "branch": null,
+      "year": 2072,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "bci-mainstream": {
+      "title": "Brain–computer interfaces mainstream for augmentation",
+      "summary": "Not just medicine. The line between a human decision and an AI-assisted one stops being legible.",
+      "resolution": {
+        "test": "By the end of 2076, at least 1% of adults in one OECD country actively use implanted brain–computer interfaces for non-therapeutic communication or cognitive augmentation, documented by a representative national survey or independently audited device registry. Clinical trial enrollment and external wearables do not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2078-12-31"
+      },
+      "branch": null,
+      "year": 2075,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "orbital-industry": {
+      "title": "Asteroid-sourced materials become economically meaningful",
+      "summary": "Orbital and lunar industry is a real sector.",
+      "resolution": {
+        "test": "By the end of 2086, independently audited annual sales of products incorporating asteroid-sourced material exceed US$1 billion in constant 2026 dollars. Public accounting records must distinguish asteroid material from Earth-launched inputs. Samples and projected resource valuations do not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2088-12-31"
+      },
+      "branch": null,
+      "year": 2085,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "off-earth-population": {
+      "title": "Tens of thousands of people live off-Earth",
+      "summary": "Nearly all in orbit or on the Moon.",
+      "resolution": {
+        "test": "By the end of 2101, at least 20,000 people have each lived outside Earth for 12 consecutive months, established by published habitat and transport records with an independent audit. Visitors of shorter duration do not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2103-12-31"
+      },
+      "branch": null,
+      "year": 2100,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "world-2100": {
+      "title": "7.5 billion people, a managed climate, and non-human minds as normal",
+      "summary": "Humanity has not gone extinct. The most capable systems on the planet are not human, and most people alive regard that as normal, the way we regard electricity.",
+      "resolution": {
+        "test": "Scenario, not currently scored as a single binary forecast: this combines population, climate management and social acceptance of non-human intelligence. The population curve can be compared with later UN estimates, but passing that one component does not establish the whole scenario.",
+        "version": "2026-10-24",
+        "mode": "scenario"
+      },
+      "branch": null,
+      "year": 2100,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "human-ai-continuity": {
+      "title": "Human–AI continuity",
+      "summary": "Augmentation, hybrid cognition, perhaps uploading. Or humans persist as a protected, long-lived population alongside the systems that do the civilizational work.",
+      "resolution": {
+        "test": "Scenario, not currently scored: there is no accepted observational test for continuity of personal identity through merger with AI. Biological survival, subjective reports and philosophical continuity are distinct. This line describes possibilities, not a presently resolvable claim.",
+        "version": "2026-10-24",
+        "mode": "scenario"
+      },
+      "branch": null,
+      "year": 2125,
+      "yearEnd": 2175,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "self-sustaining-settlement": {
+      "title": "A self-sustaining off-Earth settlement",
+      "summary": "A population that would survive if Earth stopped sending anything.",
+      "resolution": {
+        "test": "By the end of 2151, an off-Earth settlement of at least 1,000 people completes ten consecutive years without Earth-origin material supplies, maintaining population, food, breathable air, energy and replacement industrial equipment. Communication is allowed. Require independently audited resource and manufacturing records.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2153-12-31"
+      },
+      "branch": null,
+      "year": 2150,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "clock-retired": {
+      "title": "The Doomsday Clock is retired",
+      "summary": "The Bulletin retires or replaces the Clock with an instrument built for risks from systems, not arsenals.",
+      "resolution": {
+        "test": "The Bulletin of the Atomic Scientists, or its successor, announces the Clock's retirement or replacement by a different instrument. Graded as 'around 2150' (± 1 year is meaningless here; graded as any time 2140–2160).",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2162-12-31"
+      },
+      "branch": null,
+      "year": 2140,
+      "yearEnd": 2160,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "the-silence": {
+      "title": "The silence continues",
+      "summary": "No contact with non-human intelligence, detected or otherwise.",
+      "resolution": {
+        "test": "No confirmed technosignature or contact, by the standard of an IAU-recognized detection, through 2180.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2182-12-31"
+      },
+      "branch": null,
+      "year": 2180,
+      "yearEnd": null,
+      "timing": "through",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "labs-pace-the-frontier": {
+      "title": "Frontier labs agree to pace each other, with outside evaluators inside",
+      "summary": "Not regulation and not a race: three or more labs commit to the same development pace and let third parties watch, with publication rights.",
+      "resolution": {
+        "test": "By the end of 2028, at least three frontier AI developers have operated for six months under a common capability-threshold pacing agreement, with embedded independent evaluators able to publish findings and records of compliance. An unsigned proposal or safety pledge without operating evaluators does not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2030-12-31"
+      },
+      "branch": null,
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "state-ai-laws-preempted": {
+      "title": "Congress preempts state AI laws",
+      "summary": "The first federal AI statute is about who gets to regulate, not what the rules are: states lose the frontier-model field to Washington.",
+      "resolution": {
+        "test": "By the end of 2028, a US federal statute has taken effect that expressly preempts state laws imposing obligations on frontier-model developers. Executive orders, litigation proposals and an introduced bill alone do not count. Use the enacted statute and effective date.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2030-12-31"
+      },
+      "branch": null,
+      "year": 2027,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "helion-delivers-microsoft": {
+      "title": "Helion's Orion delivers fusion electricity to Microsoft",
+      "summary": "The most date-specific fusion claim in the world: a 50 MW plant in Washington, under contract with penalties, due in 2028.",
+      "resolution": {
+        "test": "During 2028–2030, independently documented metered electricity from Helion’s Orion facility reaches the grid under its Microsoft supply agreement. Any positive delivered quantity counts; annual net electricity and commercial profitability are separate questions. A contract or facility opening is insufficient.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2032-12-31"
+      },
+      "branch": null,
+      "year": 2028,
+      "yearEnd": 2030,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "bci-permanent-approval": {
+      "title": "The first permanent brain–computer interface wins FDA premarket approval",
+      "summary": "Medical, narrow, for paralysis. The first implant you can keep.",
+      "resolution": {
+        "test": "During 2029–2031, FDA issues a premarket approval for a chronically implanted brain–computer interface that decodes neural activity for communication or control. Investigational exemptions, 510(k) clearances and temporary implants do not count. The FDA approval order is authoritative.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-12-31"
+      },
+      "branch": null,
+      "year": 2029,
+      "yearEnd": 2031,
+      "timing": "window",
+      "probability": 0.65,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "china-crewed-moon": {
+      "title": "China lands a crew on the Moon",
+      "summary": "On its own hardware, on its stated schedule, and the second nation to do it.",
+      "resolution": {
+        "test": "During 2030–2031, a Chinese-led mission lands at least one human on the lunar surface and returns the crew alive to Earth. A flyby, orbital mission or robotic landing does not count. Require official mission records and independent tracking.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-12-31"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": 2031,
+      "timing": "window",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "fossil-co2-peak": {
+      "title": "Global fossil CO₂ emissions peak",
+      "summary": "The year the Global Carbon Budget later confirms as the top. 2025 was a record 38.1 billion tonnes.",
+      "resolution": {
+        "test": "The Global Carbon Budget identifies a peak year inside 2030–2033 followed by three consecutive lower years. Graded on the 2037 edition, so data revisions are in. Two declines alone identify a candidate, not the peak.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2037-12-31"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": 2033,
+      "timing": "window",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "in-vivo-editing-common-disease": {
+      "title": "An in-body gene editor is approved for a disease of the many",
+      "summary": "Casgevy edits cells in a dish. The next step is a one-time infusion that rewrites DNA inside the patient, approved for a condition with more than 100,000 US patients, not a rare one.",
+      "resolution": {
+        "test": "Counts on FDA or EMA approval of a systemically delivered CRISPR, base or prime editor for ATTR cardiomyopathy, hypercholesterolemia or any other indication with more than 100,000 US patients. Miss if: No FDA/EMA approval of a systemically delivered in-vivo editor for an indication with >100,000 US patients by 31 Dec 2031.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-12-31"
+      },
+      "branch": null,
+      "year": 2029,
+      "yearEnd": 2031,
+      "timing": "window",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "federal-pqc-deadline-met": {
+      "title": "US agencies hit the 2030 post-quantum deadline for their most important systems",
+      "summary": "The standards exist. The order exists. The question is whether every federal high-value system is actually using post-quantum key exchange by 31 December 2030, and whether an auditor says so.",
+      "resolution": {
+        "test": "Counts if GAO, or OMB's annual FISMA report to Congress, confirms that all 24 CFO Act agencies' high-value assets and high-impact systems used post-quantum key establishment at the 31 December 2030 deadline. Miss if: By the time GAO or the FISMA report covers calendar 2030, fewer than 24 agencies have all HVAs and high-impact systems on PQC key establishment; or the 2030 deadline is moved by a later order or memo; no published audit by 31 December 2033 leaves the line unresolved.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-12-31"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "by",
+      "probability": 0.2,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "quantum-chemistry-advantage": {
+      "title": "A quantum computer beats the best classical method on a real chemistry problem",
+      "summary": "Not a sampling benchmark. A molecule or material property computed on error-corrected hardware, beyond the best stated classical method, and still standing a year later.",
+      "resolution": {
+        "test": "A peer-reviewed chemistry or materials result published during 2030–2033 uses error-corrected quantum hardware to beat a named best classical method on stated accuracy or full computational cost. An outside group must reproduce or verify it, and no classical match may appear in the following 12 months. Assess publications through 31 December 2033 with follow-up through 31 December 2034; absence of a qualifying result is a miss.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2034-12-31"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": 2033,
+      "timing": "window",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "data-centres-tenth-us-power": {
+      "title": "Data centers draw a tenth of US electricity",
+      "summary": "Power, not chips, becomes the limit on the AI buildout. The test is the meter: data centers at 10% or more of US electricity in 2030, up from 4.7% in 2024.",
+      "resolution": {
+        "test": "Resolve on the US data-center share of total US electricity for calendar 2030. Use the first LBNL/DOE estimate published by 31 December 2033; if absent, use EIA, then IEA, in that order. At least 10% is a hit; below 10% is a miss. No estimate by that date leaves the claim unresolved, not automatically false. Planned capacity does not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-12-31"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "autonomous-weapons-at-scale": {
+      "title": "Autonomous weapons kill at scale in a war between states",
+      "summary": "Munitions that pick their own target and strike with no human approving that target, documented in the thousands. The first kills are already on record; what is missing is the count.",
+      "resolution": {
+        "test": "By 31 December 2028, a government, a UN body (including the UN Human Rights Monitoring Mission in Ukraine), the ICRC, SIPRI or a peer-reviewed forensic study documents at least 1,000 engagements in a war between states in which a weapon selected the specific target it struck without a human authorizing that target, or a belligerent states that a majority of a named class of its strikes were flown in fully autonomous mode. Counts whether the targets were people, vehicles or ground infrastructure. Does not count: terminal homing on a target a human designated before launch; automatic defence against incoming drones, missiles or aircraft (Phalanx, Aegis, interceptor drones); decision-support systems where a person approves each strike. Documentation published by 31 December 2029 about engagements that occurred by the deadline counts.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2029-12-31"
+      },
+      "branch": null,
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "by",
+      "probability": 0.75,
+      "confidence": "high",
+      "status": "forecast"
+    },
+    "taiwan-chip-supply-shock": {
+      "title": "A Taiwan Strait blockade or war cuts off leading-edge chips for 90 days",
+      "summary": "Every TSMC 3nm and 2nm wafer is made on the island until Arizona's second fab starts in late 2027. The bet is a 90-day interruption, not a crisis of days.",
+      "resolution": {
+        "test": "Between 1 January 2026 and 31 December 2032, a blockade, quarantine, exclusion zone or armed conflict in or around the Taiwan Strait interrupts shipments of 3nm-class-or-better logic wafers or chips from Taiwan for at least 90 consecutive days. Evidence: TSMC discloses force majeure or a suspension of Taiwan fab output or shipments covering the period, or Taiwan's customs data show integrated-circuit exports down by more than half for a full quarter with the interruption attributed to the blockade or conflict by TSMC, Taiwan's government or the US government. A quarantine of outlying islands, a crisis that ends inside 90 days, or an interruption caused by an earthquake, drought or power failure unrelated to military action does not count. 'Leading edge' moves with the window: the test applies to the most advanced node TSMC ships in volume in Taiwan at the time.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2033-06-30"
+      },
+      "branch": null,
+      "year": 2026,
+      "yearEnd": 2032,
+      "timing": "window",
+      "probability": 0.15,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "nuclear-use-in-anger": {
+      "title": "The nuclear taboo holds",
+      "summary": "No nuclear weapon detonated in anger through 2060. The forecast puts 68% on the taboo holding, which is a 32% chance that one is used in the next 34 years.",
+      "resolution": {
+        "test": "No nuclear explosive device is detonated as an act of hostility by any state or non-state actor, against any target, from 2026 through 31 December 2060. A detonation counts when the CTBTO International Monitoring System or a national technical means detects it and at least two governments or the UN Security Council attribute it to a hostile act. Does not count: nuclear tests (announced or not), accidental detonations without hostile intent, peaceful nuclear explosions, radiological dispersal devices, and conventional attacks on reactors or nuclear sites. The line resolves true if the period ends with zero such detonations; a single one, of any yield, resolves it false on that date.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2061-12-31"
+      },
+      "branch": null,
+      "year": 2060,
+      "yearEnd": null,
+      "timing": "through",
+      "probability": 0.68,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-equity-drawdown": {
+      "title": "The AI trade halves",
+      "summary": "The chip index that carries the AI boom closes 50% below its record. It has done that twice before, in 2000-02 and 2008, each time after a capex cycle outran the cash to pay for it. About even odds it happens between 2027 and 2030.",
+      "resolution": {
+        "test": "Resolve on the PHLX Semiconductor Index (SOX, published by Nasdaq; FRED series NASDAQSOX), daily closing values. A hit is any close between 1 January 2027 and 31 December 2030 that is at least 50% below the highest close recorded up to that day. The peak may be before 2027, so the record of 14,634.72 on 22 June 2026 counts if not exceeded. Intraday lows do not count. If the first qualifying close comes before 2027 the line grades early. If Nasdaq renames or reconstitutes the index, use the series Nasdaq designates as its continuation.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2031-01-31"
+      },
+      "branch": null,
+      "year": 2027,
+      "yearEnd": 2030,
+      "timing": "window",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-productivity-in-statistics": {
+      "title": "AI shows up in the productivity statistics",
+      "summary": "Solow's line again: AI is everywhere but in the numbers. The test is three straight years of US labor productivity growth above 2.5%, a run last seen in 1998-2004, with the third year landing between 2032 and 2036.",
+      "resolution": {
+        "test": "Resolve on BLS private nonfarm business sector labor productivity (output per hour), annual percent change, as published in Table 1 of the BLS Total Factor Productivity news release. A hit is any three consecutive calendar years, the last of them between 2032 and 2036, each above 2.5%, using the figures as they stand in the first TFP release published after the third year (the release covering 2036, due in early 2037, closes the window). A qualifying run that ends before 2032 grades early. If BLS discontinues the TFP tables, use the nonfarm business sector annual-average labor productivity change from the Productivity and Costs release. Total factor productivity is not the test.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2037-06-30"
+      },
+      "branch": null,
+      "year": 2032,
+      "yearEnd": 2036,
+      "timing": "window",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "next-pandemic": {
+      "title": "Another pandemic kills a million, confirmed",
+      "summary": "COVID-19 has 7.1 million confirmed deaths on WHO's count. The bet is a new outbreak that passes one million confirmed deaths before 2051: about 40%, roughly what the historical record says, nudged up for spillover and down for vaccines.",
+      "resolution": {
+        "test": "A hit if, between 24 October 2026 and 31 December 2050, WHO's reported cumulative confirmed deaths from a single new outbreak reach one million, counted from the outbreak's start. Confirmed means deaths reported to WHO by member states as caused by the pathogen, the basis of COVID-19's 7.1 million, not modelled excess deaths. The outbreak must be one WHO has declared a Public Health Emergency of International Concern or a pandemic. Continuing COVID-19 deaths do not count; a SARS-CoV-2 descendant counts only under a new PHEIC declaration. Origin, natural, accidental or deliberate, does not matter. If WHO stops publishing confirmed counts, use the successor series WHO designates.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2051-12-31"
+      },
+      "branch": null,
+      "year": 2050,
+      "yearEnd": null,
+      "timing": "by",
+      "probability": 0.4,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "glp1-quarter-of-us-adults": {
+      "title": "A quarter of American adults are on a GLP-1",
+      "summary": "Six percent of US adults were taking a GLP-1 drug in May 2024; twelve percent by November 2025. The bet is 25% around 2032, which needs the pills, the prices and Medicare to keep moving and the dropout rate to fall.",
+      "resolution": {
+        "test": "Resolve on the share of US adults (18 and over) who say they are currently taking a GLP-1 drug for any reason, in a KFF Health Tracking Poll fielded between 1 January 2031 and 31 December 2033 (the measure that read 6% in May 2024 and 12% in November 2025). 25% or more in any such poll is a hit. If KFF stops asking, use Gallup's National Health and Well-Being Index current-use measure for any reason, or failing that a federal survey estimate (NHIS, MEPS or NHANES) of current use among adults. Prescription-fill counts (IQVIA and the like) do not count, since they count fills, not people. A weight-loss-only measure does not count unless it alone reaches 25%.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2034-06-30"
+      },
+      "branch": null,
+      "year": 2032,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.35,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "ice-free-arctic-september": {
+      "title": "The first ice-free Arctic September",
+      "summary": "A September monthly mean below 1 million km² of sea ice, the standard 'ice-free' threshold. 2026's minimum was 4.60 million km²; the models say the first crossing is likely before 2050, the data say the decline has stalled for two decades.",
+      "resolution": {
+        "test": "The NSIDC Sea Ice Index (version 3 or its successor) reports a September monthly mean Arctic sea-ice extent below 1.0 million km² in any year from 2036 to 2050 inclusive. A daily extent below 1 million, or sea-ice area (rather than extent) below 1 million, does not count. A qualifying September mean before 2036 resolves the line early; none by the end of 2050 is a miss.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2051-03-31"
+      },
+      "branch": null,
+      "year": 2036,
+      "yearEnd": 2050,
+      "timing": "window",
+      "probability": 0.55,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "ai-tutor-daily-majority": {
+      "title": "Most teenagers in three OECD countries use an AI tutor every school day",
+      "summary": "Not 'has tried': a majority of secondary students reporting daily or near-daily use of a generative-AI tutor for schoolwork, measured by a published survey, in at least three OECD countries.",
+      "resolution": {
+        "test": "By 31 December 2031, published surveys with stated samples and methods (OECD PISA or TALIS, a national ministry or statistics office, Eurostat, Pew, Common Sense, Ofcom, or an equivalent) show that in each of at least three OECD member countries, 50% or more of secondary students (ages 13–18 or grades 7–12, nationally representative) report using a generative-AI chatbot or tutor for schoolwork or learning on most school days ('daily or almost daily', 'every day', or at least four days a week). The three findings may come from different surveys and years within 2029–2031. 'Ever used', weekly use, teacher use, and school-licence counts do not count.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2032-06-30"
+      },
+      "branch": null,
+      "year": 2030,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.5,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "provenance-required-political-ads": {
+      "title": "Political ads must prove where their pictures came from",
+      "summary": "A binding US federal rule that political ads disclose AI-made content, or a US or EU rule that political-ad media carry signed provenance credentials. The EU labels ads and marks AI output already; nobody yet requires the ad itself to carry its origin.",
+      "resolution": {
+        "test": "By 31 December 2029, either (a) a US federal statute or a final FCC or FEC rule is in force requiring paid political advertisements to disclose AI-generated or materially altered audio or visual content, or (b) a binding US federal or EU-level rule is in force requiring paid political advertisements' audio-visual media to carry machine-readable content credentials (C2PA or an equivalent signed-provenance standard) attesting origin. State laws, platform policies, voluntary codes, and the EU AI Act's general Article 50 marking and deepfake-labelling duties do not count. A rule enjoined before it takes effect does not count until the injunction lifts.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2030-03-31"
+      },
+      "branch": null,
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.35,
+      "confidence": "speculative",
+      "status": "forecast"
+    },
+    "india-largest-ai-user-base": {
+      "title": "India becomes the largest country on a frontier AI assistant",
+      "summary": "OpenAI or Google says on the record that India, not the United States, has the most weekly or monthly users of ChatGPT or Gemini. India passed 100 million weekly ChatGPT users in February 2026, second to the US.",
+      "resolution": {
+        "test": "By 31 December 2029, OpenAI or Google states publicly and on the record (company blog, regulatory filing, earnings call, or a named executive's published statement) that India is the single largest country by weekly or monthly active users of ChatGPT or of the Gemini app respectively, ahead of the United States. Third-party estimates (Sensor Tower, Similarweb, Statista), download counts, API-user rankings, and statements that India is 'among the largest' or 'second-largest' do not count. Either company qualifying is a hit.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2030-03-31"
+      },
+      "branch": null,
+      "year": 2028,
+      "yearEnd": null,
+      "timing": "around",
+      "probability": 0.6,
+      "confidence": "moderate",
+      "status": "forecast"
+    },
+    "africa-largest-working-age-population": {
+      "title": "Africa's working-age population passes China and India combined",
+      "summary": "The UN's 2024 medium projection has Africans aged 15–64 overtaking China and India together in 2058, 1,773 million to 1,744 million, the same year Africa passes every other UN region. Most of those workers are already born.",
+      "resolution": {
+        "test": "The UN World Population Prospects edition published in or after 2064, using its estimates (not projections), shows Africa's population aged 15–64 first exceeding the combined population aged 15–64 of China and India in a year from 2054 to 2062 inclusive. If the UN discontinues the series, use the successor UN estimate or, failing that, IHME. A crossing before 2054 resolves early; none by the end of 2062 is a miss.",
+        "version": "2026-10-24",
+        "mode": "testable",
+        "assessAfter": "2065-12-31"
+      },
+      "branch": null,
+      "year": 2054,
+      "yearEnd": 2062,
+      "timing": "window",
+      "probability": 0.8,
+      "confidence": "high",
+      "status": "forecast"
+    }
+  }
+}

@@ -15,7 +15,7 @@ erDiagram
     CITATION }o--|| REVISION : "by URL"
 ```
 
-## `events.json` — the 43 lines
+## `events.json` — the 55 lines
 
 | Field | Type | Meaning |
 | --- | --- | --- |

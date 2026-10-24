@@ -157,5 +157,34 @@
       "the-silence"
     ],
     "sources": []
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "revision",
+    "headline": "Twelve lines the forecast was missing: war, money, health, the planet, and the world outside the US",
+    "body": "The forecast read as Silicon Valley's century. Added, each with a stated test, a miss condition and opened primary or institutional sources: autonomous weapons used at scale in a war between states (by 2028, 75%); a Taiwan Strait blockade or war cutting leading-edge chips for 90 days (2026–2032, 15%); the nuclear taboo holding through 2060 (68%, so 32% that a weapon is used); the AI trade halving (SOX 50% off its record, 2027–2030, 50%; it is already 26% down); AI showing in US productivity statistics (three years above 2.5%, 2032–2036, 50%); another pandemic with a million confirmed deaths (by 2050, 40%); a quarter of US adults on a GLP-1 (around 2032, 35%); the first ice-free Arctic September (2036–2050, 55%); a daily AI tutor for most teenagers in three OECD countries (around 2030, 50%); provenance rules for political ads (around 2028, 35%); India as the largest country on a frontier assistant (around 2028, 60%); Africa's working-age population passing China and India combined (2054–2062, 80%, the UN dates the crossing to 2058). Eleven existing lines gained a link to the new ones. The weave changed with them: climate and energy became a fourth force, every line is tagged with its force, chapter pages say where each thread stands, and every page says how old someone born in 2026 is when it happens. population-peak is now a cornerstone. A fact the forecast had not absorbed surfaced in the research and is recorded here for the next check-in: the United States and Israel have been at war with Iran since 28 February 2026 (CFR Global Conflict Tracker), with Khamenei killed, the Strait of Hormuz effectively closed for a period and merchant ships still being hit in October; the energy, risk and clock lines should be re-read against it.",
+    "touched": [
+      "autonomous-weapons-at-scale",
+      "taiwan-chip-supply-shock",
+      "nuclear-use-in-anger",
+      "ai-equity-drawdown",
+      "ai-productivity-in-statistics",
+      "next-pandemic",
+      "glp1-quarter-of-us-adults",
+      "ice-free-arctic-september",
+      "ai-tutor-daily-majority",
+      "provenance-required-political-ads",
+      "india-largest-ai-user-base",
+      "africa-largest-working-age-population",
+      "population-peak"
+    ],
+    "sources": [
+      "https://www.cfr.org/global-conflict-tracker/conflict/confrontation-between-united-states-and-iran",
+      "https://www.sipri.org/sites/default/files/YB26%2008%20World%20Nuclear%20Forces.pdf",
+      "https://www.bls.gov/news.release/prod3.nr0.htm",
+      "https://nsidc.org/sea-ice-today/analyses",
+      "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf",
+      "https://www.pewresearch.org/internet/2026/02/24/how-teens-use-and-view-ai/"
+    ]
   }
 ]
