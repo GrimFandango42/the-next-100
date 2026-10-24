@@ -33,7 +33,7 @@ test("all in-page destinations exist and no HTML/SVG ids collide",()=>{
 
 test("every prediction page carries a figure drawn from data, and the ids in Figure.tsx overrides exist",()=>{
   const html=render();
-  const figures=(html.match(/class="figure/g)||[]).length;
+  const figures=(html.match(/class="figure(?: |")/g)||[]).length;
   assert.equal(figures,data.events.length-1,"one figure per prediction page (the hinge has the fork instead)");
   assert.ok((html.match(/class="fig ladder"/g)||[]).length>=5,"milestone ladders render for the lines that have them");
 });

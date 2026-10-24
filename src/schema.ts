@@ -69,12 +69,15 @@ export const ForecastEvent = z.object({
   signals: z.array(z.string()).default([]),
   /** What depends on this. */
   leadsTo: z.array(z.string()).default([]),
+  relationshipKinds: z.record(z.string(), z.enum(["prerequisite", "accelerator", "related"])).default({}),
   history: z.array(Revision).default([]),
   hero: Hero.optional(),
   /** How the date reads: "around" = year ± 1 (the default), "by" = any time up to year, "window" = year..yearEnd, "through" = still true at year. */
   timing: z.enum(["around", "by", "window", "through"]).default("around"),
   /** What counts. The test the check-in grades against, stated in advance. */
-  resolution: z.object({ test: z.string().min(1), source: z.string().optional() }).optional(),
+  resolution: z.object({ test: z.string().min(1), source: z.string().optional(), version: z.string().optional(), assessAfter: z.string().optional(), mode: z.enum(["testable", "scenario"]).default("testable") }).optional(),
+  evidenceNote: z.string().optional(),
+  adjudication: z.object({ definitionVersion: z.string(), outcome: z.union([z.literal(0),z.literal(1)]), rationale: z.string().min(1), sources: z.array(z.string().url()).min(1) }).optional(),
 });
 export type ForecastEvent = z.infer<typeof ForecastEvent>;
 

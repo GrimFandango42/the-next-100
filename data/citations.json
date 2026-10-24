@@ -51,9 +51,9 @@
     "title": "No Widespread Displacement, but the AI Employment Gap for Young Workers Has Widened to 19%",
     "publisher": "Stanford Digital Economy Lab",
     "date": "2026-08-12",
-    "tier": "institutional",
-    "status": "ok",
-    "checked": "2026-10-23"
+    "tier": "research",
+    "checked": "2026-10-24",
+    "status": "Checked for the specific contextual claim; not verification of forecast odds."
   },
   "https://www.pewresearch.org/short-reads/2026/09/16/democrats-are-now-more-worried-than-republicans-about-ai-and-its-impact-on-jobs/": {
     "title": "Democrats now more worried than Republicans about AI, its impact on jobs",
@@ -592,12 +592,12 @@
     "checked": "2026-10-23"
   },
   "https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits": {
-    "title": "IBM and The University of Chicago Demonstrate Quantum Advantage, Establishing Trusted Quantum Computation on Logical Circuits",
+    "title": "IBM and UChicago Demonstrate Quantum Advantage on Logical Circuits",
     "publisher": "IBM",
     "date": "2026-07-30",
-    "tier": "vendor",
-    "status": "ok",
-    "checked": "2026-10-23"
+    "tier": "vendor research",
+    "checked": "2026-10-24",
+    "status": "Checked for the specific contextual claim; not verification of forecast odds."
   },
   "https://www.nature.com/articles/s41586-026-10676-4": {
     "title": "A 98-qubit trapped-ion quantum computer with all-to-all connectivity",
@@ -694,5 +694,37 @@
     "tier": "primary",
     "status": "ok",
     "checked": "2026-10-23"
+  },
+  "https://lmf.llnl.gov/science/achieving-fusion-ignition": {
+    "title": "Achieving Fusion Ignition",
+    "publisher": "Lawrence Livermore National Laboratory",
+    "date": null,
+    "tier": "primary research",
+    "checked": "2026-10-24",
+    "status": "Checked for the specific contextual claim; not verification of forecast odds."
+  },
+  "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease": {
+    "title": "FDA Approves First Gene Therapies to Treat Patients with Sickle Cell Disease",
+    "publisher": "FDA",
+    "date": "2023-12-08",
+    "tier": "regulator",
+    "checked": "2026-10-24",
+    "status": "Checked for the specific contextual claim; not verification of forecast odds."
+  },
+  "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf": {
+    "title": "World Population Prospects 2024: Summary of Results",
+    "publisher": "United Nations",
+    "date": "2024-07-11",
+    "tier": "official projection",
+    "checked": "2026-10-24",
+    "status": "Checked for the specific contextual claim; not verification of forecast odds."
+  },
+  "https://www.energy.gov/powering-americas-ai-future-data-center-resource-hub": {
+    "title": "Powering America’s AI Future: Data Center Resource Hub",
+    "publisher": "US Department of Energy",
+    "date": null,
+    "tier": "official projection",
+    "checked": "2026-10-24",
+    "status": "Checked for the specific contextual claim; not verification of forecast odds."
   }
 }
