@@ -11,16 +11,24 @@
   },
   "forces": [
     {
+      "id": "ai",
       "name": "AI compounds; institutions lag",
       "text": "Capability runs 5 to 15 years ahead of adoption by governments, courts, schools and firms. The gap is where the turbulence lives."
     },
     {
+      "id": "hinge",
+      "name": "Concentration vs. pluralism is the hinge",
+      "text": "Whether the most capable systems end up in a few hands or many decides whether the 2040s look like a renaissance or a lockdown."
+    },
+    {
+      "id": "demography",
       "name": "Demographic decline is the slowest, most certain force",
       "text": "It barely matters in the 2020s and dominates the 2060s: who works, who cares for whom, who pays."
     },
     {
-      "name": "Concentration vs. pluralism is the hinge",
-      "text": "Whether the most capable systems end up in a few hands or many decides whether the 2040s look like a renaissance or a lockdown."
+      "id": "planet",
+      "name": "The planet pushes back",
+      "text": "Electricity is already the limit on the AI buildout; warming, water and heat set the terms for everything built after 2040. Energy and climate are not a side-plot."
     }
   ],
   "caveat": "A 100-year forecast is reliably wrong in its details. Each date says how it reads: around a year, by a deadline, inside a window, or through a date. The odds are judgments, not measurements, and every line says what would count. The shape is the claim, and the point of this site is to find out, in public, how wrong it was."

@@ -135,3 +135,11 @@ summary:focus-visible,select:focus-visible{outline:2px solid var(--accent);outli
 
 .forecast-confidence small{font-size:11px;color:var(--muted)}
 @media(max-width:650px){.event-scene:not(.fork-scene)>.scene-copy>.scenario-caption{order:6}.ov-list a{grid-template-columns:40px 8px 1fr 60px;gap:8px}}
+
+.ruler{color:var(--gold);letter-spacing:.06em}
+.chapter-dates .ruler{text-transform:none;letter-spacing:.04em;font-size:11px}
+.threads{display:grid;gap:10px;margin:22px 0 0;padding:18px 0 0;border-top:1px solid #ffffff14;max-width:52ch}
+.threads div{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:baseline}
+.threads dt{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);line-height:1.5}
+.threads dd{margin:0;font-size:13px;line-height:1.6;color:#aebdaf}
+@media(max-width:650px){.guide-kicker{flex-wrap:wrap;gap:6px 18px}.threads div{grid-template-columns:1fr;gap:3px}.threads{margin-top:16px}}

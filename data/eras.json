@@ -16,7 +16,13 @@
       "A bio-adjacent scare (~40%)"
     ],
     "life": "Your job changes before your title does: the work is set up for an agent and you check it. New graduates feel it first. Everything digital gets cheaper and more suspect at once.",
-    "uncertainty": "Whether institutions respond to the first big incident with rules or with panic."
+    "uncertainty": "Whether institutions respond to the first big incident with rules or with panic.",
+    "threads": {
+      "ai": "Agents take the routine half of knowledge work; the first graduates feel it; the first big incident forces the first law.",
+      "hinge": "The frontier is still contested, but the strongest models are already withheld and one government has shown it can switch a lab off.",
+      "demography": "Invisible. Fertility keeps falling everywhere; nobody votes on it yet.",
+      "planet": "Data centers hit a tenth of US power and the grid, not the chip, becomes the constraint."
+    }
   },
   {
     "id": "restructuring",
@@ -35,7 +41,13 @@
       "Concentration risk peaks"
     ],
     "life": "Fewer paid hours, more arguments about who pays. The first drugs and robots that were obviously designed by machines arrive. Someone you know works beside a system that is better than anyone at the job.",
-    "uncertainty": "The hinge: whether the most capable systems stay in many hands or a few."
+    "uncertainty": "The hinge: whether the most capable systems stay in many hands or a few.",
+    "threads": {
+      "ai": "Systems exceed experts across the board; the research loop closes; robots leave the warehouse for the home.",
+      "hinge": "Resolves in 2039: many hands or one center. Everything after follows the answer.",
+      "demography": "Rich-country hours fall by a third; the first income floors; the first aging therapy clears trials.",
+      "planet": "Fusion exports its first metered watts; fossil CO₂ peaks; 1.5°C is gone for good."
+    }
   },
   {
     "id": "divergence",
@@ -54,7 +66,13 @@
       "The nation-state loses ground to firms and city-regions"
     ],
     "life": "Where you live decides more than what you earn. Aging slows for those who can get the therapy. The weather is the thing the news argues about.",
-    "uncertainty": "Whether governance of superhuman systems is legitimate, or merely effective."
+    "uncertainty": "Whether governance of superhuman systems is legitimate, or merely effective.",
+    "threads": {
+      "ai": "Superhuman systems are governed by a regime, legitimate or not; labor cost stops deciding where things are made.",
+      "hinge": "The chosen path hardens into institutions. On one path governance is negotiated; on the other it is administered.",
+      "demography": "World population peaks decades before the UN expected; the aging therapy reaches the rich first.",
+      "planet": "2°C is breached with emissions already falling; a mid-sized country tries the thermostat alone; a Mars outpost opens."
+    }
   },
   {
     "id": "slow-and-fast",
@@ -73,7 +91,13 @@
       "Humans mostly out of the decision loop"
     ],
     "life": "Long lives, small families, and a world that runs mostly without human labor. Whether that feels like freedom or like being managed depends on the institutions you were born under.",
-    "uncertainty": "How far population falls, and whether the well-governed places stay open to the rest."
+    "uncertainty": "How far population falls, and whether the well-governed places stay open to the rest.",
+    "threads": {
+      "ai": "Brain–computer augmentation is ordinary; the line between a human decision and an assisted one stops being legible.",
+      "hinge": "The two worlds are now visible on a map: the well-governed and the managed.",
+      "demography": "Population falls; healthy lifespans pass 110; the central political fight is between generations.",
+      "planet": "The climate is managed rather than suffered; orbital industry is a real sector."
+    }
   },
   {
     "id": "sketch",
@@ -90,6 +114,12 @@
       "The silence continues"
     ],
     "life": "A sketch, not a forecast: humans either continuous with their systems or kept beside them. Either way, most of what matters is decided by minds that are not human.",
-    "uncertainty": "Whether 'human' still names a boundary anyone cares to defend."
+    "uncertainty": "Whether 'human' still names a boundary anyone cares to defend.",
+    "threads": {
+      "ai": "Either continuous with their systems, or kept beside them.",
+      "hinge": "Whether 'human' still names a boundary anyone cares to defend.",
+      "demography": "A smaller, older, longer-lived species.",
+      "planet": "A settlement that would survive without Earth; still no one else out there."
+    }
   }
 ]

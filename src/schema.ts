@@ -77,6 +77,8 @@ export const ForecastEvent = z.object({
   /** What counts. The test the check-in grades against, stated in advance. */
   resolution: z.object({ test: z.string().min(1), source: z.string().optional(), version: z.string().optional(), assessAfter: z.string().optional(), mode: z.enum(["testable", "scenario"]).default("testable") }).optional(),
   evidenceNote: z.string().optional(),
+  /** Which of the forecast's forces this line belongs to; the overview can show the book by thread. */
+  force: z.enum(["ai", "demography", "hinge", "planet"]).optional(),
   adjudication: z.object({ definitionVersion: z.string(), outcome: z.union([z.literal(0),z.literal(1)]), rationale: z.string().min(1), sources: z.array(z.string().url()).min(1) }).optional(),
 });
 export type ForecastEvent = z.infer<typeof ForecastEvent>;
@@ -92,6 +94,8 @@ export const Era = z.object({
   /** What changes for an ordinary life in this era, and the one uncertainty that matters most. */
   life: z.string().optional(),
   uncertainty: z.string().optional(),
+  /** Where each force stands in this era, one sentence each. */
+  threads: z.record(z.string(), z.string()).default({}),
 });
 export type Era = z.infer<typeof Era>;
 
@@ -158,7 +162,7 @@ export const Meta = z.object({
     pluralism: z.string(),
     concentration: z.string(),
   }),
-  forces: z.array(z.object({ name: z.string(), text: z.string() })),
+  forces: z.array(z.object({ id: z.string(), name: z.string(), text: z.string() })),
   caveat: z.string(),
 });
 export type Meta = z.infer<typeof Meta>;

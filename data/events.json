@@ -61,7 +61,8 @@
     "relationshipKinds": {
       "entry-level-hiring-contracts": "accelerator",
       "ai-runs-rd-programs": "accelerator"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "entry-level-hiring-contracts",
@@ -139,7 +140,8 @@
     "relationshipKinds": {
       "first-ai-election": "related",
       "ubi-pilots-national": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "ai-runs-rd-programs",
@@ -203,7 +205,8 @@
     "relationshipKinds": {
       "superhuman-cognition": "accelerator",
       "hinge-resolves": "accelerator"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "first-ai-election",
@@ -285,7 +288,8 @@
     },
     "relationshipKinds": {
       "federal-ai-statute": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "ai-cyberattack-infrastructure",
@@ -351,7 +355,8 @@
       "compute-verification-talks": "related",
       "federal-ai-statute": "related",
       "federal-pqc-deadline-met": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "federal-ai-statute",
@@ -419,7 +424,8 @@
       "mode": "testable",
       "assessAfter": "2032-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "compute-verification-talks",
@@ -497,7 +503,8 @@
     },
     "relationshipKinds": {
       "hinge-resolves": "related"
-    }
+    },
+    "force": "hinge"
   },
   {
     "id": "ai-drugs-phase-iii",
@@ -580,7 +587,8 @@
     "relationshipKinds": {
       "ai-chemistry-majority": "related",
       "aging-therapy-approved": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "fusion-net-grid",
@@ -663,7 +671,8 @@
     "relationshipKinds": {
       "labor-cost-irrelevant": "related",
       "geoengineering-unilateral": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "ubi-pilots-national",
@@ -700,7 +709,8 @@
         "sources": []
       }
     ],
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "ai-chemistry-majority",
@@ -757,7 +767,8 @@
       "mode": "testable",
       "assessAfter": "2038-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "lunar-base-occupied",
@@ -855,7 +866,8 @@
     "relationshipKinds": {
       "mars-outpost": "related",
       "orbital-industry": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "humanoids-in-homes",
@@ -938,7 +950,8 @@
     },
     "relationshipKinds": {
       "labor-cost-irrelevant": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "superhuman-cognition",
@@ -998,7 +1011,8 @@
     "relationshipKinds": {
       "hinge-resolves": "related",
       "superintelligence-regime": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "hinge-resolves",
@@ -1071,7 +1085,8 @@
     "relationshipKinds": {
       "superintelligence-regime": "related",
       "mass-casualty-event": "related"
-    }
+    },
+    "force": "hinge"
   },
   {
     "id": "aging-therapy-approved",
@@ -1121,7 +1136,8 @@
     "relationshipKinds": {
       "healthy-lifespan-110": "accelerator",
       "in-vivo-editing-common-disease": "accelerator"
-    }
+    },
+    "force": "demography"
   },
   {
     "id": "labor-cost-irrelevant",
@@ -1156,7 +1172,8 @@
         "sources": []
       }
     ],
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "population-peak",
@@ -1207,6 +1224,12 @@
         "sources": [
           "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "cornerstone: false → true",
+        "reason": "The demographic force had no anchor line marked as one. The peak is the line the back half of the century turns on.",
+        "sources": []
       }
     ],
     "timing": "window",
@@ -1219,7 +1242,9 @@
     "evidenceNote": "The UN WPP 2024 baseline peaks around 10.3 billion in the mid-2080s. Our earlier, lower peak is an explicit contrary scenario, not the UN consensus.",
     "relationshipKinds": {
       "population-declining": "related"
-    }
+    },
+    "force": "demography",
+    "cornerstone": true
   },
   {
     "id": "two-degrees-breached",
@@ -1269,7 +1294,8 @@
     },
     "relationshipKinds": {
       "geoengineering-unilateral": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "geoengineering-unilateral",
@@ -1316,7 +1342,8 @@
       "mode": "testable",
       "assessAfter": "2055-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "planet"
   },
   {
     "id": "mars-outpost",
@@ -1380,7 +1407,8 @@
     ],
     "relationshipKinds": {
       "self-sustaining-settlement": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "superintelligence-regime",
@@ -1453,7 +1481,8 @@
     },
     "relationshipKinds": {
       "human-ai-continuity": "related"
-    }
+    },
+    "force": "hinge"
   },
   {
     "id": "mass-casualty-event",
@@ -1508,7 +1537,8 @@
       "mode": "testable",
       "assessAfter": "2058-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "population-declining",
@@ -1562,7 +1592,8 @@
       "mode": "testable",
       "assessAfter": "2072-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "demography"
   },
   {
     "id": "healthy-lifespan-110",
@@ -1598,7 +1629,8 @@
         "sources": []
       }
     ],
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "demography"
   },
   {
     "id": "bci-mainstream",
@@ -1637,7 +1669,8 @@
     ],
     "relationshipKinds": {
       "human-ai-continuity": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "orbital-industry",
@@ -1677,7 +1710,8 @@
     ],
     "relationshipKinds": {
       "off-earth-population": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "off-earth-population",
@@ -1724,7 +1758,8 @@
     ],
     "relationshipKinds": {
       "self-sustaining-settlement": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "world-2100",
@@ -1785,7 +1820,8 @@
     },
     "relationshipKinds": {
       "human-ai-continuity": "related"
-    }
+    },
+    "force": "hinge"
   },
   {
     "id": "human-ai-continuity",
@@ -1828,7 +1864,8 @@
         "sources": []
       }
     ],
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "self-sustaining-settlement",
@@ -1871,7 +1908,8 @@
         "sources": []
       }
     ],
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "planet"
   },
   {
     "id": "clock-retired",
@@ -1923,7 +1961,8 @@
       }
     ],
     "yearEnd": 2160,
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "hinge"
   },
   {
     "id": "the-silence",
@@ -1976,7 +2015,8 @@
       "mode": "testable",
       "assessAfter": "2182-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "planet"
   },
   {
     "id": "labs-pace-the-frontier",
@@ -2054,7 +2094,8 @@
     "relationshipKinds": {
       "hinge-resolves": "related",
       "superintelligence-regime": "related"
-    }
+    },
+    "force": "hinge"
   },
   {
     "id": "state-ai-laws-preempted",
@@ -2127,7 +2168,8 @@
     },
     "relationshipKinds": {
       "federal-ai-statute": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "helion-delivers-microsoft",
@@ -2205,7 +2247,8 @@
     },
     "relationshipKinds": {
       "fusion-net-grid": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "bci-permanent-approval",
@@ -2283,7 +2326,8 @@
     },
     "relationshipKinds": {
       "bci-mainstream": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "china-crewed-moon",
@@ -2361,7 +2405,8 @@
     },
     "relationshipKinds": {
       "lunar-base-occupied": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "fossil-co2-peak",
@@ -2414,7 +2459,8 @@
     },
     "relationshipKinds": {
       "two-degrees-breached": "related"
-    }
+    },
+    "force": "planet"
   },
   {
     "id": "in-vivo-editing-common-disease",
@@ -2502,7 +2548,8 @@
     "evidenceNote": "FDA approval of ex-vivo Casgevy is established. Intellia’s HAE results are sponsor-reported evidence for a different indication; they do not establish approval for a common disease or longevity benefits.",
     "relationshipKinds": {
       "healthy-lifespan-110": "accelerator"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "federal-pqc-deadline-met",
@@ -2580,7 +2627,8 @@
       "mode": "testable",
       "assessAfter": "2033-12-31"
     },
-    "relationshipKinds": {}
+    "relationshipKinds": {},
+    "force": "ai"
   },
   {
     "id": "quantum-chemistry-advantage",
@@ -2639,7 +2687,8 @@
     "evidenceNote": "IBM reports a 70-logical-qubit demonstration. This supports progress in computing, not a verified useful-chemistry advantage. Qubit counts and vendor roadmaps are not equivalent to application success.",
     "relationshipKinds": {
       "ai-drugs-phase-iii": "related"
-    }
+    },
+    "force": "ai"
   },
   {
     "id": "data-centres-tenth-us-power",
@@ -2732,6 +2781,7 @@
     "evidenceNote": "DOE/LBNL supplies historical estimates and 2030 scenarios. The 9.5–15.3% range is an assumption-driven scenario range, not a statistical confidence interval.",
     "relationshipKinds": {
       "fusion-net-grid": "related"
-    }
+    },
+    "force": "planet"
   }
 ]
