@@ -17,12 +17,12 @@
   {
     "id": "compute-ownership",
     "watch": "Compute ownership",
-    "pluralism": "Top-5 actors hold under half of frontier compute",
+    "pluralism": "Top two actors hold under half of frontier compute (the hinge criterion)",
     "concentration": "One or two actors hold most of it; export controls harden into monopoly",
     "window": "2028–2036",
     "reading": -0.25,
     "lastChecked": "2026-10-23",
-    "note": "Epoch: Amazon, Google, Meta, Microsoft and Oracle held 71% of global AI compute in Q4 2025, up from 63% in Q1 2024; the labs still run under half of operational compute but depend on those five.",
+    "note": "Epoch: Amazon, Google, Meta, Microsoft and Oracle held 71% of global AI compute in Q4 2025, up from 63% in Q1 2024; the labs still run under half of operational compute but depend on those five. This top-five share of global AI compute is contextual evidence, not a measurement of the top-two frontier-compute criterion; it cannot resolve the hinge.",
     "sources": [
       "https://epoch.ai/data-insights/hyperscalers-control-most-compute",
       "https://epoch.ai/gradient-updates/frontier-labs-dont-use-most-ai-compute",

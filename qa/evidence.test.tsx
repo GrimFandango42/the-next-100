@@ -32,3 +32,16 @@ test('status alone, changed definitions and retrospective odds cannot be scored'
 test('every forecast states a versioned test or explicit scenario limitation',()=>{
  for(const e of data.events){assert.ok(e.resolution?.version,e.id);assert.ok(e.evidenceNote,e.id);assert.ok(e.signals.length,e.id)}
 });
+
+test('annual grid balance counts downtime and continuous auxiliary consumption',async()=>{
+ const {annualBalance}=await import('../src/components/ExhibitLabs');
+ assert.equal(annualBalance(100,50,40).net,87600);
+ assert.equal(annualBalance(100,40,40).net,0);
+ assert.ok(annualBalance(100,25,40).net<0);
+ assert.equal(annualBalance(100,0,40).generated,0);
+});
+test('the highlights tour has eight real forecasts and includes the hinge',async()=>{
+ const {highlights}=await import('../src/components/StoryJourney');
+ assert.equal(highlights.size,8);for(const id of highlights)assert.ok(data.events.some(e=>e.id===id),id);
+ assert.ok(highlights.has('hinge-resolves'));
+});

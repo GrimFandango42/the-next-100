@@ -2,7 +2,8 @@ import { data } from "./data";
 import Journey from "./components/StoryJourney";
 import { BranchChoice } from "./components/StoryJourney";
 import EventDrawer from "./components/EventDrawer";
-import WorldState from "./components/WorldState";
+import {lazy, Suspense} from "react";
+const WorldState = lazy(()=>import("./components/WorldState"));
 import Clock from "./components/Clock";
 import { Changelog, Indicators, Method, Scorecard, TrackRecord } from "./components/Sections";
 
@@ -22,7 +23,7 @@ export default function App() {
           <section id="world">
             <div className="sec-head"><div><div className="eyebrow">World state</div><h2>Drag across any chart to stand in a different year.</h2></div></div>
             <div className="world-grid">
-              <WorldState />
+              <Suspense fallback={<p className="note">Loading the evidence charts…</p>}><WorldState /></Suspense>
               <details className="risk-detail"><summary>Explore the Doomsday Clock forecast</summary><div className="clock-card"><div className="eyebrow">Doomsday Clock · forecast</div><Clock /></div></details>
             </div>
           </section>

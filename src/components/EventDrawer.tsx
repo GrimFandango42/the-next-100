@@ -4,6 +4,7 @@ import { useNarrow } from "../hooks";
 import { STATUS_LABEL } from "../lib";
 import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
+import ForecastAudit from "./ForecastAudit";
 import { when } from "./StoryJourney";
 
 export default function EventDrawer() {
@@ -71,14 +72,14 @@ export function Detail() {
       </div>
       <h3>{e.title}{e.cornerstone && <span className="corner">cornerstone</span>}</h3>
       <div className="badges">
-        <span className={"pill " + e.confidence}>{e.probability != null ? `${Math.round(e.probability * 100)}% subjective probability` : "No probability"}</span>
+        <span className={"pill " + e.confidence}>{e.resolution?.mode === "scenario" ? "Illustrative scenario · unscored" : e.probability != null ? `${Math.round(e.probability * 100)}% subjective probability` : "No probability"}</span>
         <span className={"pill status " + e.status}>{STATUS_LABEL[e.status]}{e.resolvedOn ? ` · ${e.resolvedOn}` : ""}</span>
         {e.branch && <span className="pill">{e.branch} branch only</span>}
       </div>
       <p className="lede">{e.summary}</p>
       <p>{e.detail}</p>
-      {e.resolution && <div className="block counts-block"><div className="eyebrow">What counts</div><p>{e.resolution.test}</p></div>}
-      <p className="note">{e.evidenceNote}</p>
+      {e.resolution && <div className="block counts-block"><div className="eyebrow">What counts · {when(e)}</div><p>{e.resolution.test}</p>{e.resolution.assessAfter && <p className="note">Assessment after {e.resolution.assessAfter}. This allows for reporting and verification; it does not extend the event deadline.</p>}</div>}
+      <p className="note">{e.evidenceNote}</p><ForecastAudit event={e} />
       {e.signals.length > 0 && (
         <div className="block"><div className="eyebrow">What the check-in watches for</div><ul>{e.signals.map((s) => <li key={s}>{s}</li>)}</ul></div>
       )}

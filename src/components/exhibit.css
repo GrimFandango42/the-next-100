@@ -20,3 +20,12 @@
 @keyframes plasma{to{stroke-dashoffset:-300}}
 @media(max-width:760px){.figure.exhibit{padding:12px 0}.exhibit-controls button{font-size:11px}.exhibit-reading{font-size:14px;min-height:145px}.power-controls{flex-wrap:wrap}.power-controls button{flex-basis:28%}.exhibit-heading{font-size:8px}.population-values{gap:18px}.population-values strong{font-size:30px}}
 @media(prefers-reduced-motion:reduce){.exhibit *{animation:none!important;transition:none!important}}
+.exhibit-status{display:flex;flex-wrap:wrap;gap:8px 16px;font:11px/1.5 var(--mono);color:var(--muted);margin-top:14px}
+.exhibit-lab{border:1px solid color-mix(in srgb,var(--d) 35%,transparent);border-radius:8px;padding:14px 16px;margin:14px 0 20px;background:linear-gradient(125deg,color-mix(in srgb,var(--d) 6%,transparent),transparent)}
+.exhibit-lab summary{font-size:14px;color:var(--fg);cursor:pointer;min-height:28px}
+.exhibit-lab p{font:13px/1.65 var(--body);color:var(--muted);margin:12px 0}
+.exhibit-lab>label{display:flex;justify-content:space-between;font-size:13px;margin-top:16px}
+.exhibit-lab input[type=range]{accent-color:var(--d);height:36px}
+.energy-ledger{display:grid;gap:10px;margin-top:16px}.energy-ledger>div{display:grid;grid-template-columns:1fr auto;gap:6px;font:12px var(--mono)}.energy-ledger i{grid-row:2;grid-column:1/-1;background:var(--d);height:8px;min-width:1px;border-radius:2px;transition:width .3s}.energy-ledger>div:nth-child(2) i{background:#ead19c}.energy-ledger>strong{font:36px var(--display);margin-top:8px}.energy-ledger>span{font-size:12px;color:var(--muted)}.net-positive{color:var(--d)}.net-negative{color:#ead19c}
+.verification-grid{display:grid;gap:8px}.verification-grid label{display:flex;gap:12px;align-items:flex-start;padding:10px;border:1px solid var(--line);border-radius:4px;cursor:pointer}.verification-grid input{width:20px;height:20px;flex-shrink:0;accent-color:var(--d)}.verification-grid b,.verification-grid small{display:block;font-size:13px}.verification-grid small{color:var(--muted);margin-top:4px;line-height:1.5}.verification-result{margin-top:16px;color:var(--d)}.delivery-route>b{display:block;font:15px/1.6 var(--mono);color:var(--d);margin-top:18px}
+.exhibit-heading,.exhibit-foot,.exhibit-controls button span,.exhibit-tag,.population-values span{font-size:11px;opacity:1}.diagram-label{font-size:11px}
