@@ -141,5 +141,21 @@
     "body": "Added six interactive exhibit types. Corrected the hiring figure to the 19% relative employment gap; removed stale probability overrides and the unsupported 1,000-qubit threshold. Every line now has a versioned definition or an explicit unscored-scenario designation. Newly operationalized thresholds are editorial choices, not independently calibrated odds. Resolutions need evidence and a matching frozen definition; late outcomes no longer automatically count as successes. Five broad scenarios remain unscored. Timing labels, relationship types and source limitations are explicit. Probability values are unchanged. Six priority contextual claims were checked against primary sources; this is not a full re-verification of the citation registry.",
     "touched": [],
     "sources": []
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "revision",
+    "headline": "Review of the interactive-exhibit pass: kept the exhibits and versioned tests, removed the hedging",
+    "body": "Kept: the six stage explainers, versioned resolution tests frozen in vintages, the compute-ownership wording fix, the native overview dialog with search, the deploy rollback copy. Reversed: scoring that could never use the forecast's founding odds (lines are now scored against the earliest vintage holding the same question, with any later rewording shown as a caveat); a 'subjective forecast' label under every percentage, boilerplate evidence notes on 36 lines and a boilerplate 'general challenge' in every drawer; placeholder signals on six far-future lines, replaced with real ones; the eight-forecast highlights tour (a second way to read); the resolution test folded away on desktop; the cornerstone title reworded to jargon; the site caveat rewritten into legalese. Helion keeps its dated milestone ladder instead of the generic fusion diagram. No probabilities changed.",
+    "touched": [
+      "superhuman-cognition",
+      "off-earth-population",
+      "world-2100",
+      "human-ai-continuity",
+      "self-sustaining-settlement",
+      "clock-retired",
+      "the-silence"
+    ],
+    "sources": []
   }
 ]

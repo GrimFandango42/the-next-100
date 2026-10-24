@@ -75,7 +75,7 @@ export function TrackRecord() {
           <div key={s} className={"rt " + s}><div className="v mono">{counts[s] ?? 0}</div><div className="lbl">{STATUS_LABEL[s]}</div></div>
         ))}
       </div>}
-      <p className="note">Scoring uses an evidence-backed binary adjudication and the earliest frozen probability with the same resolution definition. Missing the deadline is not a success merely because the event happens later. Legacy snapshots without definitions and narrative scenarios are not scored. {resolved.length === 0 ? "No outcomes have been adjudicated yet." : `${resolved.length} outcomes recorded so far.`}</p>
+      <p className="note">Scoring: a resolved line is Brier-scored against the probability in the earliest frozen vintage that holds the same question (title and window); if its resolution test was reworded after that vintage, the score is shown with that caveat rather than thrown out. Partial and retired lines and the unscored scenarios are listed, not scored. {resolved.length === 0 ? "Nothing has resolved yet; the first lines come due in 2027." : `${resolved.length} resolved so far.`}</p>
       {due.length > 0 && <p className="note">Past due and unresolved: {due.map((e) => e.title).join("; ")}. The next check-in has to grade these.</p>}
       {resolved.length > 0 && (
         <ul className="resolved">
@@ -115,10 +115,10 @@ export function Method() {
       <div className="forces">
         {data.meta.forces.map((f, i) => <div key={i} className="force"><div className="eyebrow">Force {i + 1}</div><b>{f.name}</b><p className="muted">{f.text}</p></div>)}
       </div>
-      <p className="note">These tiers describe subjective likelihood, not the strength of the supporting evidence. Evidence limitations are stated on each forecast.</p>
+      <p className="note">The tiers are about likelihood, not how strong the evidence is; what would count, and what the sources actually show, sit on each line.</p>
       <div className="legend">
         <div><span className="pill high">High</span> 70%+ · I'd be surprised if it didn't happen roughly on schedule</div>
-        <div><span className="pill moderate">Moderate</span> 45–70% · uncertain; includes probabilities below even odds</div>
+        <div><span className="pill moderate">Moderate</span> 45–70% · a real bet either way; timing could slip a decade</div>
         <div><span className="pill speculative">Speculative</span> under 45% · included because it matters if it happens</div>
       </div>
       <p>{data.meta.caveat}</p>

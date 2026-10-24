@@ -20,17 +20,23 @@ test('all six exhibits expose meaningful controls and avoid invented numeric thr
  assert.match(figure('data-centres-tenth-us-power'),/15.3%/);
  assert.doesNotMatch(figure('quantum-chemistry-advantage'),/1000|1,000/);
 });
-const e:Scorable={id:'deadline',status:'late',resolvedOn:'2032-01-01',resolution:{version:'v1',mode:'testable'},adjudication:{definitionVersion:'v1',outcome:0,rationale:'Occurred after deadline',sources:['https://example.org/report']}};
-const vintages:Vintage[]=[{date:'2026-01-01',events:{deadline:{probability:.9}}},{date:'2027-01-01',events:{deadline:{probability:.8,resolution:{version:'v1'}}}}];
-test('a late deadline miss scores as a miss, never an automatic success',()=>assert.equal(scoreEvent(e,vintages).score,.8**2));
-test('status alone, changed definitions and retrospective odds cannot be scored',()=>{
- assert.equal(scoreEvent({...e,adjudication:undefined},vintages).score,null);
- assert.equal(scoreEvent({...e,resolution:{version:'v2'}},vintages).score,null);
- assert.equal(scoreEvent({...e,resolvedOn:'2026-06-01'},vintages).score,null);
- assert.equal(scoreEvent({...e,resolution:{version:'v1',mode:'scenario'}},vintages).score,null);
+const e:Scorable={id:'deadline',title:'A deadline line',year:2030,status:'late',resolvedOn:'2032-01-01',resolution:{version:'v2',mode:'testable',test:'new wording'},adjudication:{definitionVersion:'v2',outcome:0,rationale:'Occurred after deadline',sources:['https://example.org']}};
+const vintages:Vintage[]=[{date:'2026-01-01',events:{deadline:{probability:.9,title:'A deadline line',year:2030,resolution:{version:'v1',test:'old wording'}}}},{date:'2027-01-01',events:{deadline:{probability:.8,title:'A deadline line',year:2030,resolution:{version:'v2',test:'new wording'}}}}];
+test('a late deadline miss scores as a miss against the EARLIEST vintage that holds the question',()=>{
+ const r=scoreEvent(e,vintages);assert.equal(r.score,.9**2);assert.match(r.caveat??'',/reworded/);
 });
-test('every forecast states a versioned test or explicit scenario limitation',()=>{
- for(const e of data.events){assert.ok(e.resolution?.version,e.id);assert.ok(e.evidenceNote,e.id);assert.ok(e.signals.length,e.id)}
+test('scenarios, open lines, partial/retired and retitled questions are not scored',()=>{
+ assert.equal(scoreEvent({...e,resolution:{version:'v1',mode:'scenario'}},vintages).score,null);
+ assert.equal(scoreEvent({...e,status:'forecast'},vintages).score,null);
+ assert.equal(scoreEvent({...e,status:'partial'},vintages).score,null);
+ assert.equal(scoreEvent({...e,title:'A different question'},vintages).score,null);
+ assert.equal(scoreEvent({...e,resolvedOn:'2025-06-01'},vintages).score,null);
+});
+test('a status without adjudication still scores, with a caveat',()=>{
+ const r=scoreEvent({...e,adjudication:undefined,status:'happened'},vintages);assert.equal(r.score,(.9-1)**2);assert.match(r.caveat??'',/no adjudication sources/);
+});
+test('every forecast states a versioned test or explicit scenario limitation, and real signals',()=>{
+ for(const e of data.events){assert.ok(e.resolution?.version,e.id);assert.ok(e.signals.length,e.id);assert.ok(!e.signals.some(s=>/published resolution definition/.test(s)),e.id)}
 });
 
 test('annual grid balance counts downtime and continuous auxiliary consumption',async()=>{
@@ -39,9 +45,4 @@ test('annual grid balance counts downtime and continuous auxiliary consumption',
  assert.equal(annualBalance(100,40,40).net,0);
  assert.ok(annualBalance(100,25,40).net<0);
  assert.equal(annualBalance(100,0,40).generated,0);
-});
-test('the highlights tour has eight real forecasts and includes the hinge',async()=>{
- const {highlights}=await import('../src/components/StoryJourney');
- assert.equal(highlights.size,8);for(const id of highlights)assert.ok(data.events.some(e=>e.id===id),id);
- assert.ok(highlights.has('hinge-resolves'));
 });

@@ -4,6 +4,7 @@ import { fmt, lerp, metricKF } from "../lib";
 import { DOMAIN_META, type Branch, type ForecastEvent } from "../schema";
 import { useStore } from "../store";
 import { exhibitFor } from "./Exhibit";
+import { useNarrow } from "../hooks";
 import { FutureMap, Network } from "./StoryArt";
 import Figure, { figureCaption } from "./Figure";
 
@@ -26,14 +27,14 @@ export function BranchChoice({ compact = false }: { compact?: boolean }) {
   </div>;
 }
 
-export const highlights = new Set(['entry-level-hiring-contracts','quantum-chemistry-advantage','in-vivo-editing-common-disease','data-centres-tenth-us-power','hinge-resolves','fusion-net-grid','population-peak','world-2100']);
 function Odds({ event }: { event: ForecastEvent }) {
   if (event.resolution?.mode === "scenario") return <div className="scenario-caption">Illustrative scenario <small>Unscored · {when(event)}</small></div>;
-  return <div className="forecast-confidence"><span>{event.probability != null ? `${Math.round(event.probability * 100)}%` : "—"}</span><div>likely<small>{when(event)} · subjective forecast{event.cornerstone ? " · cornerstone" : ""}</small></div></div>;
+  return <div className="forecast-confidence"><span>{event.probability != null ? `${Math.round(event.probability * 100)}%` : "—"}</span><div>likely<small>{when(event)} · {event.confidence} confidence{event.cornerstone ? " · cornerstone" : ""}</small></div></div>;
 }
 
 function PredictionScene({ event, index, current }: { event: ForecastEvent; index: number; current: boolean }) {
   const { select, branch } = useStore();
+  const narrow = useNarrow();
   const words = event.title.split(" ");
   const tail = words.splice(-Math.min(3, Math.max(1, Math.floor(words.length / 3)))).join(" ");
   return <section id={pageId(event)} className={`guide-scene event-scene ${index % 2 ? "verso" : "recto"} ${current ? "is-current" : ""}`} data-story-stop data-year={event.year} data-event-id={event.id} data-domain={event.domain} aria-labelledby={`title-${event.id}`} style={{ ["--d" as any]: DOMAIN_META[event.domain].color }}>
@@ -43,14 +44,13 @@ function PredictionScene({ event, index, current }: { event: ForecastEvent; inde
       <p className="guide-lead">{event.summary}</p>
       {event.branch && <span className="conditional-note">Only on the {event.branch} path</span>}
       <Odds event={event} />
-      <details className="forecast-details"><summary>Evidence & what would count</summary>
-        {event.resolution && <p className="counts"><b>What counts · {when(event)}.</b> {event.resolution.test}</p>}
-        <p className="counts"><b>Evidence status.</b> {event.evidenceNote ?? "Sources provide context; the probability is an editorial judgment, not a published scientific estimate."}</p>
-        <Drivers event={event} />
-      </details>
+      {event.resolution && (narrow
+        ? <details className="counts counts-d"><summary><b>What counts</b></summary><p>{event.resolution.test}</p>{event.evidenceNote && <p className="counts-note">{event.evidenceNote}</p>}</details>
+        : <p className="counts"><b>What counts.</b> {event.resolution.test}{event.evidenceNote && <span className="counts-note"> {event.evidenceNote}</span>}</p>)}
+      <Drivers event={event} />
       <div className="page-actions"><button className="guide-text-button" onClick={() => select(event.id)}>Why this forecast? <span>↗</span></button><Cited event={event} /></div>
     </div>
-    <div className="scene-art"><Figure ev={event} branch={branch} year={event.year} active={current} />{!exhibitFor(event) && <div className="art-caption"><span>{figureCaption(event)}</span><span>{event.hero?.ladder ? "MILESTONES · STATUS AS OF LAST REVIEW" : "OBSERVATIONS AND FORECASTS ARE DISTINCT"}</span></div>}</div>
+    <div className="scene-art"><Figure ev={event} branch={branch} year={event.year} active={current} />{!exhibitFor(event) && <div className="art-caption"><span>{figureCaption(event)}</span><span>{event.hero?.ladder ? "MILESTONES · STATUS AS OF LAST REVIEW" : "DRAWN FROM THE FORECAST'S OWN NUMBERS"}</span></div>}</div>
   </section>;
 }
 
@@ -60,8 +60,8 @@ function Drivers({ event }: { event: ForecastEvent }) {
   if (!before.length && !after.length) return null;
   const chip = (e: ForecastEvent, kind: string) => <a key={e.id} className="drv" href={`#${pageId(e)}`} style={{ ["--d" as any]: DOMAIN_META[e.domain].color }}><i /><span className="mono">{e.year}</span>{e.title}<small>{kind}</small></a>;
   return <div className="drivers">
-    {before.length > 0 && <div><span className="drv-k">Related drivers · not prerequisites</span>{before.map(e=>chip(e,e.relationshipKinds[event.id] ?? "related"))}</div>}
-    {after.length > 0 && <div><span className="drv-k">May influence</span>{after.map(e=>chip(e,event.relationshipKinds[e.id] ?? "related"))}</div>}
+    {before.length > 0 && <div><span className="drv-k">Comes before</span>{before.map(e=>chip(e,e.relationshipKinds[event.id] ?? "related"))}</div>}
+    {after.length > 0 && <div><span className="drv-k">Leads to</span>{after.map(e=>chip(e,event.relationshipKinds[e.id] ?? "related"))}</div>}
   </div>;
 }
 
@@ -113,11 +113,11 @@ function ChapterPage({ era, index, current }: { era: Era; index: number; current
 }
 
 /** The one strip: where you are, the chapters, and the overview (zoom out). */
-function ReaderBar({ active, brief, setBrief }: { active: string; brief: boolean; setBrief: (b:boolean)=>void }) {
+function ReaderBar({ active }: { active: string }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("all");
-  const matches = (e:ForecastEvent) => `${e.title} ${e.summary} ${DOMAIN_META[e.domain].name}`.toLowerCase().includes(query.toLowerCase()) && (filter === "all" || filter === "highlights" && highlights.has(e.id) || filter === "near" && e.year <= 2035 || filter === "scenario" && e.resolution?.mode === "scenario" || filter === "gaps" && !e.history.some(h=>h.sources.length));
+  const matches = (e:ForecastEvent) => `${e.title} ${e.summary} ${DOMAIN_META[e.domain].name}`.toLowerCase().includes(query.toLowerCase()) && (filter === "all" || filter === "near" && e.year <= 2035 || filter === "scenario" && e.resolution?.mode === "scenario" || filter === "gaps" && !e.history.some(h=>h.sources.length));
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLButtonElement>(null);
   const { year, branch, setBranch } = useStore();
@@ -135,7 +135,7 @@ function ReaderBar({ active, brief, setBrief }: { active: string; brief: boolean
   }, [open]);
   const event = ordered.find((e) => pageId(e) === active);
   const era = event ? chapterFor(event.year) : data.eras.find((e) => `chapter-${e.id}` === active) ?? data.eras[0];
-  const reading = brief ? ordered.filter(e=>highlights.has(e.id)) : ordered;
+  const reading = ordered;
   const index = event ? reading.indexOf(event) : -1;
   const progress = event ? (index + 1) / reading.length : reading.filter(e=>e.year < era.from).length / reading.length;
   return <>
@@ -150,12 +150,11 @@ function ReaderBar({ active, brief, setBrief }: { active: string; brief: boolean
     <dialog ref={dialog} onCancel={() => setOpen(false)} id="overview" className="overview" aria-label="The whole century" onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
       <div className="overview-panel">
         <div className="overview-head"><button className="guide-text-button" autoFocus onClick={() => setOpen(false)}>Close overview ×</button><div className="guide-kicker">THE WHOLE CENTURY · {ordered.length} PREDICTIONS · TAP ONE TO OPEN ITS PAGE</div></div>
-        <div className="overview-tools"><label>Find a forecast<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Quantum, health, energy…" /></label><label>Show<select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All forecasts</option><option value="highlights">Eight highlights</option><option value="near">Through 2035</option><option value="scenario">Unscored scenarios</option><option value="gaps">Citation gaps</option></select></label></div>
+        <div className="overview-tools"><label>Find a forecast<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Quantum, health, energy…" /></label><label>Show<select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All forecasts</option><option value="near">Through 2035</option><option value="scenario">Unscored scenarios</option><option value="gaps">Citation gaps</option></select></label></div>
         <p className="overview-result" role="status">{ordered.filter(matches).length} matching forecasts</p>
-        <button className="guide-text-button" onClick={()=>setBrief(!brief)}>{brief ? "Read the complete book" : "Read eight highlights"}</button>
         {data.eras.filter(er=>ordered.some(e=>chapterFor(e.year).id===er.id && matches(e))).map((er, i) => <div key={er.id} className="ov-era">
           <a className="ov-chapter" href={`#chapter-${er.id}`} onClick={() => setOpen(false)}><span className="mono">{pad(i + 1)} · {er.from}–{er.to}</span><b>{er.name}</b></a>
-          <ol className="ov-list">{ordered.filter((e) => chapterFor(e.year).id === er.id && matches(e)).map((e) => <li key={e.id} className={e.id === event?.id ? "here" : ""}><a href={`#${pageId(e)}`} onClick={() => { if (!highlights.has(e.id)) setBrief(false); setOpen(false); requestAnimationFrame(()=>document.getElementById(pageId(e))?.scrollIntoView()); }}><span className="mono ov-y">{e.year}</span><i className="ov-dot" style={{ background: DOMAIN_META[e.domain].color }} /><span className="ov-t">{e.title}</span><span className="mono ov-p">{e.resolution?.mode === "scenario" ? "Scenario" : e.probability != null ? Math.round(e.probability * 100) + "%" : ""}</span></a></li>)}</ol>
+          <ol className="ov-list">{ordered.filter((e) => chapterFor(e.year).id === er.id && matches(e)).map((e) => <li key={e.id} className={e.id === event?.id ? "here" : ""}><a href={`#${pageId(e)}`} onClick={() => { setOpen(false); requestAnimationFrame(()=>document.getElementById(pageId(e))?.scrollIntoView()); }}><span className="mono ov-y">{e.year}</span><i className="ov-dot" style={{ background: DOMAIN_META[e.domain].color }} /><span className="ov-t">{e.title}</span><span className="mono ov-p">{e.resolution?.mode === "scenario" ? "Scenario" : e.probability != null ? Math.round(e.probability * 100) + "%" : ""}</span></a></li>)}</ol>
         </div>)}
         <a className="ov-chapter" href="#explore" onClick={() => setOpen(false)}><span className="mono">BELOW THE BOOK</span><b>The evidence: numbers, odds, indicators, track record</b></a>
       </div>
@@ -166,7 +165,6 @@ function ReaderBar({ active, brief, setBrief }: { active: string; brief: boolean
 export default function StoryJourney() {
   const { setYear, select } = useStore();
   const [active, setActive] = useState("opening");
-  const [brief, setBrief] = useState(false);
   const [resume] = useState(() => { try { return localStorage.getItem("next100-reading"); } catch { return null; } });
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -179,28 +177,18 @@ export default function StoryJourney() {
     }, { rootMargin: "-20% 0px -35% 0px", threshold: [0, .1, .25, .4] });
     root.current?.querySelectorAll("[data-story-stop]").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [setYear, brief]);
+  }, [setYear]);
   useEffect(() => {
     const id = location.hash.slice(1);
     if (id.startsWith("m-")) { const ev = data.events.find((e) => e.id === id.slice(2)); if (ev) { setYear(ev.year); document.getElementById(pageId(ev))?.scrollIntoView(); select(ev.id); } }
     else if (id.startsWith("story-") || id.startsWith("chapter-")) requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    const reveal = () => {
-      const id = location.hash.slice(1);
-      if (brief && id.startsWith("story-") && !highlights.has(id.slice(6))) {
-        setBrief(false);
-        requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView());
-      }
-    };
-    addEventListener("hashchange",reveal); return ()=>removeEventListener("hashchange",reveal);
-  },[brief]);
   return <div className="field-guide full-book" ref={root}>
     <section id="opening" className="guide-scene opening-scene" data-story-stop data-year="2026" aria-labelledby="guide-title">
-      <div className="scene-copy"><div className="guide-kicker"><span>THE NEXT 100 · A LIVING FORECAST</span><span>2026 — 2200</span></div><h1 id="guide-title">The future isn’t<br />a straight <em>line.</em></h1><p className="guide-lead">{ordered.length} predictions, year by year, each with its odds and what would prove it wrong. Checked against the news every week.</p><a className="guide-cta" href={`#chapter-${data.eras[0].id}`}>Open the first chapter <span>↓</span></a><div className="reading-options"><button className="guide-text-button" onClick={()=>{setBrief(!brief); document.getElementById(`chapter-${data.eras[0].id}`)?.scrollIntoView();}}>{brief ? "Read all 43 forecasts" : "Take the eight-forecast highlights tour"} ↗</button>{resume && ordered.some(e=>pageId(e)===resume) && <a href={`#${resume}`} onClick={()=>setBrief(false)}>Continue where you left off →</a>}</div><div className="guide-footnote">Written {data.meta.written} · last check-in {data.meta.lastCheckin}. Scroll to read. Press − or Overview to see the whole century.</div></div>
+      <div className="scene-copy"><div className="guide-kicker"><span>THE NEXT 100 · A LIVING FORECAST</span><span>2026 — 2200</span></div><h1 id="guide-title">The future isn’t<br />a straight <em>line.</em></h1><p className="guide-lead">{ordered.length} predictions, year by year, each with its odds and what would prove it wrong. Checked against the news every week.</p><a className="guide-cta" href={`#chapter-${data.eras[0].id}`}>Open the first chapter <span>↓</span></a><div className="reading-options">{resume && ordered.some(e=>pageId(e)===resume) && <a href={`#${resume}`}>Continue where you left off →</a>}</div><div className="guide-footnote">Written {data.meta.written} · last check-in {data.meta.lastCheckin}. Scroll to read. Press − or Overview to see the whole century.</div></div>
       <div className="scene-art"><FutureMap /></div>
     </section>
-    <div className="book-body"><ReaderBar active={active} brief={brief} setBrief={setBrief} />{data.eras.map((era, i) => <div className="book-chapter" key={era.id}><ChapterPage era={era} index={i} current={active === `chapter-${era.id}`} />{ordered.filter((e) => chapterFor(e.year).id === era.id && (!brief || highlights.has(e.id))).map((event) => event.id === "hinge-resolves" ? <ForkScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} /> : <PredictionScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} />)}<div className="chapter-recap"><span className="guide-kicker">CHAPTER {pad(i+1)} / TAKEAWAY</span><p>{era.life ?? era.thesis}</p><small>Keep watching: {era.uncertainty}</small>{i<data.eras.length-1 && <a href={`#chapter-${data.eras[i+1].id}`}>Next chapter →</a>}</div></div>)}</div>
+    <div className="book-body"><ReaderBar active={active} />{data.eras.map((era, i) => <div className="book-chapter" key={era.id}><ChapterPage era={era} index={i} current={active === `chapter-${era.id}`} />{ordered.filter((e) => chapterFor(e.year).id === era.id).map((event) => event.id === "hinge-resolves" ? <ForkScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} /> : <PredictionScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} />)}<div className="chapter-recap"><span className="guide-kicker">CHAPTER {pad(i+1)} / TAKEAWAY</span><p>{era.life ?? era.thesis}</p><small>Keep watching: {era.uncertainty}</small>{i<data.eras.length-1 && <a href={`#chapter-${data.eras[i+1].id}`}>Next chapter →</a>}</div></div>)}</div>
     <Endnote />
   </div>;
 }

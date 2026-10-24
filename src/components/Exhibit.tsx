@@ -9,7 +9,7 @@ export const exhibitFor = (e: ForecastEvent): Topic | undefined => ({
   'quantum-chemistry-advantage': 'quantum', 'in-vivo-editing-common-disease': 'gene',
   'data-centres-tenth-us-power': 'power', 'ai-drugs-phase-iii': 'drugs',
   'population-peak': 'population', 'population-declining': 'population', 'world-2100': 'population',
-  'fusion-net-grid': 'fusion', 'helion-delivers-microsoft': 'fusion',
+  'fusion-net-grid': 'fusion',
 } as Record<string, Topic>)[e.id];
 const stages = {
   quantum: [

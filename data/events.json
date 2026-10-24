@@ -58,7 +58,6 @@
       "mode": "testable",
       "assessAfter": "2030-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "entry-level-hiring-contracts": "accelerator",
       "ai-runs-rd-programs": "accelerator"
@@ -201,7 +200,6 @@
       "mode": "testable",
       "assessAfter": "2031-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "superhuman-cognition": "accelerator",
       "hinge-resolves": "accelerator"
@@ -285,7 +283,6 @@
       "mode": "testable",
       "assessAfter": "2031-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "federal-ai-statute": "related"
     }
@@ -350,7 +347,6 @@
       "mode": "testable",
       "assessAfter": "2032-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "compute-verification-talks": "related",
       "federal-ai-statute": "related",
@@ -423,7 +419,6 @@
       "mode": "testable",
       "assessAfter": "2032-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {
@@ -500,7 +495,6 @@
       "mode": "testable",
       "assessAfter": "2033-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "hinge-resolves": "related"
     }
@@ -698,7 +692,6 @@
       "mode": "testable",
       "assessAfter": "2037-12-31"
     },
-    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
     "history": [
       {
         "date": "2026-10-24",
@@ -764,7 +757,6 @@
       "mode": "testable",
       "assessAfter": "2038-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {
@@ -860,7 +852,6 @@
       "mode": "testable",
       "assessAfter": "2038-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "mars-outpost": "related",
       "orbital-industry": "related"
@@ -945,7 +936,6 @@
       "mode": "testable",
       "assessAfter": "2039-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "labor-cost-irrelevant": "related"
     }
@@ -958,7 +948,7 @@
     "confidence": "moderate",
     "probability": 0.7,
     "cornerstone": true,
-    "title": "AI exceeds top human experts across an independent cognitive task suite",
+    "title": "Systems exceed every human at every measurable cognitive task",
     "summary": "There is no single moment. A gradual recognition that the hardest decisions in science, strategy and governance are made by or with systems we cannot fully audit.",
     "detail": "This is the cornerstone the whole forecast turns on, and the answer to 'when is the singularity' is: it will not feel like one. The window is 2034 to 2040 at about 70%. The recognition comes in pieces: a field where the best work is no longer human, then another, then a realization that the people nominally in charge are ratifying recommendations they cannot independently check. The question of the century becomes who sets the goals for these systems, not whether they exist.",
     "signals": [
@@ -990,6 +980,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "title restored",
+        "reason": "The cornerstone's title was reworded earlier today to mirror its test. The title is the claim in plain words; the test ('What counts') is what gets graded, and it already names the finite task suite. Restored.",
+        "sources": []
       }
     ],
     "timing": "window",
@@ -999,7 +995,6 @@
       "mode": "testable",
       "assessAfter": "2042-12-31"
     },
-    "evidenceNote": "A finite task suite cannot establish superiority at every possible cognitive task. The narrower title matches the published test; the original wording remains in prior history.",
     "relationshipKinds": {
       "hinge-resolves": "related",
       "superintelligence-regime": "related"
@@ -1073,7 +1068,6 @@
       "mode": "testable",
       "assessAfter": "2042-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "superintelligence-regime": "related",
       "mass-casualty-event": "related"
@@ -1124,7 +1118,6 @@
       "mode": "testable",
       "assessAfter": "2046-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "healthy-lifespan-110": "accelerator",
       "in-vivo-editing-common-disease": "accelerator"
@@ -1155,7 +1148,6 @@
       "version": "2026-10-24",
       "mode": "scenario"
     },
-    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
     "history": [
       {
         "date": "2026-10-24",
@@ -1275,7 +1267,6 @@
       "mode": "testable",
       "assessAfter": "2053-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "geoengineering-unilateral": "related"
     }
@@ -1325,7 +1316,6 @@
       "mode": "testable",
       "assessAfter": "2055-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {
@@ -1380,7 +1370,6 @@
       "mode": "testable",
       "assessAfter": "2055-12-31"
     },
-    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
     "history": [
       {
         "date": "2026-10-24",
@@ -1462,7 +1451,6 @@
       "version": "2026-10-24",
       "mode": "scenario"
     },
-    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
     "relationshipKinds": {
       "human-ai-continuity": "related"
     }
@@ -1520,7 +1508,6 @@
       "mode": "testable",
       "assessAfter": "2058-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {
@@ -1575,7 +1562,6 @@
       "mode": "testable",
       "assessAfter": "2072-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {
@@ -1604,7 +1590,6 @@
       "version": "2026-10-24",
       "mode": "scenario"
     },
-    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
     "history": [
       {
         "date": "2026-10-24",
@@ -1642,7 +1627,6 @@
       "mode": "testable",
       "assessAfter": "2078-12-31"
     },
-    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
     "history": [
       {
         "date": "2026-10-24",
@@ -1683,7 +1667,6 @@
       "mode": "testable",
       "assessAfter": "2088-12-31"
     },
-    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
     "history": [
       {
         "date": "2026-10-24",
@@ -1706,8 +1689,9 @@
     "summary": "Nearly all in orbit or on the Moon.",
     "detail": "A real population, not a crew. Still utterly dependent on Earth.",
     "signals": [
-      "Independent evidence meeting the published resolution definition.",
-      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+      "A permanent off-Earth population passes 1,000 (ISS, Tiangong, lunar and Mars outposts combined)",
+      "A child is born off Earth",
+      "A settlement announces a resident count rather than a crew roster"
     ],
     "leadsTo": [
       "self-sustaining-settlement"
@@ -1724,12 +1708,17 @@
       "mode": "testable",
       "assessAfter": "2103-12-31"
     },
-    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
     "history": [
       {
         "date": "2026-10-24",
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "signals: placeholders replaced",
+        "reason": "The placeholder signals added earlier today said nothing a check-in could search for; these name things that would move the line.",
         "sources": []
       }
     ],
@@ -1748,8 +1737,9 @@
     "summary": "Humanity has not gone extinct. The most capable systems on the planet are not human, and most people alive regard that as normal, the way we regard electricity.",
     "detail": "The century's summary line. Population is falling, the climate is stabilized or actively managed, and the people alive have never known a world where the best thinking was done by humans. Whether they are free depends on which branch of the hinge they live in. The 7.5 billion is a deliberate bet: the UN median for 2100 is 10.2 billion (WPP 2024).",
     "signals": [
-      "Independent evidence meeting the published resolution definition.",
-      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+      "UN WPP median for 2100 revised below 9 billion",
+      "Global mean temperature stops rising for a decade",
+      "A majority of surveyed adults say AI makes most important decisions, and are untroubled"
     ],
     "leadsTo": [
       "human-ai-continuity"
@@ -1774,6 +1764,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "signals: placeholders replaced",
+        "reason": "The placeholder signals added earlier today said nothing a check-in could search for; these name things that would move the line.",
+        "sources": []
       }
     ],
     "hero": {
@@ -1787,7 +1783,6 @@
       "version": "2026-10-24",
       "mode": "scenario"
     },
-    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
     "relationshipKinds": {
       "human-ai-continuity": "related"
     }
@@ -1803,8 +1798,9 @@
     "summary": "Augmentation, hybrid cognition, perhaps uploading. Or humans persist as a protected, long-lived population alongside the systems that do the civilizational work.",
     "detail": "Year-level resolution is not available here. The shape is one of two: a merger in which the question 'human or AI' stops parsing, or a settlement in which a small, long-lived human population is kept safe and comfortable by systems that run everything else. Both are survival. Only one is clearly evolution.",
     "signals": [
-      "Independent evidence meeting the published resolution definition.",
-      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+      "A permanent BCI approved for cognitive augmentation in healthy adults",
+      "A legal status for a human–AI hybrid or an uploaded mind is recognised anywhere",
+      "A protected-population policy for unaugmented humans is adopted by a major state"
     ],
     "leadsTo": [],
     "hero": {
@@ -1818,12 +1814,17 @@
       "version": "2026-10-24",
       "mode": "scenario"
     },
-    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
     "history": [
       {
         "date": "2026-10-24",
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "signals: placeholders replaced",
+        "reason": "The placeholder signals added earlier today said nothing a check-in could search for; these name things that would move the line.",
         "sources": []
       }
     ],
@@ -1839,8 +1840,9 @@
     "summary": "A population that would survive if Earth stopped sending anything.",
     "detail": "The threshold that matters for the species rather than for any one mission.",
     "signals": [
-      "Independent evidence meeting the published resolution definition.",
-      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+      "An off-Earth settlement runs a full year without a resupply flight",
+      "Off-Earth food, water and air closed-loop at scale",
+      "A settlement manufactures its own spare parts and medicine"
     ],
     "leadsTo": [],
     "hero": {
@@ -1855,12 +1857,17 @@
       "mode": "testable",
       "assessAfter": "2153-12-31"
     },
-    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
     "history": [
       {
         "date": "2026-10-24",
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "signals: placeholders replaced",
+        "reason": "The placeholder signals added earlier today said nothing a check-in could search for; these name things that would move the line.",
         "sources": []
       }
     ],
@@ -1876,8 +1883,9 @@
     "summary": "The Bulletin retires or replaces the Clock with an instrument built for risks from systems, not arsenals.",
     "detail": "The Clock already counts climate, biotechnology and AI, and the Bulletin calls it a metaphor rather than a forecast. The bet is institutional: by the mid-22nd century the body that tells the public how close we are to catastrophe measures risk from the systems we built, with a method it can defend, and the Clock as a device is retired or replaced. The seconds on this site's clock are the forecast's own illustration of that risk, not a calibrated probability.",
     "signals": [
-      "Independent evidence meeting the published resolution definition.",
-      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+      "The Bulletin announces a replacement metric or retires the Clock",
+      "A different institution's risk index becomes the one the news quotes",
+      "The Clock's annual setting stops moving for a decade"
     ],
     "leadsTo": [],
     "hero": {
@@ -1906,9 +1914,14 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "signals: placeholders replaced",
+        "reason": "The placeholder signals added earlier today said nothing a check-in could search for; these name things that would move the line.",
+        "sources": []
       }
     ],
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "yearEnd": 2160,
     "relationshipKinds": {}
   },
@@ -1922,8 +1935,9 @@
     "summary": "No contact with non-human intelligence, detected or otherwise.",
     "detail": "Included because contact would change everything, and because the forecast is that it does not happen. The probability is that the silence holds through 2180: no confirmed technosignature, no contact. The 65-year null result is hard to reconcile with many nearby emitters (Grimaldi, Astronomical Journal, 2026).",
     "signals": [
-      "Independent evidence meeting the published resolution definition.",
-      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+      "An IAU-recognised technosignature detection",
+      "A candidate signal survives a year of independent follow-up",
+      "Any confirmed non-human artefact or biosignature with intent"
     ],
     "leadsTo": [],
     "hero": {
@@ -1947,6 +1961,12 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
         "sources": []
+      },
+      {
+        "date": "2026-10-24",
+        "change": "signals: placeholders replaced",
+        "reason": "The placeholder signals added earlier today said nothing a check-in could search for; these name things that would move the line.",
+        "sources": []
       }
     ],
     "timing": "through",
@@ -1956,7 +1976,6 @@
       "mode": "testable",
       "assessAfter": "2182-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {
@@ -2032,7 +2051,6 @@
       "mode": "testable",
       "assessAfter": "2030-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "hinge-resolves": "related",
       "superintelligence-regime": "related"
@@ -2107,7 +2125,6 @@
       "mode": "testable",
       "assessAfter": "2030-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "federal-ai-statute": "related"
     }
@@ -2186,7 +2203,6 @@
       "mode": "testable",
       "assessAfter": "2032-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "fusion-net-grid": "related"
     }
@@ -2265,7 +2281,6 @@
       "mode": "testable",
       "assessAfter": "2033-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "bci-mainstream": "related"
     }
@@ -2344,7 +2359,6 @@
       "mode": "testable",
       "assessAfter": "2033-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "lunar-base-occupied": "related"
     }
@@ -2398,7 +2412,6 @@
       "mode": "testable",
       "assessAfter": "2037-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {
       "two-degrees-breached": "related"
     }
@@ -2567,7 +2580,6 @@
       "mode": "testable",
       "assessAfter": "2033-12-31"
     },
-    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
     "relationshipKinds": {}
   },
   {

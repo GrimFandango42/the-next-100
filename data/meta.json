@@ -2,7 +2,7 @@
   "title": "The Next 100",
   "tagline": "A living forecast of the next 100 years of humanity. It checks the news every week and grades itself.",
   "written": "2026-10-22",
-  "lastCheckin": "2026-10-23",
+  "lastCheckin": "2026-10-24",
   "hinge": {
     "resolvesBy": 2039,
     "pluralismProbability": 0.57,
@@ -23,5 +23,5 @@
       "text": "Whether the most capable systems end up in a few hands or many decides whether the 2040s look like a renaissance or a lockdown."
     }
   ],
-  "caveat": "Long-range probabilities are subjective judgments, not calibrated scientific estimates. Each date is explicitly a deadline, window, approximate year or through-date. Versioned resolution rules define the test; narrative scenarios without an agreed test are excluded from scoring."
+  "caveat": "A 100-year forecast is reliably wrong in its details. Each date says how it reads: around a year, by a deadline, inside a window, or through a date. The odds are judgments, not measurements, and every line says what would count. The shape is the claim, and the point of this site is to find out, in public, how wrong it was."
 }

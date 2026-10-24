@@ -38,7 +38,7 @@ function kindFor(ev: ForecastEvent): { kind: Kind; metric?: Metric } {
 export function figureCaption(ev: ForecastEvent) {
  const {kind, metric}=kindFor(ev);
  if(kind==='ladder')return 'Milestones and targets; a completed step does not guarantee the next.';
- if(kind==='field' && !metric)return 'Dots show the subjective probability of this forecast, not a measured quantity.';
+ if(kind==='field' && !metric)return 'Dots show the odds the forecast puts on this, not a measurement.';
  if(kind==='clock')return 'Illustrative Clock scenario, not a forecast published by the Bulletin.';
  if(kind==='orbits')return 'Illustrative off-Earth population scenario; positions and dots are not to scale.';
  return ev.hero?.label ?? 'Scenario values, with observations labeled separately.';
