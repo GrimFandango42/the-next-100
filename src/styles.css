@@ -340,3 +340,12 @@ main,section{overflow-x:clip}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}}
 .fig .fig-step{font-size:16px;font-weight:500}
 .fig.ladder .fig-mono{font-size:11px}
+
+/* Evidence stays available without crowding the reading page. */
+.forecast-details{margin:22px 0;border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff18;padding:13px 0}
+.forecast-details summary{font:12px var(--mono);color:var(--muted);cursor:pointer;min-height:24px}
+.forecast-details .counts{font-size:13px;line-height:1.7;margin-top:14px}
+.figure-bars{width:100%;padding:20px}.figure-bar{margin:18px 0}.figure-bar>div:first-child{display:flex;justify-content:space-between;gap:12px;font:14px var(--body)}.figure-bar strong{font:24px var(--display);white-space:nowrap}.bar-track{height:7px;background:#ffffff12;margin:9px 0}.bar-track i{display:block;height:100%;background:var(--d)}.figure-bar.reference .bar-track i{background:#dbc08b}.figure-bar small{font:10px/1.6 var(--mono);color:var(--muted)}
+dialog.overview{border:0;padding:0;margin:0;max-width:none;max-height:none;width:100vw;height:100dvh;color:var(--fg)}
+dialog.overview:not([open]){display:none}dialog.overview[open]{display:block;inset:0;overflow:auto}dialog.overview::backdrop{background:#07130ded}.overview-head>button{float:right;margin-bottom:18px}.overview-head>.guide-kicker{clear:both}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}

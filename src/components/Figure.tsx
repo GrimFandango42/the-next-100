@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { interpolateRdYlBu } from "d3";
+import Exhibit, { exhibitFor } from "./Exhibit";
 import { data } from "../data";
 import { fmt, lerp, metricKF } from "../lib";
 import { DOMAIN_META, type Branch, type ForecastEvent, type Metric } from "../schema";
@@ -13,23 +14,15 @@ import { DOMAIN_META, type Branch, type ForecastEvent, type Metric } from "../sc
  *   orbits   · Earth, Moon and Mars, lit when people live there
  * A hand-made image can sit behind any of them: drop public/moments/<event-id>.webp and it appears.
  */
-type Kind = "stripes" | "field" | "curve" | "clock" | "orbits" | "ladder";
+type Kind = "stripes" | "field" | "curve" | "clock" | "orbits" | "ladder" | "bars";
 const W = 480, H = 360;
 
-/** A few lines are about a specific share or quantity that is not a tracked metric; say what the 100 dots mean. */
-const FIELD_OVERRIDE: Record<string, { value: number; label: string; invert?: boolean }> = {
-  "entry-level-hiring-contracts": { value: 0.5, label: "of 100 entry-level roles at banks, law and consulting firms: gone", invert: true },
-  "ai-chemistry-majority": { value: 0.55, label: "of 100 new FDA approvals, designed by AI" },
-  "mass-casualty-event": { value: 0.15, label: "of 100 futures, millions die in one event" },
-  "ai-runs-rd-programs": { value: 0.6, label: "of 100 futures, the research loop closes by 2028" },
-};
-const CURVE_OVERRIDE: Record<string, string> = { "labor-cost-irrelevant": "work-hours", "ubi-pilots-national": "work-hours", "humanoids-in-homes": "work-hours" };
 
 function kindFor(ev: ForecastEvent): { kind: Kind; metric?: Metric } {
   const m = ev.hero?.metric;
+  if (ev.hero?.bars?.length) return { kind: "bars" };
   const metric = (id: string) => data.metrics.find((x) => x.id === id);
   if (ev.hero?.ladder?.length) return { kind: "ladder" };
-  if (CURVE_OVERRIDE[ev.id]) return { kind: "curve", metric: metric(CURVE_OVERRIDE[ev.id]) };
   if (m === "warming") return { kind: "stripes", metric: metric(m) };
   if (m === "ai-share") return { kind: "field", metric: metric(m) };
   if (m === "clock") return { kind: "clock" };
@@ -37,19 +30,27 @@ function kindFor(ev: ForecastEvent): { kind: Kind; metric?: Metric } {
   if (m) return { kind: "curve", metric: metric(m) };
   const fx = ev.hero?.effect;
   if (fx === "moon" || fx === "mars" || fx === "orbit" || fx === "silence") return { kind: "orbits", metric: metric("off-earth") };
-  if (fx === "alarm" || fx === "clock") return { kind: "clock" };
+  if (fx === "clock") return { kind: "clock" };
   if (fx === "heat" || fx === "cool") return { kind: "stripes", metric: metric("warming") };
   return { kind: "field" };
 }
 
+export function figureCaption(ev: ForecastEvent) {
+ const {kind, metric}=kindFor(ev);
+ if(kind==='ladder')return 'Milestones and targets; a completed step does not guarantee the next.';
+ if(kind==='field' && !metric)return 'Dots show the subjective probability of this forecast, not a measured quantity.';
+ if(kind==='clock')return 'Illustrative Clock scenario, not a forecast published by the Bulletin.';
+ if(kind==='orbits')return 'Illustrative off-Earth population scenario; positions and dots are not to scale.';
+ return ev.hero?.label ?? 'Scenario values, with observations labeled separately.';
+}
+
 export default function Figure({ ev, branch, year, active }: { ev: ForecastEvent; branch: Branch; year: number; active: boolean }) {
+  if (exhibitFor(ev)) return <Exhibit ev={ev} branch={branch} active={active} />;
   const { kind, metric } = kindFor(ev);
   const color = DOMAIN_META[ev.domain].color;
-  const [img, setImg] = useState<string | null>(`/moments/${ev.id}.webp`);
-  useEffect(() => setImg(`/moments/${ev.id}.webp`), [ev.id]);
   return (
-    <div className={"figure" + (active ? " live" : "")} style={{ ["--d" as any]: color }} role="img" aria-label={`${ev.hero?.label ?? ev.title}: a figure drawn from the forecast's numbers`}>
-      {img && <img className="fig-art" src={img} alt="" onError={() => setImg(null)} />}
+    <div className={"figure" + (active ? " live" : "")} style={{ ["--d" as any]: color }} role="group" aria-label={kind === "field" && !metric ? `Subjective probability: ${Math.round((ev.probability ?? .5)*100)}%` : `${ev.title}: forecast figure`}>
+      {kind === "bars" && <Bars ev={ev} />}
       {kind === "stripes" && metric && <Stripes m={metric} branch={branch} year={year} ev={ev} />}
       {kind === "field" && <Field ev={ev} metric={metric} branch={branch} year={year} />}
       {kind === "curve" && metric && <Curve m={metric} branch={branch} year={year} ev={ev} />}
@@ -86,14 +87,13 @@ function Stripes({ m, branch, year, ev }: { m: Metric; branch: Branch; year: num
 
 /* ── a field of 100 ── */
 function Field({ ev, metric, branch, year }: { ev: ForecastEvent; metric?: Metric; branch: Branch; year: number }) {
-  const ov = FIELD_OVERRIDE[ev.id];
-  const share = ov ? ov.value : metric ? lerp(metricKF(metric, branch), Math.max(year, ev.year)) / 100 : (ev.probability ?? 0.5);
+  const share = metric ? lerp(metricKF(metric, branch), Math.max(year, ev.year)) / 100 : (ev.probability ?? 0.5);
   const n = Math.round(share * 100);
   const [lit, setLit] = useState(0);
   useEffect(() => { const t = setTimeout(() => setLit(n), 60); return () => clearTimeout(t); }, [n]);
   const cell = 30, pad = (W - 10 * cell) / 2, top = 40;
-  const label = ov ? `${n} ${ov.label}` : metric ? `${n} of 100 units of cognitive work, done by AI` : `${n} of 100 futures, this happens`;
-  const gone = !!ov?.invert;
+  const label = metric ? `${n} of 100 units of cognitive work, done by AI` : `${n} of 100 futures, this happens`;
+  const gone = false;
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="fig">
       {Array.from({ length: 100 }, (_, i) => {
@@ -124,15 +124,15 @@ function Curve({ m, branch, year, ev }: { m: Metric; branch: Branch; year: numbe
   const same = a === b;
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="fig">
-      <title>{m.label}: {f.value}{f.unit} in {yr} on the {branch} path{ref ? `; ${ref.label} shown dotted` : ""}{m.observed.length ? `; ${m.observed.length} observed point${m.observed.length > 1 ? "s" : ""}` : ""}.</title>
+      <title>{`${m.label}: ${f.value}${f.unit} in ${yr} on the ${branch} path`}</title>
       <line x1={px} x2={px + pw} y1={py + ph} y2={py + ph} stroke="rgba(255,255,255,.18)" />
       {[0, 0.5, 1].map((t) => { const vv = log ? Math.pow(10, lo + (hi - lo) * t) : lo + (hi - lo) * t; const yy = py + ph - t * ph; return <g key={t}><line x1={px - 6} x2={px + pw} y1={yy} y2={yy} stroke="rgba(255,255,255,.08)" /><text x={px - 10} y={yy + 4} textAnchor="end" className="fig-mono fig-dim">{fmt(m, vv).value}{fmt(m, vv).unit}</text></g>; })}
       {!same && <path d={path(b)} fill="none" stroke="rgba(255,255,255,.35)" strokeWidth={1.5} strokeDasharray="4 5" />}
       {ref && <path d={path(ref.points as [number, number][])} fill="none" stroke="#fff" strokeOpacity={0.55} strokeWidth={2} strokeDasharray="1 6" strokeLinecap="round" />}
-      {ref && <text x={X(ref.points[ref.points.length - 1][0]) + 8} y={Y(ref.points[ref.points.length - 1][1]) + 4} textAnchor="start" className="fig-mono fig-dim">{ref.label}: {fmt(m, ref.points[ref.points.length - 1][1]).value}{fmt(m, ref.points[ref.points.length - 1][1]).unit}</text>}
+
       <path d={path(a) + ` L${X(2200).toFixed(1)},${(py + ph).toFixed(1)} L${X(2026).toFixed(1)},${(py + ph).toFixed(1)} Z`} fill="var(--d)" opacity={0.12} />
       <path d={path(a)} fill="none" stroke="var(--d)" strokeWidth={3} strokeLinejoin="round" />
-      {m.observed.map((o) => { const oy = Number(String(o.date).slice(0, 4)); return <circle key={o.date} cx={X(oy)} cy={Y(o.value)} r={5} fill="#fff" stroke="var(--d)" strokeWidth={2}><title>Observed {o.date}: {fmt(m, o.value).value}{fmt(m, o.value).unit}</title></circle>; })}
+      {m.observed.map((o) => { const oy = Number(String(o.date).slice(0, 4)); return <circle key={o.date} cx={X(oy)} cy={Y(o.value)} r={5} fill="#fff" stroke="var(--d)" strokeWidth={2}><title>{`Observed ${o.date}: ${fmt(m, o.value).value}${fmt(m, o.value).unit}`}</title></circle>; })}
       <line x1={X(yr)} x2={X(yr)} y1={py} y2={py + ph} stroke="#fff" strokeOpacity={0.5} />
       <circle cx={X(yr)} cy={Y(v)} r={7} fill="#fff" stroke="var(--d)" strokeWidth={3} />
       <text x={X(yr) + (yr > 2130 ? -14 : 14)} y={Y(v) - 14} textAnchor={yr > 2130 ? "end" : "start"} className="fig-big">{f.value}<tspan className="fig-unit">{f.unit}</tspan></text>
@@ -222,4 +222,9 @@ function Ladder({ ev, active }: { ev: ForecastEvent; active: boolean }) {
       })}
     </svg>
   );
+}
+
+function Bars({ev}: {ev: ForecastEvent}) {
+ const rows = ev.hero!.bars!; const max = Math.max(...rows.map(r=>Math.abs(r.value)),1);
+ return <div className="figure-bars">{rows.map(r=><div key={r.label} className={`figure-bar ${r.kind}`}><div><span>{r.label}</span><strong>{r.value}{r.unit}</strong></div><div className="bar-track"><i style={{width:`${Math.abs(r.value)/max*100}%`}}/></div><small>{r.kind === 'observed' ? 'Historical estimate' : r.kind === 'reference' ? 'Outside projection / target' : 'Our forecast'}{r.note ? ` · ${r.note}` : ''}</small></div>)}</div>;
 }

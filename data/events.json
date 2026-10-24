@@ -43,11 +43,25 @@
         "sources": [
           "https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_4_economy.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "In at least two of the four sectors (software, finance, law, research), a cross-industry survey such as McKinsey's State of AI reports that a majority of large firms run most of their routine knowledge work through agents, not merely that they use agents somewhere. Published by end-2028 about 2027."
+      "test": "In at least two of the four sectors (software, finance, law, research), a cross-industry survey such as McKinsey's State of AI reports that a majority of large firms run most of their routine knowledge work through agents, not merely that they use agents somewhere. Published by end-2028 about 2027.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2030-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "entry-level-hiring-contracts": "accelerator",
+      "ai-runs-rd-programs": "accelerator"
     }
   },
   {
@@ -72,8 +86,17 @@
       "prefix": "−",
       "num": 19,
       "unit": "%",
-      "label": "employment of 22–25-year-olds in AI-exposed jobs, against trend (ADP, June 2026)",
-      "effect": "ripple"
+      "label": "19% relative employment shortfall for ages 22–25 in AI-exposed US occupations; Stanford / ADP, June 2026 data",
+      "effect": "ripple",
+      "bars": [
+        {
+          "label": "Relative employment shortfall, ages 22–25",
+          "value": 19,
+          "unit": "%",
+          "kind": "observed",
+          "note": "Stanford / ADP, June 2026 data. Relative to less-exposed peers, not 19% of jobs destroyed."
+        }
+      ]
     },
     "history": [
       {
@@ -96,9 +119,28 @@
         "sources": [
           "https://digitaleconomy.stanford.edu/news/canariesaug26/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": [
+          "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+        ]
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "During 2026–2028, at least one independent payroll or vacancy study in the US and one in Europe reports a decline of at least 10% in entry-level hiring or employment in AI-exposed white-collar occupations relative to a stated 2022–2024 baseline or less-exposed comparison group. Both studies must publish their sample, age or seniority definition and method. This tests contraction, not proof that AI caused it.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2030-12-31"
+    },
+    "evidenceNote": "Stanford’s ADP analysis describes a 19% relative gap for young workers in AI-exposed occupations. It is US observational evidence, not a count of destroyed jobs or proof of the wider US-and-Europe forecast.",
+    "relationshipKinds": {
+      "first-ai-election": "related",
+      "ubi-pilots-national": "related"
+    }
   },
   {
     "id": "ai-runs-rd-programs",
@@ -144,11 +186,25 @@
         "sources": [
           "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "A frontier lab reports AI leading (Epoch automation level 4 or above) a majority of its AI R&D for at least three consecutive months, verified by an embedded third-party evaluator with publication rights. A single automated research result does not count."
+      "test": "A frontier lab reports AI leading (Epoch automation level 4 or above) a majority of its AI R&D for at least three consecutive months, verified by an embedded third-party evaluator with publication rights. A single automated research result does not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2031-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "superhuman-cognition": "accelerator",
+      "hinge-resolves": "accelerator"
     }
   },
   {
@@ -214,11 +270,24 @@
         "sources": [
           "https://www.brookings.edu/articles/why-data-centers-are-a-top-issue-in-the-2026-midterms/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "AI (including data centers and their power demand) is among the top five issues in the general-election exit poll or in Pew's post-election issue ranking, and both major-party platforms carry an AI plank."
+      "test": "AI (including data centers and their power demand) is among the top five issues in the general-election exit poll or in Pew's post-election issue ranking, and both major-party platforms carry an AI plank.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2031-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "federal-ai-statute": "related"
     }
   },
   {
@@ -266,9 +335,27 @@
         "sources": [
           "https://openai.com/index/pacing-model-development-cyber-capabilities/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "During 2028–2030, a government incident report attributes a disruption of electricity, water, transport or payments affecting at least 100,000 people for at least 24 hours to an intrusion in which AI autonomously performed a material operational step. Use of AI only to write phishing text does not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2032-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "compute-verification-talks": "related",
+      "federal-ai-statute": "related",
+      "federal-pqc-deadline-met": "related"
+    }
   },
   {
     "id": "federal-ai-statute",
@@ -321,12 +408,23 @@
           "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/",
           "https://www.ropesgray.com/en/insights/alerts/2026/03/the-white-house-legislative-recommendations-national-policy-framework-for-artificial-intelligence-an"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "'serious' means binding obligations on frontier developers (published safety frameworks, incident reporting, weight security) with an enforcement mechanism; a preemption-plus-transparency bill of that shape counts even if it is not crisis-shaped."
-    }
+      "test": "'serious' means binding obligations on frontier developers (published safety frameworks, incident reporting, weight security) with an enforcement mechanism; a preemption-plus-transparency bill of that shape counts even if it is not crisis-shaped.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2032-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "compute-verification-talks",
@@ -387,11 +485,24 @@
         ],
         "from": 0.45,
         "to": 0.5
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "An official US–China negotiation whose published agenda includes verification of compute or training runs. A safety dialogue or incident channel without a verification item does not count."
+      "test": "An official US–China negotiation whose published agenda includes verification of compute or training runs. A safety dialogue or incident channel without a verification item does not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "hinge-resolves": "related"
     }
   },
   {
@@ -401,7 +512,7 @@
     "confidence": "high",
     "probability": 0.7,
     "title": "AI-designed drugs clear Phase III at scale",
-    "summary": "Clinical trial timelines halve. Discovery stops being the bottleneck; manufacturing, quality and trials become it.",
+    "summary": "At least a dozen AI-generated molecules clear Phase III in a year. Discovery accelerates, but safety, clinical benefit and regulatory review still have to be demonstrated.",
     "detail": "The first fully AI-originated molecules are already in trials. By 2033 enough of them have cleared Phase III that the industry reorganizes: discovery is a service, and value shifts to whoever can run trials, scale manufacturing and prove quality fastest. Regulators adapt with adaptive-trial frameworks and AI-assisted review. Lab informatics, QC and release become the critical path.",
     "signals": [
       "A dozen or more AI-originated molecules approved in a single year",
@@ -456,11 +567,25 @@
         ],
         "from": 0.75,
         "to": 0.7
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "At least a dozen molecules whose chemical structure was generated by an AI system (not AI-assisted screening of human-designed libraries) clear Phase III in one year, counted from trial registries and sponsor filings. Trial duration is a separate claim and is not graded here."
+      "test": "At least a dozen molecules whose chemical structure was generated by an AI system (not AI-assisted screening of human-designed libraries) clear Phase III in one year, counted from trial registries and sponsor filings. Trial duration is a separate claim and is not graded here.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2036-12-31"
+    },
+    "evidenceNote": "Sponsor announcements document pipeline progress. Trial entry, successful Phase III results and approval are separate milestones; a forecast of a dozen successes remains speculative.",
+    "relationshipKinds": {
+      "ai-chemistry-majority": "related",
+      "aging-therapy-approved": "related"
     }
   },
   {
@@ -523,11 +648,27 @@
           "https://www.world-nuclear-news.org/articles/google-backs-fusion-power",
           "https://oodaloop.com/briefs/technology/commonwealth-fusion-installs-first-of-18-magnets-in-sparc-reactor-first-plasma-energy-targeted-for-2027/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": [
+          "https://lmf.llnl.gov/science/achieving-fusion-ignition"
+        ]
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "a fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count."
+      "test": "a fusion plant delivers more electricity to a grid over a full year than it draws, metered; a demonstration export does not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2037-12-31"
+    },
+    "evidenceNote": "NIF fuel gain is established experimental evidence. It is not whole-facility electrical gain, and vendor delivery dates are targets. No automatic progression connects these distinct engineering milestones.",
+    "relationshipKinds": {
+      "labor-cost-irrelevant": "related",
+      "geoengineering-unilateral": "related"
     }
   },
   {
@@ -550,7 +691,23 @@
       "label": "OECD countries with a national income floor",
       "effect": "ripple"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2035, two OECD member countries have each operated a statutory nationwide income-floor program for at least 12 months, open to all adult residents meeting published income and residency rules, without a work requirement. Regional pilots and temporary emergency transfers do not count. National statutes and implementation reports are the evidence.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2037-12-31"
+    },
+    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {}
   },
   {
     "id": "ai-chemistry-majority",
@@ -592,9 +749,23 @@
         "sources": [
           "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "In a calendar year during 2034–2036, more than half of FDA CDER novel small-molecule drug approvals have public discovery records showing that AI generated the chemical structure. Biologics and AI-assisted screening alone are excluded. Count every eligible approval; undisclosed design provenance does not count as AI-generated.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2038-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "lunar-base-occupied",
@@ -674,11 +845,25 @@
         "sources": [
           "https://www.gao.gov/products/gao-26-108556"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "A surface habitat occupied for twelve consecutive months with no gap longer than one crew rotation, by any nation. 'China follows by 2038' is a separate observation, not part of the grade."
+      "test": "A surface habitat occupied for twelve consecutive months with no gap longer than one crew rotation, by any nation. 'China follows by 2038' is a separate observation, not part of the grade.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2038-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "mars-outpost": "related",
+      "orbital-industry": "related"
     }
   },
   {
@@ -745,11 +930,24 @@
           "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript/",
           "https://www.humanoidsdaily.com/news/a-golden-milestone-figure-manufactures-its-1-000th-figure-03-humanoid"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "Humanoid robots doing household tasks autonomously in at least 1% of households in one OECD country, measured by a national survey or an independent deployment audit. Retail availability, subscriptions on offer, or teleoperated units do not count."
+      "test": "Humanoid robots doing household tasks autonomously in at least 1% of households in one OECD country, measured by a national survey or an independent deployment audit. Retail availability, subscriptions on offer, or teleoperated units do not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2039-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "labor-cost-irrelevant": "related"
     }
   },
   {
@@ -760,7 +958,7 @@
     "confidence": "moderate",
     "probability": 0.7,
     "cornerstone": true,
-    "title": "Systems exceed every human at every measurable cognitive task",
+    "title": "AI exceeds top human experts across an independent cognitive task suite",
     "summary": "There is no single moment. A gradual recognition that the hardest decisions in science, strategy and governance are made by or with systems we cannot fully audit.",
     "detail": "This is the cornerstone the whole forecast turns on, and the answer to 'when is the singularity' is: it will not feel like one. The window is 2034 to 2040 at about 70%. The recognition comes in pieces: a field where the best work is no longer human, then another, then a realization that the people nominally in charge are ratifying recommendations they cannot independently check. The question of the century becomes who sets the goals for these systems, not whether they exist.",
     "signals": [
@@ -786,11 +984,25 @@
           "https://metr.org/blog/2026-01-29-time-horizon-1-1/",
           "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "window",
     "resolution": {
-      "test": "On a frozen suite of professional tasks (medicine, law, mathematics, software, strategy) published by an independent evaluator, the best AI system scores above the best human expert on every task family, and the result is reproduced by a second evaluator. Graded on the window 2034–2040."
+      "test": "On a frozen suite of professional tasks (medicine, law, mathematics, software, strategy) published by an independent evaluator, the best AI system scores above the best human expert on every task family, and the result is reproduced by a second evaluator. Graded on the window 2034–2040.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2042-12-31"
+    },
+    "evidenceNote": "A finite task suite cannot establish superiority at every possible cognitive task. The narrower title matches the published test; the original wording remains in prior history.",
+    "relationshipKinds": {
+      "hinge-resolves": "related",
+      "superintelligence-regime": "related"
     }
   },
   {
@@ -846,11 +1058,25 @@
         "sources": [
           "https://epoch.ai/data-insights/open-closed-eci-gap"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "Graded in 2039 on the two lead indicators: pluralism if the best open-weight model is within twelve months of the frontier and the top two actors hold under half of frontier compute; concentration otherwise. The probability on this line is the chance of pluralism."
+      "test": "Graded in 2039 on the two lead indicators: pluralism if the best open-weight model is within twelve months of the frontier and the top two actors hold under half of frontier compute; concentration otherwise. The probability on this line is the chance of pluralism.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2042-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "superintelligence-regime": "related",
+      "mass-casualty-event": "related"
     }
   },
   {
@@ -883,9 +1109,26 @@
         "sources": [
           "https://www.ined.fr/en/everything_about_population/data/europe-developed-countries/life-expectancy"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "During 2042–2044, FDA or EMA approves a therapy for any indication and a randomized controlled human trial also demonstrates a statistically significant reduction in all-cause mortality or onset of at least two age-related diseases. An aging biomarker change alone does not count. Regulatory decisions and peer-reviewed trial results must both be available.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2046-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "healthy-lifespan-110": "accelerator",
+      "in-vivo-editing-common-disease": "accelerator"
+    }
   },
   {
     "id": "labor-cost-irrelevant",
@@ -906,7 +1149,22 @@
       "label": "role for labor cost in where things are made",
       "effect": "sun"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "Scenario, not currently scored: the claim concerns global manufacturing location decisions, for which there is no agreed measure of labor cost being irrelevant. Wage shares, factory location studies and industrial investment patterns are signposts, not a binary test. A measurable replacement must receive a new definition and new forecast vintage.",
+      "version": "2026-10-24",
+      "mode": "scenario"
+    },
+    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {}
   },
   {
     "id": "population-peak",
@@ -949,11 +1207,26 @@
         "sources": [
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": [
+          "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf"
+        ]
       }
     ],
     "timing": "window",
     "resolution": {
-      "test": "UN World Population Prospects, in its edition of 2060 or later, places the world population peak inside 2046–2058 at 9.3–9.9 billion."
+      "test": "UN World Population Prospects, in its edition of 2060 or later, places the world population peak inside 2046–2058 at 9.3–9.9 billion.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2062-12-31"
+    },
+    "evidenceNote": "The UN WPP 2024 baseline peaks around 10.3 billion in the mid-2080s. Our earlier, lower peak is an explicit contrary scenario, not the UN consensus.",
+    "relationshipKinds": {
+      "population-declining": "related"
     }
   },
   {
@@ -987,11 +1260,24 @@
           "https://www.ecmwf.int/en/about/media-centre/news/2025/2025-third-warmest-year",
           "https://climate.copernicus.eu/copernicus-second-warmest-september-global-temperatures-stay-above-15degc"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "The 20-year mean global surface temperature (Copernicus ERA5 or the WMO multi-dataset mean, 1850–1900 baseline) first exceeds 2.0°C in a year within 2049–2051, while global fossil CO₂ emissions are below their peak."
+      "test": "The 20-year mean global surface temperature (Copernicus ERA5 or the WMO multi-dataset mean, 1850–1900 baseline) first exceeds 2.0°C in a year within 2049–2051, while global fossil CO₂ emissions are below their peak.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2053-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "geoengineering-unilateral": "related"
     }
   },
   {
@@ -1024,9 +1310,23 @@
           "https://www.gao.gov/products/gao-26-108837",
           "https://solargeoengineeringupdates.substack.com/p/monthly-solar-geoengineering-updates-6d1"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "During 2051–2053, a national government starts and funds deliberate stratospheric aerosol releases for climate cooling, sustained for at least 12 months, without authorization through a multilateral climate agreement. Small research trials without a climate-cooling program do not count. Require public government records and independent atmospheric monitoring.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2055-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "mars-outpost",
@@ -1073,7 +1373,25 @@
         }
       ]
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2053, humans have continuously occupied a fixed surface outpost on Mars for at least 24 months. A visiting mission, orbital station or uncrewed installation does not count. Require mission logs plus independent tracking or published imagery.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2055-12-31"
+    },
+    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {
+      "self-sustaining-settlement": "related"
+    }
   },
   {
     "id": "superintelligence-regime",
@@ -1130,9 +1448,24 @@
         ],
         "from": 0.6,
         "to": 0.62
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "Scenario, not currently scored: a stable regime governing superintelligence has no agreed operational definition. Track binding international rules, enforceable technical standards, ownership concentration and actual compliance. Do not score a treaty announcement as proof of this broader claim.",
+      "version": "2026-10-24",
+      "mode": "scenario"
+    },
+    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
+    "relationshipKinds": {
+      "human-ai-continuity": "related"
+    }
   },
   {
     "id": "mass-casualty-event",
@@ -1172,12 +1505,23 @@
         "sources": [
           "https://thebulletin.org/2026/09/newly-created-viruses-are-a-warning-we-still-have-a-window-to-stop-ai-enabled-bioweapons/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
-    "timing": "around",
+    "timing": "by",
     "resolution": {
-      "test": "A single AI-enabled biological or infrastructure event with at least one million deaths, attributed by at least two governments or a UN body, before the end of 2055."
-    }
+      "test": "A single AI-enabled biological or infrastructure event with at least one million deaths, attributed by at least two governments or a UN body, before the end of 2055.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2058-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "population-declining",
@@ -1216,9 +1560,23 @@
         "sources": [
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "The UN World Population Prospects edition published in 2070, or its first successor after that year, estimates global population in 2065 below the maximum estimated population in any previous year. Projection changes alone do not count as observed decline.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2072-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "healthy-lifespan-110",
@@ -1240,7 +1598,22 @@
       "label": "healthy years, widely available",
       "effect": "bloom"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "Scenario, not currently scored: availability of a therapy cannot demonstrate a healthy lifespan beyond 110 without validated long-term outcomes and an agreed definition of health. Track disability-free survival, access and prospective cohort evidence; do not substitute a biomarker or a single long-lived individual.",
+      "version": "2026-10-24",
+      "mode": "scenario"
+    },
+    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {}
   },
   {
     "id": "bci-mainstream",
@@ -1262,7 +1635,25 @@
       "label": "the line stops being legible",
       "effect": "merge"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2076, at least 1% of adults in one OECD country actively use implanted brain–computer interfaces for non-therapeutic communication or cognitive augmentation, documented by a representative national survey or independently audited device registry. Clinical trial enrollment and external wearables do not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2078-12-31"
+    },
+    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {
+      "human-ai-continuity": "related"
+    }
   },
   {
     "id": "orbital-industry",
@@ -1285,7 +1676,25 @@
       "label": "people living off-Earth, working an industry",
       "effect": "orbit"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2086, independently audited annual sales of products incorporating asteroid-sourced material exceed US$1 billion in constant 2026 dollars. Public accounting records must distinguish asteroid material from Earth-launched inputs. Samples and projected resource valuations do not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2088-12-31"
+    },
+    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {
+      "off-earth-population": "related"
+    }
   },
   {
     "id": "off-earth-population",
@@ -1296,7 +1705,10 @@
     "title": "Tens of thousands of people live off-Earth",
     "summary": "Nearly all in orbit or on the Moon.",
     "detail": "A real population, not a crew. Still utterly dependent on Earth.",
-    "signals": [],
+    "signals": [
+      "Independent evidence meeting the published resolution definition.",
+      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+    ],
     "leadsTo": [
       "self-sustaining-settlement"
     ],
@@ -1305,7 +1717,25 @@
       "label": "people living off-Earth",
       "effect": "orbit"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2101, at least 20,000 people have each lived outside Earth for 12 consecutive months, established by published habitat and transport records with an independent audit. Visitors of shorter duration do not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2103-12-31"
+    },
+    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {
+      "self-sustaining-settlement": "related"
+    }
   },
   {
     "id": "world-2100",
@@ -1317,7 +1747,10 @@
     "title": "7.5 billion people, a managed climate, and non-human minds as normal",
     "summary": "Humanity has not gone extinct. The most capable systems on the planet are not human, and most people alive regard that as normal, the way we regard electricity.",
     "detail": "The century's summary line. Population is falling, the climate is stabilized or actively managed, and the people alive have never known a world where the best thinking was done by humans. Whether they are free depends on which branch of the hinge they live in. The 7.5 billion is a deliberate bet: the UN median for 2100 is 10.2 billion (WPP 2024).",
-    "signals": [],
+    "signals": [
+      "Independent evidence meeting the published resolution definition.",
+      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+    ],
     "leadsTo": [
       "human-ai-continuity"
     ],
@@ -1335,6 +1768,12 @@
         "sources": [
           "https://population.un.org/WPP/Publications/Files/WPP2024_Key-Messages.pdf"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
     "hero": {
@@ -1342,7 +1781,16 @@
       "label": "people on a managed planet, beside minds that are not human",
       "effect": "bloom"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "Scenario, not currently scored as a single binary forecast: this combines population, climate management and social acceptance of non-human intelligence. The population curve can be compared with later UN estimates, but passing that one component does not establish the whole scenario.",
+      "version": "2026-10-24",
+      "mode": "scenario"
+    },
+    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
+    "relationshipKinds": {
+      "human-ai-continuity": "related"
+    }
   },
   {
     "id": "human-ai-continuity",
@@ -1354,14 +1802,32 @@
     "title": "Human–AI continuity",
     "summary": "Augmentation, hybrid cognition, perhaps uploading. Or humans persist as a protected, long-lived population alongside the systems that do the civilizational work.",
     "detail": "Year-level resolution is not available here. The shape is one of two: a merger in which the question 'human or AI' stops parsing, or a settlement in which a small, long-lived human population is kept safe and comfortable by systems that run everything else. Both are survival. Only one is clearly evolution.",
-    "signals": [],
+    "signals": [
+      "Independent evidence meeting the published resolution definition.",
+      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+    ],
     "leadsTo": [],
     "hero": {
       "text": "Us + Them",
       "label": "or just us, kept safe",
       "effect": "merge"
     },
-    "timing": "window"
+    "timing": "window",
+    "resolution": {
+      "test": "Scenario, not currently scored: there is no accepted observational test for continuity of personal identity through merger with AI. Biological survival, subjective reports and philosophical continuity are distinct. This line describes possibilities, not a presently resolvable claim.",
+      "version": "2026-10-24",
+      "mode": "scenario"
+    },
+    "evidenceNote": "Long-range scenario with no agreed binary test. Excluded from scoring; the displayed odds are illustrative editorial judgments.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {}
   },
   {
     "id": "self-sustaining-settlement",
@@ -1372,34 +1838,59 @@
     "title": "A self-sustaining off-Earth settlement",
     "summary": "A population that would survive if Earth stopped sending anything.",
     "detail": "The threshold that matters for the species rather than for any one mission.",
-    "signals": [],
+    "signals": [
+      "Independent evidence meeting the published resolution definition.",
+      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+    ],
     "leadsTo": [],
     "hero": {
       "text": "Independent",
       "label": "a settlement that survives without Earth",
       "effect": "mars"
     },
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2151, an off-Earth settlement of at least 1,000 people completes ten consecutive years without Earth-origin material supplies, maintaining population, food, breathable air, energy and replacement industrial equipment. Communication is allowed. Require independently audited resource and manufacturing records.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2153-12-31"
+    },
+    "evidenceNote": "No claim-specific source is cited yet. Treat this as an explicitly speculative scenario, not an evidence-calibrated estimate.",
+    "history": [
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
+      }
+    ],
+    "relationshipKinds": {}
   },
   {
     "id": "clock-retired",
-    "year": 2150,
+    "year": 2140,
     "domain": "risk",
     "confidence": "speculative",
     "probability": 0.4,
     "title": "The Doomsday Clock is retired",
     "summary": "The Bulletin retires or replaces the Clock with an instrument built for risks from systems, not arsenals.",
     "detail": "The Clock already counts climate, biotechnology and AI, and the Bulletin calls it a metaphor rather than a forecast. The bet is institutional: by the mid-22nd century the body that tells the public how close we are to catastrophe measures risk from the systems we built, with a method it can defend, and the Clock as a device is retired or replaced. The seconds on this site's clock are the forecast's own illustration of that risk, not a calibrated probability.",
-    "signals": [],
+    "signals": [
+      "Independent evidence meeting the published resolution definition.",
+      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+    ],
     "leadsTo": [],
     "hero": {
       "text": "—",
       "label": "the Doomsday Clock, retired",
       "effect": "clock"
     },
-    "timing": "around",
+    "timing": "window",
     "resolution": {
-      "test": "The Bulletin of the Atomic Scientists, or its successor, announces the Clock's retirement or replacement by a different instrument. Graded as 'around 2150' (± 1 year is meaningless here; graded as any time 2140–2160)."
+      "test": "The Bulletin of the Atomic Scientists, or its successor, announces the Clock's retirement or replacement by a different instrument. Graded as 'around 2150' (± 1 year is meaningless here; graded as any time 2140–2160).",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2162-12-31"
     },
     "history": [
       {
@@ -1409,8 +1900,17 @@
         "sources": [
           "https://thebulletin.org/doomsday-clock/faq/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
-    ]
+    ],
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "yearEnd": 2160,
+    "relationshipKinds": {}
   },
   {
     "id": "the-silence",
@@ -1421,7 +1921,10 @@
     "title": "The silence continues",
     "summary": "No contact with non-human intelligence, detected or otherwise.",
     "detail": "Included because contact would change everything, and because the forecast is that it does not happen. The probability is that the silence holds through 2180: no confirmed technosignature, no contact. The 65-year null result is hard to reconcile with many nearby emitters (Grimaldi, Astronomical Journal, 2026).",
-    "signals": [],
+    "signals": [
+      "Independent evidence meeting the published resolution definition.",
+      "Evidence contradicting a key mechanism, or failure to meet the stated window."
+    ],
     "leadsTo": [],
     "hero": {
       "text": "…",
@@ -1438,12 +1941,23 @@
         ],
         "from": 0.35,
         "to": 0.65
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "through",
     "resolution": {
-      "test": "No confirmed technosignature or contact, by the standard of an IAU-recognized detection, through 2180."
-    }
+      "test": "No confirmed technosignature or contact, by the standard of an IAU-recognized detection, through 2180.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2182-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "labs-pace-the-frontier",
@@ -1501,11 +2015,28 @@
           "https://thenextweb.com/news/pacing-the-frontier-ai-employees-letter-us-government",
           "https://openai.com/index/pacing-model-development-cyber-capabilities/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
     "cornerstone": false,
     "status": "forecast",
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2028, at least three frontier AI developers have operated for six months under a common capability-threshold pacing agreement, with embedded independent evaluators able to publish findings and records of compliance. An unsigned proposal or safety pledge without operating evaluators does not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2030-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "hinge-resolves": "related",
+      "superintelligence-regime": "related"
+    }
   },
   {
     "id": "state-ai-laws-preempted",
@@ -1559,11 +2090,27 @@
           "https://www.insideglobaltech.com/2026/10/19/u-s-tech-legislative-regulatory-update-third-quarter-2026/",
           "https://rollcall.com/2026/09/15/ai-threats-confront-a-congress-far-from-erecting-guardrails/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
     "cornerstone": false,
     "status": "forecast",
-    "timing": "around"
+    "timing": "around",
+    "resolution": {
+      "test": "By the end of 2028, a US federal statute has taken effect that expressly preempts state laws imposing obligations on frontier-model developers. Executive orders, litigation proposals and an introduced bill alone do not count. Use the enacted statute and effective date.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2030-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "federal-ai-statute": "related"
+    }
   },
   {
     "id": "helion-delivers-microsoft",
@@ -1622,11 +2169,27 @@
         "sources": [
           "https://techcrunch.com/2026/10/22/fusion-startup-helion-is-developing-new-semiconductors-that-could-double-output-of-its-power-plants/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
     "cornerstone": false,
     "status": "forecast",
-    "timing": "window"
+    "timing": "window",
+    "resolution": {
+      "test": "During 2028–2030, independently documented metered electricity from Helion’s Orion facility reaches the grid under its Microsoft supply agreement. Any positive delivered quantity counts; annual net electricity and commercial profitability are separate questions. A contract or facility opening is insufficient.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2032-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "fusion-net-grid": "related"
+    }
   },
   {
     "id": "bci-permanent-approval",
@@ -1685,11 +2248,27 @@
           "https://www.neuralinktrials.com/updates",
           "https://www.techtimes.com/articles/317929/20260606/synchron-brain-implant-targets-2026-pivotal-trial-first-fda-approved-bci.htm"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
     "cornerstone": false,
     "status": "forecast",
-    "timing": "window"
+    "timing": "window",
+    "resolution": {
+      "test": "During 2029–2031, FDA issues a premarket approval for a chronically implanted brain–computer interface that decodes neural activity for communication or control. Investigational exemptions, 510(k) clearances and temporary implants do not count. The FDA approval order is authoritative.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "bci-mainstream": "related"
+    }
   },
   {
     "id": "china-crewed-moon",
@@ -1748,11 +2327,27 @@
         "sources": [
           "https://news.cgtn.com/news/2026-02-27/China-plans-two-crewed-space-missions-for-2026-eyes-2030-moon-landing-1L6i9f4Z9le/share_amp.html"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
+        "sources": []
       }
     ],
     "cornerstone": false,
     "status": "forecast",
-    "timing": "window"
+    "timing": "window",
+    "resolution": {
+      "test": "During 2030–2031, a Chinese-led mission lands at least one human on the lunar surface and returns the crew alive to Earth. A flyby, orbital mission or robotic landing does not count. Require official mission records and independent tracking.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "lunar-base-occupied": "related"
+    }
   },
   {
     "id": "fossil-co2-peak",
@@ -1786,13 +2381,26 @@
         "sources": [
           "https://geog.umd.edu/featured-content/fossil-fuel-co2-emissions-hit-record-high-2025"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "cornerstone": false,
     "status": "forecast",
     "timing": "window",
     "resolution": {
-      "test": "The Global Carbon Budget identifies a peak year inside 2030–2033 followed by three consecutive lower years. Graded on the 2037 edition, so data revisions are in. Two declines alone identify a candidate, not the peak."
+      "test": "The Global Carbon Budget identifies a peak year inside 2030–2033 followed by three consecutive lower years. Graded on the 2037 edition, so data revisions are in. Two declines alone identify a candidate, not the peak.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2037-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {
+      "two-degrees-breached": "related"
     }
   },
   {
@@ -1861,11 +2469,26 @@
           "https://investor.lilly.com/news-releases/news-release-details/single-dose-lillys-pcsk9-base-editor-verve-102-reduced-pcsk9-88",
           "https://innovativegenomics.org/news/crispr-clinical-trials-2026/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": [
+          "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease"
+        ]
       }
     ],
     "timing": "window",
     "resolution": {
-      "test": "Counts on FDA or EMA approval of a systemically delivered CRISPR, base or prime editor for ATTR cardiomyopathy, hypercholesterolemia or any other indication with more than 100,000 US patients. Miss if: No FDA/EMA approval of a systemically delivered in-vivo editor for an indication with >100,000 US patients by 31 Dec 2031."
+      "test": "Counts on FDA or EMA approval of a systemically delivered CRISPR, base or prime editor for ATTR cardiomyopathy, hypercholesterolemia or any other indication with more than 100,000 US patients. Miss if: No FDA/EMA approval of a systemically delivered in-vivo editor for an indication with >100,000 US patients by 31 Dec 2031.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-12-31"
+    },
+    "evidenceNote": "FDA approval of ex-vivo Casgevy is established. Intellia’s HAE results are sponsor-reported evidence for a different indication; they do not establish approval for a common disease or longevity benefits.",
+    "relationshipKinds": {
+      "healthy-lifespan-110": "accelerator"
     }
   },
   {
@@ -1929,12 +2552,23 @@
           "https://blog.cloudflare.com/post-quantum-visibility/",
           "https://postquantum.com/security-pqc/trump-pqc-executive-order-2030-deadline/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": []
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "Counts if GAO, or OMB's annual FISMA report to Congress, confirms that all 24 CFO Act agencies' high-value assets and high-impact systems used post-quantum key establishment at the 31 December 2030 deadline. Miss if: By the time GAO or the FISMA report covers calendar 2030, fewer than 24 agencies have all HVAs and high-impact systems on PQC key establishment; or the 2030 deadline is moved by a later order or memo; or no audit ever reports it (treated as a miss, since the line is about audited migration)."
-    }
+      "test": "Counts if GAO, or OMB's annual FISMA report to Congress, confirms that all 24 CFO Act agencies' high-value assets and high-impact systems used post-quantum key establishment at the 31 December 2030 deadline. Miss if: By the time GAO or the FISMA report covers calendar 2030, fewer than 24 agencies have all HVAs and high-impact systems on PQC key establishment; or the 2030 deadline is moved by a later order or memo; no published audit by 31 December 2033 leaves the line unresolved.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-12-31"
+    },
+    "evidenceNote": "Sources support context and mechanisms; they do not establish the stated probability. The odds remain subjective.",
+    "relationshipKinds": {}
   },
   {
     "id": "quantum-chemistry-advantage",
@@ -1957,31 +2591,7 @@
     "hero": {
       "num": 70,
       "label": "error-corrected qubits in the largest verified logical circuit so far (IBM, July 2026); useful chemistry needs hundreds",
-      "effect": "web",
-      "bars": [
-        {
-          "label": "Logical qubits, largest verified circuit",
-          "value": 70,
-          "kind": "observed",
-          "note": "IBM, July 2026"
-        },
-        {
-          "label": "IBM Starling target, 2029",
-          "value": 200,
-          "kind": "reference"
-        },
-        {
-          "label": "Useful chemistry, ETH estimate",
-          "value": 500,
-          "kind": "reference",
-          "note": "500–1,000"
-        },
-        {
-          "label": "The bet: a verified result by 2033",
-          "value": 1000,
-          "kind": "forecast"
-        }
-      ]
+      "effect": "web"
     },
     "cornerstone": false,
     "status": "forecast",
@@ -1997,11 +2607,26 @@
           "https://quantumfrontiers.com/2026/02/28/what-is-next-in-quantum-advantage/",
           "https://postquantum.com/industry-news/ibm-three-quantum-advantage-papers/"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": [
+          "https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits"
+        ]
       }
     ],
     "timing": "window",
     "resolution": {
-      "test": "Counts on a peer-reviewed ground-state energy, reaction barrier or material property for a system of chemical interest, computed on error-corrected hardware, that beats the best classical method named in the paper on accuracy or cost, is reproduced or verified by a group outside the vendor, and is not matched classically within 12 months of publication. Miss if: No peer-reviewed chemistry/materials result on error-corrected hardware beating a named best classical method, independently reproduced and unmatched classically for 12 months, by 31 Dec 2033."
+      "test": "A peer-reviewed chemistry or materials result published during 2030–2033 uses error-corrected quantum hardware to beat a named best classical method on stated accuracy or full computational cost. An outside group must reproduce or verify it, and no classical match may appear in the following 12 months. Assess publications through 31 December 2033 with follow-up through 31 December 2034; absence of a qualifying result is a miss.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2034-12-31"
+    },
+    "evidenceNote": "IBM reports a 70-logical-qubit demonstration. This supports progress in computing, not a verified useful-chemistry advantage. Qubit counts and vendor roadmaps are not equivalent to application success.",
+    "relationshipKinds": {
+      "ai-drugs-phase-iii": "related"
     }
   },
   {
@@ -2028,7 +2653,7 @@
       "effect": "sun",
       "bars": [
         {
-          "label": "2024, measured",
+          "label": "2024, estimated",
           "value": 4.7,
           "unit": "%",
           "kind": "observed",
@@ -2075,11 +2700,26 @@
           "https://www.latitudemedia.com/news/up-to-half-of-the-worlds-data-centers-may-be-delayed-this-year/",
           "https://www.eia.gov/pressroom/releases/press592.php"
         ]
+      },
+      {
+        "date": "2026-10-24",
+        "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
+        "reason": "Preserve the exact claim for future scoring; do not apply updated definitions to legacy vintages.",
+        "sources": [
+          "https://www.energy.gov/powering-americas-ai-future-data-center-resource-hub"
+        ]
       }
     ],
     "timing": "around",
     "resolution": {
-      "test": "Counts if LBNL/DOE, EIA or the IEA reports US data-center consumption at 10% or more of total US electricity for calendar 2030. Miss if: LBNL/DOE, EIA and IEA all put US data-center consumption below 10% of total US electricity for calendar 2030 - most plausibly because interconnection freezes and equipment lead times (transformers 2-3 years, turbines ~5) hold the 2026-2030 buildout to the LBNL low case or below, or because efficiency and workload shifts flatten demand per accelerator."
+      "test": "Resolve on the US data-center share of total US electricity for calendar 2030. Use the first LBNL/DOE estimate published by 31 December 2033; if absent, use EIA, then IEA, in that order. At least 10% is a hit; below 10% is a miss. No estimate by that date leaves the claim unresolved, not automatically false. Planned capacity does not count.",
+      "version": "2026-10-24",
+      "mode": "testable",
+      "assessAfter": "2033-12-31"
+    },
+    "evidenceNote": "DOE/LBNL supplies historical estimates and 2030 scenarios. The 9.5–15.3% range is an assumption-driven scenario range, not a statistical confidence interval.",
+    "relationshipKinds": {
+      "fusion-net-grid": "related"
     }
   }
 ]

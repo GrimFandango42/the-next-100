@@ -67,7 +67,7 @@ export function TrackRecord() {
   const { select } = useStore();
   const counts = data.events.reduce<Record<string, number>>((a, e) => { a[e.status] = (a[e.status] ?? 0) + 1; return a; }, {});
   const resolved = data.events.filter((e) => e.status !== "forecast");
-  const due = data.events.filter((e) => e.status === "forecast" && (e.yearEnd ?? e.year) < new Date().getFullYear());
+  const due = data.events.filter((e) => e.status === "forecast" && e.resolution?.assessAfter && e.resolution.assessAfter < new Date().toISOString().slice(0,10));
   return (
     <div className="record">
       {resolved.length > 0 && <div className="record-tiles">
@@ -75,7 +75,7 @@ export function TrackRecord() {
           <div key={s} className={"rt " + s}><div className="v mono">{counts[s] ?? 0}</div><div className="lbl">{STATUS_LABEL[s]}</div></div>
         ))}
       </div>}
-      <p className="note">Scoring: when a line resolves it is scored with a Brier score against the probability it carried when first written (the <code>from</code> of its first revision, or its current number if never moved); partial and retired lines are listed but not scored. {resolved.length === 0 ? "Nothing has resolved yet; the first lines come due in 2027." : `${resolved.length} resolved so far.`}</p>
+      <p className="note">Scoring uses an evidence-backed binary adjudication and the earliest frozen probability with the same resolution definition. Missing the deadline is not a success merely because the event happens later. Legacy snapshots without definitions and narrative scenarios are not scored. {resolved.length === 0 ? "No outcomes have been adjudicated yet." : `${resolved.length} outcomes recorded so far.`}</p>
       {due.length > 0 && <p className="note">Past due and unresolved: {due.map((e) => e.title).join("; ")}. The next check-in has to grade these.</p>}
       {resolved.length > 0 && (
         <ul className="resolved">
@@ -83,9 +83,9 @@ export function TrackRecord() {
         </ul>
       )}
       {resolved.length === 0 && (() => {
-        const first = Math.min(...data.events.map((e) => e.year));
-        const due = data.events.filter((e) => e.year === first);
-        return <div className="first-due"><div className="eyebrow">First grades due · {first}</div><p>Nothing has resolved yet. {due.length} line{due.length === 1 ? "" : "s"} come due first:</p><ul>{due.map((e) => <li key={e.id}><button className="link" onClick={() => select(e.id)}>{e.title} <span className="muted mono">{Math.round((e.probability ?? 0) * 100)}%</span></button></li>)}</ul></div>;
+        const first = Math.min(...data.events.filter(e=>e.resolution?.assessAfter).map(e=>Number(e.resolution!.assessAfter!.slice(0,4))));
+        const due = data.events.filter(e=>Number(e.resolution?.assessAfter?.slice(0,4)) === first);
+        return <div className="first-due"><div className="eyebrow">First scheduled adjudications · {first}</div><p>Nothing has resolved yet. {due.length} line{due.length === 1 ? "" : "s"} have the earliest scheduled adjudication:</p><ul>{due.map((e) => <li key={e.id}><button className="link" onClick={() => select(e.id)}>{e.title} <span className="muted mono">{Math.round((e.probability ?? 0) * 100)}%</span></button></li>)}</ul></div>;
       })()}
     </div>
   );
@@ -115,9 +115,10 @@ export function Method() {
       <div className="forces">
         {data.meta.forces.map((f, i) => <div key={i} className="force"><div className="eyebrow">Force {i + 1}</div><b>{f.name}</b><p className="muted">{f.text}</p></div>)}
       </div>
+      <p className="note">These tiers describe subjective likelihood, not the strength of the supporting evidence. Evidence limitations are stated on each forecast.</p>
       <div className="legend">
         <div><span className="pill high">High</span> 70%+ · I'd be surprised if it didn't happen roughly on schedule</div>
-        <div><span className="pill moderate">Moderate</span> 45–70% · more likely than not; timing could slip a decade</div>
+        <div><span className="pill moderate">Moderate</span> 45–70% · uncertain; includes probabilities below even odds</div>
         <div><span className="pill speculative">Speculative</span> under 45% · included because it matters if it happens</div>
       </div>
       <p>{data.meta.caveat}</p>

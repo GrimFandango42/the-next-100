@@ -133,5 +133,13 @@
       "https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits",
       "https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-announces-second-quarter-2026-financial"
     ]
+  },
+  {
+    "date": "2026-10-24",
+    "kind": "revision",
+    "headline": "Interactive field guide; evidence labels and versioned scoring",
+    "body": "Added six interactive exhibit types. Corrected the hiring figure to the 19% relative employment gap; removed stale probability overrides and the unsupported 1,000-qubit threshold. Every line now has a versioned definition or an explicit unscored-scenario designation. Newly operationalized thresholds are editorial choices, not independently calibrated odds. Resolutions need evidence and a matching frozen definition; late outcomes no longer automatically count as successes. Five broad scenarios remain unscored. Timing labels, relationship types and source limitations are explicit. Probability values are unchanged. Six priority contextual claims were checked against primary sources; this is not a full re-verification of the citation registry.",
+    "touched": [],
+    "sources": []
   }
 ]

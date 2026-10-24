@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { data } from "../data";
 import { useNarrow } from "../hooks";
-import { CONF_LABEL, STATUS_LABEL } from "../lib";
+import { STATUS_LABEL } from "../lib";
 import { DOMAIN_META } from "../schema";
 import { useStore } from "../store";
 import { when } from "./StoryJourney";
@@ -71,20 +71,21 @@ export function Detail() {
       </div>
       <h3>{e.title}{e.cornerstone && <span className="corner">cornerstone</span>}</h3>
       <div className="badges">
-        <span className={"pill " + e.confidence}>{CONF_LABEL[e.confidence]}{e.probability != null && ` · ${Math.round(e.probability * 100)}%`}</span>
+        <span className={"pill " + e.confidence}>{e.probability != null ? `${Math.round(e.probability * 100)}% subjective probability` : "No probability"}</span>
         <span className={"pill status " + e.status}>{STATUS_LABEL[e.status]}{e.resolvedOn ? ` · ${e.resolvedOn}` : ""}</span>
         {e.branch && <span className="pill">{e.branch} branch only</span>}
       </div>
       <p className="lede">{e.summary}</p>
       <p>{e.detail}</p>
       {e.resolution && <div className="block counts-block"><div className="eyebrow">What counts</div><p>{e.resolution.test}</p></div>}
+      <p className="note">{e.evidenceNote}</p>
       {e.signals.length > 0 && (
         <div className="block"><div className="eyebrow">What the check-in watches for</div><ul>{e.signals.map((s) => <li key={s}>{s}</li>)}</ul></div>
       )}
       {(prev.length > 0 || next.length > 0) && (
         <div className="block links">
-          {prev.length > 0 && <div><div className="eyebrow">Follows from</div>{prev.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
-          {next.length > 0 && <div><div className="eyebrow">Leads to</div>{next.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
+          {prev.length > 0 && <div><div className="eyebrow">Related drivers</div>{prev.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
+          {next.length > 0 && <div><div className="eyebrow">May influence</div>{next.map((p) => <button key={p.id} className="link" onClick={() => select(p.id)}>{p.year} · {p.title}</button>)}</div>}
         </div>
       )}
       <div className="block">

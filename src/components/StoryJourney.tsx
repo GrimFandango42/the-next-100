@@ -3,9 +3,9 @@ import { data } from "../data";
 import { fmt, lerp, metricKF } from "../lib";
 import { DOMAIN_META, type Branch, type ForecastEvent } from "../schema";
 import { useStore } from "../store";
-import { useNarrow } from "../hooks";
+import { exhibitFor } from "./Exhibit";
 import { FutureMap, Network } from "./StoryArt";
-import Figure from "./Figure";
+import Figure, { figureCaption } from "./Figure";
 
 /**
  * The book. One way to move: scroll. One strip at the top tells you where you are and opens the overview
@@ -27,12 +27,11 @@ export function BranchChoice({ compact = false }: { compact?: boolean }) {
 }
 
 function Odds({ event }: { event: ForecastEvent }) {
-  return <div className="forecast-confidence"><span>{event.probability != null ? `${Math.round(event.probability * 100)}%` : "—"}</span><div>likely<small>{when(event)} · {event.confidence} confidence{event.cornerstone ? " · cornerstone" : ""}</small></div></div>;
+  return <div className="forecast-confidence"><span>{event.probability != null ? `${Math.round(event.probability * 100)}%` : "—"}</span><div>likely<small>{when(event)} · {event.resolution?.mode === "scenario" ? "illustrative scenario · unscored" : "subjective forecast"}{event.cornerstone ? " · cornerstone" : ""}</small></div></div>;
 }
 
 function PredictionScene({ event, index, current }: { event: ForecastEvent; index: number; current: boolean }) {
-  const { select, branch, year } = useStore();
-  const narrow = useNarrow();
+  const { select, branch } = useStore();
   const words = event.title.split(" ");
   const tail = words.splice(-Math.min(3, Math.max(1, Math.floor(words.length / 3)))).join(" ");
   return <section id={pageId(event)} className={`guide-scene event-scene ${index % 2 ? "verso" : "recto"} ${current ? "is-current" : ""}`} data-story-stop data-year={event.year} data-event-id={event.id} data-domain={event.domain} aria-labelledby={`title-${event.id}`} style={{ ["--d" as any]: DOMAIN_META[event.domain].color }}>
@@ -42,13 +41,14 @@ function PredictionScene({ event, index, current }: { event: ForecastEvent; inde
       <p className="guide-lead">{event.summary}</p>
       {event.branch && <span className="conditional-note">Only on the {event.branch} path</span>}
       <Odds event={event} />
-      {event.resolution && (narrow
-        ? <details className="counts counts-d"><summary><b>What counts</b></summary><p>{event.resolution.test}</p></details>
-        : <p className="counts"><b>What counts.</b> {event.resolution.test}</p>)}
-      <Drivers event={event} />
+      <details className="forecast-details"><summary>Evidence & what would count</summary>
+        {event.resolution && <p className="counts"><b>What counts.</b> {event.resolution.test}</p>}
+        <p className="counts"><b>Evidence status.</b> {event.evidenceNote ?? "Sources provide context; the probability is an editorial judgment, not a published scientific estimate."}</p>
+        <Drivers event={event} />
+      </details>
       <div className="page-actions"><button className="guide-text-button" onClick={() => select(event.id)}>Why this forecast? <span>↗</span></button><Cited event={event} /></div>
     </div>
-    <div className="scene-art"><Figure ev={event} branch={branch} year={Math.max(year, event.year)} active={current} /><div className="art-caption"><span>{event.hero?.label ?? ""}</span><span>{event.hero?.ladder ? "WHAT HAS TO HAPPEN, IN ORDER" : "DRAWN FROM THE FORECAST'S OWN NUMBERS"}</span></div></div>
+    <div className="scene-art"><Figure ev={event} branch={branch} year={event.year} active={current} />{!exhibitFor(event) && <div className="art-caption"><span>{figureCaption(event)}</span><span>{event.hero?.ladder ? "MILESTONES · STATUS AS OF LAST REVIEW" : "OBSERVATIONS AND FORECASTS ARE DISTINCT"}</span></div>}</div>
   </section>;
 }
 
@@ -56,10 +56,10 @@ function Drivers({ event }: { event: ForecastEvent }) {
   const before = data.events.filter((e) => e.leadsTo.includes(event.id));
   const after = data.events.filter((e) => event.leadsTo.includes(e.id));
   if (!before.length && !after.length) return null;
-  const chip = (e: ForecastEvent) => <a key={e.id} className="drv" href={`#${pageId(e)}`} style={{ ["--d" as any]: DOMAIN_META[e.domain].color }}><i /><span className="mono">{e.year}</span>{e.title}</a>;
+  const chip = (e: ForecastEvent, kind: string) => <a key={e.id} className="drv" href={`#${pageId(e)}`} style={{ ["--d" as any]: DOMAIN_META[e.domain].color }}><i /><span className="mono">{e.year}</span>{e.title}<small>{kind}</small></a>;
   return <div className="drivers">
-    {before.length > 0 && <div><span className="drv-k">Needs first</span>{before.map(chip)}</div>}
-    {after.length > 0 && <div><span className="drv-k">Leads to</span>{after.map(chip)}</div>}
+    {before.length > 0 && <div><span className="drv-k">Related drivers · not prerequisites</span>{before.map(e=>chip(e,e.relationshipKinds[event.id] ?? "related"))}</div>}
+    {after.length > 0 && <div><span className="drv-k">May influence</span>{after.map(e=>chip(e,event.relationshipKinds[e.id] ?? "related"))}</div>}
   </div>;
 }
 
@@ -86,7 +86,7 @@ function ForkScene({ event, index, current }: { event: ForecastEvent; index: num
   const { branch, setBranch, setYear, select } = useStore();
   const rows = differs(branch);
   return <section id={pageId(event)} className={`guide-scene fork-scene event-scene ${current ? "is-current" : ""}`} data-story-stop data-year={event.year} data-event-id={event.id} aria-labelledby="fork-title">
-    <div className="fork-intro"><div className="guide-kicker"><span>{pad(index + 1)} / THE HINGE</span><span>{event.year}</span></div><h2 id="fork-title">Who gets to hold<br /><em>the future?</em></h2><p>{event.summary} Everything after this page follows the path you pick.</p><button className="guide-text-button" onClick={() => select(event.id)}>Read the reasoning <span>↗</span></button></div>
+    <div className="fork-intro"><div className="guide-kicker"><span>{pad(index + 1)} / THE HINGE</span><span>{event.year}</span></div><h2 id="fork-title">Who gets to hold<br /><em>the future?</em></h2><p>{event.summary} The scenario-dependent figures respond to the path you pick. Other forecasts remain unchanged.</p><button className="guide-text-button" onClick={() => select(event.id)}>Read the reasoning <span>↗</span></button></div>
     <div className="fork-options">
       {(["pluralism", "concentration"] as Branch[]).map((b) => <button className={"future-option " + b} key={b} aria-pressed={branch === b} onClick={() => { setBranch(b); setYear(event.year); }}>
         <span className="option-top"><span>{b === "pluralism" ? "PATH A" : "PATH B"}</span><span className="option-check">{branch === b ? "✓ Following" : "Follow this path ↗"}</span></span>
@@ -113,13 +113,21 @@ function ChapterPage({ era, index, current }: { era: Era; index: number; current
 /** The one strip: where you are, the chapters, and the overview (zoom out). */
 function ReaderBar({ active }: { active: string }) {
   const [open, setOpen] = useState(false);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const opener = useRef<HTMLButtonElement>(null);
   const { year, branch, setBranch } = useStore();
-  useEffect(() => { setOpen(false); }, [active]);
+
   useEffect(() => {
     const key = (e: KeyboardEvent) => { if ((e.target as HTMLElement)?.closest?.("input,textarea")) return; if (e.key === "Escape") setOpen(false); if (e.key === "-" || e.key === "_") setOpen(true); };
     addEventListener("keydown", key); return () => removeEventListener("keydown", key);
   }, []);
-  useEffect(() => { document.body.style.overflow = open ? "hidden" : ""; return () => { document.body.style.overflow = ""; }; }, [open]);
+  useEffect(() => {
+    if (open) dialog.current?.showModal();
+    else if (dialog.current?.open) { dialog.current.close(); opener.current?.focus({preventScroll:true}); }
+    const previous = document.body.style.overflow;
+    if (open) document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previous; };
+  }, [open]);
   const event = ordered.find((e) => pageId(e) === active);
   const era = event ? chapterFor(event.year) : data.eras.find((e) => `chapter-${e.id}` === active) ?? data.eras[0];
   const index = event ? ordered.indexOf(event) : -1;
@@ -130,19 +138,19 @@ function ReaderBar({ active }: { active: string }) {
       <nav className="chapter-rail" aria-label="Chapters">{data.eras.map((er, i) => <a key={er.id} href={`#chapter-${er.id}`} aria-label={`Chapter ${i + 1}: ${er.name}`} aria-current={er.id === era.id ? "location" : undefined}><span>{pad(i + 1)}</span><span className="rail-name">{er.name}</span><span className="rail-years">{er.from}</span></a>)}</nav>
       <span className="reader-position" aria-live="polite"><b>{active === "opening" ? 2026 : year}</b><span>{event ? `${pad(index + 1)} / ${ordered.length}` : `CHAPTER ${pad(data.eras.indexOf(era) + 1)}`}</span></span>
       <button className={"path-pill " + branch} onClick={() => setBranch(branch === "pluralism" ? "concentration" : "pluralism")} title="The path you're following. Tap to flip." aria-label={`Following the ${branch} path; tap to follow the other`}><i />{branch === "pluralism" ? "Many hands" : "One center"}</button>
-      <button className="overview-btn" aria-expanded={open} aria-controls="overview" onClick={() => setOpen(!open)} title="The whole century on one screen (−)">{open ? "Close ×" : "Overview"} {!open && <span>☷</span>}</button>
+      <button ref={opener} className="overview-btn" aria-expanded={open} aria-controls="overview" onClick={() => setOpen(!open)} title="The whole century on one screen (−)">{open ? "Close ×" : "Overview"} {!open && <span>☷</span>}</button>
       <div className="reader-progress" aria-hidden="true"><i style={{ width: `${progress * 100}%` }} /></div>
     </div>
-    {open && <div id="overview" className="overview" role="dialog" aria-modal="true" aria-label="The whole century" onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
+    <dialog ref={dialog} onCancel={() => setOpen(false)} id="overview" className="overview" aria-label="The whole century" onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
       <div className="overview-panel">
-        <div className="overview-head"><div className="guide-kicker">THE WHOLE CENTURY · {ordered.length} PREDICTIONS · TAP ONE TO OPEN ITS PAGE</div></div>
+        <div className="overview-head"><button className="guide-text-button" autoFocus onClick={() => setOpen(false)}>Close overview ×</button><div className="guide-kicker">THE WHOLE CENTURY · {ordered.length} PREDICTIONS · TAP ONE TO OPEN ITS PAGE</div></div>
         {data.eras.map((er, i) => <div key={er.id} className="ov-era">
           <a className="ov-chapter" href={`#chapter-${er.id}`} onClick={() => setOpen(false)}><span className="mono">{pad(i + 1)} · {er.from}–{er.to}</span><b>{er.name}</b></a>
           <ol className="ov-list">{ordered.filter((e) => chapterFor(e.year).id === er.id).map((e) => <li key={e.id} className={e.id === event?.id ? "here" : ""}><a href={`#${pageId(e)}`} onClick={() => setOpen(false)}><span className="mono ov-y">{e.year}</span><i className="ov-dot" style={{ background: DOMAIN_META[e.domain].color }} /><span className="ov-t">{e.title}</span><span className="mono ov-p">{e.probability != null ? Math.round(e.probability * 100) + "%" : ""}</span></a></li>)}</ol>
         </div>)}
         <a className="ov-chapter" href="#explore" onClick={() => setOpen(false)}><span className="mono">BELOW THE BOOK</span><b>The evidence: numbers, odds, indicators, track record</b></a>
       </div>
-    </div>}
+    </dialog>
   </>;
 }
 

@@ -2,7 +2,7 @@
  * Validates every data file against the schema and the cross-file rules.
  * Run by `npm run build` and by the check-in before committing.
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { Dataset } from "../src/schema";
 
@@ -11,11 +11,12 @@ const read = (f: string) => JSON.parse(readFileSync(resolve(root, "data", f), "u
 
 const raw = {
   meta: read("meta.json"), events: read("events.json"), eras: read("eras.json"), metrics: read("metrics.json"),
-  clock: read("clock.json"), scenarios: read("scenarios.json"), indicators: read("indicators.json"), changelog: read("changelog.json"),
+  clock: read("clock.json"), scenarios: read("scenarios.json"), indicators: read("indicators.json"), changelog: read("changelog.json"), citations: read("citations.json"),
 };
 
 const parsed = Dataset.safeParse(raw);
 const errors: string[] = [];
+const vintages = readdirSync(resolve(root, "data/vintages")).filter(f=>f.endsWith(".json")).map(f=>JSON.parse(readFileSync(resolve(root,"data/vintages",f),"utf8")));
 if (!parsed.success) {
   for (const i of parsed.error.issues) errors.push(`${i.path.join(".")}: ${i.message}`);
 } else {
@@ -24,6 +25,13 @@ if (!parsed.success) {
   for (const e of d.events) {
     if (ids.has(e.id)) errors.push(`duplicate event id ${e.id}`);
     ids.add(e.id);
+    for (const v of vintages) {
+      const old = v.events[e.id];
+      if (old?.resolution?.version && old.resolution.version === e.resolution?.version && old.resolution.test !== e.resolution?.test) errors.push(`${e.id}: resolution changed without a new version (${v.date})`);
+    }
+    for (const [target] of Object.entries(e.relationshipKinds)) if (!e.leadsTo.includes(target)) errors.push(`${e.id}: relationship type without a link to ${target}`);
+    if (!e.resolution?.version) errors.push(`${e.id}: needs a versioned resolution definition`);
+    if (e.adjudication && e.adjudication.definitionVersion !== e.resolution?.version) errors.push(`${e.id}: adjudication definition mismatch`);
     if (e.yearEnd && e.yearEnd < e.year) errors.push(`${e.id}: yearEnd before year`);
     if (e.yearEnd && e.timing !== "window") errors.push(`${e.id}: has yearEnd so timing must be "window"`);
     if (!e.yearEnd && e.timing === "window") errors.push(`${e.id}: timing "window" needs yearEnd`);

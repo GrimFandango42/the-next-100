@@ -1,0 +1,412 @@
+{
+  "reviewDate": "2026-10-24",
+  "scope": "Coverage inventory for all lines; primary-source spot checks for the new exhibits. Metadata presence is not verification of a claim or its probability.",
+  "summary": {
+    "lines": 43,
+    "testable": 38,
+    "scenarios": 5,
+    "withoutCitations": 9,
+    "missingMetadata": 0
+  },
+  "rows": [
+    {
+      "id": "agents-default-knowledge-work",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "entry-level-hiring-contracts",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [
+        "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+      ],
+      "signals": 3
+    },
+    {
+      "id": "ai-runs-rd-programs",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "first-ai-election",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "ai-cyberattack-infrastructure",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "federal-ai-statute",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "compute-verification-talks",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "ai-drugs-phase-iii",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "fusion-net-grid",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [
+        "https://lmf.llnl.gov/science/achieving-fusion-ignition"
+      ],
+      "signals": 3
+    },
+    {
+      "id": "ubi-pilots-national",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "ai-chemistry-majority",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "lunar-base-occupied",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 5,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "humanoids-in-homes",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "superhuman-cognition",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 2,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "hinge-resolves",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 5,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "aging-therapy-approved",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "labor-cost-irrelevant",
+      "mode": "scenario",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "population-peak",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [
+        "https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf"
+      ],
+      "signals": 2
+    },
+    {
+      "id": "two-degrees-breached",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 2,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "geoengineering-unilateral",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "mars-outpost",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "superintelligence-regime",
+      "mode": "scenario",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "mass-casualty-event",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "population-declining",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 2,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 1
+    },
+    {
+      "id": "healthy-lifespan-110",
+      "mode": "scenario",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "bci-mainstream",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 1
+    },
+    {
+      "id": "orbital-industry",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "off-earth-population",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "world-2100",
+      "mode": "scenario",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "human-ai-continuity",
+      "mode": "scenario",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "self-sustaining-settlement",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 0,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "clock-retired",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "the-silence",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 2
+    },
+    {
+      "id": "labs-pace-the-frontier",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "state-ai-laws-preempted",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 3,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "helion-delivers-microsoft",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "bci-permanent-approval",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 2,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "china-crewed-moon",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "fossil-co2-peak",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 1,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "in-vivo-editing-common-disease",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 7,
+      "missingMetadata": [],
+      "checkedThisPass": [
+        "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease"
+      ],
+      "signals": 3
+    },
+    {
+      "id": "federal-pqc-deadline-met",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 4,
+      "missingMetadata": [],
+      "checkedThisPass": [],
+      "signals": 3
+    },
+    {
+      "id": "quantum-chemistry-advantage",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 5,
+      "missingMetadata": [],
+      "checkedThisPass": [
+        "https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits"
+      ],
+      "signals": 3
+    },
+    {
+      "id": "data-centres-tenth-us-power",
+      "mode": "testable",
+      "definition": "2026-10-24",
+      "citedUrls": 7,
+      "missingMetadata": [],
+      "checkedThisPass": [
+        "https://www.energy.gov/powering-americas-ai-future-data-center-resource-hub"
+      ],
+      "signals": 3
+    }
+  ]
+}
