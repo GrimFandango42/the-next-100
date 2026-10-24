@@ -69,7 +69,7 @@ function Explorer({ m }: { m: Metric }) {
   const H = 240, ML = 52, MR = 16, MT = 22, MB = 28;
   const x = d3.scaleLinear().domain([YEAR_MIN, YEAR_MAX]).range([ML, w - MR]);
   const series = (["pluralism", "concentration"] as const).map((b) => ({ b, pts: d3.range(YEAR_MIN, YEAR_MAX + 1).map((y) => [y, lerp(metricKF(m, b), y)] as [number, number]) }));
-  const all = series.flatMap((s) => s.pts.map((p) => p[1]));
+  const all = [...series.flatMap((s) => s.pts.map((p) => p[1])), ...m.reference.flatMap(r=>r.points.map(p=>p[1]))];
   const y = (m.scale === "log" ? d3.scaleLog().domain([Math.max(1, d3.min(all)!), d3.max(all)!]) : d3.scaleLinear().domain([Math.min(0, d3.min(all)!), d3.max(all)! * 1.08])).range([H - MB, MT]).nice();
   const line = d3.line<[number, number]>().x((p) => x(p[0])).y((p) => y(p[1])).curve(d3.curveMonotoneX);
   const area = d3.area<[number, number]>().x((p) => x(p[0])).y0(H - MB).y1((p) => y(p[1])).curve(d3.curveMonotoneX);
@@ -103,6 +103,7 @@ function Explorer({ m }: { m: Metric }) {
             <path d={line(s.pts) ?? ""} fill="none" stroke={s.b === branch ? "var(--accent)" : "var(--muted)"} strokeWidth={s.b === branch ? 2.4 : 1.5} strokeDasharray={s.b === branch ? undefined : "4 4"} />
           </g>
         ))}
+        {m.reference.map(r=><path key={r.label} d={line(r.points) ?? ""} fill="none" stroke="#ead19c" strokeWidth="2" strokeDasharray="2 6" />)}
         {obs.map((o, i) => <circle key={i} cx={x(+o.date.slice(0, 4) + (+o.date.slice(5, 7) - 1) / 12)} cy={y(o.value)} r={3.5} fill="var(--fg)" />)}
         <line x1={x(year)} x2={x(year)} y1={MT} y2={H - MB} stroke="var(--accent)" strokeWidth={1.5} />
         <circle cx={x(year)} cy={y(cur)} r={5} fill="var(--accent)" stroke="var(--bg)" strokeWidth={2} />
@@ -115,6 +116,8 @@ function Explorer({ m }: { m: Metric }) {
         )}
         {diverges && <text x={w - MR} y={MT - 8} textAnchor="end" className="tick" fill="var(--muted)">solid: {branch} · dashed: {other(branch)} · shaded: the gap</text>}
       </svg>
+      <label className="chart-year">Explore the year <strong>{year}</strong><input type="range" min={YEAR_MIN} max={YEAR_MAX} value={year} onChange={e=>setYear(Number(e.target.value))} aria-label={`${m.label}: year`} /></label>
+      {m.reference.map(r=><p className="note" key={r.label}>Dotted gold: <a href={r.source} target="_blank" rel="noreferrer">{r.label}</a>{year >= r.points[0][0] && year <= r.points[r.points.length-1][0] ? ` · ${fmt(m,lerp(r.points,year)).value}${fmt(m,lerp(r.points,year)).unit} in ${year}` : " · outside this reference’s published range"}</p>)}
     </div>
   );
 }

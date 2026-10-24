@@ -2560,7 +2560,7 @@
         "sources": []
       }
     ],
-    "timing": "around",
+    "timing": "by",
     "resolution": {
       "test": "Counts if GAO, or OMB's annual FISMA report to Congress, confirms that all 24 CFO Act agencies' high-value assets and high-impact systems used post-quantum key establishment at the 31 December 2030 deadline. Miss if: By the time GAO or the FISMA report covers calendar 2030, fewer than 24 agencies have all HVAs and high-impact systems on PQC key establishment; or the 2030 deadline is moved by a later order or memo; no published audit by 31 December 2033 leaves the line unresolved.",
       "version": "2026-10-24",
