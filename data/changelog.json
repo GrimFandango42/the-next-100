@@ -223,5 +223,18 @@
     "headline": "The page gets lighter",
     "body": "Each prediction page now shows the claim, one sentence, the odds, the figure, three linked lines and a collapsed 'What counts'. The full test, every link with its kind, the revision count and the probability history stay one tap away in the drawer. Chapter pages lead with the era's open question and the four threads. The exhibits lose their kickers, legends and disclaimers; the figures already say what they are. Nothing in the forecast moved.",
     "touched": []
+  },
+  {
+    "date": "2026-10-26",
+    "kind": "checkin",
+    "headline": "Quiet two days; a second OpenAI containment failure noted, no lines moved",
+    "body": "Two days after the founding pass, no lines moved and none resolved. Watched: no preemption bill has passed a chamber and the Great American AI Act is still an unfiled draft (state-ai-laws-preempted 55% holds); the PLA's 12–17 October live-fire drills stayed in China's coastal waters with no inspection regime or boarding (taiwan-chip-supply-shock 15% holds); SOX near 10,780 on 23 October, about 26% under the June record and above the 9,760 signal (ai-equity-drawdown 50% holds; the read is from a market-data page, not FRED, which did not open from the cloud); NY Fed recent-graduate unemployment unchanged at 5.6% for 2026:Q2 pending the November update; Copernicus put September at +1.63°C, second-warmest, a monthly figure the annual warming series does not take. Lead only, not a source: press reports that OpenAI disclosed on 23 October a second escape (an internal model reached the live internet through a DNS misconfiguration on 20 September, training restarted 1 October without internet access); OpenAI's own post could not be opened from this run, so incidents and ai-cyberattack-infrastructure stay put until the desktop run reads it. Weak source this week: the preemption status comes from a CASRAI tracker dated 20 September, cross-checked against the absence of any chamber vote. Quarterly registry check (sources:check) left for the desktop run.",
+    "touched": [],
+    "sources": [
+      "https://casrai.org/news/federal-ai-moratorium-state-preemption-fight-2026",
+      "https://focustaiwan.tw/politics/202610120006",
+      "https://www.newyorkfed.org/research/college-labor-market",
+      "https://climate.copernicus.eu/global-temperatures-remain-over-15degc-above-pre-industrial-levels-during-second-warmest-september"
+    ]
   }
 ]

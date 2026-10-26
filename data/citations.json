@@ -1526,5 +1526,29 @@
     "tier": "primary",
     "status": "ok",
     "checked": "2026-10-24"
+  },
+  "https://focustaiwan.tw/politics/202610120006": {
+    "title": "China announces live-fire drills in five sea areas, Oct. 12-17",
+    "publisher": "Focus Taiwan (CNA)",
+    "date": "2026-10-12",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-10-26"
+  },
+  "https://climate.copernicus.eu/global-temperatures-remain-over-15degc-above-pre-industrial-levels-during-second-warmest-september": {
+    "title": "Global temperatures remain over 1.5°C above pre-industrial levels during second-warmest September",
+    "publisher": "Copernicus Climate Change Service",
+    "date": "2026-10-14",
+    "tier": "institutional",
+    "status": "ok",
+    "checked": "2026-10-26"
+  },
+  "https://casrai.org/news/federal-ai-moratorium-state-preemption-fight-2026": {
+    "title": "Federal AI Preemption Fight: Where It Stands",
+    "publisher": "CASRAI",
+    "date": "2026-09-20",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-10-26"
   }
 }

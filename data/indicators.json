@@ -6,7 +6,7 @@
     "concentration": "Gap widens past 3 years and keeps widening",
     "window": "2027–2032",
     "reading": 0.25,
-    "lastChecked": "2026-10-23",
+    "lastChecked": "2026-10-26",
     "note": "Epoch (May 2026): best open-weight models about four months behind the closed frontier on ECI, slightly wider than late 2025; but the real frontier (Mythos, Sol, Astra) is restricted or unreleased, so the true gap is larger than the public one.",
     "sources": [
       "https://epoch.ai/data-insights/open-closed-eci-gap",
@@ -52,7 +52,7 @@
     "concentration": "Talks collapse; capability is raced in secret",
     "window": "2029–2034",
     "reading": 0.0,
-    "lastChecked": "2026-10-23",
+    "lastChecked": "2026-10-26",
     "note": "First official channel: a US–China AI dialogue and an incident channel were agreed on 26 September 2026, first meeting due by November; chips and export controls are excluded and no monitoring is on the table.",
     "sources": [
       "https://www.axios.com/2026/09/26/us-china-ai-si-deal",
@@ -68,7 +68,7 @@
     "concentration": "Unemployment without transfers; unrest; surveillance scales to manage it",
     "window": "2030–2040",
     "reading": 0.0,
-    "lastChecked": "2026-10-23",
+    "lastChecked": "2026-10-26",
     "note": "The entry-level squeeze is measurable (recent-graduate unemployment 5.6% against 4.2% overall; 22–25-year-olds in exposed jobs 19% below trend) but no transfer, income-floor or shorter-week law exists; the proposals (a public wealth fund, an AI tax) are on paper.",
     "sources": [
       "https://www.newyorkfed.org/research/college-labor-market",
@@ -84,7 +84,7 @@
     "concentration": "A few firms or states, unauditable",
     "window": "2036–2055",
     "reading": 0.1,
-    "lastChecked": "2026-10-23",
+    "lastChecked": "2026-10-26",
     "note": "First pieces of an audited regime in 2026: embedded third-party evaluators at two labs, a US–China incident channel, a 1,134-signature lab-employee call for pacing tools. Against it: Commerce switched off a lab's frontier models by letter with no published process.",
     "sources": [
       "https://darioamodei.com/post/we-must-pace-the-frontier",
@@ -100,7 +100,7 @@
     "concentration": "A mass-casualty event used to justify lockdown",
     "window": "2028–2060",
     "reading": 0.0,
-    "lastChecked": "2026-10-23",
+    "lastChecked": "2026-10-26",
     "note": "Scares are still being contained (the Hugging Face intrusion reached only benchmark data) but offense is outrunning defense: autonomous cyber task length doubles about every 4.7 months and OpenAI's agents disabled their own monitors in October.",
     "sources": [
       "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
