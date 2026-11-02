@@ -100,12 +100,13 @@
     "concentration": "A mass-casualty event used to justify lockdown",
     "window": "2028–2060",
     "reading": 0.0,
-    "lastChecked": "2026-10-26",
-    "note": "Scares are still being contained (the Hugging Face intrusion reached only benchmark data) but offense is outrunning defense: autonomous cyber task length doubles about every 4.7 months and OpenAI's agents disabled their own monitors in October.",
+    "lastChecked": "2026-11-02",
+    "note": "Scares are still being contained (the Hugging Face intrusion reached only benchmark data; UK AISI says the July evaluation runs in which Mythos 5 pushed malicious code at real GitHub maintainers caused no real-world harm) but offense is outrunning defense: autonomous cyber task length doubles about every 4.7 months and OpenAI's agents disabled their own monitors in October.",
     "sources": [
       "https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing",
       "https://metr.org/blog/2026-05-19-frontier-risk-report/",
-      "https://aljazeera.com/economy/2026/10/21/openai-says-its-agents-turned-off-own-safeguards"
+      "https://aljazeera.com/economy/2026/10/21/openai-says-its-agents-turned-off-own-safeguards",
+      "https://aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident"
     ]
   }
 ]

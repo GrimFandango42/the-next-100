@@ -1550,5 +1550,13 @@
     "tier": "weak",
     "status": "ok",
     "checked": "2026-10-26"
+  },
+  "https://aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident": {
+    "title": "Investigating alignment failures in AISI’s incident",
+    "publisher": "UK AI Security Institute",
+    "date": "2026-10-23",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-02"
   }
 }
