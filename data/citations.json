@@ -1558,5 +1558,53 @@
     "tier": "primary",
     "status": "ok",
     "checked": "2026-11-02"
+  },
+  "https://www.kut.org/politics/2026-11-04/democrats-win-full-control-of-congress-ushering-in-a-new-era-of-divided-government": {
+    "title": "Democrats win full control of Congress, ushering in a new era of divided government",
+    "publisher": "NPR (via KUT)",
+    "date": "2026-11-04",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-11-09"
+  },
+  "https://bgrdc.com/wp-content/uploads/2026/11/Post-Election-Congressional-Deck.pdf": {
+    "title": "Post-Election Congressional Outlook: Lame Duck and 120th Congress Preview",
+    "publisher": "BGR Group",
+    "date": "2026-11-04",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-11-09"
+  },
+  "https://thenextweb.com/news/ai-super-pacs-midterms-results-leading-the-future": {
+    "title": "AI super PACs lost their biggest general election bet of the midterms",
+    "publisher": "The Next Web",
+    "date": "2026-11-05",
+    "tier": "trade",
+    "status": "ok",
+    "checked": "2026-11-09"
+  },
+  "https://data.consilium.europa.eu/doc/document/ST-14436-2026-INIT/en/pdf": {
+    "title": "Council Conclusions on the Seventh Review Conference of the CCW (14436/26)",
+    "publisher": "Council of the European Union",
+    "date": "2026-10-13",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-09"
+  },
+  "https://www.bls.gov/news.release/archives/empsit_11062026.htm": {
+    "title": "The Employment Situation — October 2026",
+    "publisher": "US Bureau of Labor Statistics",
+    "date": "2026-11-06",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-09"
+  },
+  "https://climate.copernicus.eu/copernicus-warmest-october-record-2026-virtually-certain-exceed-15degc": {
+    "title": "Warmest October on record; 2026 virtually certain to exceed 1.5°C",
+    "publisher": "Copernicus Climate Change Service",
+    "date": "2026-11-05",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-09"
   }
 }

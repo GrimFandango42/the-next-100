@@ -247,5 +247,22 @@
       "https://aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident",
       "https://www.newyorkfed.org/research/college-labor-market"
     ]
+  },
+  {
+    "date": "2026-11-09",
+    "kind": "checkin",
+    "headline": "Democrats take Congress; state-AI preemption 55% → 42%",
+    "body": "One line moved, none resolved. Democrats won both chambers on 3 November (NPR on AP race calls; certification pending) and the preemption super PAC Leading the Future lost most of its general-election bets, so state-ai-laws-preempted falls 0.55 → 0.42 (moderate → speculative): the live route is now a December lame-duck package pairing children's AI safety bills with preemption of 'certain state AI laws', narrow and short. Watched, no change: BLS October jobs (+165,000, unemployment 4.1%, bachelor's-plus 2.6%; entry-level-hiring-contracts 85% holds); no PLA inspection regime or boarding near Taiwan despite a 53-vessel surge on 28–29 October (15% holds); the CCW Seventh Review Conference meets 16–20 November with the EU asking for a negotiating mandate (autonomous-weapons-at-scale 75% holds); Copernicus put October at 1.75°C, warmest on record, with 2026 virtually certain above 1.5°C (no annual point until January). federal-ai-statute (65%) held: a Democratic Congress makes a binding frontier bill more likely to pass a chamber but not to be signed before 2029. Weak sources: the preemption move rests on press and a lobbying-firm deck, not congressional documents; Time and Semafor midterm analyses and the NY Fed graduate page did not open from the cloud.",
+    "touched": [
+      "state-ai-laws-preempted"
+    ],
+    "sources": [
+      "https://www.kut.org/politics/2026-11-04/democrats-win-full-control-of-congress-ushering-in-a-new-era-of-divided-government",
+      "https://bgrdc.com/wp-content/uploads/2026/11/Post-Election-Congressional-Deck.pdf",
+      "https://thenextweb.com/news/ai-super-pacs-midterms-results-leading-the-future",
+      "https://data.consilium.europa.eu/doc/document/ST-14436-2026-INIT/en/pdf",
+      "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "https://climate.copernicus.eu/copernicus-warmest-october-record-2026-virtually-certain-exceed-15degc"
+    ]
   }
 ]

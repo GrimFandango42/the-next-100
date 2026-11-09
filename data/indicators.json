@@ -68,7 +68,7 @@
     "concentration": "Unemployment without transfers; unrest; surveillance scales to manage it",
     "window": "2030–2040",
     "reading": 0.0,
-    "lastChecked": "2026-10-26",
+    "lastChecked": "2026-11-09",
     "note": "The entry-level squeeze is measurable (recent-graduate unemployment 5.6% against 4.2% overall; 22–25-year-olds in exposed jobs 19% below trend) but no transfer, income-floor or shorter-week law exists; the proposals (a public wealth fund, an AI tax) are on paper.",
     "sources": [
       "https://www.newyorkfed.org/research/college-labor-market",
@@ -84,7 +84,7 @@
     "concentration": "A few firms or states, unauditable",
     "window": "2036–2055",
     "reading": 0.1,
-    "lastChecked": "2026-10-26",
+    "lastChecked": "2026-11-09",
     "note": "First pieces of an audited regime in 2026: embedded third-party evaluators at two labs, a US–China incident channel, a 1,134-signature lab-employee call for pacing tools. Against it: Commerce switched off a lab's frontier models by letter with no published process.",
     "sources": [
       "https://darioamodei.com/post/we-must-pace-the-frontier",

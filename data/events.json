@@ -2179,8 +2179,8 @@
     "id": "state-ai-laws-preempted",
     "year": 2027,
     "domain": "society",
-    "confidence": "moderate",
-    "probability": 0.55,
+    "confidence": "speculative",
+    "probability": 0.42,
     "title": "Congress preempts state AI laws",
     "summary": "The first federal AI statute is about who gets to regulate, not what the rules are: states lose the frontier-model field to Washington.",
     "detail": "The executive branch has been moving this way since December 2025 (an AI litigation task force, a March 2026 White House framework rejecting any new AI rulemaking body). A preemption bill trades states' frontier laws for a thin federal transparency layer. It counts when a statute preempts state frontier-model laws, whatever else it does.",
@@ -2233,6 +2233,18 @@
         "change": "Versioned the resolution definition and distinguished evidence from subjective odds.",
         "reason": "Added an operational definition; numerical odds are unchanged and have not been recalibrated to the new test.",
         "sources": []
+      },
+      {
+        "date": "2026-11-09",
+        "change": "probability 0.55 → 0.42; confidence moderate → speculative",
+        "reason": "Democrats won both chambers on 3 November (NPR's analysis of AP race calls, 4 November; certification pending), so from 3 January 2027 a preemption statute needs a Democratic Congress that has mostly opposed one, and Leading the Future, the super PAC built to win a single national rulebook, lost most of its general-election bets (TNW, 5 November). The live route is narrower and shorter: a December lame-duck package in which the children's AI safety bills 'could move as a package with federal preemption of certain state AI laws' (BGR post-election deck, 4 November), before the 11 December funding deadline. A narrow carve-out of that kind would count only if it reaches frontier-developer obligations. Weak sources: both are press or lobbying-firm reads, not congressional documents; the move rests on the change of majority, which no outlet disputes.",
+        "sources": [
+          "https://www.kut.org/politics/2026-11-04/democrats-win-full-control-of-congress-ushering-in-a-new-era-of-divided-government",
+          "https://bgrdc.com/wp-content/uploads/2026/11/Post-Election-Congressional-Deck.pdf",
+          "https://thenextweb.com/news/ai-super-pacs-midterms-results-leading-the-future"
+        ],
+        "from": 0.55,
+        "to": 0.42
       }
     ],
     "cornerstone": false,
