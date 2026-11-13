@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="The Next 100: A living forecast of the next hundred years">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1222"/><stop offset="1" stop-color="#1b1f3a"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9b46b"/><stop offset="1" stop-color="#7fd1b9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="320" rx="18" fill="url(#bg)"/>
+  <rect x="64" y="96" width="56" height="6" rx="3" fill="url(#acc)"/>
+<path d="M790 250 C 880 120, 960 300, 1040 170 S 1180 60, 1250 110" fill="none" stroke="url(#acc)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+<circle cx="790" cy="250" r="11" fill="url(#acc)"/><circle cx="790" cy="250" r="4" fill="#ffffff"/>
+<circle cx="1040" cy="170" r="11" fill="url(#acc)"/><circle cx="1040" cy="170" r="4" fill="#ffffff"/>
+<circle cx="1250" cy="110" r="11" fill="url(#acc)"/><circle cx="1250" cy="110" r="4" fill="#ffffff"/>
+  <text x="64" y="170" fill="#ffffff" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="64" font-weight="700">The Next 100</text>
+  <text x="66" y="218" fill="#c7cbe6" font-family="Segoe UI, Inter, Helvetica, Arial, sans-serif" font-size="26">A living forecast of the next hundred years</text>
+</svg>
