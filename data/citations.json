@@ -37,7 +37,7 @@
     "date": "2026",
     "tier": "primary",
     "status": "ok",
-    "checked": "2026-10-23"
+    "checked": "2026-11-16"
   },
   "https://www.bls.gov/news.release/empsit.nr0.htm": {
     "title": "Employment Situation Summary - September 2026",
@@ -917,7 +917,7 @@
     "date": "2026-10-23",
     "tier": "primary",
     "status": "ok",
-    "checked": "2026-10-24"
+    "checked": "2026-11-16"
   },
   "https://historyofmarket.com/semi/semi-price/": {
     "title": "Philadelphia Semiconductor Index (SOX): Historical Chart Since 1994",
@@ -1606,5 +1606,61 @@
     "tier": "primary",
     "status": "ok",
     "checked": "2026-11-09"
+  },
+  "https://essd.copernicus.org/preprints/essd-2026-895/essd-2026-895.pdf": {
+    "title": "Global Carbon Budget 2026 (preprint)",
+    "publisher": "Earth System Science Data / Global Carbon Project",
+    "date": "2026-11-10",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-16"
+  },
+  "https://globalcarbonbudget.org/fossil-co2-emissions-decrease-in-2026/": {
+    "title": "Fossil CO₂ emissions decrease in 2026",
+    "publisher": "Global Carbon Budget",
+    "date": "2026-11-10",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-16"
+  },
+  "https://www.ibtimes.com/semiconductor-stocks-plunge-ai-spending-concerns-3809509": {
+    "title": "Semiconductor stocks plunge on AI spending concerns",
+    "publisher": "International Business Times",
+    "date": "2026-11-06",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-11-16"
+  },
+  "https://www.pbs.org/newshour/nation/opposition-to-ai-data-centers-in-the-midterms-foreshadows-tougher-regulations-ahead": {
+    "title": "Opposition to AI data centers in the midterms foreshadows tougher regulations ahead",
+    "publisher": "AP via PBS NewsHour",
+    "date": "2026-11-06",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-11-16"
+  },
+  "https://indexes.nasdaq.com/Index/Overview/sox": {
+    "title": "PHLX Semiconductor (SOX) overview",
+    "publisher": "Nasdaq Global Indexes",
+    "date": "2026-11-13",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-16"
+  },
+  "https://www.techtimes.com/articles/330787/20261116/autonomous-weapons-treaty-stake-ccw-review-conference-opens-monday-us-wants-nonbinding-text.htm": {
+    "title": "Autonomous weapons treaty at stake as CCW Review Conference opens Monday; US wants nonbinding text",
+    "publisher": "Tech Times",
+    "date": "2026-11-16",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-11-16"
+  },
+  "https://www.insurancejournal.com/news/southcentral/2026/11/06/891870.htm": {
+    "title": "Some 40% of planned data center capacity is in states wanting to hit pause",
+    "publisher": "Insurance Journal (Bloomberg)",
+    "date": "2026-11-06",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-11-16"
   }
 }

@@ -264,5 +264,26 @@
       "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
       "https://climate.copernicus.eu/copernicus-warmest-october-record-2026-virtually-certain-exceed-15degc"
     ]
+  },
+  {
+    "date": "2026-11-16",
+    "kind": "checkin",
+    "headline": "Chips fall 38%, emissions dip, data centers on the ballot; three lines move",
+    "body": "Three lines moved, none resolved. The SOX closed at 9,011 on 5 November, 38% below its June record and through the 9,760 signal, then recovered to 10,146 by 13 November (FRED/Nasdaq); ai-equity-drawdown 0.50 → 0.55. The Global Carbon Budget projects fossil CO₂ down 0.4% in 2026 (range −1.5% to +0.6%) on oil and geopolitical shocks with coal still rising; a 2025 peak would fall before the window, so fossil-co2-peak 0.60 → 0.57. AP reports a quarter of midterm voters called AI data centers crucial to their vote and restrictions won 44 of 45 local referendums; first-ai-election 0.78 → 0.81. Watched, no change: NY Fed recent-graduate unemployment fell to 5.2% in 2026:Q3 from 5.6% with underemployment up to 42.5% (entry-level-hiring-contracts 85% holds; labor-response note updated); the CCW Review Conference opened today with a US paper rejecting a protocol, outcome due 20 November (autonomous-weapons-at-scale 75% holds); PLA 'area denial' carrier drills in the Western Pacific with no inspection regime or boarding (taiwan-chip-supply-shock 15% holds); governors-elect in states holding about 40% of planned data-center capacity pledged pauses, a lead for data-centres-tenth-us-power (50%) that waits for executive orders or an EIA/LBNL figure. Weak sources: the SOX causal story and the AP Voter Poll numbers come from press write-ups (IBTimes, PBS/AP), not the poll toplines; the moratorium tally is Bloomberg via Insurance Journal.",
+    "touched": [
+      "ai-equity-drawdown",
+      "fossil-co2-peak",
+      "first-ai-election"
+    ],
+    "sources": [
+      "https://fred.stlouisfed.org/series/NASDAQSOX",
+      "https://indexes.nasdaq.com/Index/Overview/sox",
+      "https://essd.copernicus.org/preprints/essd-2026-895/essd-2026-895.pdf",
+      "https://globalcarbonbudget.org/fossil-co2-emissions-decrease-in-2026/",
+      "https://www.pbs.org/newshour/nation/opposition-to-ai-data-centers-in-the-midterms-foreshadows-tougher-regulations-ahead",
+      "https://www.newyorkfed.org/research/college-labor-market",
+      "https://www.techtimes.com/articles/330787/20261116/autonomous-weapons-treaty-stake-ccw-review-conference-opens-monday-us-wants-nonbinding-text.htm",
+      "https://www.insurancejournal.com/news/southcentral/2026/11/06/891870.htm"
+    ]
   }
 ]

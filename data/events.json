@@ -237,7 +237,7 @@
     "year": 2028,
     "domain": "society",
     "confidence": "high",
-    "probability": 0.78,
+    "probability": 0.81,
     "title": "The first US presidential election fought substantially over AI",
     "summary": "Labor displacement, compute control and accountability dominate the campaign.",
     "detail": "AI will not be the only issue, but it will be the organizing one: who is responsible when an agent causes harm, whether compute is national infrastructure, what the state owes workers displaced by systems it licensed. Both parties will run on it from different angles. The consequence is that the first serious federal statute follows within two years, shaped by whichever crisis is freshest. The mobilizer may be the power bill: in 2026 data-center siting and electricity prices became a voting issue before liability or compute did, and that counts.",
@@ -308,6 +308,16 @@
         "change": "leadsTo: linked to provenance-required-political-ads",
         "reason": "A new line was added that this one bears on; the graph shows the dependency.",
         "sources": []
+      },
+      {
+        "date": "2026-11-16",
+        "change": "probability 0.78 → 0.81",
+        "reason": "AI reached the ballot two years early, through data centers. AP's post-election write-up (6 November) reports its AP Voter Poll found about a quarter of midterm voters called AI data centers crucial to their congressional vote and about three-quarters oppose one in their community; local restrictions passed in 44 of 45 counted referendums (Redbud Consulting), and Data Center Watch counts 32 of 34 winning governors backing tighter rules. The test still needs a top-five issue in the 2028 exit poll and an AI plank in both platforms; this moves the first half closer. The AP figures are approximate as reported, and the Voter Poll toplines were not opened directly.",
+        "sources": [
+          "https://www.pbs.org/newshour/nation/opposition-to-ai-data-centers-in-the-midterms-foreshadows-tougher-regulations-ahead"
+        ],
+        "from": 0.78,
+        "to": 0.81
       }
     ],
     "timing": "around",
@@ -2504,7 +2514,7 @@
     "yearEnd": 2033,
     "domain": "climate",
     "confidence": "moderate",
-    "probability": 0.6,
+    "probability": 0.57,
     "title": "Global fossil CO₂ emissions peak",
     "summary": "The year the Global Carbon Budget later confirms as the top. 2025 was a record 38.1 billion tonnes.",
     "detail": "Everything in the climate lines assumes emissions fall from the mid-2030s, and nothing in the forecast said when they stop rising. The peak is only known in hindsight: it counts when the Global Carbon Budget shows two consecutive annual declines from a year inside the window.",
@@ -2543,6 +2553,17 @@
         "change": "leadsTo: linked to ice-free-arctic-september",
         "reason": "A new line was added that this one bears on; the graph shows the dependency.",
         "sources": []
+      },
+      {
+        "date": "2026-11-16",
+        "change": "probability 0.60 → 0.57",
+        "reason": "The Global Carbon Budget 2026 (10 November) projects fossil CO₂ down 0.4% in 2026 (range −1.5% to +0.6%) to 38.2 Gt; oil −1.9%, gas −0.3%, coal +0.6%, China −0.9%, India +4.4%. The authors call it a response to geopolitical shocks, 'not a sustainable climate solution', and say 'a drop in emissions in one year is not a peak unless it is driven by structural change'. If it held, the peak would be 2025, before the window, so the in-window odds dip slightly; the range includes a rise, and coal is still growing.",
+        "sources": [
+          "https://essd.copernicus.org/preprints/essd-2026-895/essd-2026-895.pdf",
+          "https://globalcarbonbudget.org/fossil-co2-emissions-decrease-in-2026/"
+        ],
+        "from": 0.6,
+        "to": 0.57
       }
     ],
     "cornerstone": false,
@@ -3196,7 +3217,7 @@
     "yearEnd": 2030,
     "domain": "society",
     "confidence": "moderate",
-    "probability": 0.5,
+    "probability": 0.55,
     "title": "The AI trade halves",
     "summary": "The chip index that carries the AI boom closes 50% below its record. It has done that twice before, in 2000-02 and 2008, each time after a capex cycle outran the cash to pay for it. About even odds it happens between 2027 and 2030.",
     "detail": "The five big hyperscalers will spend more than $690 billion on capex in fiscal 2026, up over 80% in a year, with free cash flow near zero or negative at three of the five and new debt covering 32% of capex, up from 9% in 2024 (FactSet, July 2026). The IMF counts $1.4 trillion of circular revenue commitments across 14 vendor-financing deals; the BIS says the boom's scale and pace resemble the canal, railway and dot-com manias, each of which ended in an investment bust; the Bank of England's FPC says a sharper correction than July's remains possible. The market has already flinched: the Philadelphia Semiconductor Index (SOX) hit a record 14,635 on 22 June 2026, fell 21% in July, its worst month since October 2008, and closed at 10,779 on 23 October, 26% below the peak. The bet is that this is the first leg, not the last. A halving does not require the technology to fail; the internet worked and the Nasdaq still lost about three-quarters of its value from March 2000 to October 2002. It requires only that returns on roughly a trillion dollars a year of spending disappoint for a few quarters.",
@@ -3275,6 +3296,17 @@
           "https://fred.stlouisfed.org/series/NASDAQSOX",
           "https://historyofmarket.com/semi/semi-price/"
         ]
+      },
+      {
+        "date": "2026-11-16",
+        "change": "probability 0.50 → 0.55",
+        "reason": "The SOX closed at 9,011.14 on 5 November, 38.4% below the 14,634.72 record, its largest one-day fall since March 2020 (−12.25%) after the Democratic sweep raised doubts about the data-center build-out; that fires the 9,760 signal. It closed 13 November at 10,146.32, 30.7% below the record. A halving now needs a further 19% fall from the 5 November low inside 2027–2030; no hyperscaler has guided capex down and no AI financing vehicle has defaulted, so the move is modest. A sub-7,317 close before 1 January 2027 would grade the line early.",
+        "sources": [
+          "https://fred.stlouisfed.org/series/NASDAQSOX",
+          "https://www.ibtimes.com/semiconductor-stocks-plunge-ai-spending-concerns-3809509"
+        ],
+        "from": 0.5,
+        "to": 0.55
       }
     ],
     "timing": "window",
