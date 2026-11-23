@@ -285,5 +285,21 @@
       "https://www.techtimes.com/articles/330787/20261116/autonomous-weapons-treaty-stake-ccw-review-conference-opens-monday-us-wants-nonbinding-text.htm",
       "https://www.insurancejournal.com/news/southcentral/2026/11/06/891870.htm"
     ]
+  },
+  {
+    "date": "2026-11-23",
+    "kind": "checkin",
+    "headline": "Huang out at Nvidia, CCW defers a killer-robot treaty; no lines moved",
+    "body": "No lines moved and none resolved. Nvidia's 8-K (12 November) records Jensen Huang's resignation as CEO and director with Colette Kress as interim CEO; five days later the company reported Q3 FY2027 data-center revenue of $107.6bn (+110% year on year) and guided Q4 to about $130bn, so the capex and revenue signals for ai-equity-drawdown point the other way and the line holds at 55% (SOX not re-read: FRED and Nasdaq did not open from the cloud). The CCW Seventh Review Conference closed 21 November with a two-year expert mandate to develop an instrument on autonomous weapons, legal nature left open, after the US, Russia and Israel blocked a fast binding path; autonomous-weapons-at-scale (75%) holds and the who-decides note is updated. Trump said on 20 November that he and Xi agreed to 'joint guardrails' on AI with no text, scope or talks named; compute-verification-talks (50%) and the compute-treaty reading (0.0) hold until something is written down. Watched, no change: PLA naval surge of 100+ vessels in early November fell to about 70 with no boarding or inspection regime (taiwan-chip-supply-shock 15%); no preemption bill has passed a chamber, governors issued counter-principles on 22 November and the GAIA package awaits floor action (state-ai-laws-preempted 42%). Weak sources: the CCW outcome and the Trump remark rest on press (Anadolu, IBTimes, NPR) because the UN Geneva page and Semafor did not open; Nvidia's figures come from a Stock Titan copy of the release, not nvidianews.nvidia.com.",
+    "touched": [],
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm",
+      "https://www.stocktitan.net/articles/nvidia-q3-fiscal-2027-earnings-revenue-outlook",
+      "https://www.anews.com.tr/world/2026/11/21/un-sees-progress-on-autonomous-weapons-regulation-despite-lack-of-binding-treaty-mandate",
+      "https://www.ibtimes.com/un-talks-autonomous-weapons-further-negotiations-3810048",
+      "https://www.klcc.org/npr-news/2026-11-20/trump-touts-meeting-with-xi-and-putin-but-offers-few-results",
+      "https://www.ibtimes.com/china-unannounced-naval-deployment-taiwan-blockade-3809720",
+      "https://intelligencereport.org/2026/11/23/federal-ai-framework-governors-congress/"
+    ]
   }
 ]

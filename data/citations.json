@@ -1662,5 +1662,61 @@
     "tier": "quality-press",
     "status": "ok",
     "checked": "2026-11-16"
+  },
+  "https://www.klcc.org/npr-news/2026-11-20/trump-touts-meeting-with-xi-and-putin-but-offers-few-results": {
+    "title": "Trump touts meeting with Xi and Putin but offers few results",
+    "publisher": "NPR (via KLCC)",
+    "date": "2026-11-20",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-11-23"
+  },
+  "https://www.anews.com.tr/world/2026/11/21/un-sees-progress-on-autonomous-weapons-regulation-despite-lack-of-binding-treaty-mandate": {
+    "title": "UN sees progress on autonomous weapons regulation despite lack of binding treaty mandate",
+    "publisher": "Anadolu (via A News)",
+    "date": "2026-11-21",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-11-23"
+  },
+  "https://www.ibtimes.com/un-talks-autonomous-weapons-further-negotiations-3810048": {
+    "title": "Nearly 100 countries called for imminent regulation of 'killer robots.' The U.S., Russia and Israel disagreed",
+    "publisher": "International Business Times",
+    "date": "2026-11-21",
+    "tier": "quality-press",
+    "status": "ok",
+    "checked": "2026-11-23"
+  },
+  "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm": {
+    "title": "NVIDIA Corp. Form 8-K: CEO transition",
+    "publisher": "NVIDIA / SEC EDGAR",
+    "date": "2026-11-12",
+    "tier": "primary",
+    "status": "ok",
+    "checked": "2026-11-23"
+  },
+  "https://www.stocktitan.net/articles/nvidia-q3-fiscal-2027-earnings-revenue-outlook": {
+    "title": "NVIDIA Q3 fiscal 2027 earnings and revenue outlook",
+    "publisher": "Stock Titan",
+    "date": "2026-11-17",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-11-23"
+  },
+  "https://www.ibtimes.com/china-unannounced-naval-deployment-taiwan-blockade-3809720": {
+    "title": "China quietly mobilizes over 100 warships and patrol vessels",
+    "publisher": "International Business Times",
+    "date": "2026-11-13",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-11-23"
+  },
+  "https://intelligencereport.org/2026/11/23/federal-ai-framework-governors-congress/": {
+    "title": "Federal AI framework: why governors are pressing Congress now",
+    "publisher": "Intelligence Report",
+    "date": "2026-11-23",
+    "tier": "weak",
+    "status": "ok",
+    "checked": "2026-11-23"
   }
 }
