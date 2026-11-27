@@ -6,7 +6,7 @@ import EventDrawer from "./components/EventDrawer";
 import {lazy, Suspense} from "react";
 const WorldState = lazy(()=>import("./components/WorldState"));
 import Clock from "./components/Clock";
-import { Changelog, Indicators, Method, Scorecard, TrackRecord } from "./components/Sections";
+import { Changelog, Indicators, MarketGap, Method, Scorecard, TrackRecord } from "./components/Sections";
 
 /** The film on top; below it, the evidence. One page, one direction: down. */
 export default function App() {
@@ -33,6 +33,8 @@ export default function App() {
             <div className="sec-head"><div><div className="eyebrow">Odds</div><h2>Does humanity make it?</h2></div></div>
             <BranchChoice compact />
             <Scorecard />
+            <div className="sec-head" style={{ marginTop: 32 }}><div><div className="eyebrow">Against the markets</div><h2>Where the forecast and the betting markets disagree.</h2></div></div>
+            <MarketGap />
           </section>
           <section id="signals">
             <div className="sec-head"><div><div className="eyebrow">Leading indicators</div><h2>Which branch are we on? The needles move with the news.</h2></div></div>
