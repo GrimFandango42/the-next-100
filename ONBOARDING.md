@@ -1,6 +1,6 @@
 # Working on The Next 100 — brief for any AI model or collaborator
 
-You are working on **The Next 100**, a public, self-grading forecast of 2026–2200. Owner: Nithin. Live site: https://thenext100.duckdns.org · Source: https://github.com/GrimFandango42/the-next-100 (public). Read `CLAUDE.md` (repo map and conventions), `CONTRIBUTING.md` (the rules) and `CHECKIN.md` (how the forecast is edited) before changing anything; `docs/data-model.md` explains every field and `docs/architecture.md` how the site is put together.
+You are working on **The Next 100**, a public, self-grading forecast of 2026–2200. It is run by the maintainer. Live site: https://thenext100.duckdns.org · Source: https://github.com/GrimFandango42/the-next-100 (public). Read `CLAUDE.md` (repo map and conventions), `CONTRIBUTING.md` (the rules) and `CHECKIN.md` (how the forecast is edited) before changing anything; `docs/data-model.md` explains every field and `docs/architecture.md` how the site is put together.
 
 ## What it is
 - `data/*.json` **is the forecast**: 55 dated predictions (`events.json`), eras, metrics with keyframes to 2200, leading indicators, scenario odds, the Doomsday Clock path, and a changelog. Everything on the site is drawn from these files.
@@ -8,9 +8,9 @@ You are working on **The Next 100**, a public, self-grading forecast of 2026–2
 - `scripts/` holds the validator and the check-in tooling; `qa/` holds headless Playwright checks; `deploy/` holds the VPS setup.
 
 ## Access
-- **Code:** clone the GitHub repo. Nithin grants push access per account; if you don't have it, open a PR.
+- **Code:** clone the GitHub repo. The maintainer grants push access per account; if you don't have it, open a PR.
 - **Deploy:** pushing to `main` *is* the deploy. A timer on the VPS pulls, builds and swaps the site every 10 minutes. Nobody deploys by hand and nothing else writes to the server. A push is live in ~3–6 minutes; check with `curl -s https://thenext100.duckdns.org/ | grep -o 'index-[A-Za-z0-9_-]*\.js'` against `dist/assets/` after a local build.
-- **Server:** Hetzner VPS, reachable only from Nithin's desktop over SSH (see `CLAUDE.md`). You should not need it.
+- **Server:** the server is reachable only by the maintainer. You should not need it.
 - **No secrets exist in the repo and none may be added.** The art generator (`scripts/make-art.mjs`) reads `OPENAI_API_KEY` from the environment only.
 
 ## Run it
@@ -31,4 +31,4 @@ QA (expected for UI changes): `npm run qa:book`, then `npm i -D playwright`, `np
 6. Commit messages: a short imperative headline, a body that says why. Push to `main` only when `npm run build` passes and the QA scripts are clean.
 
 ## What's wanted
-Reviews and improvements in this order: (a) is the forecast right — challenge dates, probabilities, framing, and missing lines, with sources; (b) is the presentation clear and genuinely visual on a phone; (c) code quality. Open GitHub issues for anything you don't fix. The backlog lives in issues #1–#18.
+Reviews and improvements in this order: (a) is the forecast right — challenge dates, probabilities, framing, and missing lines, with sources; (b) is the presentation clear and genuinely visual on a phone; (c) code quality. Open GitHub issues for anything you don't fix. The backlog lives in GitHub issues.

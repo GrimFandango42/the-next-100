@@ -1,6 +1,6 @@
 # The Next 100 — working notes for Claude
 
-A living, self-grading forecast of 2026–2200. Public site at https://thenext100.duckdns.org, source at github.com/GrimFandango42/the-next-100. Owner: Nithin.
+A living, self-grading forecast of 2026–2200. Public site at https://thenext100.duckdns.org, source at github.com/GrimFandango42/the-next-100. The project is run by the maintainer.
 
 ## Shape of the repo
 - `data/*.json` — the forecast itself. Validated by `src/schema.ts` (zod) and `scripts/validate.ts`. This is what check-ins edit.
@@ -25,6 +25,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - Deploys happen by pushing to `main`; the VPS pulls and rebuilds every 10 minutes (`deploy/update.sh`). Never deploy by hand-copying files.
 
 ## On the VPS
-- Hetzner Ubuntu box at 5.161.210.111, user `nithin`. Caddy serves every site (acl26, ajntrip, indianrummy, thenext100). Reach it from the Windows desktop over SSH; cloud sessions cannot reach it, so they push to GitHub and the VPS pulls.
-- Checkout `/srv/thenext100/repo`, site root `/srv/thenext100/site`, Caddy block `thenext100.duckdns.org`, timer `thenext100-update.timer`, log `/srv/thenext100/update.log`.
+- The site is static files behind Caddy on a small Linux server. A systemd timer pulls `main`, builds and swaps the site every 10 minutes.
+- Checkout `/srv/thenext100/repo`, site root `/srv/thenext100/site`, timer `thenext100-update.timer`, log `/srv/thenext100/update.log`.
+- The server's address and login are not in this repository.
 - `systemctl reload caddy` has hung before; use `sudo caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile`.

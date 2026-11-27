@@ -116,7 +116,7 @@ That is the point of publishing it. Three ways in, lightest first:
 | [`scripts/`](scripts/) | The validator, check-in brief and log, vintage snapshots, scoring and source checks. |
 | [`qa/`](qa/) | Node tests and headless-browser sweeps for layout, overflow and console errors. See [qa/README.md](qa/README.md). |
 | [`public/`](public/) | Static assets: optional artwork behind a prediction (`moments/`), evidence data (`evidence/`), the social card. |
-| [`deploy/`](deploy/) | Caddy site block and the VPS update timer. Pushing to `main` is the deploy. |
+| [`deploy/`](deploy/) | Caddy site block, the VPS update timer, and the [self-hosting guide](deploy/README.md). Pushing to `main` is the deploy. |
 | [`docs/`](docs/) | [Roadmap](docs/ROADMAP.md), [data model](docs/data-model.md), [architecture](docs/architecture.md), past [reviews](docs/reviews/), and the README images. |
 | [`.github/`](.github/) | Issue templates, the PR template and the CI workflow. |
 
@@ -135,8 +135,17 @@ That is the point of publishing it. Three ways in, lightest first:
 - Decisions live in [docs/ROADMAP.md](docs/ROADMAP.md) (what is next), [docs/architecture.md](docs/architecture.md) (how it fits together) and [docs/reviews/](docs/reviews/) (outside reviews, kept as written).
 - Repo conventions for agents: [CLAUDE.md](CLAUDE.md) and [ONBOARDING.md](ONBOARDING.md).
 
+## Built with AI agents
+
+[CLAUDE.md](CLAUDE.md) is the brief an agent reads first: repository shape, commands, conventions and boundaries. [ONBOARDING.md](ONBOARDING.md) gives any other model the same working rules. The weekly check-in is an agent session that follows [CHECKIN.md](CHECKIN.md), using the [`/checkin` skill](.claude/skills/checkin/SKILL.md), and edits `data/` only. The validator and CI keep an agent honest: `npm run build` validates and compiles the project, while `npm run qa:book` checks the structure of the rendered book. Each change is written by one model and reviewed by a different model before it merges.
+
+Try the pattern in your own repository:
+
+1. Write one agent brief with the repository map, commands and hard boundaries.
+2. Put repeatable workflows in versioned instructions or skills.
+3. Give each agent a bounded task and require the real build and tests.
+4. Have a different model review the diff and test evidence before merging.
+
 ## License
 
 Code is [MIT](LICENSE). The forecast itself, everything under `data/`, is [CC BY 4.0](data/LICENSE): quote it, fork it, grade it, with attribution.
-
-Maintained with the relay (Claude, Codex, Gemini).

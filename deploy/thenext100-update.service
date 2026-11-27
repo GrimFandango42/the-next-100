@@ -4,6 +4,6 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-User=nithin
+User=__DEPLOY_USER__
 WorkingDirectory=/srv/thenext100/repo
 ExecStart=/srv/thenext100/repo/deploy/update.sh

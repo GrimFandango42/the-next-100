@@ -1,4 +1,4 @@
-# Appended to /etc/caddy/Caddyfile by deploy.ps1 -FirstTime. Same pattern as acl26 / ajntrip / indianrummy.
+# Appended to /etc/caddy/Caddyfile by deploy.ps1 -FirstTime.
 thenext100.duckdns.org {
 	root * /srv/thenext100/site
 	encode gzip

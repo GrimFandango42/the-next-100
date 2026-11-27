@@ -5,7 +5,7 @@ The forecast is meant to be argued with. Here is how to do it so the argument la
 ## The quick version
 
 1. **Found a line that's wrong?** [Open a *Challenge a forecast* issue](https://github.com/GrimFandango42/the-next-100/issues/new/choose). Say which line, what's wrong (the date, the odds, the framing, the test), and link the source you read. That alone is a contribution: the next check-in will weigh it.
-2. **Want to fix it yourself?** Edit `data/events.json`, append a `history` entry, run `npm run build`, open a PR. CI (`.github/ci.yml`, enabled by moving it to `.github/workflows/`) runs the validator and the tests.
+2. **Want to fix it yourself?** Edit `data/events.json`, append a `history` entry, run `npm run build`, open a PR. CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs the validator and the tests.
 3. **Something missing?** [*Propose a line*](https://github.com/GrimFandango42/the-next-100/issues/new/choose): a dated, gradable claim with two sources.
 
 ## The rules (the validator enforces most of them)

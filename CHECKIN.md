@@ -68,4 +68,4 @@ Titles are the claim in plain words; `resolution.test` carries the precision. Do
 
 ## Scope guard
 
-A check-in edits `data/` only. UI, scripts and deploy files are changed in ordinary development sessions, by Nithin or by Claude when asked.
+A check-in edits `data/` only. UI, scripts and deploy files are changed in ordinary development sessions by the maintainer or a scoped coding agent.
