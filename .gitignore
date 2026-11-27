@@ -4,3 +4,4 @@ dist
 *.log
 .env
 qa/out/
+deploy/vps.local
