@@ -1,0 +1,1617 @@
+[
+  {
+    "source": "polymarket",
+    "eventSlug": "will-china-blockade-taiwan-by-in-2026",
+    "eventTitle": "China blockades Taiwan by...?",
+    "slug": "will-china-blockade-taiwan-by-in-2026",
+    "question": "Will China blockade Taiwan by December 31, 2026??",
+    "yes": "0.022",
+    "end": "2027-01-01T04:59:00Z",
+    "volume": 520759.8573360001,
+    "liquidity": 37962.5462,
+    "token": "65690291927311053038729636064393178237016575706040697041146545333078252381107",
+    "rules": "This market will resolve to \"Yes\" if China (People's Republic of China) announces it has established or otherwise de facto establishes an aerial or naval blockade for the territory of Taiwan (Republic of China) by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying blockade is:\n- Prevents the normal ingress or egress of foreign commercial traffic to or from Taiwan Island’s main ports or airports by threat or use of force for ≥ 24 hours.\n- Covers part or whole of the main island of Taiwan (Formosa).\n- Is declared and enforced, de facto (e.g., it is established that China is blocking a significant portion of foreign commercial traffic, as described above, by a wide consensus of credible reporting regardless of whether China has issued a statement or not), or China-issued navigation/airspace prohibitions covering Taiwan's main island's approach lanes that are actively enforced so that most foreign commercial access is denied.\n\nA qualifying blockade is not:\n- Military or naval exercises or drills (established with warning areas or NOTAMs that do not actively stop third-country ships/aircraft and do not materially deny access).\n- Purely economic or coercive measures (e.g., sanctions, customs delays, fishing bans, cyber/GPS jamming) without physical interdiction or enforced closure).\n- Weather/accident-related closures or voluntary rerouting by operators absent PRC enforcement.\n- Islet-only incidents that do not involve the main island of Taiwan.\n- Seizure or inspection of a single vessel/aircraft by itself, unless part of an enforced pattern that denies access as defined above.\n\nThe resolution source for this market will be a broad consensus of credible reporting.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.034
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.032
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.034
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.021
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.021
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.029
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.024
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.026
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.026
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.026
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.026
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.026
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.023
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.023
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.023
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.025
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.025
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.019
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.02
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.019
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.019
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.028
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.018
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.029
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.02
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.021
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.022
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "will-china-blockade-taiwan-by-in-2026",
+    "eventTitle": "China blockades Taiwan by...?",
+    "slug": "will-china-blockade-taiwan-by-june-30-2027",
+    "question": "Will China blockade Taiwan by June 30, 2027?",
+    "yes": "0.105",
+    "end": "2027-07-01T03:59:00Z",
+    "volume": 583.267563,
+    "liquidity": 10819.2367,
+    "token": "52242744017198849288647651637524011263399294754029285582401906163496014931698",
+    "rules": "This market will resolve to \"Yes\" if China (People's Republic of China) announces it has established or otherwise de facto establishes an aerial or naval blockade for the territory of Taiwan (Republic of China) by June 30, 2027, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying blockade is:\n- Prevents the normal ingress or egress of foreign commercial traffic to or from Taiwan Island’s main ports or airports by threat or use of force for ≥ 24 hours.\n- Covers part or whole of the main island of Taiwan (Formosa).\n- Is declared and enforced, de facto (e.g., it is established that China is blocking a significant portion of foreign commercial traffic, as described above, by a wide consensus of credible reporting regardless of whether China has issued a statement or not), or China-issued navigation/airspace prohibitions covering Taiwan's main island's approach lanes that are actively enforced so that most foreign commercial access is denied.\n\nA qualifying blockade is not:\n- Military or naval exercises or drills (established with warning areas or NOTAMs that do not actively stop third-country ships/aircraft and do not materially deny access).\n- Purely economic or coercive measures (e.g., sanctions, customs delays, fishing bans, cyber/GPS jamming) without physical interdiction or enforced closure).\n- Weather/accident-related closures or voluntary rerouting by operators absent PRC enforcement.\n- Islet-only incidents that do not involve the main island of Taiwan.\n- Seizure or inspection of a single vessel/aircraft by itself, unless part of an enforced pattern that denies access as defined above.\n\nThe resolution source for this market will be a broad consensus of credible reporting.",
+    "history": [
+      {
+        "d": "2026-11-26",
+        "p": 0.485
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.18
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.105
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "will-china-blockade-taiwan-by-in-2026",
+    "eventTitle": "China blockades Taiwan by...?",
+    "slug": "will-china-blockade-taiwan-by-december-31-2027",
+    "question": "Will China blockade Taiwan by December 31, 2027?",
+    "yes": "0.14",
+    "end": "2028-01-01T04:59:00Z",
+    "volume": 1472.204756,
+    "liquidity": 17767.5457,
+    "token": "79546429873962282173396170572657972410871778773430490486229412458476882196205",
+    "rules": "This market will resolve to \"Yes\" if China (People's Republic of China) announces it has established or otherwise de facto establishes an aerial or naval blockade for the territory of Taiwan (Republic of China) by December 31, 2027, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA qualifying blockade is:\n- Prevents the normal ingress or egress of foreign commercial traffic to or from Taiwan Island’s main ports or airports by threat or use of force for ≥ 24 hours.\n- Covers part or whole of the main island of Taiwan (Formosa).\n- Is declared and enforced, de facto (e.g., it is established that China is blocking a significant portion of foreign commercial traffic, as described above, by a wide consensus of credible reporting regardless of whether China has issued a statement or not), or China-issued navigation/airspace prohibitions covering Taiwan's main island's approach lanes that are actively enforced so that most foreign commercial access is denied.\n\nA qualifying blockade is not:\n- Military or naval exercises or drills (established with warning areas or NOTAMs that do not actively stop third-country ships/aircraft and do not materially deny access).\n- Purely economic or coercive measures (e.g., sanctions, customs delays, fishing bans, cyber/GPS jamming) without physical interdiction or enforced closure).\n- Weather/accident-related closures or voluntary rerouting by operators absent PRC enforcement.\n- Islet-only incidents that do not involve the main island of Taiwan.\n- Seizure or inspection of a single vessel/aircraft by itself, unless part of an enforced pattern that denies access as defined above.\n\nThe resolution source for this market will be a broad consensus of credible reporting.",
+    "history": [
+      {
+        "d": "2026-11-26",
+        "p": 0.51
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.14
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "will-china-invade-taiwan-by-june-30-2027",
+    "eventTitle": "Will China invade Taiwan by June 30, 2027?",
+    "slug": "will-china-invade-taiwan-by-june-30-2027",
+    "question": "Will China invade Taiwan by June 30, 2027?",
+    "yes": "0.0445",
+    "end": "2027-07-01T03:59:00Z",
+    "volume": 625267.5149099999,
+    "liquidity": 73504.96205,
+    "token": "29025488225813526669599040222477073683559999116743837274144475701987306415711",
+    "rules": "This market will resolve to \"Yes\" if China commences a military offensive intended to establish control over any portion of the Republic of China (Taiwan) by June 30, 2027, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nTerritory under the administration of the Republic of China, including any inhabited islands, will qualify; however, uninhabited islands will not qualify. \n\nThe resolution source for this market will be official confirmation by China, Taiwan, the United Nations, or any permanent member of the UN Security Council; however, a consensus of credible reporting will also be used.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.045
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.045
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.045
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.045
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.034
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.034
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.034
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.034
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.038
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.04
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.042
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.041
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.048
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.054
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.044
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.043
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.044
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.044
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.044
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "ai-bubble-burst-by",
+    "eventTitle": "AI bubble burst by...?",
+    "slug": "ai-industry-downturn-by-december-31-2026-857",
+    "question": "AI bubble burst in 2026?",
+    "yes": "0.171",
+    "end": "2027-01-01T04:59:00Z",
+    "volume": 3712440.924992001,
+    "liquidity": 21211.92406,
+    "token": "95143949049440805515065120245245136072200903084986833252741074455111459269340",
+    "rules": "This market will resolve to \"Yes\" if the AI industry experiences an industry downturn by the specified date, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, the AI industry will be considered to have experienced an industry downturn once at least three of the following events have occurred within 90 days of this market's specified timeframe:\n- NVIDIA Corporation (NVDA) closing stock price is down 50% from its all-time high.\n- iShares PHLX Semiconductor ETF (SOXX) closing stock price is down 40% from its all-time high.\n- OpenAI, Inc. or Anthropic PBC declares bankruptcy.\n- OpenAI, Inc. is acquired.\n- H100 rental price falls to $1.00 or lower for five consecutive days, as shown on the SiliconData Silicon Index at:\nhttps://www.silicondata.com/products/silicon-index.\n- Major AI Hardware Supplier Collapse: Taiwan Semiconductor Manufacturing Company Limited (TSM), ASML Holding N.V. (ASML), Broadcom Inc. (AVGO), Arista Networks, Inc. (ANET), or Super Micro Computer, Inc. (SMCI), closing stock price is down 50% from its all-time high.\n\nThis market may resolve immediately once three conditions have been met within 90 days of the specified timeframe.\n\nThis market will not resolve to \"Yes\" until three conditions have been met, regardless of reporting of an industry downturn or similar claims.\n\nThe primary resolution source will be official information from the respective companies and listing exchanges; however, a consensus of credible reporting will also be used.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.066
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.067
+      },
+      {
+        "d": "2026-10-18",
+        "p": 0.07
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.078
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.084
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.106
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.094
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.093
+      },
+      {
+        "d": "2026-10-26",
+        "p": 0.094
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.096
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.08
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.102
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.096
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.098
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.097
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.088
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.085
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.068
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.084
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.076
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.087
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.082
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.072
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.09
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.11
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.066
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.069
+      },
+      {
+        "d": "2026-11-15",
+        "p": 0.086
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.076
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.078
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.085
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.08
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.08
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.554
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.616
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.516
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.112
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.172
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.196
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.175
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.171
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "ai-bubble-burst-by",
+    "eventTitle": "AI bubble burst by...?",
+    "slug": "ai-bubble-burst-by-june-30-2027",
+    "question": "AI bubble burst by June 30, 2027?",
+    "yes": "0.395",
+    "end": "2027-07-01T03:59:00Z",
+    "volume": 283426.041021,
+    "liquidity": 24514.8206,
+    "token": "54930692724987225021792924039023958542270805785463374293701614625470107640058",
+    "rules": "This market will resolve to \"Yes\" if the AI industry experiences an industry downturn by the specified date, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, the AI industry will be considered to have experienced an industry downturn once at least three of the following events have occurred within 90 days of this market's specified timeframe:\n- NVIDIA Corporation (NVDA) closing stock price is down 50% from its all-time high.\n- iShares PHLX Semiconductor ETF (SOXX) closing stock price is down 40% from its all-time high.\n- OpenAI, Inc. or Anthropic PBC declares bankruptcy.\n- OpenAI, Inc. is acquired.\n- H100 rental price falls to $1.00 or lower for five consecutive days, as shown on the SiliconData Silicon Index at:\nhttps://www.silicondata.com/products/silicon-index.\n- Major AI Hardware Supplier Collapse: Taiwan Semiconductor Manufacturing Company Limited (TSM), ASML Holding N.V. (ASML), Broadcom Inc. (AVGO), Arista Networks, Inc. (ANET), or Super Micro Computer, Inc. (SMCI), closing stock price is down 50% from its all-time high.\n\nThis market may resolve immediately once three conditions have been met within 90 days of the specified timeframe. For clarity, ‘within 90 days of this market’s specified timeframe’ means that three qualifying events must occur within a single 90-day window that ends no later than the market’s final resolution deadline. For example, with a December 31, 2026 deadline, if Event A occurs on January 10, Event B on February 5, and Event C on March 3 of 2026, this would qualify because all three fall within one 90-day span. By contrast, if Event A occurs on January 10, Event B on April 20, and Event C on November 1 of 2026, they would not qualify because they do not occur within the same 90-day window.\n\nThis market will not resolve to \"Yes\" until three conditions have been met, regardless of reporting of an industry downturn or similar claims.\n\nThe primary resolution source will be official information from the respective companies and listing exchanges; however, a consensus of credible reporting will also be used.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.185
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.185
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.165
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.195
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.21
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.21
+      },
+      {
+        "d": "2026-10-25",
+        "p": 0.23
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.225
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.23
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.24
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.265
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.265
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.245
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.225
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.26
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.255
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.185
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.18
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.18
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.18
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.185
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.215
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.665
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.68
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.625
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.275
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.425
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.46
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.38
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.395
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "comprehensive-federal-ai-framework-becomes-us-law-before-2028",
+    "eventTitle": "Comprehensive federal AI framework becomes US law before 2028?",
+    "slug": "comprehensive-federal-ai-framework-becomes-us-law-before-2028",
+    "question": "Comprehensive federal AI framework becomes US law before 2028?",
+    "yes": "0.44",
+    "end": "2027-01-01T04:59:00Z",
+    "volume": 3583.9208910000007,
+    "liquidity": 86.2496,
+    "token": "84286167335230831985269082992276540667697361105138502585799874464021807550946",
+    "rules": "This market will resolve to \"Yes\" if legislation establishing a comprehensive federal framework for artificial intelligence becomes law in the United States between market creation and December 31, 2027, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nLegislation establishes a comprehensive federal framework for artificial intelligence if its enacted text contains provisions in both of the following categories:\n\n(1) Standards or testing: the legislation directs a federal agency or body (for example, the National Institute of Standards and Technology) to develop, adopt, or maintain technical standards, benchmarks, testing frameworks, or evaluation capacity for artificial intelligence systems.\n\n(2) Transparency, disclosure, or risk management: the legislation requires transparency, disclosure, reporting, or risk-management practices for artificial intelligence systems, either as obligations on private-sector developers or deployers, or as guidelines or frameworks that a federal agency is directed to develop or adopt for use by federal agencies, whether mandatory or voluntary. Findings, sense-of-Congress language, and provisions that only authorize a study or require a one-time report to Congress will not satisfy this category.\n\nThe qualifying provisions must apply to artificial intelligence systems generally, either government-wide or to private-sector developers or deployers. Provisions that govern only the artificial intelligence systems developed, procured, or used by a single federal department or agency, or only defense, national security, or intelligence applications (for example, Department of Defense or intelligence community provisions in a National Defense Authorization Act or Intelligence Authorization Act), will not qualify. Qualifying provisions may be enacted as a standalone act or as a distinct title or division of a broader act.\n\nPending legislation that this market is intended to capture includes the American Leadership in AI Act (H.R. 8516, 119th Congress) and the Great American Artificial Intelligence Act of 2026 (Obernolte-Trahan discussion draft released June 4, 2026). Whether any legislation qualifies will be determined solely by whether its enacted text satisfies the requirements above, regardless of its title or sponsors.\n\nLegislation that satisfies only one of the two categories above will not qualify. Legislation whose artificial intelligence provisions apply only to a single application, sector, or technology (for example, semiconductor or chip export controls, deepfakes or digital replicas, chatbots or companion applications, data centers or their electricity use, autonomous vehicles, or the funding of a research resource such as the National Artificial Intelligence Research Resource) will not qualify, even if it contains standards, testing, disclosure, or reporting provisions for that application. Legislation that became law before January 1, 2026, including the National Artificial Intelligence Initiative Act of 2020, will not qualify.\n\nThe primary resolution source for this market will be Congress.gov's legislation tracker (https://www.congress.gov/) and other official information from the government of the United States; however, a consensus of credible reporting may also be used.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.355
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.39
+      },
+      {
+        "d": "2026-10-18",
+        "p": 0.395
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.395
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.395
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.395
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.39
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.39
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.43
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.415
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.655
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.55
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.66
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.635
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.615
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.455
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.45
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.535
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.54
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.445
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.44
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.46
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.46
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.47
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.47
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.47
+      },
+      {
+        "d": "2026-11-15",
+        "p": 0.47
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.47
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.47
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.695
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.515
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.495
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.465
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.485
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.45
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.435
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.43
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.415
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.4
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.44
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "us-x-china-ai-safety-agreement-by",
+    "eventTitle": "US x China AI safety agreement by...?",
+    "slug": "us-x-china-ai-safety-agreement-by-june-30-2027",
+    "question": "Will the US and China announce an AI safety agreement by June 30, 2027?",
+    "yes": "0.295",
+    "end": "2027-07-01T03:59:00Z",
+    "volume": 4573.788528000001,
+    "liquidity": 21754.4279,
+    "token": "93999846372490782435360758020228399212186559932140137314160167763981600619648",
+    "rules": "This market will resolve to “Yes” if a diplomatic agreement between the United States and China over AI safety is announced between market creation and the specified date, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nA diplomatic agreement refers to an official agreement, treaty, deal, or substantially similar diplomatic instrument that establishes agreed actions, policies, obligations, or commitments between the United States and China.\n\nA diplomatic agreement qualifies as an agreement over AI safety if it is explicitly and unambiguously presented as an AI safety agreement in official announcements from both the United States and China, or if it commits the United States and China to at least one of the following:\n\ni) Mandatory testing of advanced AI models for dangerous capabilities before or after release.\nii) Specific policies to prevent AI from being used to develop biological, chemical, nuclear or cyber weapons or to facilitate attacks using such weapons.\niii) A policy that restricts the use of AI in military weapons, including nuclear weapons, such as a requirement for human control over decisions to use them.\niv) The creation of a dedicated government channel or hotline for AI incidents, or a formal mechanism for sharing information on specific AI risks or incidents. An agreement to hold talks or dialogues on AI alone does not qualify.\nv) A policy conditioning the training, release or deployment of AI models on safety requirements.\nvi) A cap on the computing power used to train AI models.\nvii) A policy limiting the capability level to which AI models or systems may be trained or developed.\n\nAgreements limited to trade, export controls, or topics other than AI safety will not qualify.\n\nBoth the United States and China must announce their acceptance of the same qualifying diplomatic agreement for a “Yes” resolution. A joint announcement will qualify, as will separate announcements from each entity of its own acceptance of an agreement which, taken together, directly indicate that all the listed countries accepted the same agreement. Separate announcements of individual policies will not qualify if the policies are not announced as part of a diplomatic agreement.\n\nEach announcement must be a declarative statement that clearly and unambiguously communicates acceptance of an agreement. Statements that reference ongoing negotiations or a prospective agreement, or that allude to or express support for an agreement without confirming acceptance of the agreement, do not qualify. A qualifying announcement need not reference the agreement by name or use specific terminology, provided it clearly communicates acceptance of an agreement.\n\nWhether announcements from the listed countries represent a diplomatic agreement and whether such an agreement qualifies will be primarily determined through the announcements themselves. Where an announcement is made by all listed countries but, based on the announcements, it remains ambiguous whether the announcements represent a qualifying diplomatic agreement between the countries, this market will remain open until either i) definitive confirmation that the announcements represent a qualifying diplomatic agreement between the listed entities is achieved through further announcements from the listed countries or a consensus of credible reporting or ii) 14 calendar days (ET) have passed after the date that the last country made their first potentially qualifying announcement. If, at the end of the fourteenth calendar day, no definitive confirmation has been achieved, whether the agreement qualifies will be adjudicated based on the totality of information available from the resolution sources at that time. No single statement, denial, or presentation of evidence will govern where it is contradicted by the totality of information.\n\nThe resolution sources for this market will be official information from the governments of the United States and China and a consensus of credible reporting.",
+    "history": [
+      {
+        "d": "2026-11-27",
+        "p": 0.295
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.295
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "us-x-china-ai-safety-agreement-by",
+    "eventTitle": "US x China AI safety agreement by...?",
+    "slug": "us-x-china-ai-safety-agreement-by-december-31-2027",
+    "question": "Will the US and China announce an AI safety agreement by December 31, 2027?",
+    "yes": "0.43",
+    "end": "2028-01-01T04:59:00Z",
+    "volume": 1481.0963219999999,
+    "liquidity": 21920.2021,
+    "token": "65868586404556095812705573591353880874428605539380898180536460021980801305650",
+    "rules": "This market will resolve to “Yes” if a diplomatic agreement between the United States and China over AI safety is announced between market creation and the specified date, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nA diplomatic agreement refers to an official agreement, treaty, deal, or substantially similar diplomatic instrument that establishes agreed actions, policies, obligations, or commitments between the United States and China.\n\nA diplomatic agreement qualifies as an agreement over AI safety if it is explicitly and unambiguously presented as an AI safety agreement in official announcements from both the United States and China, or if it commits the United States and China to at least one of the following:\n\ni) Mandatory testing of advanced AI models for dangerous capabilities before or after release.\nii) Specific policies to prevent AI from being used to develop biological, chemical, nuclear or cyber weapons or to facilitate attacks using such weapons.\niii) A policy that restricts the use of AI in military weapons, including nuclear weapons, such as a requirement for human control over decisions to use them.\niv) The creation of a dedicated government channel or hotline for AI incidents, or a formal mechanism for sharing information on specific AI risks or incidents. An agreement to hold talks or dialogues on AI alone does not qualify.\nv) A policy conditioning the training, release or deployment of AI models on safety requirements.\nvi) A cap on the computing power used to train AI models.\nvii) A policy limiting the capability level to which AI models or systems may be trained or developed.\n\nAgreements limited to trade, export controls, or topics other than AI safety will not qualify.\n\nBoth the United States and China must announce their acceptance of the same qualifying diplomatic agreement for a “Yes” resolution. A joint announcement will qualify, as will separate announcements from each entity of its own acceptance of an agreement which, taken together, directly indicate that all the listed countries accepted the same agreement. Separate announcements of individual policies will not qualify if the policies are not announced as part of a diplomatic agreement.\n\nEach announcement must be a declarative statement that clearly and unambiguously communicates acceptance of an agreement. Statements that reference ongoing negotiations or a prospective agreement, or that allude to or express support for an agreement without confirming acceptance of the agreement, do not qualify. A qualifying announcement need not reference the agreement by name or use specific terminology, provided it clearly communicates acceptance of an agreement.\n\nWhether announcements from the listed countries represent a diplomatic agreement and whether such an agreement qualifies will be primarily determined through the announcements themselves. Where an announcement is made by all listed countries but, based on the announcements, it remains ambiguous whether the announcements represent a qualifying diplomatic agreement between the countries, this market will remain open until either i) definitive confirmation that the announcements represent a qualifying diplomatic agreement between the listed entities is achieved through further announcements from the listed countries or a consensus of credible reporting or ii) 14 calendar days (ET) have passed after the date that the last country made their first potentially qualifying announcement. If, at the end of the fourteenth calendar day, no definitive confirmation has been achieved, whether the agreement qualifies will be adjudicated based on the totality of information available from the resolution sources at that time. No single statement, denial, or presentation of evidence will govern where it is contradicted by the totality of information.\n\nThe resolution sources for this market will be official information from the governments of the United States and China and a consensus of credible reporting.",
+    "history": [
+      {
+        "d": "2026-11-27",
+        "p": 0.425
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.43
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "new-pandemic-before-2028",
+    "eventTitle": "New pandemic before 2028?",
+    "slug": "new-pandemic-before-2028",
+    "question": "New pandemic before 2028?",
+    "yes": "0.11",
+    "end": "2028-01-01T04:59:00Z",
+    "volume": 42044.178123,
+    "liquidity": 7474.4012,
+    "token": "21525359343670841100616544448640351556466987559782648926890449748848846112709",
+    "rules": "This market will resolve to \"Yes\" if the World Health Organization (WHO) declares any disease a pandemic between market creation and December 31, 2027 11:59 PM ET. Otherwise, this market will resolve to \"No\". \n\nThe resolution source will be official announcements from the World Health Organization.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.125
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.105
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.115
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.115
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.12
+      },
+      {
+        "d": "2026-10-25",
+        "p": 0.11
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.14
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.13
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.13
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.13
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.13
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.125
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.135
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.145
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.155
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.145
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.145
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.155
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.155
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.165
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.145
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.09
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.075
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.07
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.105
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.105
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.11
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "will-the-us-confirm-that-aliens-exist-before-2027",
+    "eventTitle": "Will the US confirm that aliens exist by...?",
+    "slug": "will-the-us-confirm-that-aliens-exist-before-2027-789-924-249",
+    "question": "Will the US confirm that aliens exist before 2027?",
+    "yes": "0.0135",
+    "end": "2027-01-01T04:59:00Z",
+    "volume": 47996000.232643,
+    "liquidity": 2775014.25917,
+    "token": "107505882767731489358349912513945399560393482969656700824895970500493757150417",
+    "rules": "This market will resolve to \"Yes\" if the President of the United States, any member of the Cabinet of the United States, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the government of the United States, however a consensus of credible reporting will also be used.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.04
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.04
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.05
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.044
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.042
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.042
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.05
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.042
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.04
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.038
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.034
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.028
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.024
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.018
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.018
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.022
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.018
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.014
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.014
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.018
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.018
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.014
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.016
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.01
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.014
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.014
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "us-x-china-agree-to-pace-the-ai-frontier-in-2026",
+    "eventTitle": "US x China agree to pace the AI frontier in 2026?",
+    "slug": "us-x-china-agree-to-pace-the-ai-frontier-in-2026",
+    "question": "US x China agree to pace the AI frontier in 2026?",
+    "yes": "0.0355",
+    "end": "2027-01-01T04:59:00Z",
+    "volume": 75754.47391700002,
+    "liquidity": 14615.94511,
+    "token": "97987658922460882346584683594420542790305392213029477153076387241217977264091",
+    "rules": "This market will resolve to \"Yes\" if the governments of the United States and China announce an AI pacing agreement between them by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nAn AI pacing agreement means an agreement under which both governments commit to at least one of the following for AI developers within their jurisdictions: conditioning the training, releasing, or deploying AI models on safety requirements; capping the computing power used to train AI models; limiting the rate or extent to which AI systems autonomously train or improve more capable AI systems (recursive self-improvement); or otherwise pausing or slowing the training or release of AI models.\n\nBoth governments must announce their acceptance of the agreement. A joint statement will qualify, as will separate official statements from each government that, taken together, confirm acceptance of the agreement. A statement by one government that the other does not confirm, and statements that reference ongoing negotiations, a prospective agreement, or an intention to cooperate without confirming acceptance of an agreement, will not qualify. A multilateral agreement will qualify, provided both the United States and China are parties to it and it otherwise meets the requirements above. Qualifying announcements must come from an authorized agency or representative of the relevant country acting in an official capacity.\n\nIf a qualifying announcement is made within this market's timeframe, this market will resolve to \"Yes\" regardless of whether the agreement is binding, signed, ratified, later modified or withdrawn from, or ever implemented. The primary resolution sources for this market will be official information from the governments of the United States and China; however, a consensus of credible reporting may also be used.",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.064
+      },
+      {
+        "d": "2026-10-18",
+        "p": 0.062
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.052
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.054
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.054
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.052
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-26",
+        "p": 0.051
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.051
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.054
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.05
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.047
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.046
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.054
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.04
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.038
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.042
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.042
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.03
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.029
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.029
+      },
+      {
+        "d": "2026-11-15",
+        "p": 0.04
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.04
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.04
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.036
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.028
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.063
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.047
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.04
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.032
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.036
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.038
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.036
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.036
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.036
+      }
+    ]
+  },
+  {
+    "source": "polymarket",
+    "eventSlug": "us-enacts-ai-safety-bill-before-2027",
+    "eventTitle": "U.S. enacts AI safety bill before 2027?",
+    "slug": "us-enacts-ai-safety-bill-before-2027",
+    "question": "U.S. enacts AI safety bill before 2027?",
+    "yes": "0.1",
+    "end": "2027-01-01T04:59:00Z",
+    "volume": 212506.297646,
+    "liquidity": 4170.0631,
+    "token": "112508072057994582792425094054868799670328706955765422423524843982075694185575",
+    "rules": "This market will resolve to \"Yes\" if a bill that includes at least one of the following provisions is signed into federal law in the United States  by December 31, 2026, 11:59 PM ET. \n\n- Prohibition on Creation or Release: Forbids the creation or release of specific AI systems or models.\n\n- Training Restrictions: Sets limits on how AI systems can be trained, such as restricting access to previously available training data or imposing a maximum limit on the number of parameters used for training.\n\n- Usage Restrictions:  Prevents AI systems from being used in certain applications, such as interacting with customers, interfacing with other applications, or performing actions on the web.\n\n- Human-in-the-Loop Requirements: Requires AI systems to include mechanisms ensuring human oversight or involvement in their operation.\n\nOtherwise this market will resolve to \"No\". \n\nThe resolution source will be official U.S. federal government (e.g., Congress.gov) however a consensus of credible reporting may also be used. ",
+    "history": [
+      {
+        "d": "2026-10-16",
+        "p": 0.05
+      },
+      {
+        "d": "2026-10-17",
+        "p": 0.055
+      },
+      {
+        "d": "2026-10-18",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-19",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-20",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-21",
+        "p": 0.065
+      },
+      {
+        "d": "2026-10-23",
+        "p": 0.095
+      },
+      {
+        "d": "2026-10-24",
+        "p": 0.095
+      },
+      {
+        "d": "2026-10-27",
+        "p": 0.105
+      },
+      {
+        "d": "2026-10-28",
+        "p": 0.09
+      },
+      {
+        "d": "2026-10-30",
+        "p": 0.1
+      },
+      {
+        "d": "2026-10-31",
+        "p": 0.095
+      },
+      {
+        "d": "2026-11-01",
+        "p": 0.125
+      },
+      {
+        "d": "2026-11-02",
+        "p": 0.13
+      },
+      {
+        "d": "2026-11-03",
+        "p": 0.12
+      },
+      {
+        "d": "2026-11-04",
+        "p": 0.08
+      },
+      {
+        "d": "2026-11-05",
+        "p": 0.09
+      },
+      {
+        "d": "2026-11-06",
+        "p": 0.09
+      },
+      {
+        "d": "2026-11-07",
+        "p": 0.08
+      },
+      {
+        "d": "2026-11-08",
+        "p": 0.09
+      },
+      {
+        "d": "2026-11-09",
+        "p": 0.1
+      },
+      {
+        "d": "2026-11-10",
+        "p": 0.105
+      },
+      {
+        "d": "2026-11-11",
+        "p": 0.105
+      },
+      {
+        "d": "2026-11-12",
+        "p": 0.11
+      },
+      {
+        "d": "2026-11-13",
+        "p": 0.11
+      },
+      {
+        "d": "2026-11-14",
+        "p": 0.065
+      },
+      {
+        "d": "2026-11-16",
+        "p": 0.11
+      },
+      {
+        "d": "2026-11-17",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-18",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-19",
+        "p": 0.06
+      },
+      {
+        "d": "2026-11-20",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-21",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-22",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-23",
+        "p": 0.06
+      },
+      {
+        "d": "2026-11-24",
+        "p": 0.05
+      },
+      {
+        "d": "2026-11-25",
+        "p": 0.05
+      },
+      {
+        "d": "2026-11-26",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.055
+      },
+      {
+        "d": "2026-11-27",
+        "p": 0.1
+      }
+    ]
+  }
+]
