@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Pulls matched prediction-market prices into data/market-history/.
  *
  *   npm run markets:pull                                      live: read every unresolved link, append unseen days
@@ -20,7 +20,7 @@ import { REPO_ROOT, appendHistory, latestStoredDate, latestVintageDate, readHist
 // ---------------------------------------------------------------------------------------------------------------- types
 
 export type Resolved = { on: string; outcome: "yes" | "no" };
-/** One Kalshi daily candle, reduced to what the price rule needs. All prices are dollars (0–1). */
+/** One Kalshi daily candle, reduced to what the price rule needs. All prices are dollars (0â€“1). */
 export interface KalshiDay { date: string; bid: number | null; ask: number | null; last: number | null; oi: number | null }
 /** One Polymarket price print. `t` (unix seconds) is present on live data; recorded daily series are already in order. */
 export interface PolyPrint { date: string; p: number; t?: number }
@@ -75,7 +75,7 @@ export function dayPrices(snap: Snapshot, link: MarketLink): { prices: DayPrice[
     prices.push({ date: x.date, p: applyInversion(x.p, link.inverted), liquidity: liquidity === null ? null : Math.max(0, liquidity) });
   }
   prices.sort((a, b) => (a.date < b.date ? -1 : 1));
-  if (dropped.length) warnings.push(`${link.eventId} ${marketId(link)}: ${dropped.length} day(s) with no usable price, no row written (${dropped.slice(0, 3).join(", ")}${dropped.length > 3 ? ", …" : ""})`);
+  if (dropped.length) warnings.push(`${link.eventId} ${marketId(link)}: ${dropped.length} day(s) with no usable price, no row written (${dropped.slice(0, 3).join(", ")}${dropped.length > 3 ? ", â€¦" : ""})`);
   return { prices, warnings };
 }
 
@@ -207,7 +207,7 @@ export function liveAdapter(opts: LiveOptions = {}): Adapter {
       if (!m) return { venue: "polymarket", prints: [], liquidityNow: null, resolved: null, warnings: [`${slug}: not found in event ${eventSlug}`] };
       const info = parsePolymarketMarket(m, today);
       if (info.resolved || !info.token) return { venue: "polymarket", prints: [], liquidityNow: info.liquidity, resolved: info.resolved, warnings: info.token || info.resolved ? info.warnings : [...info.warnings, `${slug}: no Yes token`] };
-      const hist = await getJson(`${CLOB}/prices-history?market=${encodeURIComponent(info.token)}&fidelity=1440&startTs=${startTs}&endTs=${endTs}`, false);
+      const hist = await getJson(`${CLOB}/prices-history?market=${encodeURIComponent(info.token)}&fidelity=1440&startTs=${startTs}`, false);
       return { venue: "polymarket", prints: parsePolymarketHistory(hist), liquidityNow: info.liquidity, resolved: null, warnings: info.warnings };
     },
   };
@@ -286,7 +286,7 @@ async function main(): Promise<void> {
     for (const r of result.resolved) { const l = all.find((x) => linkKey(x) === linkKey(r.link) && x.eventId === r.link.eventId); if (l) l.resolved = r.resolved; }
     writeLinks(all);
   }
-  console.log(`✓ markets: ${written.length} new row(s) in data/market-history, ${result.resolved.length} link(s) resolved`);
+  console.log(`âœ“ markets: ${written.length} new row(s) in data/market-history, ${result.resolved.length} link(s) resolved`);
 }
 
 if (process.argv[1] && /markets-pull\.ts$/.test(process.argv[1])) main().catch((e) => { console.error(e instanceof Error ? e.message : e); process.exit(1); });
