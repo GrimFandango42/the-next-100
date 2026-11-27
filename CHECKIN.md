@@ -22,6 +22,7 @@ npm ci
 npm run checkin:brief          # what is due, what to search, where the needles sit
 # research: open the registry sources (SOURCES.md) first, then the standing queries + each live line's signals; read, don't skim
 # edit data/*.json accordingly (see "What can change" below)
+npm run markets:pull           # after the research: today's price of each matched prediction market → data/market-history/ (see "Prediction markets")
 npm run checkin:log -- --headline "…" --body "…" --touched id,id --sources url,url
 npm run sources:check -- --write   # quarterly, from the desktop: per-source status (ok / moved / blocked / dead), never a publisher ban
 npm run validate               # must pass
@@ -30,6 +31,16 @@ git add -A && git commit -m "checkin: YYYY-MM-DD — <one line>" && git push
 ```
 
 The VPS pulls `main` every 10 minutes and rebuilds, so a push is a deploy.
+
+## Prediction markets
+
+Some lines have a public Kalshi or Polymarket market that asks a nearby question. `data/markets.json` lists the matches (one primary per line at most, with `differs` saying how the market's question is not the line's test). The pull is read-only and needs no key.
+
+1. Run `npm run markets:pull` after the research and **before** `checkin:log`, so the vintage the logger writes freezes today's primary prices. It appends one price per market per UTC day to `data/market-history/YYYY-MM.json`, never rewrites a day already stored, and prints one `PRICE` line per primary link. Read any `WARN`: a day with no usable price is skipped, not filled in. `--dry-run` prints without writing.
+2. When a primary market has moved **more than 10 points in the week**, find out why before deciding whether the line moves: open the market page, read the news behind the move, and check whether the market's question (see `differs`) is even the one that moved. A thin market (see `liquidity` in the history rows) can jump on one trade.
+3. A market price is evidence like any other source. It **never moves a line by itself**, and a line is never set to match a market. If it does inform an edit, say so in the `history` reason and cite the market page in `sources` (add it to `citations.json` like any other URL).
+4. A market that resolves is recorded on its link (`resolved: {on, outcome}`) and no longer pulled. That is the market's result, not the line's grade.
+5. Once a quarter, look for lines with no link and propose matches in `data/markets.json` (`primary: false` until a human has read the market's resolution rules; label it from the market's own title; write `differs`). The candidate finder (`markets:find`) is a separate, later order; until it lands, search both venues by hand.
 
 ## What can change, and where
 
@@ -46,6 +57,8 @@ The VPS pulls `main` every 10 minutes and rebuilds, so a push is a deploy.
 | `data/sources.json` + `SOURCES.md` | — | quarterly: `npm run sources:check -- --write`, then replace moved or dead sources, demote ones that failed twice, add a source a line needed and lacked |
 | `data/citations.json` | add an entry (title, publisher, date, tier) for every new URL cited in `history` or `changelog` | — |
 | `data/vintages/` | written automatically by `checkin:log`; never edited | — |
+| `data/market-history/` | appended by `markets:pull`; existing rows are never edited | — |
+| `data/markets.json` | `markets:pull` records `resolved` on a link that settles | quarterly: add or re-judge a link (never changes a line's probability) |
 
 ## Scoring
 

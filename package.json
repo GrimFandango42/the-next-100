@@ -14,7 +14,9 @@
     "checkin:log": "tsx scripts/checkin-log.ts",
     "score": "tsx scripts/score.ts",
     "sources:check": "node scripts/sources-check.mjs",
-    "qa:evidence": "node --import tsx --test qa/evidence.test.tsx"
+    "qa:evidence": "node --import tsx --test qa/evidence.test.tsx",
+    "markets:pull": "tsx scripts/markets-pull.ts",
+    "qa:markets": "node --import tsx --test qa/markets.test.ts"
   },
   "dependencies": {
     "d3": "^7.9.0",

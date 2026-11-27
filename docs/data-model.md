@@ -77,6 +77,32 @@ One entry per check-in or revision: `{ date, kind, headline, body, touched[], so
 
 `citations.json` maps every cited URL to `{ title, publisher, date, tier, status, checked }` so a source reads as publisher · title · date. `sources.json` is the standing registry of what to read per domain and metric, with tiers, the standing search queries and the source rules; `SOURCES.md` is the readable version. `npm run sources:check -- --write` records per-source status.
 
+## `markets.json` — matched prediction markets
+
+An array of links between a line and a public market that asks a nearby question. Schema: `scripts/markets-schema.ts`; the validator checks it on every build.
+
+| Field | Meaning |
+| --- | --- |
+| `eventId` | The line. Must exist in `events.json`. |
+| `venue` | `kalshi` or `polymarket`. |
+| `market` | Kalshi: `{ ticker, series }`. Polymarket: `{ slug, eventSlug }` (the market's slug and the event that holds it). The ticker or slug is the market's stable id. |
+| `label` | The market's own title or question. |
+| `primary` | The one market per line that is charted and frozen into vintages. At most one per `eventId`. |
+| `match` | `close` · `related` · `loose`: how near the market's question is to the line's. |
+| `bar` | `easier` · `harder` · `different`: whether the market's bar is lower, higher, or not comparable. |
+| `inverted` | `true` when the line is the market's opposite (shown as 100% minus the market). |
+| `differs` | One or two plain sentences on how the market's question differs from the line's test. |
+| `addedOn` | Date the link was added. |
+| `resolved` | Optional `{ on, outcome: "yes"\|"no" }`, written by `markets:pull` when the market itself settles. The outcome is the market's, before inversion. The link is no longer pulled. |
+
+A link never changes a line's probability, history or resolution test; a market is evidence, not a source of truth (`CHECKIN.md`, "Prediction markets").
+
+## `market-history/` — daily prices
+
+`YYYY-MM.json`, one array per month, rows `{ eventId, venue, market, date, p, liquidity }`, written by `npm run markets:pull` and append-only: the key `(eventId, venue, market, date)` is unique and a stored row is never rewritten, so a price is the price as pulled on that day. `p` is 0–1 and already inverted for inverted links. `liquidity` is `null` or a number and is venue-specific (Kalshi open interest, Polymarket reported liquidity), so do not plot the two on one scale. The latest day of a pull carries the market's current liquidity on Polymarket and recorded fixtures; Kalshi candles carry open interest for every day.
+
+Price rule, one per market per UTC day: **Kalshi** the midpoint of the day's closing Yes bid and ask when the spread is at most 0.15, otherwise that day's last trade (a candle is dated by the UTC day it closes); **Polymarket** the last print of the UTC day. A day with no usable price gets a warning and no row; nothing is carried forward. Sources are the public Kalshi trade API (`/markets/{ticker}` and the daily candlesticks, 700 ms between calls) and the public Polymarket gamma and CLOB APIs (`/events/slug/{eventSlug}`, `/prices-history`). Tests and `--fixtures` runs use the recordings in `qa/fixtures/markets/`.
+
 ## `vintages/`
 
-One file per check-in, written by the logger, never edited: every line's title, window, test, probability and status; every indicator reading; the hinge; the scenario odds. `npm run score` grades resolved lines against the earliest vintage holding the same question. `2026-10-22.json` is the forecast as first written, reconstructed from history.
+One file per check-in, written by the logger, never edited: every line's title, window, test, probability and status; every indicator reading; the hinge; the scenario odds. From the first check-in after the market feed lands, a vintage also has `markets: { <eventId>: { venue, market, p } }`: the primary link's price for **that exact date** (omitted when there is none; an earlier day's price is never substituted). Older vintages have no `markets` key and are not edited. `npm run score` grades resolved lines against the earliest vintage holding the same question. `2026-10-22.json` is the forecast as first written, reconstructed from history.
