@@ -5,6 +5,8 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { Dataset } from "../src/schema";
+import { MarketLinks, validateHistory, validateLinks } from "./markets-schema";
+import { readHistoryFiles } from "./markets-store";
 
 const root = resolve(import.meta.dirname ?? ".", "..");
 const read = (f: string) => JSON.parse(readFileSync(resolve(root, "data", f), "utf8"));
@@ -43,6 +45,11 @@ if (!parsed.success) {
     for (const h of e.history) if (h.date < d.meta.written) errors.push(`${e.id}: revision dated before the forecast was written`);
   }
   for (const e of d.events) for (const l of e.leadsTo) if (!ids.has(l)) errors.push(`${e.id}: leadsTo unknown id ${l}`);
+  // Market feed: curated links, then the append-only price history that refers to them.
+  const marketsRaw = read("markets.json");
+  errors.push(...validateLinks(marketsRaw, ids));
+  const links = MarketLinks.safeParse(marketsRaw);
+  if (links.success) errors.push(...validateHistory(readHistoryFiles(root), links.data));
   for (const c of d.changelog) for (const t of c.touched) if (!ids.has(t)) errors.push(`changelog ${c.date}: touched unknown id ${t}`);
   for (const s of d.scenarios) { /* branch sums */ }
   for (const b of ["pluralism", "concentration"] as const) {
