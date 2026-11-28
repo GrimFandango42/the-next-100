@@ -48,7 +48,12 @@ export function figureCaption(ev: ForecastEvent) {
  if(kind==='field' && !metric)return 'Dots show the odds the forecast puts on this, not a measurement.';
  if(kind==='clock')return 'Illustrative Clock scenario, not a forecast published by the Bulletin.';
  if(kind==='orbits')return 'Illustrative off-Earth population scenario; positions and dots are not to scale.';
- return ev.hero?.label ?? 'Scenario values, with observations labeled separately.';
+ const h=ev.hero;
+ if(!h?.label)return 'Scenario values, with observations labeled separately.';
+ // A stat caption reads as a sentence fragment ("of US electricity…"); lead with its number so it is never orphaned.
+ if(h.num==null)return h.label;
+ const unit=h.unit??'', tight=/^(%|bn|m|k|x|×)$/i.test(unit);
+ return `${h.prefix??''}${h.num.toLocaleString('en-US')}${tight?unit:unit?` ${unit}`:''} ${h.label}`;
 }
 
 export default function Figure({ ev, branch, year, active }: { ev: ForecastEvent; branch: Branch; year: number; active: boolean }) {

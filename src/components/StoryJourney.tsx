@@ -5,6 +5,7 @@ import { DOMAIN_META, type Branch, type ForecastEvent } from "../schema";
 import { useStore } from "../store";
 import { exhibitFor } from "./Exhibit";
 import ChapterWeave from "./ChapterWeave";
+import CenturyBoard from "./CenturyBoard";
 import { FutureMap, Network } from "./StoryArt";
 import Figure, { figureCaption, signatureFor } from "./Figure";
 
@@ -59,7 +60,7 @@ function Drivers({ event }: { event: ForecastEvent }) {
   const after = data.events.filter((e) => event.leadsTo.includes(e.id));
   if (!before.length && !after.length) return null;
   // The page shows the three nearest links; the drawer lists them all with their kinds.
-  const links = [...after, ...before].sort((a, b) => Math.abs(a.year - event.year) - Math.abs(b.year - event.year)).slice(0, 3);
+  const links = [...new Map([...after, ...before].map((e) => [e.id, e] as const)).values()].sort((a, b) => Math.abs(a.year - event.year) - Math.abs(b.year - event.year)).slice(0, 3);
   const chip = (e: ForecastEvent) => <a key={e.id} className="drv" href={`#${pageId(e)}`} style={{ ["--d" as any]: DOMAIN_META[e.domain].color }}><i /><span className="mono">{e.year}</span>{e.title}</a>;
   return <div className="drivers"><div><span className="drv-k">Linked</span>{links.map(chip)}</div></div>;
 }
@@ -114,26 +115,17 @@ function ChapterPage({ era, index, current, onThread }: { era: Era; index: numbe
 /** The one strip: where you are, the chapters, and the overview (zoom out). */
 function ReaderBar({ active, threadRequest, visible }: { active: string; threadRequest:{force:string;nonce:number}|null; visible: boolean }) {
   const [open, setOpen] = useState(false);
-  const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState("all");
-  useEffect(()=>{if(threadRequest){setFilter("force:"+threadRequest.force);setQuery("");setOpen(true);}},[threadRequest]);
-  const matches = (e:ForecastEvent) => `${e.title} ${e.summary} ${DOMAIN_META[e.domain].name}`.toLowerCase().includes(query.toLowerCase()) && (filter === "all" || filter === "near" && e.year <= 2035 || filter.startsWith("force:") && e.force === filter.slice(6) || filter === "scenario" && e.resolution?.mode === "scenario" || filter === "gaps" && !e.history.some(h=>h.sources.length));
-  const dialog = useRef<HTMLDialogElement>(null);
+  useEffect(()=>{if(threadRequest)setOpen(true);},[threadRequest]);
   const opener = useRef<HTMLButtonElement>(null);
   const { year, branch, setBranch } = useStore();
 
   useEffect(() => {
     if (!visible) { setOpen(false); return; }
-    const key = (e: KeyboardEvent) => { if ((e.target as HTMLElement)?.closest?.("input,textarea,select")) return; if (e.key === "Escape") setOpen(false); if (e.key === "-" || e.key === "_") setOpen(true); };
+    const key = (e: KeyboardEvent) => { if ((e.target as HTMLElement)?.closest?.("input,textarea,select")) return; if (e.key === "-" || e.key === "_") setOpen(true); };
     addEventListener("keydown", key); return () => removeEventListener("keydown", key);
   }, [visible]);
-  useEffect(() => {
-    if (open) dialog.current?.showModal();
-    else if (dialog.current?.open) { dialog.current.close(); opener.current?.focus({preventScroll:true}); }
-    const previous = document.body.style.overflow;
-    if (open) document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = previous; };
-  }, [open]);
+  const wasOpen = useRef(false);
+  useEffect(() => { if (!open && wasOpen.current) opener.current?.focus({ preventScroll: true }); wasOpen.current = open; }, [open]);
   const event = ordered.find((e) => pageId(e) === active);
   const era = event ? chapterFor(event.year) : data.eras.find((e) => `chapter-${e.id}` === active) ?? data.eras[0];
   const reading = ordered;
@@ -145,21 +137,10 @@ function ReaderBar({ active, threadRequest, visible }: { active: string; threadR
       <nav className="chapter-rail" aria-label="Chapters">{data.eras.map((er, i) => <a key={er.id} href={`#chapter-${er.id}`} aria-label={`Chapter ${i + 1}: ${er.name}`} aria-current={er.id === era.id ? "location" : undefined}><span>{pad(i + 1)}</span><span className="rail-name">{er.name}</span><span className="rail-years">{er.from}</span></a>)}</nav>
       <span className="reader-position"><b>{active === "opening" ? 2026 : year}</b><span>{event ? `${pad(index + 1)} / ${reading.length}` : `CHAPTER ${pad(data.eras.indexOf(era) + 1)}`}</span></span>
       <button className={"path-pill " + branch} onClick={() => setBranch(branch === "pluralism" ? "concentration" : "pluralism")} title="The path you're following. Tap to flip." aria-label={`Following the ${branch} path; tap to follow the other`}><i />{branch === "pluralism" ? "Many hands" : "One center"}</button>
-      <button ref={opener} className="overview-btn" aria-expanded={open} aria-controls="overview" onClick={() => setOpen(!open)} title="The whole century on one screen (−)">{open ? "Close ×" : "Overview"} {!open && <span>☷</span>}</button>
+      <button ref={opener} className="overview-btn" aria-expanded={open} onClick={() => setOpen(!open)} title="The century board: every line on one screen (−)">{open ? "Close ×" : "Board"} {!open && <span aria-hidden="true">⬡</span>}</button>
       <div className="reader-progress" aria-hidden="true"><i style={{ width: `${progress * 100}%` }} /></div>
     </div>
-    <dialog ref={dialog} onCancel={() => setOpen(false)} id="overview" className="overview" aria-label="The whole century" onClick={(e) => { if (e.target === e.currentTarget) setOpen(false); }}>
-      <div className="overview-panel">
-        <div className="overview-head"><button className="guide-text-button" autoFocus onClick={() => setOpen(false)}>Close overview ×</button><div className="guide-kicker">THE WHOLE CENTURY · {ordered.length} PREDICTIONS · TAP ONE TO OPEN ITS PAGE</div></div>
-        <div className="overview-tools"><label>Find a forecast<input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Quantum, health, energy…" /></label><label>Show<select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All forecasts</option><option value="near">Through 2035</option>{data.meta.forces.map((f) => <option key={f.id} value={"force:" + f.id}>Thread: {f.name}</option>)}<option value="scenario">Unscored scenarios</option><option value="gaps">Citation gaps</option></select></label></div>
-        <p className="overview-result" role="status">{ordered.filter(matches).length} matching forecasts</p>
-        {data.eras.filter(er=>ordered.some(e=>chapterFor(e.year).id===er.id && matches(e))).map((er, i) => <div key={er.id} className="ov-era">
-          <a className="ov-chapter" href={`#chapter-${er.id}`} onClick={() => setOpen(false)}><span className="mono">{pad(data.eras.indexOf(er) + 1)} · {er.from}–{er.to}</span><b>{er.name}</b></a>
-          <ol className="ov-list">{ordered.filter((e) => chapterFor(e.year).id === er.id && matches(e)).map((e) => <li key={e.id} className={e.id === event?.id ? "here" : ""}><a href={`#${pageId(e)}`} onClick={() => { setOpen(false); requestAnimationFrame(()=>document.getElementById(pageId(e))?.scrollIntoView()); }}><span className="mono ov-y">{e.year}</span><i className="ov-dot" style={{ background: DOMAIN_META[e.domain].color }} /><span className="ov-t">{e.title}</span><span className="mono ov-p">{e.resolution?.mode === "scenario" ? "Scenario" : e.probability != null ? Math.round(e.probability * 100) + "%" : ""}</span></a></li>)}</ol>
-        </div>)}
-        <a className="ov-chapter" href="#explore" onClick={() => setOpen(false)}><span className="mono">BELOW THE BOOK</span><b>The evidence: numbers, odds, indicators, track record</b></a>
-      </div>
-    </dialog>
+    <CenturyBoard open={open} onClose={() => setOpen(false)} thread={threadRequest} />
   </>;
 }
 

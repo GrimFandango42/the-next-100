@@ -99,6 +99,14 @@ export function Indicators() {
   );
 }
 
+/** The earliest date any open line can be assessed, from the data; "the end of 2029" style. */
+function firstAssessable(): string {
+  const d = data.events.map((e) => e.resolution?.assessAfter).filter((x): x is string => !!x).sort()[0];
+  if (!d) return "its window closes";
+  const [y, m] = d.split("-");
+  return m === "12" ? `the end of ${y}` : new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
+}
+
 export function TrackRecord() {
   const { select } = useStore();
   const counts = data.events.reduce<Record<string, number>>((a, e) => { a[e.status] = (a[e.status] ?? 0) + 1; return a; }, {});
@@ -111,7 +119,7 @@ export function TrackRecord() {
           <div key={s} className={"rt " + s}><div className="v mono">{counts[s] ?? 0}</div><div className="lbl">{STATUS_LABEL[s]}</div></div>
         ))}
       </div>}
-      <p className="note">Scoring requires an explicit outcome, rationale and sources. The probability comes from the earliest pre-resolution vintage with the exact definition, time window and branch. Original and revised questions are scored separately; founding odds remain preserved. Early or late status alone never establishes a hit. Partial and retired lines and the unscored scenarios are listed, not scored. {resolved.length === 0 ? "Nothing has resolved yet; the first lines come due in 2027." : `${resolved.length} resolved so far.`}</p>
+      <p className="note">Scoring requires an explicit outcome, rationale and sources. The probability comes from the earliest pre-resolution vintage with the exact definition, time window and branch. Original and revised questions are scored separately; founding odds remain preserved. Early or late status alone never establishes a hit. Partial and retired lines and the unscored scenarios are listed, not scored. {resolved.length === 0 ? `Nothing has resolved yet; the first lines can be graded after ${firstAssessable()}.` : `${resolved.length} resolved so far.`}</p>
       {due.length > 0 && <p className="note">Past due and unresolved: {due.map((e) => e.title).join("; ")}. The next check-in has to grade these.</p>}
       {resolved.length > 0 && (
         <ul className="resolved">

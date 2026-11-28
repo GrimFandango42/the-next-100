@@ -6,6 +6,7 @@ import "./styles.css";
 import "./story.css";
 import "./components/exhibit.css";
 import "./views.css";
+import "./components/board.css";
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

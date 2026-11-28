@@ -43,7 +43,7 @@ Copy the shape of a neighbour in `data/events.json`. It needs: `id`, `year` (and
 
 ## Changing the site
 
-Read `ONBOARDING.md` rule 5 first: three views (This week, Odds, The book) one tap apart in the top bar, one drawer per line, no other navigation modes; inside the book, scroll reads and Overview zooms out; figures drawn from data. Then:
+Read `ONBOARDING.md` rule 5 first: three views (This week, Odds, The book) one tap apart in the top bar, one drawer per line, no other navigation modes; inside the book, scroll reads and the Board zooms out; figures drawn from data. Then:
 
 ```bash
 npm run dev

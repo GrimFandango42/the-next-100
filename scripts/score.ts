@@ -13,4 +13,4 @@ console.log(`${events.length} lines · ${resolved.length} resolved · ${f.length
 for (const r of rows) console.log(`- ${r.id}: founding ${r.founding == null ? "—" : r.founding.toFixed(3)} · strict ${r.strict == null ? "—" : r.strict.toFixed(3)} · ${r.reason}${r.caveat ? ` · ${r.caveat}` : ""}`);
 const mean = (xs: number[]) => (xs.reduce((a, b) => a + b, 0) / xs.length).toFixed(3);
 if (f.length) console.log(`Mean founding Brier ${mean(f.map((r) => r.founding!))} over ${f.length}${s.length ? `; mean strict Brier ${mean(s.map((r) => r.strict!))} over ${s.length}` : ""} (0.25 = always saying 50%).`);
-else console.log("Nothing scored yet; the first lines come due in 2027.");
+else console.log("Nothing scored yet; the first lines can be graded after the end of 2029.");
