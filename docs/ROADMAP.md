@@ -2,7 +2,7 @@
 
 Where the site goes from here, in the order it should go. Four tracks — **data**, **visuals**, **interaction**, **consumption** — and a fifth for the machinery that keeps it honest. Each item says what it is, why it earns a place, and how we'd know it worked. Dates are intentions, not promises; the check-in cadence is the only fixed clock.
 
-Principles that outrank anything below: one way to read (scroll, strip, Overview); figures drawn from data, never decoration; no hedging filler on the page; no source, no change; never rewrite history.
+Principles that outrank anything below: three views (This week, Odds, the book) and one drawer per line, no other navigation; figures drawn from data, never decoration; no hedging filler on the page; no source, no change; never rewrite history.
 
 ## Now → next check-in (late October – November 2026)
 

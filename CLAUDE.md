@@ -4,7 +4,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 
 ## Shape of the repo
 - `data/*.json` — the forecast itself. Validated by `src/schema.ts` (zod) and `scripts/validate.ts`. This is what check-ins edit.
-- `src/` — Vite + React + TypeScript + D3. `components/StoryJourney.tsx` is the book: native scroll, one page per prediction, chapter pages, one reader strip with an Overview (the whole century on one screen). `Figure.tsx` draws one data figure per prediction (stripes, field of 100, curve with reference line, clock, orbits, milestone ladder). `store.tsx` holds year / branch / selection; `WorldState.tsx` the metric explorer; `Sections.tsx` the evidence section below the book. Styles: `styles.css` (tokens, evidence) + `story.css` (the book).
+- `src/` — Vite + React + TypeScript + D3. Three views under `components/TopBar.tsx`, routed by hash in `route.ts`: `ThisWeek.tsx` (latest check-in, what changed since the last visit, market gaps that moved, what comes due), `OddsView.tsx` (every line in one sortable table with sparklines) and the book; their selectors are pure functions in `views.ts`. `components/StoryJourney.tsx` is the book: native scroll, one page per prediction, chapter pages, one reader strip with an Overview (the whole century on one screen). `Figure.tsx` draws one data figure per prediction (stripes, field of 100, curve with reference line, clock, orbits, milestone ladder). `store.tsx` holds year / branch / selection; `WorldState.tsx` the metric explorer; `Sections.tsx` the evidence section below the book. Styles: `styles.css` (tokens, evidence) + `story.css` (the book).
 - `public/moments/<event-id>.webp` — optional artwork shown behind a moment's figure; `scripts/make-art.mjs` can generate it (needs OPENAI_API_KEY on the desktop; never commit keys).
 - `scripts/` — validator, check-in brief, check-in logger.
 - `deploy/` — Caddy site block, `deploy.ps1` (run from the Windows desktop) and the pull-and-build timer for the VPS.
@@ -20,7 +20,7 @@ A living, self-grading forecast of 2026–2200. Public site at https://thenext10
 - Colors and fonts are tokens in `src/styles.css`; domain colors live in `src/schema.ts` (`DOMAIN_META`).
 - Keep the forecast's voice: plain, specific, no hedging filler. Titles are the plain-language claim; the test carries the precision — don't retitle to match tests.
 - Scoring is two numbers (founding and strict), defined in `CHECKIN.md`; change the policy there before the code.
-- One navigation model: scroll reads, the strip shows where you are, Overview zooms out. Don't add a second way to move.
+- Three views, one drawer: **This week** (`#week`), **Odds** (`#odds`) and **The book** (`#book`), switched only from the top bar; `#line-<id>` opens Odds with that line's drawer. Every line has one drawer, shared by all three. Inside the book: scroll reads, the strip shows where you are, Overview zooms out. No other navigation modes.
 - A page is light: claim, one sentence, odds, figure, three linked lines, a collapsed "What counts". Everything else (full test, all links with kinds, revisions, probability history) lives in the drawer. Figures carry one caption, no boilerplate, no disclaimers — the method says once what the figures are.
 - Deploys happen by pushing to `main`; the VPS pulls and rebuilds every 10 minutes (`deploy/update.sh`). Never deploy by hand-copying files.
 

@@ -19,7 +19,7 @@ erDiagram
 
 | Field | Type | Meaning |
 | --- | --- | --- |
-| `id` | kebab-case string | Permanent. Referenced by `leadsTo`, `changelog.touched`, vintages and deep links (`#story-<id>`, `#m-<id>`). Never renamed. |
+| `id` | kebab-case string | Permanent. Referenced by `leadsTo`, `changelog.touched`, vintages and deep links (`#line-<id>`, `#story-<id>`, `#m-<id>`). Never renamed. |
 | `year`, `yearEnd` | int 2026–2200 | The date. `yearEnd` only when `timing` is `window`. |
 | `timing` | `around` · `by` · `window` · `through` | How the date reads. `around` = year ± 1 (the default and the grading rule in `CHECKIN.md`); `by` = any time up to the year; `window` = year…yearEnd; `through` = still true at the year. |
 | `domain` | `ai` · `bio` · `energy` · `climate` · `space` · `society` · `risk` | Colour and figure defaults come from this. |
