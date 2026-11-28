@@ -16,7 +16,8 @@
     "sources:check": "node scripts/sources-check.mjs",
     "qa:evidence": "node --import tsx --test qa/evidence.test.tsx",
     "markets:pull": "tsx scripts/markets-pull.ts",
-    "qa:markets": "node --import tsx --test qa/markets.test.ts"
+    "qa:markets": "node --import tsx --test qa/markets.test.ts",
+    "qa:board": "node --import tsx --test qa/board.test.ts"
   },
   "dependencies": {
     "d3": "^7.9.0",

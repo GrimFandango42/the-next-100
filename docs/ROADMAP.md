@@ -1,56 +1,90 @@
 # Roadmap
 
-Where the site goes from here, in the order it should go. Four tracks — **data**, **visuals**, **interaction**, **consumption** — and a fifth for the machinery that keeps it honest. Each item says what it is, why it earns a place, and how we'd know it worked. Dates are intentions, not promises; the check-in cadence is the only fixed clock.
+Where the site goes next. Revised 28 November 2026 around one question: **is this a good place to take in the future and compare its pieces?** Grading still matters and the machinery stays honest, but it is not the product: no line can be graded before the end of 2029, so for the next three years the site earns its keep by what a reader can see, explore and compare.
 
-Principles that outrank anything below: three views (This week, Odds, the book) and one drawer per line, no other navigation; figures drawn from data, never decoration; no hedging filler on the page; no source, no change; never rewrite history.
+The items are ordered within each section. Dates are intentions, not promises; the weekly check-in is the only fixed clock.
 
-## Now → next check-in (late October – November 2026)
+## Principles
 
-**Data**
-- **Absorb 2026.** The forecast was written before it knew about the Iran war (since 28 Feb), the Hugging Face agent incident, Commerce switching off a lab's models, the US–China incident channel. Re-read the energy, risk and Clock lines against them in a sourced check-in rather than a reflex. *Done when:* every line whose signals fired in 2026 has a 2026 history entry.
-- **Re-anchor the vendor-sourced moves.** Humanoids, AI drugs, the research loop and the-silence still lean on sponsor or trade sources (`SOURCES.md` lists them). *Done when:* each has one primary or institutional source in history.
-- **Signature exhibits for the lines that have a real series.** The population and Arctic exhibits set the pattern: a pinned, hashed extract from the measuring institution, a chart that reads at a glance, variants the reader can flip without touching the forecast. Next in line: warming (Copernicus annual series beside the stripes), fossil CO₂ (Global Carbon Budget), US data-centre share (LBNL), recent-graduate unemployment (NY Fed), SOX drawdown (FRED). *Done when:* six lines carry an exhibit whose data file has a source URL and SHA.
+These outrank anything below.
+- **Three views (This week, Odds, the book), one drawer per line, and the board inside the book.** No other navigation.
+- **Every picture is drawn from `data/`.** A lens or a game word is fine as long as the real measure is one glance away: the legend says it in plain words.
+- **Compare beats catalogue.** A new feature should help a reader set two things side by side: line against line, forecast against market, a year against a year, one path against the other.
+- **No source, no change; never rewrite history.**
+- **Phones are first-class.** The page never scrolls sideways. The board is the one exception: it pans sideways inside its own frame, like a map.
 
-**Visuals**
-- **One figure vocabulary.** Seven figure kinds plus six exhibit types plus two signature exhibits is three visual grammars. Fold them into one: every page gets a *figure* (data) and, where it helps, a *stage strip* (the explainer tabs), with the same kicker, caption and source line. *Done when:* `Figure.tsx` is the only entry point and the caption format is identical on every page.
-- **The phone first screen.** Title, one sentence, the figure, the odds — in that order, inside the first 100svh, on every page. The ladders and bars already fit; the curves and exhibits sometimes don't. *Done when:* the sweep reports the figure's top edge above the fold on iPhone SE for all 55 pages.
+## Shipped
 
-**Interaction**
-- **The branch flip should feel like a flip.** Changing the path on the fork page re-renders twenty figures and a table; nothing tells you what changed. Animate the numbers that move (CountUp on the differs table, curve morphs on the metric figures) and show a one-line "on this path: …" under the odds of each branch-aware line. *Done when:* flipping on any page produces visible motion on that page.
-- **Overview as the map.** It already filters by thread and searches. Add the four threads as columns so the century reads as a weave, and show each line's odds as a dot you can scan. *Done when:* the Overview answers "what does the planet thread look like in the 2040s" without opening a page.
+| | What | Where |
+|---|---|---|
+| TN-01 | Public repo scrubbed of names and server; onboarding docs | #28 |
+| TN-03 / 03B | Kalshi and Polymarket odds matched to 19 lines, pulled daily, frozen at each check-in | #29, #30 |
+| TN-04 | "How the odds moved": each line's odds over time against its market, in the drawer | #31 |
+| TN-05 | This week · Odds · the book, one tap apart | #32 |
+| **TN-06** | **The century board** replaces the list Overview. Every line is a hex token, years across and domains down, with six lenses: odds, momentum, crowd gap, evidence, threads and horizon. It has cards with links and the market line, a compare tray of four with one overlaid chart and a side-by-side table, a world panel for any year on either path, explored count, keyboard travel. Also: the drawer is a readable side panel on desktop; duplicate "Linked" chips and number-less figure captions fixed. | this branch |
 
-**Consumption**
-- **Reading time and progress.** 62 pages is a long read; say so on the cover ("about 40 minutes; chapter 1 is 8") and let the strip's progress bar mean something. *Done when:* the cover states the time and it's within 20% of a real read.
-- **Share a page.** Every page has a deep link (`#story-<id>`); give it an OG image per line (the figure on the book's background) so a shared page previews as that prediction, not the cover. *Done when:* `public/og/<id>.png` exists for all lines and `index.html` picks it by hash at build time or via a tiny edge rewrite.
+## Every earlier item, checked again
 
-## Next quarter (December 2026 – February 2027)
+Each item from the previous roadmap, judged on whether it helps a reader consume and compare.
 
-**Data**
-- **The first grades.** The 2027 lines come due. Before they do: adjudication fields on each (`adjudication: {outcome, rationale, sources, definitionVersion}`), the two scores on the track-record page, and a worked example of a graded line in `CHECKIN.md`. *Done when:* the first resolved line shows a founding and a strict score on the site.
-- **Metrics with observed series, not points.** `population`, `warming`, `work-hours`, `off-earth` get yearly observed arrays from the registry sources so the curves show a solid observed line meeting a dashed forecast. *Done when:* every metric figure draws observed as a line, not rings.
-- **Indicators that compute.** Four of the seven indicators (open-weights gap, compute ownership, incidents, labor response) can be numbers from Epoch, BLS and the incident registry rather than a hand-set reading. *Done when:* their `reading` is derived from a stored series with the formula in the note.
-- **A line budget.** 55 is right; 80 is a catalogue. New lines replace or merge weak ones (two of the far space lines overlap) rather than add. *Done when:* `CONTRIBUTING.md` states the budget and the merge rule.
+| Item | Verdict | Why |
+|---|---|---|
+| Absorb 2026 (Iran war, agent incident, etc.) | **Keep: check-in work** | A forecast that ignores the year it lives in can't be compared with anything. This belongs to the check-in, not a feature. |
+| Re-anchor vendor-sourced moves | **Keep: check-in work** | The Evidence lens now shows these lines as dark tokens, so the gap is visible. Close it one check-in at a time. |
+| Signature exhibits (six lines with a real series) | **Keep, move up** | Two of six done (population, Arctic). A real series beside the forecast is the most direct comparison the site can offer. |
+| One figure vocabulary | **Reshape** | The board and the drawer chart are now the shared grammar for odds. What remains is captions: one caption format on every page. Fold into the phone pass. |
+| Phone first screen | **Keep** | Still true: some curves and exhibits fall below the fold on an iPhone SE. |
+| Branch flip should feel like a flip | **Partly done** | The board's world panel moves with the path pill. Still to do: in the book, show "on this path: …" under each branch-aware line. |
+| Overview as the map | **Done** | The century board (TN-06). |
+| Reading time and progress | **Shrink** | One line on the cover. Low value next to the board. |
+| Share a page (OG images) | **Keep** | Sharing is how a comparison travels. Pair it with shareable board states (below). |
+| First grades (2027) | **Correct and defer** | The earliest `assessAfter` is 2029-12-31, not 2027. The adjudication fields and two-score code exist; the worked example waits. |
+| Observed series on metric curves | **Keep, move up** | "Observed" against "forecast" on one curve is a comparison. It also feeds the world panel. |
+| Indicators that compute | **Keep** | A derived reading can be compared week to week; a hand-set one can't. |
+| Line budget (55, merge rule) | **Keep** | Fewer, sharper lines make the board readable. |
+| Era palettes | **Drop** | The board's chapter bands already say where you are. Cosmetic. |
+| Fork page as centerpiece | **Reshape** | Build it from the world panel: two worlds at a year, side by side, rather than new art. |
+| VoiceOver / NVDA pass | **Keep** | The board adds a large interactive surface. It needs a real screen-reader read. |
+| "What would change your mind?" | **Keep** | One signal per card, as a question. Cheap, and it makes a card worth opening. |
+| Weekly digest + RSS | **Keep** | The most direct "consume" feature not yet built. |
+| Return-visit banner | **Done** | This week already shows changes since your last visit. |
+| Calibration plot | **Later (2030+)** | Needs resolved lines. |
+| Vintage diffing | **Keep, reshape** | Becomes a board lens: "the board as it was on <date>", tokens showing their move since. |
+| Contributor forecasts | **Keep (later)** | "Your odds against ours" is a comparison. It needs storage, so it comes after the shareable states. |
+| Translations, print | **Later** | Unchanged. |
 
-**Visuals**
-- **Era palettes.** Five chapters, one palette. A restrained shift per era (the greens cool toward 2200) would let a reader feel where they are without reading the strip. *Done when:* a screenshot of any page can be placed in its chapter by colour alone.
-- **The fork page as the centrepiece.** It is the most important page and currently the plainest. Two planets or two worlds drawn from the two branches' metrics at 2060 — population, hours, lifespan, actors, clock — side by side, animated on choice. *Done when:* the fork page is the one people screenshot.
+## Next: December 2026 – February 2027
 
-**Interaction**
-- **Keyboard and screen-reader pass on a real device.** Headless checks say the structure is sound; nobody has read it with VoiceOver. *Done when:* a full read-through on iOS VoiceOver and NVDA produces a list of fixes and they're shipped.
-- **"What would change your mind?" on every page.** The signals already exist; render the top one as a question under the odds ("If OpenAI reports India as #1, this resolves"). *Done when:* every page shows one signal in that form.
+**Explore and compare**
+1. **TN-07 Shareable board states.** The hash carries the lens, the open card and the tray (`#board?lens=crowd&card=x&cmp=a,b`), so a comparison can be sent as a link. *Done when:* a pasted link reopens the same board, card and tray.
+2. **TN-08 Compare from Odds.** A checkbox column in the Odds table feeds the same tray, and "Compare" opens the board's compare panel. *Done when:* the tray is shared between Odds and the board.
+3. **TN-09 Outside views beyond markets.** Add Metaculus community forecasts and the major expert surveys as a second comparator beside Kalshi and Polymarket. The Crowd gap lens becomes "Outside views" with a venue picker. This needs `metaculus.com` allowed in the check-in environment; it is blocked here today. *Done when:* at least 10 lines show a non-market outside view with its date and question text.
+4. **TN-10 The card asks what would change its mind.** The top signal appears under the odds on each card and book page, phrased as a question. *Done when:* every open line shows one.
+5. **TN-11 Board polish from real use.** Lane labels that stay put while the board pans on a phone; a zoomed board when a card is open on narrow desktops; a "since <date>" lens built from vintages. *Done when:* the board sweep (`qa/board.mjs`) and a phone read-through find nothing.
 
-**Consumption**
-- **A weekly digest that writes itself.** The check-in already writes a changelog entry; render the latest as a short, shareable page (`/this-week`) and an RSS/Atom feed. *Done when:* the feed validates and the Monday check-in populates it with no extra step.
-- **Return visits.** The "what changed since you were here" digest exists; make it the thing a returning reader sees first (a one-line banner on the cover when their stored edition is older). *Done when:* a returning reader sees the count of changed lines before scrolling.
+**Data to compare against**
+
+6. **TN-12 Four more signature exhibits:** SOX drawdown (FRED), warming (Copernicus), fossil CO₂ (Global Carbon Budget), recent-graduate unemployment (NY Fed). Each is a pinned extract with source URL and hash. *Done when:* six lines carry one.
+7. **TN-13 Observed series** for population, warming, work hours and off-Earth, drawn solid against the dashed forecast, and shown as "observed" in the world panel for past years. *Done when:* no metric figure draws observations as loose points.
+8. **TN-14 Source quotes on cards.** Each card shows one short, attributed quote from its strongest source: what the evidence actually says, in its own words. This needs a `quote` field on history sources, added at check-in time and never invented. *Done when:* 20 lines carry one.
+
+**Take it with you**
+
+9. **TN-15 Weekly digest and feed.** `/feed.xml` (Atom) is built from `changelog.json` at build time, and This week links to it. *Done when:* the feed validates and fills with no extra step at check-in.
+10. **TN-16 Share images.** `public/og/<id>.png` for every line (its token, claim and odds), served for `#line-<id>` links through a small Caddy rewrite. *Done when:* a shared line previews as that line.
+
+**Keep it fast**
+
+11. **TN-17 Split the bundle.** The main chunk is 733 kB. Lazy-load the board and the signature exhibits. *Done when:* the first screen loads under 300 kB of JS.
 
 ## Later (2027)
 
-- **Calibration, once there is enough to calibrate.** After ~15 resolved lines: a calibration plot (stated odds vs. hit rate) on the track-record page, by tier and by force, with the honest sample-size note. Not before.
-- **Vintage diffing.** "Show me the forecast as it was on 2026-10-22" — the vintages exist; a read-only toggle in the Overview to view a past edition's odds beside today's.
-- **Contributor forecasts.** Let a reader record their own odds on a line (local only, or a signed-in layer later) and see how they did when it resolves. The founding/strict split already supports it.
-- **Translations.** The data model separates copy from code; the book is ~15k words. Spanish and Hindi first, given where the readers of the India and Africa lines are.
-- **Print.** A PDF of the current edition, generated at check-in time: the book as a book, dated, with the vintage hash on the cover.
+- The fork as two worlds side by side, built from the world panel.
+- A screen-reader pass on real devices (VoiceOver, NVDA) across the board and the drawer.
+- Contributor odds: a reader records their own number on a line and sees it beside the forecast and the market.
+- Translations (Spanish, Hindi), then a print edition per check-in.
+- Calibration, once enough lines resolve (not before 2030).
 
 ## How this list changes
 
-Anyone — person or agent — can propose an item by opening an issue with the *Propose a line* or *Site bug* template, or a PR against this file. Items move up when a reader asks for them or a check-in needs them; they come off when done or when a better idea replaces them. Reviews that argue with this plan live in `docs/reviews/`.
+Anyone can propose an item with the *Propose a line* or *Site bug* issue template, or with a PR against this file. Items move up when a reader asks for them or a check-in needs them. Reviews that argue with this plan live in `docs/reviews/`.

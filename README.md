@@ -34,7 +34,7 @@ Other commands, all defined in [`package.json`](package.json):
 npm run build        # validates the data, typechecks, builds dist/ (must pass before any push)
 npm run validate     # only the data checks
 npm run qa:book      # structural tests: one page per prediction, anchors resolve, figures render
-npm run score        # the track record (prints "Nothing scored yet" until the first lines come due in 2027)
+npm run score        # the track record (prints "Nothing scored yet" until the first lines can be graded, after 2029)
 npm run checkin:brief  # what the next weekly check-in should look at
 ```
 
@@ -88,7 +88,8 @@ Lines also carry a `detail`, a `resolution` (the test, versioned), a `hero` figu
 | --- | --- |
 | **Read the book** | Scroll. Five chapters, one page per prediction, each with one figure drawn from the forecast's own data (a curve against the UN projection, warming stripes, a field of 100 futures, a ladder of what has to happen first). |
 | **Take a path** | In 2039 the future forks between *many hands* and *one center*. Pick a side and every figure after it follows. |
-| **See the whole century** | **Overview** puts all 55 predictions on one screen, with search and filters. |
+| **See the whole century** | **The board** lays all 55 predictions on one board, years across and domains down. Switch the lens to see odds, what moved, where the forecast disagrees with the prediction markets, how well sourced each line is, its thread, or how soon it can be graded. |
+| **Compare** | Open any line's card, add up to four to the tray, and see their odds over time on one chart with the facts side by side. |
 | **Ask "why this odds?"** | Each page opens a drawer with the reasoning, what counts, what the check-in watches for, and every revision with its reason and sources. |
 | **Check the evidence** | Below the book: metrics, the odds of flourishing on each path, seven leading indicators that say which path we are on, the track record, and the changelog. |
 | **Use it on a phone** | Mobile is first-class: one idea per screen, no sideways scrolling. |
@@ -127,7 +128,7 @@ That is the point of publishing it. Three ways in, lightest first:
 | `npm run build` fails on the data | The validator enforces the rules: a line whose window has closed must be graded, `confidence` must match `probability`, scenarios sum to 100, no dangling `leadsTo`. | Fix the data, not the validator. Grade the closed line first (see [CHECKIN.md](CHECKIN.md)). |
 | `node qa/book.mjs` cannot start a browser | It drives headless Chromium through Playwright. | Install the bundled Chromium, or point `PW_CHROMIUM` at a Chrome or Chromium executable. See [qa/README.md](qa/README.md). |
 | A push to `main` is not on the site yet | The VPS checks for changes every 10 minutes, then builds. | Wait 3 to 6 minutes. If the build failed, `npm run build` locally shows why. |
-| `npm run score` says "Nothing scored yet" | Expected: the first lines come due in 2027. | Nothing to fix. |
+| `npm run score` says "Nothing scored yet" | Expected: the first lines can be graded after the end of 2029. | Nothing to fix. |
 
 ## Working on it
 

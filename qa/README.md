@@ -11,6 +11,8 @@ node qa/overflow.mjs http://localhost:4174/   # iPhone 13 / SE / Pixel 7: any se
 node qa/views.mjs http://localhost:4174/      # desktop + iPhone 13: This week, Odds, the book, drawers, deep links, back/forward, book position kept across a round trip
 node qa/views.mjs http://localhost:4174/ --block-fonts   # the same with the web-font host blocked; only that host's failures are excused
 node --import tsx --test qa/views.test.tsx    # routes and the "what changed since" selectors, offline
+npm run qa:board                              # the century board's layout, lenses and compare tray, offline
+node qa/board.mjs http://localhost:4174/      # desktop + iPhone 13: board opens, every lens paints, card, arrow travel, compare, Escape, no errors
 ```
 
 Pass a URL as the first argument to run against the live site. Clean = `errs: []`, `sw` equal to the viewport width, `sheet: true`.

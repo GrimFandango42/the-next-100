@@ -352,3 +352,11 @@ button.gap-row:hover{background:var(--panel-2)}
 .gap-nums{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;min-width:150px}
 .gap-nums b{color:var(--accent)}.gap-market{color:var(--cool)}
 @media (max-width:640px){button.gap-row{grid-template-columns:minmax(0,1fr);gap:8px}.gap-nums{justify-content:flex-start;min-width:0}}
+
+/* Desktop: the drawer is a side panel, like a field-guide card beside the page, at a readable measure. Phones keep the bottom sheet. */
+.sheet-wrap.modal{align-items:stretch;justify-content:flex-end}
+.sheet-wrap.modal .sheet{width:min(820px,100%);max-height:none;height:100%;border-radius:0;border-top:0;border-left:1px solid var(--line);animation:slidein .22s cubic-bezier(.2,.8,.2,1);box-shadow:-24px 0 60px -30px #000}
+.sheet-wrap.modal .sheet .drawer{padding:18px 28px 40px}
+.sheet .drawer>p,.sheet .drawer .block>p,.sheet .drawer .hist{max-width:72ch}
+@keyframes slidein{from{transform:translateX(40px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.sheet-wrap.modal .sheet{animation:none}}
