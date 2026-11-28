@@ -5,6 +5,7 @@ import { StoreProvider } from "./store";
 import "./styles.css";
 import "./story.css";
 import "./components/exhibit.css";
+import "./views.css";
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

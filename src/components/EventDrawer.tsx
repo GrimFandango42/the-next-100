@@ -33,7 +33,7 @@ export default function EventDrawer() {
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     };
     document.addEventListener("keydown", trap);
-    const content = document.querySelectorAll<HTMLElement>(".field-guide, .explore, .foot, .skip");
+    const content = document.querySelectorAll<HTMLElement>(".topbar, .view, .foot, .skip");
     content.forEach(el => { el.inert = true; });
     return () => { document.body.style.overflow = prev; document.removeEventListener("keydown", trap); content.forEach(el => { el.inert = false; }); trigger?.focus({ preventScroll: true }); };
   }, [narrow, e]);
@@ -66,7 +66,7 @@ export function Detail() {
       <div className="drawer-top">
         <div className="eyebrow" style={{ color }}>{DOMAIN_META[e.domain].name} · {when(e)}</div>
         <span className="drawer-actions">
-          <button className="x" aria-label="Copy link to this event" title="Copy link" onClick={() => { const u = location.origin + location.pathname + location.search + "#" + e.id; navigator.clipboard?.writeText(u).catch(() => {}); }}>⧉</button>
+          <button className="x" aria-label="Copy link to this event" title="Copy link" onClick={() => { const u = location.origin + location.pathname + location.search + "#line-" + e.id; navigator.clipboard?.writeText(u).catch(() => {}); }}>⧉</button>
           <button className="x" aria-label="Close" onClick={() => select(null)}>×</button>
         </span>
       </div>

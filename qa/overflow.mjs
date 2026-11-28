@@ -15,8 +15,8 @@ for (const dev of ["iPhone 13", "iPhone SE", "Pixel 7"]) {
   const ex = await p.evaluate(() => innerWidth - document.documentElement.clientWidth);
   console.log(dev, "worst extra width in film:", worst, "at beat", at, "| explore:", ex);
   // the "Forecast against the markets" figure, then the three drawers (two markets, none, inverted)
-  await p.evaluate(() => document.querySelector("#odds .market-gap")?.scrollIntoView()); await p.waitForTimeout(300);
-  const gapOver = await p.evaluate(() => { const g = document.querySelector("#odds .market-gap"); return g ? { rows: g.querySelectorAll(".gap-row").length, over: Math.max(0, g.scrollWidth - g.clientWidth), page: innerWidth - document.documentElement.clientWidth } : null; });
+  await p.evaluate(() => document.querySelector("#outcomes .market-gap")?.scrollIntoView()); await p.waitForTimeout(300);
+  const gapOver = await p.evaluate(() => { const g = document.querySelector("#outcomes .market-gap"); return g ? { rows: g.querySelectorAll(".gap-row").length, over: Math.max(0, g.scrollWidth - g.clientWidth), page: innerWidth - document.documentElement.clientWidth } : null; });
   console.log(dev, "market figure:", JSON.stringify(gapOver));
   if (!gapOver || gapOver.over > 0 || gapOver.page > 0) process.exitCode = 1;
   for (const d of await checkDrawers(p, "m", errs, { shots: false })) {

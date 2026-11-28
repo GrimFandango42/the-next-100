@@ -9,7 +9,7 @@ import { FutureMap, Network } from "./StoryArt";
 import Figure, { figureCaption, signatureFor } from "./Figure";
 
 /**
- * The book. One way to move: scroll. One strip at the top tells you where you are and opens the overview
+ * The book, one of the three views (This week, Odds, the book). Inside it, one way to move: scroll. One strip at the top tells you where you are and opens the overview
  * (the whole century on one screen) when you want to zoom out. Every page shows one prediction with a figure
  * drawn from the forecast's own numbers.
  */
@@ -112,7 +112,7 @@ function ChapterPage({ era, index, current, onThread }: { era: Era; index: numbe
 }
 
 /** The one strip: where you are, the chapters, and the overview (zoom out). */
-function ReaderBar({ active, threadRequest }: { active: string; threadRequest:{force:string;nonce:number}|null }) {
+function ReaderBar({ active, threadRequest, visible }: { active: string; threadRequest:{force:string;nonce:number}|null; visible: boolean }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("all");
@@ -123,9 +123,10 @@ function ReaderBar({ active, threadRequest }: { active: string; threadRequest:{f
   const { year, branch, setBranch } = useStore();
 
   useEffect(() => {
-    const key = (e: KeyboardEvent) => { if ((e.target as HTMLElement)?.closest?.("input,textarea")) return; if (e.key === "Escape") setOpen(false); if (e.key === "-" || e.key === "_") setOpen(true); };
+    if (!visible) { setOpen(false); return; }
+    const key = (e: KeyboardEvent) => { if ((e.target as HTMLElement)?.closest?.("input,textarea,select")) return; if (e.key === "Escape") setOpen(false); if (e.key === "-" || e.key === "_") setOpen(true); };
     addEventListener("keydown", key); return () => removeEventListener("keydown", key);
-  }, []);
+  }, [visible]);
   useEffect(() => {
     if (open) dialog.current?.showModal();
     else if (dialog.current?.open) { dialog.current.close(); opener.current?.focus({preventScroll:true}); }
@@ -162,8 +163,9 @@ function ReaderBar({ active, threadRequest }: { active: string; threadRequest:{f
   </>;
 }
 
-export default function StoryJourney() {
-  const { setYear, select } = useStore();
+/** `visible` is false while This week or Odds is showing: the book stays mounted (and keeps its place) but its keys are off. */
+export default function StoryJourney({ visible = true }: { visible?: boolean }) {
+  const { setYear } = useStore();
   const [active, setActive] = useState("opening");
   const [threadRequest,setThreadRequest]=useState<{force:string;nonce:number}|null>(null);
   const [resume] = useState(() => { try { return localStorage.getItem("next100-reading"); } catch { return null; } });
@@ -179,17 +181,13 @@ export default function StoryJourney() {
     root.current?.querySelectorAll("[data-story-stop]").forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, [setYear]);
-  useEffect(() => {
-    const id = location.hash.slice(1);
-    if (id.startsWith("m-")) { const ev = data.events.find((e) => e.id === id.slice(2)); if (ev) { setYear(ev.year); document.getElementById(pageId(ev))?.scrollIntoView(); select(ev.id); } }
-    else if (id.startsWith("story-") || id.startsWith("chapter-")) requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // Links into the book (#story-…, #chapter-…, #m-…) are routed by the store and scrolled to by App.
   return <div className="field-guide full-book" ref={root}>
     <section id="opening" className="guide-scene opening-scene" data-story-stop data-year="2026" aria-labelledby="guide-title">
       <div className="scene-copy"><div className="guide-kicker"><span>THE NEXT 100 · A LIVING FORECAST</span><span>2026 — 2200</span></div><h1 id="guide-title">The future isn’t<br />a straight <em>line.</em></h1><p className="guide-lead">{ordered.length} predictions, year by year, each with its odds and what would prove it wrong. Checked against the news every week.</p><a className="guide-cta" href={`#chapter-${data.eras[0].id}`}>Open the first chapter <span>↓</span></a><div className="reading-options">{resume && ordered.some(e=>pageId(e)===resume) && <a href={`#${resume}`}>Continue where you left off →</a>}</div><div className="guide-footnote">Last check-in {data.meta.lastCheckin} · Scroll to read · Overview to see the whole century</div></div>
       <div className="scene-art"><FutureMap /></div>
     </section>
-    <div className="book-body"><ReaderBar active={active} threadRequest={threadRequest} />{data.eras.map((era, i) => <div className="book-chapter" key={era.id}><ChapterPage era={era} index={i} current={active === `chapter-${era.id}`} onThread={force=>setThreadRequest({force,nonce:Date.now()})} />{ordered.filter((e) => chapterFor(e.year).id === era.id).map((event) => event.id === "hinge-resolves" ? <ForkScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} /> : <PredictionScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} />)}<div className="chapter-recap"><span className="guide-kicker">CHAPTER {pad(i+1)} / TAKEAWAY</span><p>{era.uncertainty}</p><small>THE QUESTION WE CARRY INTO THE NEXT CHAPTER</small>{i<data.eras.length-1 && <a href={`#chapter-${data.eras[i+1].id}`}>Next chapter →</a>}</div></div>)}</div>
+    <div className="book-body"><ReaderBar active={active} threadRequest={threadRequest} visible={visible} />{data.eras.map((era, i) => <div className="book-chapter" key={era.id}><ChapterPage era={era} index={i} current={active === `chapter-${era.id}`} onThread={force=>setThreadRequest({force,nonce:Date.now()})} />{ordered.filter((e) => chapterFor(e.year).id === era.id).map((event) => event.id === "hinge-resolves" ? <ForkScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} /> : <PredictionScene key={event.id} event={event} index={ordered.indexOf(event)} current={active === pageId(event)} />)}<div className="chapter-recap"><span className="guide-kicker">CHAPTER {pad(i+1)} / TAKEAWAY</span><p>{era.uncertainty}</p><small>THE QUESTION WE CARRY INTO THE NEXT CHAPTER</small>{i<data.eras.length-1 && <a href={`#chapter-${data.eras[i+1].id}`}>Next chapter →</a>}</div></div>)}</div>
     <Endnote />
   </div>;
 }

@@ -24,7 +24,9 @@ flowchart TB
 
 ## The reading model
 
-Scroll is the only way to read. The reader strip at the top shows where you are (chapter, year, page n of 55) and the path you're following; **Overview** (or the `−` key) opens the whole century on one screen with search and a filter. There is deliberately no second navigation: no page-turn links, no tours, no autoplay. See `ONBOARDING.md` rule 5 before adding UI.
+The site has three views, one tap apart in the top bar (`TopBar.tsx`): **This week** (`ThisWeek.tsx`), **Odds** (`OddsView.tsx`) and **the book**. `route.ts` maps the hash to a view (`#week`, `#odds`, `#book`, `#line-<id>` for Odds with a drawer; `#story-`, `#chapter-`, `#m-` and the evidence anchors open the book), and the store listens to `hashchange`, so back and forward move between views. A first visit opens the book; a returning reader (one with a stored edition in `localStorage`) opens This week, which compares against the edition they last saw. All three views stay mounted and the inactive ones are `hidden`, so the book keeps its place; `App.tsx` restores each view's scroll position on return. The selectors behind This week and Odds (moves after a date, resolved lines, market-gap deltas, coming due, sort and filter) are pure functions in `views.ts`, tested in `qa/views.test.tsx`. Every line has one drawer (`EventDrawer.tsx`), shared by all three views.
+
+Inside the book, scroll is the only way to read. The reader strip under the top bar shows where you are (chapter, year, page n of 55) and the path you're following; **Overview** (or the `−` key) opens the whole century on one screen with search and a filter. There is deliberately no other navigation: no page-turn links, no tours, no autoplay. See `ONBOARDING.md` rule 5 before adding UI.
 
 `StoryJourney` renders one `<section data-story-stop>` per cover, chapter, page and ending. An `IntersectionObserver` picks the section nearest the viewport centre and sets `active` and the store's `year`; the figures and the fork read `branch` from the store, so flipping the path on the fork page (or the pill in the strip) re-renders every branch-aware figure after it.
 

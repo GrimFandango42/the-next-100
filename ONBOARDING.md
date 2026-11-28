@@ -4,7 +4,7 @@ You are working on **The Next 100**, a public, self-grading forecast of 2026–2
 
 ## What it is
 - `data/*.json` **is the forecast**: 55 dated predictions (`events.json`), eras, metrics with keyframes to 2200, leading indicators, scenario odds, the Doomsday Clock path, and a changelog. Everything on the site is drawn from these files.
-- `src/` is a Vite + React + TypeScript + D3 site. `components/StoryJourney.tsx` is the book: native scroll, one page per prediction, chapter pages, one reader strip with an Overview that shows the whole century; `Figure.tsx` draws one data figure per prediction from `data/`; the evidence section below the book (`WorldState`, `Sections`) shows the numbers, odds, indicators, track record and method.
+- `src/` is a Vite + React + TypeScript + D3 site with three views under one top bar (`components/TopBar.tsx`, routes in `route.ts`): **This week** (`ThisWeek.tsx`: the latest check-in, what moved or resolved since the reader's last visit, market gaps that moved, what comes due), **Odds** (`OddsView.tsx`: every line in one sortable, filterable table with a sparkline) and **the book**. The selectors behind the first two are pure functions in `views.ts`. `components/StoryJourney.tsx` is the book: native scroll, one page per prediction, chapter pages, one reader strip with an Overview that shows the whole century; `Figure.tsx` draws one data figure per prediction from `data/`; the evidence section below the book (`WorldState`, `Sections`) shows the numbers, odds, indicators, track record and method.
 - `scripts/` holds the validator and the check-in tooling; `qa/` holds headless Playwright checks; `deploy/` holds the VPS setup.
 
 ## Access
@@ -27,7 +27,7 @@ QA (expected for UI changes): `npm run qa:book`, then `npm i -D playwright`, `np
 2. The validator enforces: confidence tiers (high ≥ .70, moderate .45–.70, speculative < .45), scenarios sum to 100, resolved lines carry `resolvedOn`, no dangling `leadsTo`, eras join. Fix data, don't weaken the validator.
 3. Event ids are kebab-case and permanent. `leadsTo` and `changelog.touched` reference them.
 4. Keep the forecast's voice: plain, specific, no hedging filler. Keep 2-space JSON formatting.
-5. UI: one navigation model only — scroll reads the book, the reader strip shows where you are and its chapters, Overview (or the − key) shows the whole century. Don't add autoplay, sound, page-turn links, extra menus, or a second way to navigate. Figures are drawn from `data/`; decorative illustration that carries no information is out. Mobile is first-class: no horizontal overflow, nothing overlapping, one idea per screen.
+5. UI: three views and nothing else — **This week**, **Odds** and **The book**, one tap apart in the top bar, each with a hash route (`#week`, `#odds`, `#book`; `#line-<id>` opens Odds with that line's drawer; old `#story-<id>` links open the book). Every line has one drawer, the same from every view. Inside the book, scroll reads, the reader strip shows where you are and its chapters, and Overview (or the − key) shows the whole century. Don't add a fourth view, autoplay, sound, page-turn links, extra menus, or any other navigation mode. Figures are drawn from `data/`; decorative illustration that carries no information is out. Mobile is first-class: no horizontal overflow, nothing overlapping, one idea per screen.
 6. Commit messages: a short imperative headline, a body that says why. Push to `main` only when `npm run build` passes and the QA scripts are clean.
 
 ## What's wanted

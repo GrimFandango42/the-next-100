@@ -8,6 +8,9 @@ npm i -D playwright                   # once; bundled Chromium, or set PW_CHROMI
 npm run build && npx vite preview --port 4174 &
 node qa/book.mjs                      # desktop + iPhone 13: console errors, horizontal overflow, page count, Why sheet opens; screenshots of 9 pages
 node qa/overflow.mjs http://localhost:4174/   # iPhone 13 / SE / Pixel 7: any section wider than the screen
+node qa/views.mjs http://localhost:4174/      # desktop + iPhone 13: This week, Odds, the book, drawers, deep links, back/forward, book position kept across a round trip
+node qa/views.mjs http://localhost:4174/ --block-fonts   # the same with the web-font host blocked; only that host's failures are excused
+node --import tsx --test qa/views.test.tsx    # routes and the "what changed since" selectors, offline
 ```
 
 Pass a URL as the first argument to run against the live site. Clean = `errs: []`, `sw` equal to the viewport width, `sheet: true`.
@@ -21,3 +24,5 @@ node --import tsx --test qa/odds.test.tsx qa/markets.test.ts
 ```
 
 With no `data/market-history/` the drawers draw the forecast alone and the Explore rows say "no price yet". To see real lines in a preview before the first pull, write rows from the fixtures into `data/market-history/` locally, build, and delete the folder afterwards; never commit it.
+
+`qa/views.mjs` walks the three views in a fresh browser: the first visit opens the book, a reload (now with a stored edition) opens This week; it opens a drawer from each view, sorts and filters Odds (the sheet on a phone), checks that a drawer in Odds names the line in the URL (`#line-<id>`) and closing it returns to `#odds`, goes back and forward between views, and loads `#line-next-pandemic` and an old `#story-` link fresh. Per view it checks sideways overflow, the top bar fitting on one line, overlapping parts inside each card or row, and console errors. Screenshots: `qa/out/views-{d,m}-*.png`. `qa/views.test.tsx` covers the routes and the selectors behind This week and Odds with invented lines and prices.

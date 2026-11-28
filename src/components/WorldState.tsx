@@ -65,7 +65,8 @@ function Explorer({ m }: { m: Metric }) {
   const [w, setW] = useState(800);
   const [peek, setPeek] = useState<number | null>(null);
   const dragging = useRef(false);
-  useEffect(() => { const ro = new ResizeObserver(([e]) => setW(e.contentRect.width)); ro.observe(wrap.current!); return () => ro.disconnect(); }, []);
+  // A hidden view (the book while This week or Odds shows) measures 0 wide; keep the last real width.
+  useEffect(() => { const ro = new ResizeObserver(([e]) => { if (e.contentRect.width > 0) setW(e.contentRect.width); }); ro.observe(wrap.current!); return () => ro.disconnect(); }, []);
   const H = 240, ML = 52, MR = 16, MT = 22, MB = 28;
   const x = d3.scaleLinear().domain([YEAR_MIN, YEAR_MAX]).range([ML, w - MR]);
   const series = (["pluralism", "concentration"] as const).map((b) => ({ b, pts: d3.range(YEAR_MIN, YEAR_MAX + 1).map((y) => [y, lerp(metricKF(m, b), y)] as [number, number]) }));

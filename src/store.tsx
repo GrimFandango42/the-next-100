@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { Branch, Domain } from "./schema";
 import { data, DEFAULT_VIEW, YEAR_MAX, YEAR_MIN } from "./data";
+import { defaultView, hashFor, parseHash, readEdition, writeEdition, type Route } from "./route";
 
 type State = {
   year: number; setYear: (y: number) => void;
@@ -10,25 +11,50 @@ type State = {
   selected: string | null; select: (id: string | null) => void;
   /** Timeline visible window [from, to] in years. */
   view: [number, number]; setView: (v: [number, number]) => void;
+  /** Which reader view is showing (This week, Odds, the book), from the URL hash. */
+  route: Route;
+  /** The check-in the reader had seen before this visit; null on a first visit. */
+  lastSeen: string | null;
 };
 
 const Ctx = createContext<State | null>(null);
 const ALL: Domain[] = ["ai", "bio", "energy", "climate", "space", "society", "risk"];
+const LINE_IDS = new Set(data.events.map((e) => e.id));
+const currentHash = () => (typeof location !== "undefined" ? location.hash : "");
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [year, setYearRaw] = useState(YEAR_MIN);
-  const initialHash = typeof location !== "undefined" && !location.hash.startsWith("#m-") ? location.hash.slice(1) : "";
-  const initialEvent = data.events.find((e) => e.id === initialHash);
-  const [branch, setBranchRaw] = useState<Branch>(() => (new URLSearchParams(location.search).get("b") === "concentration" || initialHash === "concentration" ? "concentration" : "pluralism"));
+  // Read once per visit: whether the reader has been here before decides the default view, and the edition they last saw is what This week compares against.
+  const [lastSeen] = useState(readEdition);
+  const [route, setRoute] = useState<Route>(() => parseHash(currentHash(), LINE_IDS, defaultView(lastSeen)));
+  const routeRef = useRef(route);
+  routeRef.current = route;
+  const initialEvent = route.line ? data.events.find((e) => e.id === route.line) : undefined;
+  const [branch, setBranchRaw] = useState<Branch>(() => (typeof location !== "undefined" && (new URLSearchParams(location.search).get("b") === "concentration" || currentHash() === "#concentration") ? "concentration" : "pluralism"));
   const [playing, setPlaying] = useState(false);
   const [pausedOnce, setPausedOnce] = useState(false);
   const [domains, setDomains] = useState<Set<Domain>>(new Set(ALL));
   const [selected, setSelectedRaw] = useState<string | null>(initialEvent?.id ?? null);
-  const setSelected = (id: string | null) => {
+  /** Opening a drawer in Odds names the line in the URL (#line-<id>) without adding a history entry; the other views keep their hash. */
+  const setSelected = useCallback((id: string | null) => {
     setSelectedRaw(id);
-    try { history.replaceState(null, "", location.pathname + location.search + (id ? "#" + id : "")); } catch { /* sandboxed */ }
-  };
+    if (routeRef.current.view !== "odds") return;
+    try { history.replaceState(history.state, "", location.pathname + location.search + hashFor({ view: "odds", line: id ?? undefined })); } catch { /* sandboxed */ }
+  }, []);
   useEffect(() => { if (initialEvent) setYearRaw(initialEvent.year); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { writeEdition(data.meta.lastCheckin); }, []);
+  // Back, forward and every link to #week / #odds / #book / #line-… / #story-… land here.
+  useEffect(() => {
+    const onHash = () => {
+      const r = parseHash(currentHash(), LINE_IDS, defaultView(lastSeen));
+      setRoute(r);
+      setSelectedRaw(r.line ?? null);
+      const ev = r.line ? data.events.find((e) => e.id === r.line) : undefined;
+      if (ev) setYearRaw(ev.year);
+    };
+    addEventListener("hashchange", onHash);
+    return () => removeEventListener("hashchange", onHash);
+  }, [lastSeen]);
   const [view, setView] = useState<[number, number]>(DEFAULT_VIEW);
   const raf = useRef<number>(0);
   const last = useRef(0);
@@ -75,7 +101,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     toggleDomain: (d) => setDomains((s) => { const n = new Set(s); if (n.has(d) && n.size > 1) n.delete(d); else n.add(d); return n; }),
     selected, select: setSelected,
     view, setView,
-  }), [year, branch, playing, pausedOnce, domains, selected, view]);
+    route, lastSeen,
+  }), [year, branch, playing, pausedOnce, domains, selected, view, route, lastSeen, setSelected]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
