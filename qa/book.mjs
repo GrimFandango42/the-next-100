@@ -1,7 +1,9 @@
-import { chromium, devices } from "playwright";
+import { devices } from "playwright";
+import { launch } from "./browser.mjs";
 import { mkdirSync } from "node:fs";
+import { checkDrawers } from "./drawers.mjs";
 mkdirSync("qa/out", { recursive: true });
-const b = await chromium.launch({ ...(process.env.PW_CHROMIUM ? { executablePath: process.env.PW_CHROMIUM } : {}) });
+const b = await launch();
 const out = {};
 for (const [dev, opts] of [["d", { viewport: { width: 1440, height: 900 } }], ["m", devices["iPhone 13"]]]) {
   const ctx = await b.newContext({ ...opts, colorScheme: "dark" });
@@ -18,7 +20,9 @@ for (const [dev, opts] of [["d", { viewport: { width: 1440, height: 900 } }], ["
   await p.locator(".event-scene .page-actions .guide-text-button").first().click({ force: true }); await p.waitForTimeout(600);
   const sheet = await p.locator(".sheet").isVisible().catch(() => false);
   await p.screenshot({ path: `qa/out/${dev}-why.png` });
-  out[dev] = { errs, total, sw, nStops: stops.length, avgStop: Math.round(stops.reduce((a, s) => a + s.h, 0) / stops.length), sheet };
+  const odds = await checkDrawers(p, dev, errs);
+  if (odds.some((d) => !d.ok)) process.exitCode = 1;
+  out[dev] = { errs, total, sw, nStops: stops.length, avgStop: Math.round(stops.reduce((a, s) => a + s.h, 0) / stops.length), sheet, odds };
   await ctx.close();
 }
 await b.close();

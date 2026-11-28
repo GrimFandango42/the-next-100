@@ -1,6 +1,7 @@
 import { data } from "../data";
 import { STATUS_LABEL } from "../lib";
-import { DOMAIN_META } from "../schema";
+import { MARKET_HISTORY, MARKET_LINKS, gapRows, venueName, type HistoryRow, type MarketLink } from "../markets";
+import { DOMAIN_META, type ForecastEvent } from "../schema";
 import { useStore } from "../store";
 import { Cite } from "./EventDrawer";
 
@@ -41,6 +42,41 @@ export function Scorecard() {
       <p className="note">Bars show the odds if {branch} wins. The thin mark on each bar is the overall estimate, with the two branches weighted {Math.round(data.meta.hinge.pluralismProbability * 100)}/{Math.round((1 - data.meta.hinge.pluralismProbability) * 100)}. Use the scenario buttons above to compare.</p>
     </div>
   );
+}
+
+/** One row per line with a primary market: our number as a dot, the market's latest price as a ring, on one 0–100 track. Widest gap first. */
+export function MarketGapFigure({ events = data.events, links = MARKET_LINKS, rows = MARKET_HISTORY, onSelect }: { events?: readonly ForecastEvent[]; links?: readonly MarketLink[]; rows?: readonly HistoryRow[]; onSelect: (id: string) => void }) {
+  const list = gapRows(events, links, rows);
+  if (!list.length) return null;
+  return (
+    <div className="market-gap">
+      <p className="note"><span className="gap-key"><i className="gap-dot" />our forecast</span> <span className="gap-key"><i className="gap-ring" />the market's latest price</span>Widest gap first. A market is a neighbour of a line, not the same question; open a row to see how they differ.</p>
+      <ol className="gap-rows">
+        {list.map((r) => (
+          <li key={r.event.id}>
+            <button className="gap-row" data-event={r.event.id} data-gap={r.gap === null ? "" : r.gap.toFixed(4)} onClick={() => onSelect(r.event.id)}>
+              <span className="gap-title">{r.event.title}</span>
+              <span className="gap-track" role="img" aria-label={`Forecast ${Math.round(r.forecast * 100)}%${r.market === null ? ", no market price yet" : `, ${venueName(r.link)} ${Math.round(r.market * 100)}%`}`}>
+                {r.market !== null && <i className="gap-ring" style={{ left: `${r.market * 100}%` }} />}
+                <i className="gap-dot" style={{ left: `${r.forecast * 100}%` }} />
+              </span>
+              <span className="gap-nums">
+                <b className="mono">{Math.round(r.forecast * 100)}%</b>
+                {r.market === null ? <span className="muted small">no price yet</span> : <span className="mono gap-market">{Math.round(r.market * 100)}%</span>}
+                <span className={"pill match-" + r.link.match}>{r.link.match}</span>
+                {r.thin && <span className="pill">thin</span>}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+export function MarketGap() {
+  const { select } = useStore();
+  return <MarketGapFigure onSelect={select} />;
 }
 
 export function Indicators() {
